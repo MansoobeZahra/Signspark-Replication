@@ -1,0 +1,10 @@
+data/
+checkpoints/
+outputs/
+logs/
+__pycache__/
+*.pyc
+*.npy
+*.npz
+*.pt
+.venv*
