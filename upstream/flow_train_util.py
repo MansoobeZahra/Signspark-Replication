@@ -257,6 +257,9 @@ class TrainLoop_Flow:
 
             loss_dict = compute_losses()
             loss = (loss_dict["loss"]).mean()
+            # [replication patch] weight each microbatch so the accumulated gradient equals the full-batch mean
+            # (upstream sums microbatch means; identical when microbatch == batch_size, as in the release config).
+            loss = loss * (len(_micro_embed) / len(batch_embed))
 
             wandb_dict = loss_dict.pop("wandb_dict", None)
             wandb_dict.update({k: v for k, v in loss_dict.items()})
