@@ -79,9 +79,7 @@ norm, and 3-4x smaller than its change across flow time.
    reproduces. For English→ASL no released gloss dictionary or text-to-gloss model exists (SR-T2P release covers
    CSL and Phoenix only).
 
-Open question the retrain answers: does a model trained **exactly as the paper describes** (2:1:1, no acceleration
-loss, the paper's data size) reach the paper's T2P numbers, and does its text pathway behave differently from the
-released one? See §4.
+The retrain (§4) answers whether the paper-exact recipe changes this: it does not.
 
 ## 4. Retrain (paper config)
 
@@ -89,4 +87,51 @@ released one? See §4.
 accumulation...") so that batch 64 = 2 × 32 microbatches gives the full-batch mean gradient (fp32 batch 64 does not
 fit on one 32 GB RTX 5090). 100k steps per stream (lr 1e-5, linear anneal to 0, EMA 0.9999), ~13 h per stream.
 
-Results: *pending (queue running; see `logs/queue_paper.log`, `outputs/eval/paper*_*.json`).*
+Finished 2026-10-23 (body 12.0 h, hand 12.0 h). `paper_*` = both retrained streams; `paperbody_*` = retrained body
++ released hand. All rows are from the same harness, the same 200 clips per dataset, and the same seeds.
+
+**Body DTW-JPE, text-only (T2P)** (the metric that did not reproduce):
+
+| | How2Sign | CSL-Daily | PHOENIX-2014T |
+|---|---|---|---|
+| paper | 6.30 | 6.27 | 4.40 |
+| static pose | 7.04 | 6.94 | 4.50 |
+| released, 1 / 10 / 50 steps | 7.04 / 8.71 / 9.26 | 6.82 / 8.14 / 8.52 | 5.07 / 5.84 / 6.16 |
+| **retrained (paper config), 1 / 10 / 50 steps** | **7.17 / 8.73 / 9.21** | **6.69 / 8.05 / 8.36** | **4.41 / 5.34 / 5.60** |
+
+**Full rows, retrained, 10 steps** (body PA / hand PA / body JPE / hand JPE):
+- How2Sign: T2P 9.88 / 2.38 / 8.73 / 11.99 (paper 7.26 / 2.72 / 6.30 / 11.43); KF2P 1.62 / 0.52 / 1.35 / 2.21 (paper 2.11 / 0.86 / 1.68 / 2.80).
+- CSL-Daily: T2P 9.42 / 1.94 / 8.05 / 10.63 (paper 7.26 / 2.00 / 6.27 / 10.63); KF2P 1.33 / 0.31 / 1.15 / 1.70 (paper 2.50 / 0.63 / 2.02 / 2.71).
+- PHOENIX: T2P 6.12 / 1.35 / 5.34 / 6.77 (paper 5.24 / 1.52 / 4.40 / 7.10); KF2P 1.47 / 0.35 / 1.23 / 1.82 (paper 2.39 / 0.71 / 1.92 / 2.25).
+
+**Text-vs-noise ratio (10 steps):** retrained 0.12 / 0.18 / 0.22 (H2S / CSL / Ph) vs released 0.16 / 0.20 / 0.17.
+The own sentence beats another clip's sentence on body JPE in 52 / 66 / 62% of clips (released 54 / 62 / 54%).
+At 1 step the ratio is not comparable: a single Euler step adds the noise sample x0 to the output directly.
+
+### Conclusions
+
+1. **The paper's training recipe reproduces the released model's behaviour.** Correct loss weights, no
+   acceleration loss and the paper's data quantity give T2P within ±0.1 of the released model on How2Sign and
+   slightly better on CSL/PHOENIX. KF2P beats the paper on every metric and dataset, as the released model does.
+   **The 1:2:1 + acceleration config is not the cause** of the text-only failure.
+2. **The paper's T2P table matches few-step sampling, not real signing.** Our 1-step retrained body on PHOENIX is
+   4.41 vs the paper's 4.40, and the hands (6.26 vs 7.10) are better than the paper. On CSL/How2Sign, 1 step is
+   0.4-0.9 off. Every T2P number, ours and the paper's, sits at or near the motionless-pose score.
+   More ODE steps (= more real motion) always worsen DTW-JPE. The paper reports neither a static baseline nor
+   B-T for T2P, so its Tab. 3 cannot show that text-only output carries the sentence.
+3. **The specific issue behind "wrong signs": the text pathway, not training noise or a bug.**
+   - Swapping the sentence moves the output 5-8x less than swapping the noise, in both the released and our
+     retrained model.
+   - The sentence is 1 mean-pooled M-CLIP vector added to the timestep embedding (no word-level attention, no
+     notion of word timing).
+   - Only ~9% of training samples are text-only (keyframe dropout 0.1).
+   The model learns a strong motion prior and a strong in-betweener (KF2P), but almost no text→sign mapping.
+   That is the paper's design, so retraining it as published cannot fix it.
+4. **What would fix it** (each needs new work, none is in the release):
+   - (a) Keyframes from real signs: SR-T2P = English→ASL gloss + an ASL sign dictionary (3D-LEX/WLASL in
+     `ver_03_sr_t2p`), with SignSparK as the in-betweener. That is the regime the paper actually relies on.
+   - (b) Retraining with token-level text conditioning (cross-attention over the XLM-R token states) and a much
+     higher keyframe-drop rate, then measuring with sentence retrieval / B-T, not DTW-JPE alone.
+
+Checkpoints: `outputs/train/paper_{body,hand}_100k/checkpoints/*/` (167 GB each; EMA at every 10k steps, plus
+model/opt states).
