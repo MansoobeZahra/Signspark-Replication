@@ -1,0 +1,275 @@
+<title>SignSparK & MaDiS Replication</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one reading column (~760px) with full-width figure bands; summary first, then one part per model. */
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --ink: #1b2330; --muted: #5a6577; --line: #d9dee6;
+  --accent: #1f6f8b; --accent-soft: #e2eff4;
+  --good: #2f7d4f; --good-soft: #e3f2e8; --bad: #b4462c; --bad-soft: #f8e6e0; --warn: #9a6a12; --warn-soft: #f6eedb;
+  --bar-real: #4b5a70; --bar-paper: #9aa6b8;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #12161d; --surface: #1a2029; --ink: #e6eaf0; --muted: #9aa5b5; --line: #2c3442;
+  --accent: #5fb3cf; --accent-soft: #19313b;
+  --good: #6cc392; --good-soft: #1b3326; --bad: #ec8a70; --bad-soft: #3a221c; --warn: #e0b45c; --warn-soft: #362c17;
+  --bar-real: #a9b6c9; --bar-paper: #5d6878; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #12161d; --surface: #1a2029; --ink: #e6eaf0; --muted: #9aa5b5; --line: #2c3442;
+  --accent: #5fb3cf; --accent-soft: #19313b;
+  --good: #6cc392; --good-soft: #1b3326; --bad: #ec8a70; --bad-soft: #3a221c; --warn: #e0b45c; --warn-soft: #362c17;
+  --bar-real: #a9b6c9; --bar-paper: #5d6878; color-scheme: dark }
+
+body { background: var(--bg); color: var(--ink); font: 17px/1.6 var(--body); }
+.wrap { max-width: 800px; margin: 0 auto; padding-block: 40px 80px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--display); line-height: 1.2; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(30px, 6vw, 44px); font-weight: 800; letter-spacing: -0.01em; }
+h2 { font-size: 27px; font-weight: 800; margin-top: 64px; padding-top: 22px; border-top: 2px solid var(--ink); }
+h3 { font-size: 19px; font-weight: 700; margin-top: 34px; }
+p { margin: 12px 0; } .muted { color: var(--muted); }
+.eyebrow { font: 600 12px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.lede { font-size: 19px; color: var(--muted); max-width: 65ch; }
+.part { font: 600 13px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 8px; }
+
+.verdicts { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin-top: 26px; }
+.verdict { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px; min-width: 0; }
+.verdict b { font-family: var(--display); font-size: 17px; display: block; margin-bottom: 4px; }
+.chip { display: inline-block; font: 600 12px/1 var(--mono); padding: 5px 8px; border-radius: 4px; margin-bottom: 10px; }
+.chip.good { background: var(--good-soft); color: var(--good); } .chip.bad { background: var(--bad-soft); color: var(--bad); }
+.chip.warn { background: var(--warn-soft); color: var(--warn); }
+
+.flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 8px; margin: 18px 0 6px; }
+.step { flex: 1 1 130px; min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; font-size: 14px; line-height: 1.4; }
+.step b { display: block; font-family: var(--display); font-size: 14px; margin-bottom: 3px; }
+.step.key { border-color: var(--accent); background: var(--accent-soft); }
+.arrow { align-self: center; color: var(--muted); font: 600 18px var(--mono); }
+.modes { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 14px; }
+
+.chart { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 18px 18px 14px; margin: 18px 0; }
+.chart h4 { margin: 0 0 4px; font: 700 15px/1.3 var(--display); }
+.chart .sub { font-size: 14px; color: var(--muted); margin: 0 0 14px; }
+.row { display: grid; grid-template-columns: minmax(110px, 190px) 1fr; gap: 10px; align-items: center; margin: 7px 0; font-size: 14px; }
+.track { position: relative; height: 22px; background: color-mix(in srgb, var(--line) 45%, transparent); border-radius: 3px; }
+.bar { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 3px; display: flex; align-items: center; justify-content: flex-end; padding-right: 6px;
+  font: 600 12px var(--mono); color: var(--bg); font-variant-numeric: tabular-nums; }
+.bar.paper { background: var(--bar-paper); color: var(--ink); } .bar.real { background: var(--bar-real); }
+.bar.bad { background: var(--bad); } .bar.good { background: var(--good); } .bar.acc { background: var(--accent); }
+.mark { position: absolute; top: -4px; bottom: -4px; border-left: 2px dashed var(--ink); }
+.marklabel { font: 600 11px var(--mono); color: var(--muted); }
+.note { font-size: 13px; color: var(--muted); margin-top: 10px; }
+
+.tablewrap { overflow-x: auto; margin: 16px 0; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; font-variant-numeric: tabular-nums; }
+th, td { padding: 9px 12px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th { font: 600 12px var(--mono); letter-spacing: .04em; color: var(--muted); text-transform: uppercase; }
+tr:last-child td { border-bottom: 0; }
+td.num { font-family: var(--mono); font-size: 13px; }
+td.win { color: var(--good); font-weight: 600; } td.lose { color: var(--bad); font-weight: 600; }
+
+figure { margin: 22px 0; }
+figure img { display: block; width: 100%; border-radius: 6px; border: 1px solid var(--line); background: #1e1e22; }
+figcaption { font-size: 14px; color: var(--muted); margin-top: 8px; }
+figcaption b { color: var(--ink); }
+.pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+
+.problems { display: grid; gap: 12px; margin-top: 16px; }
+.problem { display: grid; grid-template-columns: 34px 1fr; gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+.problem .n { font: 800 22px var(--display); color: var(--bad); }
+.problem b { font-family: var(--display); }
+.problem p { margin: 4px 0 0; font-size: 15px; }
+
+.timeline { display: grid; gap: 0; margin: 16px 0; border-left: 2px solid var(--line); padding-left: 18px; }
+.tl { position: relative; padding: 4px 0 14px; font-size: 15px; }
+.tl::before { content: ""; position: absolute; left: -25px; top: 10px; width: 12px; height: 12px; border-radius: 50%; background: var(--line); border: 2px solid var(--bg); }
+.tl.done::before { background: var(--good); } .tl.now::before { background: var(--warn); }
+.tl b { font-family: var(--display); }
+.callout { background: var(--accent-soft); border-radius: 8px; padding: 16px 18px; margin: 20px 0; }
+.callout b { font-family: var(--display); }
+code { font: 13px var(--mono); background: color-mix(in srgb, var(--line) 50%, transparent); padding: 1px 5px; border-radius: 3px; }
+footer { margin-top: 60px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; }
+</style>
+
+<div class="wrap">
+  <div class="eyebrow">Speech-to-sign project · status report · 26 Oct 2026</div>
+  <h1 style="margin-top:12px">SignSparK and MaDiS: can either one turn text into real ASL signs?</h1>
+  <p class="lede">We tested two published text-to-sign models end to end: their papers, their released code, our own retraining, and a new check of whether the output contains real ASL signs. This page is the bird's-eye view of what we found.</p>
+
+  <div class="verdicts">
+    <div class="verdict"><span class="chip bad">Text → sign: fails</span><b>SignSparK</b>Replicated completely, including a full retrain with the paper's settings. From text alone it produces smooth motion with no recognisable ASL signs.</div>
+    <div class="verdict"><span class="chip warn">Text → sign: weak</span><b>MaDiS</b>Its released model matches its paper exactly. Its output carries a faint trace of a few common signs, too weak to read. A full retrain is running now.</div>
+    <div class="verdict"><span class="chip good">Keyframes → sign: works</span><b>SignSparK, keyframe mode</b>Given real keyframes from a real signer, SignSparK reproduces the signing well, better than the paper reports.</div>
+  </div>
+
+  <!-- ============================== PART 1 ============================== -->
+  <h2><span class="part">Part 1</span>SignSparK</h2>
+
+  <h3>What SignSparK is</h3>
+  <p>SignSparK (ECCV 2026, University of Surrey) generates 3D signing motion (an SMPL-X body with hands) with a flow-matching model. It is trained on real signing videos that were converted into 3D poses. Its main idea is to train with <b>sparse keyframes</b>: for every sign, three frames (start, middle, end) are given to the model, and it learns to fill in the motion between them.</p>
+
+  <div class="flow" aria-label="SignSparK training pipeline">
+    <div class="step"><b>Sign videos</b>How2Sign (ASL), CSL-Daily, PHOENIX</div><div class="arrow">→</div>
+    <div class="step"><b>3D pose extraction</b>WiLoR (hands), NLF (body) → SMPL-X</div><div class="arrow">→</div>
+    <div class="step"><b>FAST segmenter</b>finds where each sign starts and ends</div><div class="arrow">→</div>
+    <div class="step"><b>Keyframes</b>start / middle / end of each sign</div><div class="arrow">→</div>
+    <div class="step key"><b>Flow-matching UNet</b>fills in all the frames, guided by the sentence text</div>
+  </div>
+
+  <p>The model can be used in two ways:</p>
+  <div class="modes">
+    <div class="verdict"><b>Keyframe mode (KF2P)</b>You give it the sentence <i>and</i> real keyframes of the signs. It fills in smooth motion between them.</div>
+    <div class="verdict"><b>Text-only mode (T2P)</b>You give it only the sentence. It must invent all the signs itself. <b>This is what our speech-to-sign pipeline needs.</b></div>
+  </div>
+
+  <h3>What we did</h3>
+  <p>We vendored the authors' code unchanged into a new git repository and checked it against the paper line by line. We downloaded the released data (How2Sign, CSL-Daily, PHOENIX; BOBSL is not released) and then:</p>
+  <ol>
+    <li>evaluated the <b>released model</b> with the paper's own metric (SOKE's DTW joint error) on all three datasets;</li>
+    <li><b>retrained the model from scratch</b> with exactly the paper's settings (about 24 hours of GPU time, body and hand models);</li>
+    <li>built an independent <b>ASL sign recogniser</b> and used it to check whether the generated motion contains real signs.</li>
+  </ol>
+
+  <h3>Result 1: keyframe mode works</h3>
+  <p>Joint error between the generated and the real signing (lower is better). Our retrained model and the released model both <b>beat the paper</b>.</p>
+  <div class="tablewrap"><table>
+    <tr><th>Keyframe mode</th><th>Body error</th><th></th><th></th><th>Hand error</th><th></th><th></th></tr>
+    <tr><th></th><th>Paper</th><th>Released</th><th>Our retrain</th><th>Paper</th><th>Released</th><th>Our retrain</th></tr>
+    <tr><td>How2Sign (ASL)</td><td class="num">1.68</td><td class="num win">1.21</td><td class="num win">1.35</td><td class="num">2.80</td><td class="num win">2.10</td><td class="num win">2.21</td></tr>
+    <tr><td>CSL-Daily (Chinese SL)</td><td class="num">2.02</td><td class="num win">1.01</td><td class="num win">1.15</td><td class="num">2.71</td><td class="num win">1.65</td><td class="num win">1.70</td></tr>
+    <tr><td>PHOENIX (German SL)</td><td class="num">1.92</td><td class="num win">1.23</td><td class="num win">1.23</td><td class="num">2.25</td><td class="num win">1.94</td><td class="num win">1.82</td></tr>
+  </table></div>
+  <p class="muted" style="font-size:15px">One caveat: plain interpolation (SLERP) between the same keyframes scores almost as well (How2Sign body 1.24, hands 2.39). The paper's own SLERP baseline is 2.5–3.5× worse than a correct SLERP, so the paper overstates how much the model adds on top of the keyframes.</p>
+
+  <h3>Result 2: text-only mode does not work</h3>
+  <p>Here the model gets only the sentence. We also scored a <b>"standing still" pose</b>: the average body position, frozen for the whole clip. It contains no signing at all. A model that really signs the sentence should beat it easily.</p>
+
+  <div class="chart" role="img" aria-label="Body joint error, text-only, How2Sign">
+    <h4>Body joint error, text-only, How2Sign (lower is better)</h4>
+    <p class="sub">Same 200 test sentences for every row; the dashed line is the "standing still" pose.</p>
+    <div class="row"><span>Paper claims</span><div class="track"><div class="bar paper" style="width:63%">6.30</div><div class="mark" style="left:70.4%"></div></div></div>
+    <div class="row"><span><b>Standing still</b></span><div class="track"><div class="bar real" style="width:70.4%">7.04</div></div></div>
+    <div class="row"><span>Released model</span><div class="track"><div class="bar bad" style="width:87.1%">8.71</div><div class="mark" style="left:70.4%"></div></div></div>
+    <div class="row"><span>Our retrain (paper settings)</span><div class="track"><div class="bar bad" style="width:87.3%">8.73</div><div class="mark" style="left:70.4%"></div></div></div>
+    <p class="note">Scale 0–10. CSL-Daily and PHOENIX show the same pattern (released 8.14 / 5.84, retrain 8.05 / 5.34, standing still 6.94 / 4.50).</p>
+  </div>
+
+  <p>Three things stand out:</p>
+  <ul>
+    <li><b>The model loses to standing still.</b> Moving signing that is wrong is penalised more than not moving at all.</li>
+    <li><b>Our retrain gives the same number as the released model</b> (8.73 vs 8.71). So the failure is not caused by the released checkpoint or by our setup.</li>
+    <li><b>The paper's number (6.30) sits at the standing-still level.</b> When we sample with only 1 step, the output stays close to the average pose and scores 7.04, the same as standing still; on PHOENIX it reproduces the paper exactly (4.41 vs 4.40). More steps produce more motion and a <i>worse</i> score. The metric rewards motion that stays near the average pose, so a good number here does not mean correct signs.</li>
+  </ul>
+
+  <figure>
+    <img src="img/signspark_counting.jpg" alt="Three rows of a 3D signer over six time points: real signing counting on the fingers at the chin, SignSparK text-only holding the hand near the mouth, SignSparK keyframe mode counting like the real signer.">
+    <figcaption><b>"One and two and three and four."</b> Top: the real signer counts 1-2-3-4 on the fingers at the chin. Middle: SignSparK, text only. The hand wanders near the mouth and never counts. Bottom: SignSparK with real keyframes. It counts like the real signer, because the keyframes carry the signs.</figcaption>
+  </figure>
+
+  <h3>Result 3: the sign recogniser finds no real signs</h3>
+  <p>Joint error cannot tell us whether a sign is right, so we trained a sign recogniser on 1,000 real isolated ASL sign videos (WLASL, 124 signs, 53 signers). On signers it never saw, it names the correct sign 57% of the time (chance: 0.8%). We then asked: when a sentence contains a word such as "again", does that word's sign appear in the motion more often than in sentences without the word?</p>
+
+  <div class="chart" role="img" aria-label="Sign detection score">
+    <h4>Sign detection score (0.5 = no trace of the sign)</h4>
+    <p class="sub">Average over the words the recogniser can find in real signing. The dashed line is chance.</p>
+    <div class="row"><span><b>Real signers</b></span><div class="track"><div class="bar real" style="width:82%">0.655</div><div class="mark" style="left:20%"></div></div></div>
+    <div class="row"><span>SignSparK text-only</span><div class="track"><div class="bar bad" style="width:22.8%">0.507</div><div class="mark" style="left:20%"></div></div></div>
+    <p class="note">Scale 0.45–0.70. SignSparK: p = 0.36, no signal at all. Real signing: p = 0.0005.</p>
+  </div>
+
+  <figure>
+    <img src="img/judge_again.jpg" alt="Four rows: the real WLASL sign AGAIN, a real How2Sign signer making it, SignSparK output with one hand at the eye, MaDiS output with hands together at the chest.">
+    <figcaption><b>The sign AGAIN.</b> Row 1: the real dictionary sign. Row 2: a real signer making it inside the sentence "Again I want to make faces." (recogniser confidence 0.66). Row 3: SignSparK for the same sentence: one hand at the eye, the other at the shoulder (0.02). Row 4: MaDiS for the same sentence (0.00).</figcaption>
+  </figure>
+
+  <h3>What is wrong with SignSparK</h3>
+  <div class="problems">
+    <div class="problem"><div class="n">1</div><div><b>The sentence barely reaches the model.</b><p>The whole sentence is squeezed into one averaged vector (no word-by-word attention). We measured it: keeping the random noise fixed and swapping the sentence changes the output only <b>0.12–0.22×</b> as much as keeping the sentence and swapping the noise. The output is decided mostly by chance, not by the words.</p></div></div>
+    <div class="problem"><div class="n">2</div><div><b>It rarely practises text-only generation.</b><p>Keyframes are removed for only 10% of training examples, so only about 9% of training is text-only. The model becomes an excellent keyframe in-betweener and a poor text-to-sign model.</p></div></div>
+    <div class="problem"><div class="n">3</div><div><b>The benchmark cannot see the failure.</b><p>The paper's joint-error metric gives a better score to standing still than to wrong signing. The paper reports no standing-still baseline and no back-translation for text-only, so its text-only table cannot show whether signs are correct.</p></div></div>
+    <div class="problem"><div class="n">4</div><div><b>The paper and the released code differ.</b><p>The paper's loss weights are 2:1:1; the released code uses 1:2:1 plus an extra loss the paper never mentions. The released checkpoint was trained on 15× more data than the paper's. Neither difference explains the failure: our retrain with the paper's exact settings behaves the same.</p></div></div>
+  </div>
+
+  <div class="callout"><b>Bottom line for SignSparK.</b> The replication is complete and the answer is clear. SignSparK cannot produce correct ASL signs from text alone, and retraining it as published cannot change that, because the limit is in the method's design. Its strength is filling in motion when real keyframes are given.</div>
+
+  <!-- ============================== PART 2 ============================== -->
+  <h2><span class="part">Part 2</span>MaDiS</h2>
+
+  <h3>What MaDiS is</h3>
+  <p>MaDiS (2026, from the authors of SOKE) treats signing like a language. A tokenizer turns real 3D signing into discrete "sign tokens" (separately for body, left hand and right hand). A language model (Qwen3, 0.6B parameters) then learns to write those tokens from an English sentence, word by word. Unlike SignSparK, it reads the sentence token by token.</p>
+
+  <div class="flow" aria-label="MaDiS pipeline">
+    <div class="step"><b>English sentence</b>"One and two and three and four."</div><div class="arrow">→</div>
+    <div class="step key"><b>Language model</b>Qwen3-0.6B writes sign tokens</div><div class="arrow">→</div>
+    <div class="step"><b>Sign tokens</b>body, left hand, right hand</div><div class="arrow">→</div>
+    <div class="step"><b>Tokenizer decoder</b>tokens → SMPL-X motion</div>
+  </div>
+  <p class="muted" style="font-size:15px">Training has three stages: (1) the sign tokenizer, (2) language-model pretraining on sign tokens, (3) fine-tuning on How2Sign.</p>
+
+  <h3>What has been achieved</h3>
+  <p><b>The released model reproduces its paper almost exactly</b>, using the authors' own test code on all 2,308 How2Sign test clips:</p>
+  <div class="tablewrap"><table>
+    <tr><th>How2Sign, joint error</th><th>Paper</th><th>Our run</th><th>Standing still</th></tr>
+    <tr><td>Body</td><td class="num">6.59</td><td class="num win">6.575</td><td class="num">5.66</td></tr>
+    <tr><td>Hands</td><td class="num">9.45</td><td class="num win">9.414</td><td class="num">9.63</td></tr>
+  </table></div>
+  <p>So our setup is correct. But the same warning applies as for SignSparK: standing still beats MaDiS on the body, and the hands are nearly tied.</p>
+
+  <p>The sign recogniser gives MaDiS a better result than SignSparK. Its output contains a <b>weak but real trace</b> of the correct signs, mostly for frequent words such as "all" and "after":</p>
+  <div class="chart" role="img" aria-label="Sign detection score, MaDiS">
+    <h4>Sign detection score (0.5 = no trace of the sign)</h4>
+    <p class="sub">Compared with the real signing in the same 3D format MaDiS was trained on.</p>
+    <div class="row"><span><b>Real signers</b></span><div class="track"><div class="bar real" style="width:74.8%">0.637</div><div class="mark" style="left:20%"></div></div></div>
+    <div class="row"><span>MaDiS</span><div class="track"><div class="bar acc" style="width:47.6%">0.569</div><div class="mark" style="left:20%"></div></div></div>
+    <div class="row"><span>SignSparK (for comparison)</span><div class="track"><div class="bar bad" style="width:22.8%">0.507</div><div class="mark" style="left:20%"></div></div></div>
+    <p class="note">Scale 0.45–0.70. MaDiS: p = 0.0015, about half the strength of real signing. It shows up on average across many sentences but is not visible in single examples.</p>
+  </div>
+
+  <figure>
+    <img src="img/madis_counting.jpg" alt="Two rows over six time points: the real signer counting at the chin, and MaDiS output keeping the hand at the chest with a pointing hand.">
+    <figcaption><b>"One and two and three and four."</b> Top: the real signer counts on the fingers at the chin (88 frames). Bottom: MaDiS keeps the hand at the chest with a pointing handshape and stops after 32 frames. It does not count.</figcaption>
+  </figure>
+
+  <h3>Problems found along the way</h3>
+  <ul>
+    <li><b>Its official sign-quality evaluator is unreliable.</b> On MaDiS's own retrieval evaluator (SiCLIP), a standing-still pose scores 62.6% top-1, far above real signing (34.2%) and MaDiS (28.0%).</li>
+    <li><b>Part of the released data is broken.</b> The released validation and test sign tokens are noise in all three datasets (the training tokens are fine). The paper's back-translation scores (SiBLEU) are computed against those test tokens, so they cannot be trusted.</li>
+    <li><b>Sentence matching is at chance.</b> If you ask which of 200 real clips a MaDiS output belongs to, it picks the right one 1% of the time (chance: 0.5%).</li>
+  </ul>
+
+  <h3>Full MaDiS replication: running now</h3>
+  <p>The whole training pipeline is being retrained from scratch, in full precision as in the paper, on How2Sign, CSL-Daily and PHOENIX.</p>
+  <div class="timeline">
+    <div class="tl done"><b>Stage 1: sign tokenizer</b> · done (500 epochs, 23–24 Oct)</div>
+    <div class="tl done"><b>Data re-tokenised</b> · done for all three datasets, replacing the broken released tokens</div>
+    <div class="tl now"><b>Stage 2: language-model pretraining</b> · running, about epoch 50 of 200. It crashed once on 24 Oct (GPU timeout) and resumed on 26 Oct. About 30 hours left.</div>
+    <div class="tl"><b>Stage 3: fine-tuning on How2Sign</b> · about 17 hours, starts automatically</div>
+    <div class="tl"><b>Evaluation</b> · paper metrics, standing-still baseline and the sign recogniser · expected around 29–30 Oct</div>
+  </div>
+
+  <h3>What we hope to learn from it</h3>
+  <ul>
+    <li><b>Whether the paper is reproducible from scratch</b>, not only from the released checkpoint.</li>
+    <li><b>Whether clean test tokens change the picture.</b> With correctly tokenised test data, MaDiS's own quality scores become meaningful for the first time.</li>
+    <li><b>Whether the faint sign trace gets stronger.</b> MaDiS is the only model that showed any real sign content. The retrained model will be judged with the same sign recogniser, which gives a direct before/after comparison.</li>
+  </ul>
+  <p class="muted">Realistic expectation: the retrain should confirm the paper's numbers. A large jump to clearly readable signs would be a surprise, because the released model, trained the same way, is far from that.</p>
+
+  <!-- ============================== SUMMARY ============================== -->
+  <h2><span class="part">Summary</span>Where things stand</h2>
+  <div class="tablewrap"><table>
+    <tr><th></th><th>SignSparK</th><th>MaDiS</th></tr>
+    <tr><td>Paper numbers reproduced?</td><td>Keyframe mode: yes, better. Text-only: no (body)</td><td class="win">Yes, almost exactly</td></tr>
+    <tr><td>Beats standing still (text only)?</td><td class="lose">No</td><td class="lose">No on body, tie on hands</td></tr>
+    <tr><td>Real signs in the output?</td><td class="lose">None detected</td><td>Weak trace on a few frequent words</td></tr>
+    <tr><td>Retrained by us?</td><td class="win">Done, same behaviour</td><td>Running, done ~29–30 Oct</td></tr>
+    <tr><td>Usable for text → ASL now?</td><td class="lose">No</td><td class="lose">No</td></tr>
+  </table></div>
+
+  <footer>
+    Details and every number: <code>SIGNSPARK_PaPer Replication/PAPER_AUDIT.md</code> (SignSparK replication, sign recogniser), <code>model_tests/REPORT.md</code> (official evaluations of both models), <code>ver_03_madis/</code> (MaDiS replication). Joint errors are SOKE's DTW-JPE (summed metres along the matched path), on 200 random test clips unless stated; MaDiS official numbers use all 2,308 clips.
+  </footer>
+</div>
