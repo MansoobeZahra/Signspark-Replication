@@ -1,0 +1,242 @@
+<title>Real-Sign Dictionary Plan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one reading column (~760px) with full-width figure bands; summary first, then one part per model. */
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --ink: #1b2330; --muted: #5a6577; --line: #d9dee6;
+  --accent: #1f6f8b; --accent-soft: #e2eff4;
+  --good: #2f7d4f; --good-soft: #e3f2e8; --bad: #b4462c; --bad-soft: #f8e6e0; --warn: #9a6a12; --warn-soft: #f6eedb;
+  --bar-real: #4b5a70; --bar-paper: #9aa6b8;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #12161d; --surface: #1a2029; --ink: #e6eaf0; --muted: #9aa5b5; --line: #2c3442;
+  --accent: #5fb3cf; --accent-soft: #19313b;
+  --good: #6cc392; --good-soft: #1b3326; --bad: #ec8a70; --bad-soft: #3a221c; --warn: #e0b45c; --warn-soft: #362c17;
+  --bar-real: #a9b6c9; --bar-paper: #5d6878; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #12161d; --surface: #1a2029; --ink: #e6eaf0; --muted: #9aa5b5; --line: #2c3442;
+  --accent: #5fb3cf; --accent-soft: #19313b;
+  --good: #6cc392; --good-soft: #1b3326; --bad: #ec8a70; --bad-soft: #3a221c; --warn: #e0b45c; --warn-soft: #362c17;
+  --bar-real: #a9b6c9; --bar-paper: #5d6878; color-scheme: dark }
+
+body { background: var(--bg); color: var(--ink); font: 17px/1.6 var(--body); }
+.wrap { max-width: 800px; margin: 0 auto; padding-block: 40px 80px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--display); line-height: 1.2; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(30px, 6vw, 44px); font-weight: 800; letter-spacing: -0.01em; }
+h2 { font-size: 27px; font-weight: 800; margin-top: 64px; padding-top: 22px; border-top: 2px solid var(--ink); }
+h3 { font-size: 19px; font-weight: 700; margin-top: 34px; }
+p { margin: 12px 0; } .muted { color: var(--muted); }
+.eyebrow { font: 600 12px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.lede { font-size: 19px; color: var(--muted); max-width: 65ch; }
+.part { font: 600 13px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 8px; }
+
+.verdicts { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin-top: 26px; }
+.verdict { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px; min-width: 0; }
+.verdict b { font-family: var(--display); font-size: 17px; display: block; margin-bottom: 4px; }
+.chip { display: inline-block; font: 600 12px/1 var(--mono); padding: 5px 8px; border-radius: 4px; margin-bottom: 10px; }
+.chip.good { background: var(--good-soft); color: var(--good); } .chip.bad { background: var(--bad-soft); color: var(--bad); }
+.chip.warn { background: var(--warn-soft); color: var(--warn); }
+
+.flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 8px; margin: 18px 0 6px; }
+.step { flex: 1 1 130px; min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; font-size: 14px; line-height: 1.4; }
+.step b { display: block; font-family: var(--display); font-size: 14px; margin-bottom: 3px; }
+.step.key { border-color: var(--accent); background: var(--accent-soft); }
+.arrow { align-self: center; color: var(--muted); font: 600 18px var(--mono); }
+.modes { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 14px; }
+
+.chart { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 18px 18px 14px; margin: 18px 0; }
+.chart h4 { margin: 0 0 4px; font: 700 15px/1.3 var(--display); }
+.chart .sub { font-size: 14px; color: var(--muted); margin: 0 0 14px; }
+.row { display: grid; grid-template-columns: minmax(110px, 190px) 1fr; gap: 10px; align-items: center; margin: 7px 0; font-size: 14px; }
+.track { position: relative; height: 22px; background: color-mix(in srgb, var(--line) 45%, transparent); border-radius: 3px; }
+.bar { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 3px; display: flex; align-items: center; justify-content: flex-end; padding-right: 6px;
+  font: 600 12px var(--mono); color: var(--bg); font-variant-numeric: tabular-nums; }
+.bar.paper { background: var(--bar-paper); color: var(--ink); } .bar.real { background: var(--bar-real); }
+.bar.bad { background: var(--bad); } .bar.good { background: var(--good); } .bar.acc { background: var(--accent); }
+.mark { position: absolute; top: -4px; bottom: -4px; border-left: 2px dashed var(--ink); }
+.marklabel { font: 600 11px var(--mono); color: var(--muted); }
+.note { font-size: 13px; color: var(--muted); margin-top: 10px; }
+
+.tablewrap { overflow-x: auto; margin: 16px 0; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; font-variant-numeric: tabular-nums; }
+th, td { padding: 9px 12px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th { font: 600 12px var(--mono); letter-spacing: .04em; color: var(--muted); text-transform: uppercase; }
+tr:last-child td { border-bottom: 0; }
+td.num { font-family: var(--mono); font-size: 13px; }
+td.win { color: var(--good); font-weight: 600; } td.lose { color: var(--bad); font-weight: 600; }
+
+figure { margin: 22px 0; }
+figure img { display: block; width: 100%; border-radius: 6px; border: 1px solid var(--line); background: #1e1e22; }
+figcaption { font-size: 14px; color: var(--muted); margin-top: 8px; }
+figcaption b { color: var(--ink); }
+.pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+
+.problems { display: grid; gap: 12px; margin-top: 16px; }
+.problem { display: grid; grid-template-columns: 34px 1fr; gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+.problem .n { font: 800 22px var(--display); color: var(--bad); }
+.problem b { font-family: var(--display); }
+.problem p { margin: 4px 0 0; font-size: 15px; }
+
+.timeline { display: grid; gap: 0; margin: 16px 0; border-left: 2px solid var(--line); padding-left: 18px; }
+.tl { position: relative; padding: 4px 0 14px; font-size: 15px; }
+.tl::before { content: ""; position: absolute; left: -25px; top: 10px; width: 12px; height: 12px; border-radius: 50%; background: var(--line); border: 2px solid var(--bg); }
+.tl.done::before { background: var(--good); } .tl.now::before { background: var(--warn); }
+.tl b { font-family: var(--display); }
+.callout { background: var(--accent-soft); border-radius: 8px; padding: 16px 18px; margin: 20px 0; }
+.callout b { font-family: var(--display); }
+code { font: 13px var(--mono); background: color-mix(in srgb, var(--line) 50%, transparent); padding: 1px 5px; border-radius: 3px; }
+footer { margin-top: 60px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; }
+</style>
+<style>
+.pill { display: inline-block; font: 600 11px/1 var(--mono); padding: 4px 7px; border-radius: 4px; white-space: nowrap; }
+.pill.good { background: var(--good-soft); color: var(--good); } .pill.warn { background: var(--warn-soft); color: var(--warn); }
+.pill.new { background: var(--accent-soft); color: var(--accent); }
+td.wrap, th.wrap { white-space: normal; min-width: 200px; }
+.adds { display: grid; gap: 12px; margin-top: 16px; }
+.add { display: grid; grid-template-columns: 34px 1fr; gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+.add .n { font: 800 22px var(--display); color: var(--accent); }
+.add b { font-family: var(--display); }
+.add p { margin: 4px 0 0; font-size: 15px; }
+.add .why { color: var(--muted); }
+.narrow { max-width: 520px; }
+</style>
+
+<div class="wrap">
+  <div class="eyebrow">Speech-to-sign project · proposed solution · 26 Oct 2026</div>
+  <h1 style="margin-top:12px">Real-sign dictionary: the proposed way to get accurate ASL</h1>
+  <p class="lede">Text-to-sign models (SignSparK, MaDiS) do not produce recognisable ASL from text. This page describes the alternative: build every sentence from real recorded ASL signs. It covers how it works, what we took from where, what is already built, what we still need to add, and why.</p>
+
+  <div class="verdicts">
+    <div class="verdict"><span class="chip good">The idea</span><b>Look signs up instead of generating them</b>Translate the sentence into a list of ASL signs, take each sign from a dictionary of real signers, and join them smoothly.</div>
+    <div class="verdict"><span class="chip good">The evidence</span><b>It works in the paper's own setting</b>On Chinese and German sign data, stitched dictionary signs read back as well as real recordings. Text-only generation does not come close.</div>
+    <div class="verdict"><span class="chip warn">The gap</span><b>We need an ASL dictionary</b>A working prototype covers 23 signs. Scaling to ~2,000 needs better hand capture (blocked on one license file).</div>
+  </div>
+
+  <!-- ============================== 1 ============================== -->
+  <h2><span class="part">1</span>How it works</h2>
+  <div class="flow" aria-label="Proposed speech-to-sign pipeline">
+    <div class="step"><b>Speech</b>microphone audio</div><div class="arrow">→</div>
+    <div class="step"><b>Whisper</b>speech → English text</div><div class="arrow">→</div>
+    <div class="step key"><b>LLM glosser</b>English → list of ASL signs in ASL order</div><div class="arrow">→</div>
+    <div class="step key"><b>Sign dictionary</b>each sign = real 3D signing (SMPL-X)</div><div class="arrow">→</div>
+    <div class="step"><b>Smooth joins</b>interpolation between signs</div><div class="arrow">→</div>
+    <div class="step"><b>Robot</b>ver_02 retargeting + safety check → Unitree G1</div>
+  </div>
+  <p>Example: "Where is your school?" → <code>YOUR SCHOOL WHERE</code> → three real signs from the dictionary → one continuous motion → robot.</p>
+  <p>The two highlighted boxes are the new parts. Everything else already exists in the project.</p>
+
+  <figure class="narrow">
+    <img src="img/sentence_school.jpg" alt="A 3D signer performing YOUR, SCHOOL and WHERE in sequence, with front view, side view and close-ups of both hands at seven moments.">
+    <figcaption><b>Already working at small scale:</b> "Where is your school?" built from three motion-capture signs (3D-LEX) and joined smoothly. Rows show the signer moving into YOUR, SCHOOL and WHERE, then back to rest.</figcaption>
+  </figure>
+
+  <!-- ============================== 2 ============================== -->
+  <h2><span class="part">2</span>Why this way</h2>
+  <h3>Text-only models cannot do it</h3>
+  <p>Our replication showed that SignSparK's text-only output contains no recognisable signs, and MaDiS's only a faint trace (see the separate SignSparK and MaDiS report). Both papers' benchmarks reward standing still, so their good numbers do not mean correct signs.</p>
+
+  <h3>Real signs, looked up, are readable</h3>
+  <p>SignSparK's authors released a dictionary pipeline for Chinese (CSL-Daily) and German (PHOENIX) sign language. We ran it and scored the output with their back-translation model, which reads the motion and writes the sentence it thinks was signed (higher is better):</p>
+
+  <div class="chart" role="img" aria-label="Back-translation scores">
+    <h4>Back-translation BLEU-4, PHOENIX (German Sign Language)</h4>
+    <p class="sub">How well a sign-reading model recovers the sentence. 200 test sentences.</p>
+    <div class="row"><span><b>Real recordings</b></span><div class="track"><div class="bar real" style="width:87.4%">17.5</div></div></div>
+    <div class="row"><span>Dictionary signs, stitched</span><div class="track"><div class="bar good" style="width:94.5%">18.9</div></div></div>
+    <div class="row"><span>Standing still</span><div class="track"><div class="bar paper" style="width:4.9%"></div></div></div>
+    <p class="note">Scale 0–20; standing still scores 1.0. CSL-Daily shows the same: stitched 7.7, real 6.2. Caveat: the dictionary comes from the same training data the reading model learned from, so the stitched score is somewhat flattered. The signs themselves are the right ones.</p>
+  </div>
+
+  <h3>Simple interpolation is enough to join signs</h3>
+  <p>We tested whether SignSparK's motion model joins dictionary signs better than plain interpolation (SLERP). It does not: on stitched signs it ties or does slightly worse (PHOENIX: 39.5 vs 40.9 on chrF, p = 0.018), and it needs a 1.4-billion-parameter model per stream. Interpolation is instant and needs no GPU.</p>
+
+  <!-- ============================== 3 ============================== -->
+  <h2><span class="part">3</span>What we picked, and from where</h2>
+  <div class="tablewrap"><table>
+    <tr><th>Part</th><th>Taken from</th><th class="wrap">Why this choice</th><th>Status</th></tr>
+    <tr><td>Speech → text</td><td>faster-whisper (<code>ver-01/stt_test.py</code>)</td><td class="wrap">Accurate, runs locally, already tested on our audio</td><td><span class="pill good">works</span></td></tr>
+    <tr><td>Text → sign list</td><td>An LLM (new); the step mirrors the text-to-gloss stage of SignSparK's dictionary pipeline</td><td class="wrap">No English → ASL gloss model exists. An LLM can follow ASL word order and is told to use only signs the dictionary has</td><td><span class="pill new">to add</span></td></tr>
+    <tr><td>Main sign source</td><td>WLASL videos (2,000 ASL signs, ~10 signers each)</td><td class="wrap">Largest public word-level ASL set; several signers per sign let us pick the most typical one</td><td><span class="pill warn">prototype: 23 signs</span></td></tr>
+    <tr><td>Video → 3D body</td><td>NLF, the body tool SignSparK's authors used</td><td class="wrap">Same tool and SMPL-X format as SignSparK's training data, so everything downstream reads it unchanged</td><td><span class="pill good">works (CPU)</span></td></tr>
+    <tr><td>Video → 3D hands</td><td>WiLoR, the hand tool SignSparK's authors used</td><td class="wrap">NLF's handshapes are approximate; WiLoR is built for hands</td><td><span class="pill warn">needs MANO file</span></td></tr>
+    <tr><td>Cut each video to the sign</td><td>FAST segmenter, released with SignSparK</td><td class="wrap">Removes the rest pose before and after each sign, so joins are clean</td><td><span class="pill warn">needs WiLoR</span></td></tr>
+    <tr><td>Reference signs</td><td>3D-LEX motion capture (<code>ver_03_sr_t2p</code>)</td><td class="wrap">Best handshapes (real mocap). Used to check WLASL fits and as the preferred version where available</td><td><span class="pill good">735 signs converted</span></td></tr>
+    <tr><td>Joining signs</td><td>Eased interpolation (<code>ver_03_sr_t2p</code>, joined mode)</td><td class="wrap">As good as SignSparK for this job (section 2); fixed earlier problems at the joins</td><td><span class="pill good">works</span></td></tr>
+    <tr><td>Motion → robot</td><td><code>ver_02</code> pipeline</td><td class="wrap">Retargeting, collision fix and MuJoCo safety gate are finished and accept this format</td><td><span class="pill good">works</span></td></tr>
+    <tr><td>Quality check</td><td>Our WLASL sign recogniser (this replication)</td><td class="wrap">Measures whether a produced sign is recognisable, which joint-error metrics cannot do</td><td><span class="pill good">works, 124 signs</span></td></tr>
+  </table></div>
+  <p class="muted" style="font-size:15px">What we did <b>not</b> keep: the SignSparK and MaDiS generators. From SignSparK we keep its data recipe (NLF, WiLoR, FAST, SMPL-X format), not its motion model.</p>
+
+  <!-- ============================== 4 ============================== -->
+  <h2><span class="part">4</span>What the prototype already shows</h2>
+  <p>23 signs taken from our robot demo sentences (hello, thank you, name, bathroom, where, school, ...), 3 WLASL videos each, all 69 fetched and converted to SMPL-X with NLF on the CPU.</p>
+
+  <div class="pair">
+    <figure>
+      <img src="img/dict_hello.jpg" alt="Three 3D bodies converted from three different signers, each raising the right hand to the forehead and moving it outward: the sign HELLO.">
+      <figcaption><b>HELLO from three different WLASL signers</b>, converted to 3D. The salute from the forehead comes out right for all three.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/dict_bathroom.jpg" alt="Three 3D bodies from WLASL signers and one motion-capture body, all holding the right hand up near the shoulder: the sign BATHROOM.">
+      <figcaption><b>BATHROOM:</b> three WLASL signers (top) and the 3D-LEX motion capture (bottom). Same location and movement; the mocap hands are cleaner.</figcaption>
+    </figure>
+  </div>
+
+  <div class="tablewrap"><table>
+    <tr><th class="wrap">Check</th><th>Result</th><th>Chance</th></tr>
+    <tr><td class="wrap">A WLASL clip is matched to the right 3D-LEX sign, picking among the 14 prototype signs</td><td class="num win">50% (top-5: 90%)</td><td class="num">7%</td></tr>
+    <tr><td class="wrap">Same, picking among all 735 3D-LEX signs</td><td class="num win">7.1% (top-5: 23.8%)</td><td class="num">0.1%</td></tr>
+    <tr><td class="wrap">Same with the older SignAvatars fits of WLASL, for comparison</td><td class="num">5.3% (top-5: 13.2%)</td><td class="num">0.1%</td></tr>
+    <tr><td class="wrap">A clip's nearest other clip is the same sign by another signer</td><td class="num win">41%</td><td class="num">2.9%</td></tr>
+  </table></div>
+  <p>Our conversion already agrees with motion capture better than the older published fits, before the hand tool is added. It also fills a real gap: 9 of our 23 demo signs (hello, me, good, need, nice, learn, language, thank you, name) are broken files in 3D-LEX, and WLASL has all of them.</p>
+
+  <!-- ============================== 5 ============================== -->
+  <h2><span class="part">5</span>What we want to add, and why</h2>
+  <div class="adds">
+    <div class="add"><div class="n">1</div><div><b>WiLoR hand capture</b><p>Handshapes decide which sign it is (A vs S vs T). NLF gives only loose curls. <span class="why">Needs the free MANO model file (license-gated, you download it) and a 2.57 GB checkpoint.</span></p></div></div>
+    <div class="add"><div class="n">2</div><div><b>FAST trimming of every clip</b><p>WLASL videos start and end with the hands down. Cutting each clip to the sign itself makes sentences faster and the joins cleaner. <span class="why">FAST is the segmenter SignSparK's data was built with; it reads WiLoR output.</span></p></div></div>
+    <div class="add"><div class="n">3</div><div><b>Mirror left-handed signers</b><p>Some WLASL signers sign with the left hand (for example one HELLO clip). Every sign is flipped to right-dominant so a sentence never switches hands.</p></div></div>
+    <div class="add"><div class="n">4</div><div><b>Pick the most typical signer for each sign</b><p>With ~10 versions of each sign, we choose the one closest to all the others. <span class="why">That rejects clips with tracking errors or regional variants, as SignSparK's own dictionary pipeline does.</span></p></div></div>
+    <div class="add"><div class="n">5</div><div><b>LLM glosser limited to the dictionary</b><p>The LLM writes the sentence in ASL order using only signs we have, and rephrases unknown words into known signs (PURCHASE → BUY). <span class="why">No trained English → ASL gloss model exists, and rephrasing is what human interpreters do.</span></p></div></div>
+    <div class="add"><div class="n">6</div><div><b>Fingerspelling fallback</b><p>Names and words with no sign are spelled letter by letter with the 26 handshapes of the ASL alphabet. <span class="why">It keeps any sentence possible; we still need a source for the letter handshapes.</span></p></div></div>
+    <div class="add"><div class="n">7</div><div><b>Quality checks on every sign and sentence</b><p>Run the sign recogniser on each dictionary entry and on stitched sentences, and have a signer review a sample. <span class="why">This catches wrong or badly captured signs before they reach the robot.</span></p></div></div>
+    <div class="add"><div class="n">8</div><div><b>Connect everything end to end</b><p>One command: speech in, robot motion out, through the existing <code>ver_02</code> fast pipeline.</p></div></div>
+    <div class="add"><div class="n">9</div><div><b>Optional: ASL Citizen</b><p>About 2,700 signs from 52 Deaf signers (Microsoft). <span class="why">It adds more signs and more consistent recordings than WLASL. You must accept its research license yourself.</span></p></div></div>
+  </div>
+
+  <!-- ============================== 6 ============================== -->
+  <h2><span class="part">6</span>How many words it will cover</h2>
+  <ul>
+    <li><b>Dictionary size:</b> about 2,000 signs from WLASL (some video links are dead), up to ~3,000+ with ASL Citizen, plus 735 motion-capture signs from 3D-LEX. That covers most everyday conversation.</li>
+    <li><b>Words without a sign:</b> the LLM rephrases them into known signs; names and the rest are fingerspelled.</li>
+    <li><b>Limits:</b>
+      <ul>
+        <li>Signs come out in their dictionary form. ASL grammar that changes the sign itself (direction of verbs like GIVE-to-you, use of space, facial grammar) will be missing. The result is understandable but "textbook" rather than fluent.</li>
+        <li>Very technical words fall back to fingerspelling, which is slow on a robot.</li>
+        <li>The LLM's sign order needs checking by a signer on a sample.</li>
+        <li>WLASL is for research use only.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- ============================== 7 ============================== -->
+  <h2><span class="part">7</span>What is needed to continue</h2>
+  <div class="tablewrap"><table>
+    <tr><th>Item</th><th class="wrap">Why</th><th>Who</th></tr>
+    <tr><td><code>MANO_RIGHT.pkl</code></td><td class="wrap">Free download after registering at mano.is.tue.mpg.de; WiLoR cannot run without it</td><td>You</td></tr>
+    <tr><td>OK to download WiLoR (2.57 GB)</td><td class="wrap">The hand-capture model</td><td>You</td></tr>
+    <tr><td>ASL Citizen license (optional)</td><td class="wrap">Larger, cleaner sign source</td><td>You</td></tr>
+    <tr><td>GPU time</td><td class="wrap">Extraction of ~20,000 WLASL clips is slow on CPU; the GPU is busy with the MaDiS retrain until about 29–30 Oct</td><td>After MaDiS</td></tr>
+  </table></div>
+
+  <footer>
+    Details: <code>SIGNSPARK_PaPer Replication/PAPER_AUDIT.md</code> §6 (dictionary pipeline tests, SLERP vs SignSparK, prototype), <code>dictionary/</code> (WLASL fetch and NLF extraction scripts), <code>ver_03_sr_t2p/</code> (3D-LEX signs and joined sentences), <code>ver_02/</code> (robot pipeline). Back-translation uses the SignSparK authors' released models.
+  </footer>
+</div>
