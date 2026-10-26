@@ -9,4 +9,5 @@ __pycache__/
 *.pt
 .venv*
 smplx/
-dictionaries/   # SignSparK_Retrieval stitch's cached sign dictionaries
+# SignSparK_Retrieval stitch's cached sign dictionaries
+dictionaries/

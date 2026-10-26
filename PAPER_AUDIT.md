@@ -135,3 +135,55 @@ At 1 step the ratio is not comparable: a single Euler step adds the noise sample
 
 Checkpoints: `outputs/train/paper_{body,hand}_100k/checkpoints/*/` (167 GB each; EMA at every 10k steps, plus
 model/opt states).
+
+## 5. Do the generated signs resemble real ASL signs? (sign-level judge, 2026-10-26)
+
+DTW-JPE cannot answer this (it rewards a motionless pose), so a judge that knows what real ASL signs look like was
+built and **calibrated on real signing first**. Code: `judge/` (CPU only; the GPU belonged to the MaDiS run).
+
+**Judge.** A small temporal transformer on joint positions (12 upper-body joints relative to the neck, both hands
+relative to their wrists, scaled by shoulder width).
+- **Training data:** the 1,000 real isolated-sign WLASL clips we have as SMPL-X fits (SignAvatars release; 124
+  signs, "a".."available", 53 signers).
+- **Augmentation:** speed, crop, mirror, rotation.
+- **Calibration, 5 folds split by signer:** on signers never seen in training, **top-1 56.7%, top-5 82.1%**
+  (chance 0.8% / 4.0%). This is the final model: a 3-net ensemble trained on all clips.
+
+**Test** (`judge/spot.py`, `judge/significance.py`):
+- Every How2Sign test sentence is scanned with windows of 6 lengths. Each of the 124 signs gets its best window
+  score, minus the clip's mean over signs, so that longer clips do not score higher.
+- For each word that is a judge class and appears in ≥ 10 test sentences ("a" and "and" excluded; 17 words), the
+  AUC asks whether that word's sign scores higher in sentences containing the word than in those that don't.
+- p-values come from 2,000 permutations of sentences across clips.
+- The words are chosen on the **real** signing only, then the same words are tested on the model.
+- Each model is compared with the real signing in its own data: SignSparK with SignSparK's fits of How2Sign,
+  MaDiS with SOKE's fits (the fits MaDiS was trained and evaluated on).
+
+| Source | 17 words: mean AUC (p) | words the judge finds in real signing: mean AUC (p) |
+|---|---|---|
+| Real How2Sign (SignSparK fits) | 0.571 (0.0005) | 0.655 (0.0005), 7 words |
+| **SignSparK text-only** (official, 50 steps), same sentences | **0.482 (0.90)** | **0.507 (0.36)** |
+| Real How2Sign (SOKE fits) | 0.579 (0.0005) | 0.637 (0.0005), 8 words |
+| **MaDiS** (official test.py), same sentences | **0.517 (0.11)** | **0.569 (0.0015)** |
+
+(0.5 = no trace of the sign; chance 95% band ≈ 0.52-0.54.)
+
+Per word, real → model:
+- SignSparK: add 0.73 → 0.48, again 0.73 → 0.53, already 0.71 → 0.44, ahead 0.64 → 0.45, against 0.66 → 0.55.
+- MaDiS: all 0.55 → 0.60 (p < 0.001), after 0.61 → 0.64 (p = 0.007), already 0.70 → 0.61, add 0.66 → 0.58,
+  again 0.65 → 0.52, ahead 0.63 → 0.45.
+
+Renders (`outputs/judge/words/{all,after,again,add}.png`; rows: real WLASL sign | real How2Sign signer | SignSparK |
+MaDiS, same sentence, the judge's best window): the real How2Sign signer visibly makes the WLASL sign. Neither
+model does at that point.
+
+**Answer:**
+- **SignSparK text-only:** its output contains **no detectable real ASL signs**, at chance on every word set.
+- **MaDiS:** its output contains a **weak but real trace** of a few frequent signs ("all", "after"), about half
+  the effect of real signing on the detectable words. It is not word-by-word correct signing: it is not visible
+  in individual renders, and it adds nothing on most words.
+- **Limits:**
+  - The judge covers only 124 signs (17 testable words).
+  - Even real signing scores only 0.57-0.58 mean AUC, because an English word is often not signed with that
+    WLASL sign.
+  - A bigger WLASL fit set (the ASL dictionary session is extracting more) would make this test stronger.

@@ -2,7 +2,8 @@
 
 Paper Tab. 4 reports B-T BLEU-4 for KF2P and SLERP. BLEU-4 on 200 clips is mostly 0 (ver_03_gf_t2p/REPORT.md
 §2.1), so chrF and BLEU-1 are the main numbers here, with a paired test on sentence-level chrF.
-BT model + wrapper: ../ver_03_gf_t2p/bt_common.py (authors' SignSparK_BT, unmodified; How2Sign weights only).
+BT model + wrapper: ../ver_03_gf_t2p/bt_common.py (authors' SignSparK_BT, unmodified). Weights: How2Sign from
+../ver_03_gf_t2p/checkpoints/bt/How2Sign_nopg, CSL-Daily / PHOENIX-2014T from checkpoints/bt_all (HF LionelLow/SignSparK_BT).
 
     python eval/bt_kf2p.py --dataset How2Sign --runs slerp_How2Sign_kf2p released_How2Sign_kf2p_s10 ...
 """
@@ -29,7 +30,7 @@ def main():
     ap.add_argument("--out", default=None)
     a = ap.parse_args()
     if a.dataset != "How2Sign":
-        sys.exit("only the How2Sign BT model is downloaded")
+        bc.BT_DIR = REPO / "checkpoints" / "bt_all" / a.dataset
 
     clips = ev.read_clips(ev.lmdb_path(REPO / "data" / "lmdb", "test", a.dataset), 200)
     raw = [c["text"].split("> ", 1)[1] for c in clips]  # drop the "<American> " language tag
@@ -56,7 +57,7 @@ def main():
     names = list(feats)
     res["paired_sentence_chrf"] = {f"{x}>{y}": {"frac": float(np.mean(sent[x] > sent[y])),
                                                "p": float(wilcoxon(sent[x], sent[y], alternative="greater").pvalue)}
-                                   for x in names for y in names if x != y and y in ("slerp_" + a.dataset + "_kf2p",)}
+                                   for x in names for y in names if x != y and y.startswith("slerp_")}
     res["refs_examples"] = refs[:5]
     out = Path(a.out or REPO / "outputs" / "eval" / f"bt_kf2p_{a.dataset}.json")
     out.write_text(json.dumps(res, indent=1, ensure_ascii=False))
