@@ -187,3 +187,156 @@ model does at that point.
   - Even real signing scores only 0.57-0.58 mean AUC, because an English word is often not signed with that
     WLASL sign.
   - A bigger WLASL fit set (the ASL dictionary session is extracting more) would make this test stronger.
+
+## 6. Dictionary-based production (SR-T2P): are the signs correct, and does SignSparK beat interpolation? (2026-10-26)
+
+Everything below ran on the CPU (the GPU belongs to the MaDiS queue). Same 200 test clips/sentences as §2 unless
+stated. SignSparK = released checkpoints, 10 ODE steps. Code: `eval/evaluate.py --baseline slerp / --keyframes
+dense`, `eval/rescore_pasteback.py`, `eval/bt_kf2p.py`, `eval/sr_t2p.py`, `dictionary/`.
+
+**SLERP baseline** = per-joint quaternion SLERP of rot6D between the *same* keyframes SignSparK gets, ends held
+constant, no model. (Note: the released body rot6D is not orthonormal, |a1·a2| ≈ 0.05-0.1. Both GT and outputs
+go through the same Gram-Schmidt in scoring, so SLERP is exact at keyframes in rotation space.)
+
+### 6.1 Tab. 4 (KF2P, onset/mid/offset keyframes, 15-26 per clip): SignSparK vs SLERP
+
+DTW body PA / hand PA / body JPE / hand JPE. B-T = SignSparK-BT (authors' models). BLEU-4 on 200 clips is noisy, so
+chrF is the main number (CSL: per character), with a paired Wilcoxon test on sentence chrF.
+
+| | paper SLERP | paper SignSparK | **our SLERP** | **released SignSparK** | SSK better than SLERP, per clip (body / hand JPE) |
+|---|---|---|---|---|---|
+| How2Sign | 4.18 / 0.98 / 4.36 / 3.76 | 2.11 / 0.86 / 1.68 / 2.80 | **1.66 / 0.51 / 1.24 / 2.39** | 1.47 / 0.51 / 1.21 / 2.10 | 43% (n.s.) / 60% (p = 2e-5) |
+| CSL-Daily | 4.39 / 0.85 / 4.05 / 4.35 | 2.50 / 0.63 / 2.02 / 2.71 | **1.69 / 0.32 / 1.32 / 2.08** | 1.20 / 0.31 / 1.01 / 1.65 | 92% / 89% (p < 1e-28) |
+| PHOENIX-2014T | 4.10 / 0.89 / 3.71 / 4.12 | 2.39 / 0.71 / 1.92 / 2.25 | **1.54 / 0.34 / 1.22 / 1.90** | 1.50 / 0.37 / 1.23 / 1.94 | 46% / 46% (n.s.) |
+
+| B-T (BLEU-4 / chrF) | GT | static pose | SLERP | released SignSparK | retrained (§4) | SSK vs SLERP, sentence chrF |
+|---|---|---|---|---|---|---|
+| How2Sign | 3.26 / 19.67 | 0.49 / 13.06 | 2.23 / 18.35 | 2.48 / 18.61 | 2.67 / 18.66 | p = 0.43 |
+| CSL-Daily | 6.23 / 6.95 | 0.00 / 1.90 | 5.80 / 6.68 | 6.23 / 6.95 | 6.29 / 6.96 | p = 0.30 |
+| PHOENIX-2014T | 17.48 / 39.83 | 0.98 / 20.63 | 15.11 / 36.21 | 17.18 / 37.55 | 16.57 / 37.76 | p = 0.012 |
+
+- **The paper's SLERP row is not reproduced.** Our SLERP on the same keyframe policy is **2.5-3.5x better** than
+  the paper's SLERP. It is better than the paper's own SignSparK on every DTW metric and dataset. Paper B-T
+  drops for SLERP are 18 / 29 / 38%; ours are 32 / 7 / 14% (BLEU-4, noisy) and 7 / 4 / 9% (chrF). The paper does
+  not say how its SLERP was built. Whatever it was, it is not interpolation between these keyframes.
+- **SignSparK still beats SLERP, but by much less than claimed:**
+  - CSL-Daily: clearly better on DTW (and the B-T drop is 0 vs 7% BLEU-4).
+  - How2Sign: hands only.
+  - PHOENIX: tie on DTW, small B-T win (chrF 37.6 vs 36.2, p = 0.012).
+  - The released checkpoint was not trained on PHOENIX, according to the SignSparK_Retrieval README.
+
+### 6.2 Stitching regime on real clips (every sign frame kept, only transitions generated; 100 clips)
+
+Interior transitions are short: median 6 frames, p90 11-13. SignSparK does **not** reproduce its keyframes
+exactly: mean drift is 0.014-0.017 in rot6D, which costs more than the in-betweening gains. Raw SSK is *worse* than
+SLERP (PHOENIX body JPE 1.71 vs 0.84). With the keyframes **pasted back** (as SignSparK_Retrieval's `merge` does):
+
+| body PA / hand PA / body JPE / hand JPE | SLERP | SignSparK + paste-back | SSK better (body / hand JPE) |
+|---|---|---|---|
+| How2Sign | 0.90 / 0.32 / 0.68 / 1.38 | 0.84 / 0.26 / 0.68 / 1.27 | 50% / 70% (p = 8e-5) |
+| CSL-Daily | 1.41 / 0.27 / 1.10 / 1.71 | 0.87 / 0.23 / 0.76 / 1.26 | 94% / 89% (p < 1e-14) |
+| PHOENIX-2014T | 1.08 / 0.23 / 0.84 / 1.37 | 0.92 / 0.21 / 0.77 / 1.24 | 72% / 67% (p < 1e-4) |
+
+When the gaps sit between *real, continuous* signing, SignSparK's transitions are closer to the real ones than
+SLERP's, as long as the kept frames are pasted back.
+
+### 6.3 SR-T2P (Tab. 3 retrieval rows), released pipeline, back-translated
+
+Upstream `SignSparK_Retrieval` @ b1ed927, unmodified:
+- `stitch --mode train`, dictionary = isolated signs from the train split;
+- the paper's own T2G gloss predictions (`predictions/<ds>/test_pres.txt`);
+- `--no-embed` (skips the 8 GB OOV embedding model): 26 / 45 OOV glosses dropped (PHOENIX / CSL).
+
+Then our CPU generation (`eval/sr_t2p.py`, 10 steps; upstream `generate` uses `sample.py` at 50 steps on CUDA)
+with the upstream keyframe policies and paste-back. 200 test sentences per dataset, scored against the real
+recording (DTW) and by B-T.
+
+| | DTW body PA / hand PA / body JPE / hand JPE | B-T BLEU-4 / chrF / ROUGE |
+|---|---|---|
+| **PHOENIX-2014T** GT | | 17.48 / 39.83 / 41.47 |
+| paper SR-T2P / README (train, sparse) | 3.68 / 1.18 / 3.51 / 4.82 · 5.52 / 1.08 / 4.87 / 5.14 | (not reported) |
+| stitched (upstream eased placeholders, no model) | 5.30 / 1.06 / 4.58 / 5.53 | **18.89 / 39.41 / 42.81** |
+| SLERP dense / sparse | 5.26 / 1.06 / 4.54 / 5.49 · 5.23 / 1.05 / 4.52 / 5.49 | 18.81 / 39.60 / 42.54 · 18.65 / 39.79 / 43.44 |
+| SignSparK dense / sparse | 5.31 / 1.07 / 4.58 / 5.57 · 5.31 / 1.07 / 4.59 / 5.58 | 18.26 / 38.02 / 42.01 · 17.73 / 38.23 / 41.88 |
+| **CSL-Daily** GT | | 6.23 / 6.95 / 25.98 |
+| paper SR-T2P / README (train, sparse) | 4.87 / 1.37 / 4.89 / 6.56 · 6.77 / 1.22 / 6.09 / 6.24 | (not reported) |
+| stitched | 7.10 / 1.30 / 6.20 / 7.84 | **7.67 / 8.08 / 28.10** |
+| SLERP dense / sparse | 7.05 / 1.29 / 6.15 / 7.78 · 7.02 / 1.28 / 6.13 / 7.79 | 7.62 / 8.05 / 28.08 · 7.78 / 8.17 / 28.45 |
+| SignSparK dense / sparse | 7.10 / 1.31 / 6.20 / 7.87 · 7.09 / 1.30 / 6.20 / 7.88 | 7.43 / 7.84 / 27.70 · 6.93 / 7.41 / 26.55 |
+
+Paired sentence chrF, SignSparK vs SLERP with the same keyframes:
+- PHOENIX: dense 39.5 vs 40.9 (p = 0.018), sparse 40.2 vs 41.5 (p = 0.042).
+- CSL: dense 8.87 vs 9.12 (p = 0.77), sparse 8.51 vs 9.35 (p = 0.035).
+
+- **The SR-T2P DTW row reproduces the README to within about 0.3 on the body, not the paper.** Hands on CSL are
+  1.6 worse than the README; likely causes are 10 vs 50 steps and the dropped OOV glosses. Every variant scores the
+  same within 0.1 DTW, the raw stitch included. **DTW cannot tell the in-betweeners apart here.**
+- **Dictionary retrieval gives sentence-specific, readable signing.** Stitched dictionary signs back-translate
+  **as well as or better than the real recordings** (PHOENIX BLEU-4 18.9 vs 17.5; CSL 7.7 vs 6.2). Compare
+  text-only T2P, which sits at the "someone else's sentence" floor (§3, ver_03_gf_t2p). Caveat: the dictionary
+  is cut from the train split, which the BT model was also trained on. So "above GT" is partly
+  in-distribution bias, but the signs are clearly the right ones.
+- **SignSparK as the in-betweener does not help on stitched isolated signs.** It is equal (CSL dense) or
+  significantly worse (PHOENIX both policies, CSL sparse) than SLERP on B-T. Sparse keyframes (regenerating each
+  sign from 3 frames) lose sign content. Dense keeps it, but adds nothing over interpolation for 7-frame gaps.
+
+### 6.4 ASL dictionary prototype (WLASL video → NLF SMPL-X), compared with 3D-LEX
+
+- **FAST** (`upstream/fast/`, `signlangtk` 0.3.1) needs **WiLoR hand features** (`.h5`, from `sltk extract
+  wilor`). Raw video works only through the WiLoR extractor, which needs the license-gated **`MANO_RIGHT.pkl`**
+  (+ `mano_mean_params.npz`). An optional NLF `.h5` assigns hands to signers in multi-person video.
+- **The authors' LMDB pipeline** (DATA.md §3): segment (FAST) → extract (WiLoR hands, NLF body, and in `sltk
+  smplfx` also TEASER face + RTMPose + optional depth) → **re-optimise** (`smplfx`) → export rot6D. TEASER needs
+  FLAME (gated).
+- **Prototype, done:**
+  - 23 glosses from the robot demo sentences (`ver_03_sr_t2p/sentences.json` + ver_02's six demo sentences),
+    3 WLASL clips each.
+  - 69/69 fetched (`dictionary/wlasl_fetch.py`).
+  - NLF-L SMPL-X fits on the CPU (`dictionary/extract_nlf.py`). The released TorchScript casts to fp16 and pins
+    its detector to `cuda:0`, so `checkpoints/nlf/PATCH.md` makes an fp32 CPU copy; boxes come from
+    YOLOv8x).
+  - Output: SignSparK streams (`data/wlasl/streams/<gloss>/<id>/`).
+- **Not yet:** WiLoR hands, FAST segments and `smplfx` re-optimisation. Waiting on MANO (user) and, for WiLoR, a
+  2.57 GB checkpoint. Hands are NLF's for now.
+- **Comparison** (`dictionary/compare_proto.py`; ver_04's word-level metric unchanged: trim 0.35, DTW,
+  handedness-invariant):
+
+| | WLASL → NLF (ours) | SignAvatars-WLASL fits (ver_04 calibration) |
+|---|---|---|
+| clip → its 3D-LEX sign, 735-way: top-1 / top-5 / median rank | **7.1% / 23.8% / 27** (42 clips, 14 glosses) | 5.3% / 13.2% / 48 (303 clips) |
+| clip → 3D-LEX, closed set of the 14 prototype glosses: top-1 / top-5 | **50% / 90%** (chance 7% / 36%) | — |
+| leave-one-out nearest other WLASL clip has the same gloss (69 clips) | **41%** (chance 2.9%) | — |
+
+Renders: `outputs/dictionary/renders/<gloss>.png` (rows: WLASL video | NLF fit, 3 signers, + 3D-LEX if animated).
+
+What the renders show:
+- Arm trajectories and locations are right: HELLO salutes from the forehead, BATHROOM shakes at the shoulder.
+- NLF handshapes are approximate: the T and A shapes come out as loose curls. WiLoR is needed for the hands.
+- Some WLASL signers are left-dominant (e.g. HELLO 27180), so clips must be mirrored to right-dominant, as
+  `ver_03_sr_t2p/lex3d_convert.MIRROR` does.
+- **9 of the 23 glosses** (hello, me, good, need, nice, learn, language, thank you, name) are frozen in 3D-LEX, and
+  WLASL covers them all.
+
+### 6.5 Recommendation
+
+1. **Stitching: use SLERP / eased interpolation, not SignSparK, to join dictionary signs.**
+   - On stitched isolated signs (the robot's case), SignSparK never beats interpolation on B-T and is
+     significantly worse in 3 of 4 settings. DTW cannot separate them.
+   - It also costs 1.4 B params per stream, and its kept frames drift unless pasted back.
+   - SignSparK + paste-back is better only between real continuous signing (§6.2), which a dictionary
+     pipeline does not have.
+   - Revisit only with a stitched-sign B-T or recognition test on ASL, once an ASL BT/judge covers the vocabulary.
+2. **Dictionary source to scale: WLASL video → (WiLoR + NLF → FAST → `smplfx`) in the LMDB format.**
+   - **Coverage:** WLASL has 2,000 glosses, ~10 videos each from different signers (often dead links); 3D-LEX has 735 animated signs, 203 frozen
+     (including 9 of our 23).
+   - **Agreement:** our NLF-only fits already agree with 3D-LEX better than the SignAvatars fits do.
+   - **Selection:** several signers per gloss allow picking the medoid, as SR-T2P's `mode train` does.
+   - **Keep 3D-LEX as the reference / tie-breaker** for the glosses it animates: mocap hands are better than any
+     video fit.
+   - **Next steps:**
+     - Get MANO, then install WiLoR (2.57 GB, ask first) for the hands.
+     - Add FAST segments, so dictionary entries are trimmed to the sign. That also replaces the wrist-height trim.
+     - Mirror left-dominant clips.
+     - Pick the medoid clip per gloss.
+     - Stitch with SLERP.
+     - Score with the ver_04 word metric and B-T once an ASL-capable BT/judge covers the vocabulary.
