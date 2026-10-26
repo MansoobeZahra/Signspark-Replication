@@ -12,6 +12,9 @@ Controls, same clips, same code path:
   * static     : the dataset's mean pose (from train clips), motionless, at each clip's length;
   * other_text : the same noise but another clip's sentence (t2p only) -> does the text matter?
   * other_seed : the own sentence with a second noise seed  -> how much does the noise matter?
+--keyframes dense: every sign frame (segment > 0) is a keyframe, only the transitions are generated, as in
+SignSparK_Retrieval's `generate --keyframes dense` stitching regime.
+Baseline (--baseline slerp, no model): per-joint SLERP between the same KF2P keyframes, ends held constant.
 
     python eval/evaluate.py --name released_h2s_t2p --dataset How2Sign --mode t2p \
         --hand-ckpt <hand ema.pt> --body-ckpt <body ema.pt> [--n 200] [--scale 2.5] [--steps 10]
@@ -27,7 +30,7 @@ from pathlib import Path
 import lmdb
 import numpy as np
 import torch
-from scipy.spatial.transform import Rotation
+from scipy.spatial.transform import Rotation, Slerp
 from scipy.stats import wilcoxon
 
 REPO = Path(__file__).resolve().parents[1]
@@ -41,7 +44,7 @@ from signspark.pose_datasets_lmdb import PoseDataset_Lmdb, flip_left_hand_featur
 
 T = 304
 FLIP = np.diag([1.0, -1.0, -1.0])
-dev = torch.device("cuda")
+dev = torch.device("cuda")  # generation device; main() may switch it to --device
 PAPER = {  # Tab. 3 (GF-T2P, "SignSparK (no KF)") and Tab. 4 (KF2P): body/hand DTW-PA-JPE, DTW-JPE
     ("How2Sign", "t2p"): {"body_pa_jpe": 7.26, "hand_pa_jpe": 2.72, "body_jpe": 6.30, "hand_jpe": 11.43},
     ("CSL-Daily", "t2p"): {"body_pa_jpe": 7.26, "hand_pa_jpe": 2.00, "body_jpe": 6.27, "hand_jpe": 10.63},
@@ -73,6 +76,7 @@ def read_clips(path, n, seed=0):
                   (b[0], (b[0] + b[1]) // 2, b[1])]
             clips.append({"id": ids[i], "text": f"<{z['language'][0]}> {z['translation'][0]}", "L": L,
                           "kf": sorted({k for k in kf if k < T}),
+                          "kf_dense": np.flatnonzero(seg[:L] > 0).tolist(),
                           "rh": z["right_features"][:L, :90].astype(np.float32),
                           "lh": z["left_features"][:L, :90].astype(np.float32),
                           "body": z["body_features"][:L, 66:126].astype(np.float32)})
@@ -122,6 +126,28 @@ def generate(model, flow, x_gt, texts, lengths, keyframes, seeds, scale, steps):
     s, _ = flow.decode(net, noise=noise, keyframe_mask=obs, x_embed=x_gt, model_kwargs=kw,
                        ode_package="torchdiffeq", ode_stepnum=steps)
     return s.permute(0, 2, 1).float().cpu().numpy()
+
+
+def slerp_fill(x, kf):
+    """x (L, J*6) rot6D GT; kf sorted keyframe frames. Per-joint SLERP between keyframes, constant outside them."""
+    L, J = len(x), x.shape[1] // 6
+    R = r6(x.reshape(L, J, 6))
+    if len(kf) < 2:
+        return np.repeat(R[kf[0] if kf else 0][None, :, :2, :].reshape(1, -1), L, 0).astype(np.float32)
+    t = np.clip(np.arange(L), kf[0], kf[-1])
+    out = np.stack([Slerp(kf, Rotation.from_matrix(R[kf, j]))(t).as_matrix() for j in range(J)], 1)
+    return out[:, :, :2, :].reshape(L, -1).astype(np.float32)
+
+
+def run_slerp(clips):
+    """SLERP baseline in the same layout as run_streams: H[:, 0] = left hand in the right-hand frame."""
+    H = np.zeros((len(clips), 2, T, 90), np.float32)
+    Bd = np.zeros((len(clips), T, 60), np.float32)
+    for k, c in enumerate(clips):
+        H[k, 0] = pad(slerp_fill(flip_left_hand_features(c["lh"]), c["kf"]))
+        H[k, 1] = pad(slerp_fill(c["rh"], c["kf"]))
+        Bd[k] = pad(slerp_fill(c["body"], c["kf"]))
+    return H, Bd
 
 
 def pad(x):
@@ -177,7 +203,7 @@ def score_all(fk, gt_j, clips, H, Bd):
     out = []
     for k, c in enumerate(clips):
         n = c["L"]
-        s = sm.score(fk(*smplx_in(Bd[k, :n], H[k, 1, :n], H[k, 0, :n], True)), gt_j[k])
+        s = sm.score(fk(*smplx_in(Bd[k, :n], H[k, 1, :n], H[k, 0, :n], True)), gt_j[k], device=fk.device)
         s["hand_jpe"] = (s["lhand_jpe"] + s["rhand_jpe"]) / 2
         s["hand_pa_jpe"] = (s["lhand_pa_jpe"] + s["rhand_pa_jpe"]) / 2
         out.append(s)
@@ -202,33 +228,47 @@ def feat_dist(A, B, clips):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--name", required=True)
-    ap.add_argument("--hand-ckpt", required=True)
-    ap.add_argument("--body-ckpt", required=True)
+    ap.add_argument("--hand-ckpt")
+    ap.add_argument("--body-ckpt")
+    ap.add_argument("--baseline", default="none", choices=["none", "slerp"],
+                    help="slerp: no model, interpolate the KF2P keyframes (implies --mode kf2p)")
     ap.add_argument("--dataset", default="How2Sign", choices=["How2Sign", "CSL-Daily", "PHOENIX-2014T"])
     ap.add_argument("--lmdb-root", default=str(REPO / "data" / "lmdb"))
     ap.add_argument("--mode", default="t2p", choices=["t2p", "kf2p"])
+    ap.add_argument("--keyframes", default="fast3", choices=["fast3", "dense"],
+                    help="kf2p keyframes: onset/mid/offset per FAST segment (paper) or every sign frame")
     ap.add_argument("--n", type=int, default=200, help="random test subset (rng 0); -1 = whole test set")
     ap.add_argument("--scale", type=float, default=-1, help="CFG text scale; -1 = no guidance")
     ap.add_argument("--steps", type=int, default=10)
     ap.add_argument("--seed", type=int, default=102)
     ap.add_argument("--batch", type=int, default=32)
+    ap.add_argument("--device", default="cuda", help="generation device (cpu when the GPU is taken)")
     ap.add_argument("--controls", action="store_true", help="also run other_text and other_seed generations")
     a = ap.parse_args()
+    global dev
+    dev = torch.device(a.device)
+    if a.baseline == "slerp":
+        a.mode, a.controls = "kf2p", False
+    elif not (a.hand_ckpt and a.body_ckpt):
+        ap.error("--hand-ckpt and --body-ckpt are required unless --baseline is set")
     out_dir = REPO / "outputs" / "eval"
     out_dir.mkdir(parents=True, exist_ok=True)
     kf2p = a.mode == "kf2p"
 
     t0 = time.perf_counter()
     clips = read_clips(lmdb_path(a.lmdb_root, "test", a.dataset), a.n)
-    models = {"hand": load("hand", a.hand_ckpt), "body": load("body", a.body_ckpt)}
-    fk = sm.SoKeJoints(flat_hand_mean=True)
+    if a.keyframes == "dense":
+        for c in clips:
+            c["kf"] = c["kf_dense"]
+    models = None if a.baseline != "none" else {"hand": load("hand", a.hand_ckpt), "body": load("body", a.body_ckpt)}
+    fk = sm.SoKeJoints(flat_hand_mean=True, device=a.device)
     gt_j = [fk(*smplx_in(c["body"], c["rh"], c["lh"], False)) for c in clips]
     print(f"{len(clips)} clips, models loaded in {time.perf_counter() - t0:.0f}s", flush=True)
 
     N = len(clips)
     own = list(range(N))
     t0 = time.perf_counter()
-    H, Bd = run_streams(models, clips, own, 0, a, kf2p)
+    H, Bd = run_slerp(clips) if a.baseline == "slerp" else run_streams(models, clips, own, 0, a, kf2p)
     gen_s = time.perf_counter() - t0
     rows = score_all(fk, gt_j, clips, H, Bd)
     res = {"args": vars(a), "n": N, "gen_seconds": gen_s, "paper": PAPER.get((a.dataset, a.mode)),
@@ -262,7 +302,8 @@ def main():
     np.savez_compressed(out_dir / f"{a.name}_pred.npz", hand=H, body=Bd, ids=np.array([c["id"] for c in clips]),
                         lengths=np.array([c["L"] for c in clips]))
 
-    print(f"\n{a.name}: {a.dataset} {a.mode}, {N} clips, scale {a.scale}, {a.steps} steps, gen {gen_s:.0f}s")
+    print(f"\n{a.name}: {a.dataset} {a.mode}, {N} clips, " +
+          ("SLERP baseline" if a.baseline != "none" else f"scale {a.scale}, {a.steps} steps") + f", gen {gen_s:.0f}s")
     hdr = f"{'':14}{'paper':>8}{'model':>8}{'static':>8}{'beats static':>14}"
     print(hdr + (f"{'other text':>12}{'own<other':>11}{'p':>8}" if a.controls else ""))
     for k in METRICS:
