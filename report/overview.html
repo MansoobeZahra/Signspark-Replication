@@ -1,0 +1,389 @@
+<title>Speech-to-Sign Project Overview</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one reading column (~760px) with full-width figure bands; summary first, then one part per model. */
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --ink: #1b2330; --muted: #5a6577; --line: #d9dee6;
+  --accent: #1f6f8b; --accent-soft: #e2eff4;
+  --good: #2f7d4f; --good-soft: #e3f2e8; --bad: #b4462c; --bad-soft: #f8e6e0; --warn: #9a6a12; --warn-soft: #f6eedb;
+  --bar-real: #4b5a70; --bar-paper: #9aa6b8;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #12161d; --surface: #1a2029; --ink: #e6eaf0; --muted: #9aa5b5; --line: #2c3442;
+  --accent: #5fb3cf; --accent-soft: #19313b;
+  --good: #6cc392; --good-soft: #1b3326; --bad: #ec8a70; --bad-soft: #3a221c; --warn: #e0b45c; --warn-soft: #362c17;
+  --bar-real: #a9b6c9; --bar-paper: #5d6878; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #12161d; --surface: #1a2029; --ink: #e6eaf0; --muted: #9aa5b5; --line: #2c3442;
+  --accent: #5fb3cf; --accent-soft: #19313b;
+  --good: #6cc392; --good-soft: #1b3326; --bad: #ec8a70; --bad-soft: #3a221c; --warn: #e0b45c; --warn-soft: #362c17;
+  --bar-real: #a9b6c9; --bar-paper: #5d6878; color-scheme: dark }
+
+body { background: var(--bg); color: var(--ink); font: 17px/1.6 var(--body); }
+.wrap { max-width: 800px; margin: 0 auto; padding-block: 40px 80px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--display); line-height: 1.2; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(30px, 6vw, 44px); font-weight: 800; letter-spacing: -0.01em; }
+h2 { font-size: 27px; font-weight: 800; margin-top: 64px; padding-top: 22px; border-top: 2px solid var(--ink); }
+h3 { font-size: 19px; font-weight: 700; margin-top: 34px; }
+p { margin: 12px 0; } .muted { color: var(--muted); }
+.eyebrow { font: 600 12px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.lede { font-size: 19px; color: var(--muted); max-width: 65ch; }
+.part { font: 600 13px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 8px; }
+
+.verdicts { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin-top: 26px; }
+.verdict { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px; min-width: 0; }
+.verdict b { font-family: var(--display); font-size: 17px; display: block; margin-bottom: 4px; }
+.chip { display: inline-block; font: 600 12px/1 var(--mono); padding: 5px 8px; border-radius: 4px; margin-bottom: 10px; }
+.chip.good { background: var(--good-soft); color: var(--good); } .chip.bad { background: var(--bad-soft); color: var(--bad); }
+.chip.warn { background: var(--warn-soft); color: var(--warn); }
+
+.flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 8px; margin: 18px 0 6px; }
+.step { flex: 1 1 130px; min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; font-size: 14px; line-height: 1.4; }
+.step b { display: block; font-family: var(--display); font-size: 14px; margin-bottom: 3px; }
+.step.key { border-color: var(--accent); background: var(--accent-soft); }
+.arrow { align-self: center; color: var(--muted); font: 600 18px var(--mono); }
+.modes { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 14px; }
+
+.chart { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 18px 18px 14px; margin: 18px 0; }
+.chart h4 { margin: 0 0 4px; font: 700 15px/1.3 var(--display); }
+.chart .sub { font-size: 14px; color: var(--muted); margin: 0 0 14px; }
+.row { display: grid; grid-template-columns: minmax(110px, 190px) 1fr; gap: 10px; align-items: center; margin: 7px 0; font-size: 14px; }
+.track { position: relative; height: 22px; background: color-mix(in srgb, var(--line) 45%, transparent); border-radius: 3px; }
+.bar { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 3px; display: flex; align-items: center; justify-content: flex-end; padding-right: 6px;
+  font: 600 12px var(--mono); color: var(--bg); font-variant-numeric: tabular-nums; }
+.bar.paper { background: var(--bar-paper); color: var(--ink); } .bar.real { background: var(--bar-real); }
+.bar.bad { background: var(--bad); } .bar.good { background: var(--good); } .bar.acc { background: var(--accent); }
+.mark { position: absolute; top: -4px; bottom: -4px; border-left: 2px dashed var(--ink); }
+.marklabel { font: 600 11px var(--mono); color: var(--muted); }
+.note { font-size: 13px; color: var(--muted); margin-top: 10px; }
+
+.tablewrap { overflow-x: auto; margin: 16px 0; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; font-variant-numeric: tabular-nums; }
+th, td { padding: 9px 12px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th { font: 600 12px var(--mono); letter-spacing: .04em; color: var(--muted); text-transform: uppercase; }
+tr:last-child td { border-bottom: 0; }
+td.num { font-family: var(--mono); font-size: 13px; }
+td.win { color: var(--good); font-weight: 600; } td.lose { color: var(--bad); font-weight: 600; }
+
+figure { margin: 22px 0; }
+figure img { display: block; width: 100%; border-radius: 6px; border: 1px solid var(--line); background: #1e1e22; }
+figcaption { font-size: 14px; color: var(--muted); margin-top: 8px; }
+figcaption b { color: var(--ink); }
+.pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+
+.problems { display: grid; gap: 12px; margin-top: 16px; }
+.problem { display: grid; grid-template-columns: 34px 1fr; gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+.problem .n { font: 800 22px var(--display); color: var(--bad); }
+.problem b { font-family: var(--display); }
+.problem p { margin: 4px 0 0; font-size: 15px; }
+
+.timeline { display: grid; gap: 0; margin: 16px 0; border-left: 2px solid var(--line); padding-left: 18px; }
+.tl { position: relative; padding: 4px 0 14px; font-size: 15px; }
+.tl::before { content: ""; position: absolute; left: -25px; top: 10px; width: 12px; height: 12px; border-radius: 50%; background: var(--line); border: 2px solid var(--bg); }
+.tl.done::before { background: var(--good); } .tl.now::before { background: var(--warn); }
+.tl b { font-family: var(--display); }
+.callout { background: var(--accent-soft); border-radius: 8px; padding: 16px 18px; margin: 20px 0; }
+.callout b { font-family: var(--display); }
+code { font: 13px var(--mono); background: color-mix(in srgb, var(--line) 50%, transparent); padding: 1px 5px; border-radius: 3px; }
+footer { margin-top: 60px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; }
+</style>
+<style>
+.pill { display: inline-block; font: 600 11px/1 var(--mono); padding: 4px 7px; border-radius: 4px; white-space: nowrap; }
+.pill.good { background: var(--good-soft); color: var(--good); } .pill.warn { background: var(--warn-soft); color: var(--warn); }
+.pill.new { background: var(--accent-soft); color: var(--accent); }
+td.wrap, th.wrap { white-space: normal; min-width: 200px; }
+.adds { display: grid; gap: 12px; margin-top: 16px; }
+.add { display: grid; grid-template-columns: 34px 1fr; gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+.add .n { font: 800 22px var(--display); color: var(--accent); }
+.add b { font-family: var(--display); }
+.add p { margin: 4px 0 0; font-size: 15px; }
+.add .why { color: var(--muted); }
+.narrow { max-width: 520px; }
+</style>
+<style>
+.lane { margin: 18px 0 4px; }
+.lane .lanelabel { font: 600 12px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.lane .flow { margin-top: 8px; }
+.joinnote { font-size: 14px; color: var(--muted); margin: 4px 0 0; }
+.ask { border: 2px solid var(--warn); background: var(--warn-soft); border-radius: 8px; padding: 16px 18px; margin: 22px 0; }
+.ask b { font-family: var(--display); }
+.proscons { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-top: 14px; }
+.proscons .verdict ul { margin: 6px 0 0; padding-left: 18px; font-size: 15px; }
+td.wrap { white-space: normal; }
+</style>
+
+<div class="wrap">
+  <div class="eyebrow">Speech-to-sign project · full overview · 29 Oct 2026</div>
+  <h1 style="margin-top:12px">Speech to ASL: what we tested, what failed, and what comes next</h1>
+  <p class="lede">We replicated two published text-to-sign models, SignSparK and MaDiS, from their papers and code, including full retraining. This page explains how we did it, how our results compare with the published ones, why neither model produces real ASL signs, and the new approach built from real recorded signs. It ends with three decisions and the expo plan.</p>
+
+  <div class="verdicts">
+    <div class="verdict"><span class="chip bad">Text → sign: fails</span><b>SignSparK</b>Replicated and retrained with the paper's settings. From text alone it makes smooth motion with no recognisable ASL signs.</div>
+    <div class="verdict"><span class="chip warn">Text → sign: weak</span><b>MaDiS</b>Retrained from scratch (finished 28 Oct). Same quality as the released model. Only a faint trace of a few common signs.</div>
+    <div class="verdict"><span class="chip good">New: real-sign dictionary</span><b>WLASL + ASL Citizen</b>Each sign is taken from real signers. 27 signs and 13 demo sentences already built.</div>
+  </div>
+
+  <!-- ============================== PART 1 ============================== -->
+  <h2><span class="part">Part 1</span>SignSparK</h2>
+
+  <h3>What it is</h3>
+  <p>SignSparK (ECCV 2026, University of Surrey) generates 3D signing (an SMPL-X body with hands) with a flow-matching model. It is trained on real signing videos converted into 3D poses. During training it is shown three <b>keyframes</b> of every sign (start, middle, end) and learns to fill in the motion between them.</p>
+  <div class="flow" aria-label="SignSparK pipeline">
+    <div class="step"><b>Sign videos</b>How2Sign (ASL), CSL-Daily, PHOENIX</div><div class="arrow">→</div>
+    <div class="step"><b>3D pose extraction</b>WiLoR (hands), NLF (body) → SMPL-X</div><div class="arrow">→</div>
+    <div class="step"><b>FAST segmenter</b>finds where each sign starts and ends</div><div class="arrow">→</div>
+    <div class="step"><b>Keyframes</b>start / middle / end of each sign</div><div class="arrow">→</div>
+    <div class="step key"><b>Flow-matching UNet</b>fills in all frames, guided by the sentence</div>
+  </div>
+  <div class="modes">
+    <div class="verdict"><b>Keyframe mode (KF2P)</b>Sentence <i>plus</i> real keyframes of the signs. The model only fills the gaps.</div>
+    <div class="verdict"><b>Text-only mode (T2P)</b>Sentence only. The model must invent every sign. <b>This is the mode speech-to-sign needs.</b></div>
+  </div>
+
+  <h3>How we replicated it</h3>
+  <ol>
+    <li>Copied the authors' code unchanged into a new git repository and compared it with the paper line by line.</li>
+    <li>Downloaded the released data (How2Sign, CSL-Daily, PHOENIX; BOBSL is not released) and the released model.</li>
+    <li>Scored the released model with the paper's metric (SOKE's DTW joint error) and added a <b>"standing still"</b> baseline: the average pose frozen for the whole clip, with no signing at all.</li>
+    <li><b>Retrained from scratch</b> with the paper's exact settings: 100,000 steps per model, about 24 GPU hours in total.</li>
+    <li>Built an independent <b>ASL sign recogniser</b> to check whether the output contains real signs.</li>
+  </ol>
+
+  <h3>Published results vs ours: keyframe mode works</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Keyframe mode (lower is better)</th><th>Body: paper</th><th>Released</th><th>Our retrain</th><th>Hands: paper</th><th>Released</th><th>Our retrain</th></tr>
+    <tr><td>How2Sign (ASL)</td><td class="num">1.68</td><td class="num win">1.21</td><td class="num win">1.35</td><td class="num">2.80</td><td class="num win">2.10</td><td class="num win">2.21</td></tr>
+    <tr><td>CSL-Daily (Chinese)</td><td class="num">2.02</td><td class="num win">1.01</td><td class="num win">1.15</td><td class="num">2.71</td><td class="num win">1.65</td><td class="num win">1.70</td></tr>
+    <tr><td>PHOENIX (German)</td><td class="num">1.92</td><td class="num win">1.23</td><td class="num win">1.23</td><td class="num">2.25</td><td class="num win">1.94</td><td class="num win">1.82</td></tr>
+  </table></div>
+  <p class="muted" style="font-size:15px">Simple interpolation between the same keyframes scores almost as well (How2Sign body 1.24). The keyframes carry the signs.</p>
+
+  <h3>Published results vs ours: text-only mode fails</h3>
+  <div class="chart" role="img" aria-label="Body joint error, text-only, How2Sign">
+    <h4>Body joint error, text only, How2Sign (lower is better)</h4>
+    <p class="sub">Same 200 test sentences for every row. Dashed line: standing still.</p>
+    <div class="row"><span>Paper claims</span><div class="track"><div class="bar paper" style="width:63%">6.30</div><div class="mark" style="left:70.4%"></div></div></div>
+    <div class="row"><span><b>Standing still</b></span><div class="track"><div class="bar real" style="width:70.4%">7.04</div></div></div>
+    <div class="row"><span>Released model</span><div class="track"><div class="bar bad" style="width:87.1%">8.71</div><div class="mark" style="left:70.4%"></div></div></div>
+    <div class="row"><span>Our retrain</span><div class="track"><div class="bar bad" style="width:87.3%">8.73</div><div class="mark" style="left:70.4%"></div></div></div>
+    <p class="note">Scale 0–10. The paper's 6.30 is reached only with 1 sampling step, which leaves the body near the average pose. More steps give more motion and a worse score.</p>
+  </div>
+
+  <figure>
+    <img src="img/signspark_counting.jpg" alt="Three rows of a 3D signer: real signing counting on the fingers, SignSparK text-only holding the hand near the mouth, SignSparK keyframe mode counting like the real signer.">
+    <figcaption><b>"One and two and three and four."</b> Top: real signer counting on the fingers. Middle: SignSparK text only, the hand wanders and never counts. Bottom: SignSparK with real keyframes counts correctly.</figcaption>
+  </figure>
+
+  <div class="chart" role="img" aria-label="Sign detection score">
+    <h4>Sign recogniser: is the sign for a word in the motion? (0.5 = no trace)</h4>
+    <p class="sub">Recogniser trained on 124 WLASL signs; 57% correct on signers it never saw (chance 0.8%).</p>
+    <div class="row"><span><b>Real signers</b></span><div class="track"><div class="bar real" style="width:82%">0.655</div><div class="mark" style="left:20%"></div></div></div>
+    <div class="row"><span>SignSparK text only</span><div class="track"><div class="bar bad" style="width:22.8%">0.507</div><div class="mark" style="left:20%"></div></div></div>
+    <p class="note">Scale 0.45–0.70. SignSparK: p = 0.36, no signal.</p>
+  </div>
+
+  <h3>What is wrong with SignSparK</h3>
+  <div class="problems">
+    <div class="problem"><div class="n">1</div><div><b>The sentence barely reaches the model.</b><p>The whole sentence becomes one averaged vector. Swapping the sentence changes the output only 0.12–0.22× as much as swapping the random noise.</p></div></div>
+    <div class="problem"><div class="n">2</div><div><b>It rarely practises text-only generation.</b><p>Only about 9% of training has no keyframes. It learns to in-between, not to sign from text.</p></div></div>
+    <div class="problem"><div class="n">3</div><div><b>The benchmark cannot see the failure.</b><p>Standing still scores better than wrong signing, and the paper reports neither a standing-still baseline nor back-translation for text-only.</p></div></div>
+    <div class="problem"><div class="n">4</div><div><b>Paper and code differ.</b><p>Different loss weights, an extra loss, 15× more data for the released model. Our retrain with the paper's settings behaves the same, so these do not explain the failure.</p></div></div>
+  </div>
+
+  <!-- ============================== PART 2 ============================== -->
+  <h2><span class="part">Part 2</span>MaDiS</h2>
+
+  <h3>What it is</h3>
+  <p>MaDiS (2026, the SOKE authors) treats signing like a language. A tokenizer turns 3D signing into discrete "sign tokens" (body, left hand, right hand), and a language model (Qwen3, 0.6B parameters) learns to write those tokens from an English sentence.</p>
+  <div class="flow" aria-label="MaDiS pipeline">
+    <div class="step"><b>English sentence</b></div><div class="arrow">→</div>
+    <div class="step key"><b>Language model</b>Qwen3-0.6B writes sign tokens</div><div class="arrow">→</div>
+    <div class="step"><b>Sign tokens</b>body, left hand, right hand</div><div class="arrow">→</div>
+    <div class="step"><b>Tokenizer decoder</b>tokens → SMPL-X motion</div>
+  </div>
+
+  <h3>How we replicated it</h3>
+  <p>First we tested the released model with the authors' own test code on all 2,308 How2Sign test clips. Then we retrained the whole chain from scratch, in full precision, with the authors' configs on one GPU (gradient accumulation keeps the paper's batch size).</p>
+  <div class="timeline">
+    <div class="tl done"><b>Stage 1: sign tokenizer</b> · 500 epochs, 23–24 Oct</div>
+    <div class="tl done"><b>Re-tokenised all data</b> · replaced the released validation/test tokens, which turned out to be noise</div>
+    <div class="tl done"><b>Stage 2: language-model pretraining</b> · How2Sign + CSL-Daily + PHOENIX, 24–28 Oct (resumed after GPU timeouts)</div>
+    <div class="tl done"><b>Stage 3: fine-tuning on How2Sign</b> · 150 epochs, best at epoch 137, finished 28 Oct</div>
+    <div class="tl done"><b>Evaluation</b> · paper metrics (DTW joint error, SiBLEU, SiCLIP), 28 Oct</div>
+  </div>
+
+  <h3>Published results vs ours</h3>
+  <div class="tablewrap"><table>
+    <tr><th>How2Sign test, 2,308 clips</th><th>Body error ↓</th><th>Hand error ↓</th><th>SiCLIP top-1 ↑</th><th>SiBLEU body ↑</th></tr>
+    <tr><td>Paper</td><td class="num">6.59</td><td class="num">9.45</td><td class="num">–</td><td class="num">4.41</td></tr>
+    <tr><td>Released model, our run</td><td class="num win">6.575</td><td class="num win">9.414</td><td class="num">28.0%</td><td class="num">10.9 *</td></tr>
+    <tr><td><b>Our retrain from scratch</b></td><td class="num">6.911</td><td class="num">9.930</td><td class="num win">33.4%</td><td class="num win">18.9 *</td></tr>
+    <tr><td>Standing still</td><td class="num win">5.66</td><td class="num">9.63</td><td class="num">62.6%</td><td class="num">–</td></tr>
+  </table></div>
+  <p class="muted" style="font-size:15px">* Scored against correctly tokenised test data. The paper's 4.41 was scored against the broken released test tokens; with correct references the released model scores 2.5× higher. Most of our retrain's SiBLEU lead comes from producing outputs of the right length, not from better signs.</p>
+
+  <p><b>What this shows:</b> MaDiS is reproducible. Our retrain is within 5% of the released model on joint error and better on retrieval. But standing still still beats it on body error, and even beats real signing on its own SiCLIP evaluator, so these numbers cannot tell correct signs from wrong ones.</p>
+
+  <div class="chart" role="img" aria-label="Sign detection score, MaDiS">
+    <h4>Sign recogniser score, released MaDiS (0.5 = no trace)</h4>
+    <p class="sub">Compared with real signing in the same 3D format.</p>
+    <div class="row"><span><b>Real signers</b></span><div class="track"><div class="bar real" style="width:74.8%">0.637</div><div class="mark" style="left:20%"></div></div></div>
+    <div class="row"><span>MaDiS</span><div class="track"><div class="bar acc" style="width:47.6%">0.569</div><div class="mark" style="left:20%"></div></div></div>
+    <div class="row"><span>SignSparK</span><div class="track"><div class="bar bad" style="width:22.8%">0.507</div><div class="mark" style="left:20%"></div></div></div>
+    <p class="note">Scale 0.45–0.70. MaDiS: p = 0.0015. A real but weak trace, mostly for frequent words ("all", "after"). Not visible in single sentences. The same check on our retrained model is still to run.</p>
+  </div>
+
+  <figure>
+    <img src="img/madis_counting.jpg" alt="Two rows: the real signer counting at the chin, and MaDiS keeping the hand at the chest with a pointing hand.">
+    <figcaption><b>"One and two and three and four."</b> Top: real signer counts at the chin. Bottom: MaDiS keeps a pointing hand at the chest and stops early. It does not count.</figcaption>
+  </figure>
+
+  <h3>What was achieved with MaDiS</h3>
+  <ul>
+    <li><b>Full from-scratch replication</b> of all three training stages, matching the released model's quality.</li>
+    <li><b>Found and fixed broken released data</b>: the validation and test tokens are noise in all three datasets, which made the paper's SiBLEU 2.5× too low.</li>
+    <li><b>Showed the metrics are unreliable</b>: standing still beats MaDiS on body error and on SiCLIP.</li>
+    <li><b>Clear answer</b>: the wrong signs are a property of the method and data, not of a bad release. Retraining does not fix them. Example: our retrain turns "Nice to meet you." into a single 0.17-second movement.</li>
+  </ul>
+
+  <!-- ============================== PART 3 ============================== -->
+  <h2><span class="part">Part 3</span>Why both models fail</h2>
+  <div class="problems">
+    <div class="problem"><div class="n">1</div><div><b>They must learn every sign from sentence videos with no sign labels.</b><p>How2Sign gives an English sentence and a long video. The model never learns which stretch of motion is which sign, and there are too few examples per word to work it out.</p></div></div>
+    <div class="problem"><div class="n">2</div><div><b>The benchmarks reward staying still.</b><p>Joint error and the official evaluators give better scores to an average pose than to real but slightly misplaced signing, so the published numbers look good while the signs are wrong.</p></div></div>
+    <div class="problem"><div class="n">3</div><div><b>Retraining does not help.</b><p>We retrained both models exactly as published. Each matched its released model. The limit is in the approach.</p></div></div>
+  </div>
+
+  <!-- ============================== PART 4 ============================== -->
+  <h2><span class="part">Part 4</span>The new approach: a dictionary of real signs</h2>
+  <p>Instead of generating signs, look them up. Every sign comes from real signers in isolated-sign datasets, converted to the same 3D SMPL-X format, and signs are joined smoothly into a sentence.</p>
+
+  <h3>The sign sources</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Source</th><th>Size</th><th class="wrap">Strength</th><th class="wrap">Weakness</th></tr>
+    <tr><td><b>ASL Citizen</b> (Microsoft)</td><td class="num">~2,700 signs, 52 Deaf signers</td><td class="wrap">Each sign is tied to one ASL-LEX entry; ~31 signers per sign, so the most typical version can be chosen; variants kept apart (HOW1 / HOW2)</td><td class="wrap">Webcam video, so hands are noisier. Research licence, videos stay private</td></tr>
+    <tr><td><b>WLASL</b></td><td class="num">~2,000 signs, ~10 signers each</td><td class="wrap">Large, covers most everyday words</td><td class="wrap">Noisy labels: one word may mix several variants; some dead links</td></tr>
+    <tr><td><b>3D-LEX</b></td><td class="num">735 usable signs, 1 signer</td><td class="wrap">Motion capture: the cleanest motion, especially the hands</td><td class="wrap">One signer, one variant; 9 of our 23 demo words are broken files</td></tr>
+  </table></div>
+
+  <h3>Pipeline</h3>
+  <div class="lane">
+    <span class="lanelabel">Built once (offline)</span>
+    <div class="flow" aria-label="Dictionary building pipeline">
+      <div class="step"><b>Sign videos</b>ASL Citizen, WLASL</div><div class="arrow">→</div>
+      <div class="step"><b>WiLoR + NLF</b>video → 3D hands and body (SMPL-X)</div><div class="arrow">→</div>
+      <div class="step"><b>FAST trim</b>cut to the sign itself</div><div class="arrow">→</div>
+      <div class="step"><b>Mirror</b>make every signer right-handed</div><div class="arrow">→</div>
+      <div class="step key"><b>Pick the typical signer</b>one clean version per sign</div>
+    </div>
+  </div>
+  <p class="joinnote">↓ fills the sign dictionary (3D-LEX mocap used where it is correct)</p>
+  <div class="lane">
+    <span class="lanelabel">Every sentence (live)</span>
+    <div class="flow" aria-label="Speech to sign runtime pipeline">
+      <div class="step"><b>Speech</b></div><div class="arrow">→</div>
+      <div class="step"><b>Whisper</b>speech → English</div><div class="arrow">→</div>
+      <div class="step key"><b>Glosser (LLM)</b>English → ASL sign list</div><div class="arrow">→</div>
+      <div class="step key"><b>Dictionary lookup</b>one real sign per gloss</div><div class="arrow">→</div>
+      <div class="step"><b>Smooth joins</b>SLERP between signs</div><div class="arrow">→</div>
+      <div class="step"><b>Robot</b>retarget + safety check → Unitree sim</div>
+    </div>
+  </div>
+  <p>Example: "Where is the bathroom?" → <code>BATHROOM WHERE</code> → two real ASL Citizen signs → one motion.</p>
+
+  <figure>
+    <img src="img/aslc_bathroom.jpg" alt="A 3D avatar signing BATHROOM with a raised fist in the top row, then WHERE with a raised index finger in the bottom row, each with a close-up of the right hand.">
+    <figcaption><b>Built from ASL Citizen:</b> "Where is the bathroom?" Top row: BATHROOM (fist shaken at shoulder height). Bottom row: WHERE (index finger), then back to rest. 95 frames at 24 fps.</figcaption>
+  </figure>
+
+  <h3>What already exists</h3>
+  <ul>
+    <li><b>ASL Citizen:</b> 27 demo signs extracted with WiLoR + NLF, ~31 signers each, the most typical version chosen for each, and 13 demo sentences stitched and rendered.</li>
+    <li><b>WLASL prototype:</b> 23 signs, 69 clips. Matched to the right 3D-LEX sign 50% of the time among 14 (chance 7%), better than the older published fits.</li>
+    <li><b>Evidence that looked-up signs are readable:</b> on German sign data, stitched dictionary signs back-translate as well as real recordings (BLEU-4 18.9 vs 17.5).</li>
+    <li><b>Joining:</b> plain SLERP joins signs as well as SignSparK, with no GPU.</li>
+  </ul>
+
+  <h3>Why this can work</h3>
+  <ul>
+    <li><b>Every sign is a real sign</b>, made by real Deaf signers, so it is correct by construction rather than guessed by a model.</li>
+    <li><b>Every sign can be checked</b> one by one before it reaches the robot.</li>
+    <li><b>No large training run.</b> The heavy step is extraction: about 37 GPU hours for all of ASL Citizen.</li>
+    <li><b>Vocabulary grows by adding signs</b>, about 2,700 from ASL Citizen plus WLASL and 3D-LEX, with fingerspelling for names.</li>
+  </ul>
+  <p class="muted" style="font-size:15px">Limits: signs come out in dictionary form, so grammar that changes a sign (verb direction, use of space, facial grammar) is missing. The result is understandable "textbook" ASL, not fluent signing.</p>
+
+  <!-- ============================== PART 5 ============================== -->
+  <h2><span class="part">Part 5</span>Decision 1: should we break sentences into glosses?</h2>
+  <p>A gloss is the name of one sign, written in capitals (<code>BATHROOM</code>, <code>WHERE</code>). Breaking a sentence into glosses means first turning English into a list of signs in ASL order, then looking up each sign.</p>
+  <div class="proscons">
+    <div class="verdict"><span class="chip good">Pros</span>
+      <ul>
+        <li>Every sign in the output is a real, checked sign</li>
+        <li>Works with any dictionary; adding a word means adding one sign</li>
+        <li>Easy to debug: you can see which sign is wrong</li>
+        <li>An LLM can produce ASL word order without training</li>
+        <li>Unknown words can be rephrased (PURCHASE → BUY) or fingerspelled</li>
+      </ul></div>
+    <div class="verdict"><span class="chip bad">Cons</span>
+      <ul>
+        <li>Loses ASL grammar that is not a separate sign: verb direction, use of space, classifiers, facial expressions</li>
+        <li>Glosses have no single standard; one word can map to several sign variants</li>
+        <li>LLM mistakes in word order or sign choice need a signer to check</li>
+        <li>Joins between signs look less natural than real sentence signing</li>
+        <li>Fingerspelling long words is slow on a robot</li>
+      </ul></div>
+  </div>
+  <p>A second meaning is to cut real signed sentences (How2Sign) into single signs for the dictionary. That gives natural transitions, but How2Sign has no gloss labels, so every cut needs automatic segmentation and naming, and both make mistakes. Fewer and noisier examples per word than ASL Citizen's ~31 clean ones.</p>
+  <div class="ask"><b>Question for you:</b> should the system translate sentences into glosses and look up signs? Our recommendation is yes for the first working system and the expo, keeping isolated signs for the vocabulary, and using sentence data later only to make the joins more natural.</div>
+
+  <!-- ============================== PART 6 ============================== -->
+  <h2><span class="part">Part 6</span>Decision 2: how to evaluate the signs</h2>
+  <p>Joint-error metrics failed us twice. These checks look at the signs themselves, from strongest to weakest:</p>
+  <div class="tablewrap"><table>
+    <tr><th>Check</th><th class="wrap">What it proves</th><th>Cost</th></tr>
+    <tr><td><b>1. Sign recogniser on ASL Citizen</b></td><td class="wrap">Trained on some signers, tested on unseen ones. High accuracy proves the 3D extraction keeps each sign's identity. Run on each sentence, it checks every sign is recognised, in order</td><td class="wrap">~37 GPU hours extraction, then a few hours training</td></tr>
+    <tr><td><b>2. Overlay check</b></td><td class="wrap">Projects the 3D body back onto the video and compares with an independent 2D keypoint detector. Catches bad extraction frame by frame</td><td class="wrap">Low</td></tr>
+    <tr><td><b>3. Back-translation</b></td><td class="wrap">SignSparK's ASL model turns motion back into English. Weak (real data scores only ~20 chrF); good for comparing two versions, not proof of correct signs</td><td class="wrap">Low, already set up</td></tr>
+    <tr><td><b>4. Distance to 3D-LEX</b></td><td class="wrap">For signs both have. Weak at naming the exact sign, good for flagging outliers</td><td class="wrap">Low, already set up</td></tr>
+    <tr><td><b>5. Deaf signer review</b></td><td class="wrap">The real gold standard. No metric replaces it</td><td class="wrap">A person's time</td></tr>
+  </table></div>
+  <div class="ask"><b>Question for you:</b> which evaluation should we use? Our recommendation: the sign recogniser (1) as the main automatic check, the overlay check (2) to catch extraction errors, and a Deaf signer review (5) on a sample before anything is shown publicly. Back-translation and 3D-LEX distance stay as secondary checks.</div>
+
+  <!-- ============================== PART 7 ============================== -->
+  <h2><span class="part">Part 7</span>Expo plan</h2>
+  <p>For the expo we will show <b>3D-LEX signs only, the ones that are correct</b>, performed by the Unitree humanoid in simulation.</p>
+  <div class="flow" aria-label="Expo pipeline">
+    <div class="step"><b>3D-LEX mocap</b>only signs that pass every check</div><div class="arrow">→</div>
+    <div class="step"><b>Short sentences</b>built from those signs, joined smoothly</div><div class="arrow">→</div>
+    <div class="step"><b>ver_02 retargeting</b>human motion → robot joints</div><div class="arrow">→</div>
+    <div class="step"><b>Safety check</b>collision fix, MuJoCo gate</div><div class="arrow">→</div>
+    <div class="step key"><b>Unitree simulation</b>shown at the expo</div>
+  </div>
+  <ul>
+    <li><b>Why 3D-LEX:</b> it is motion capture, so the hands are the cleanest we have and every sign is known to be correct.</li>
+    <li><b>What is excluded:</b> broken 3D-LEX files (for example HELLO, THANK YOU, NAME) and any sign that fails a check. Sentences use only words that survive.</li>
+    <li><b>Not shown at the expo:</b> SignSparK, MaDiS and the video-extracted dictionary, until the evaluation above confirms them.</li>
+  </ul>
+
+  <!-- ============================== SUMMARY ============================== -->
+  <h2><span class="part">Summary</span>Where things stand</h2>
+  <div class="tablewrap"><table>
+    <tr><th></th><th>SignSparK</th><th>MaDiS</th><th>Real-sign dictionary</th></tr>
+    <tr><td>Replicated?</td><td class="win">Yes, retrained</td><td class="win">Yes, retrained</td><td>n/a</td></tr>
+    <tr><td>Published numbers reproduced?</td><td>Keyframe: yes, better. Text-only: no</td><td class="win">Yes</td><td>n/a</td></tr>
+    <tr><td>Beats standing still (text only)?</td><td class="lose">No</td><td class="lose">No</td><td>n/a</td></tr>
+    <tr><td>Real signs in the output?</td><td class="lose">None</td><td>Faint trace</td><td class="win">Yes, by construction</td></tr>
+    <tr><td>Status</td><td>Done, not usable</td><td>Done, not usable</td><td>27 signs, 13 sentences</td></tr>
+  </table></div>
+
+  <footer>
+    Details: <code>SIGNSPARK_PaPer Replication/PAPER_AUDIT.md</code> (SignSparK, sign recogniser, dictionary tests), <code>ver_03_madis/README.md</code> (MaDiS replication), <code>dictionary/</code> (WLASL and ASL Citizen extraction), <code>ver_03_sr_t2p/</code> (3D-LEX), <code>ver_02/</code> (robot pipeline). Joint errors are SOKE's DTW-JPE, on 200 test clips for SignSparK and all 2,308 for MaDiS.
+  </footer>
+</div>
