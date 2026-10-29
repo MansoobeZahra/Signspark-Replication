@@ -1,0 +1,20 @@
+left hand: GT true_left {'vs_mirror_right': 0.021025750077909286, 'vs_right': 0.41370933403383076} -> flip False | prediction true_left {'vs_mirror_right': 0.13051461144614013, 'vs_right': 0.30692975330784794} -> flip False
+/home/cvl/Desktop/Speech to sign/ver_02/.venv-signspark/lib/python3.10/site-packages/torch/cuda/__init__.py:1007: UserWarning: Can't initialize NVML
+  raw_cnt = _raw_device_count_nvml()
+  0/2183 clips, 11s
+  200/2183 clips, 307s
+  400/2183 clips, 562s
+  600/2183 clips, 753s
+  800/2183 clips, 932s
+  1000/2183 clips, 1109s
+  1200/2183 clips, 1276s
+  1400/2183 clips, 1438s
+  1600/2183 clips, 1602s
+  1800/2183 clips, 1763s
+  2000/2183 clips, 1908s
+
+kf2p: 2183 clips, 1995s
+  model             body_jpe   1.18  hand_jpe   3.03  body_pa_jpe   1.74  hand_pa_jpe   1.40
+  visualize default body_jpe   1.18  hand_jpe   3.11  body_pa_jpe    nan  hand_pa_jpe    nan
+  static mean pose  body_jpe   6.41  hand_jpe  10.48  body_pa_jpe   8.01  hand_pa_jpe   2.26
+  paper (no KF)     body_jpe   6.30  hand_jpe  11.43  body_pa_jpe   7.26  hand_pa_jpe   2.72

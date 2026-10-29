@@ -1,0 +1,7 @@
+
+ground truth, test split  (2183 clips)
+
+                 BLEU-1   BLEU-2   BLEU-3   BLEU-4     chrF    ROUGE
+ground truth      23.03    10.25     5.68     3.48    19.77    23.57
+
+hypotheses -> outputs/bt/gt_test_full_hyp.txt

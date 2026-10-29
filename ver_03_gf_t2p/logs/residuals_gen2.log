@@ -1,0 +1,14 @@
+neg_mean_s2.5 hand: 27s
+neg_mean_s5 hand: 27s
+emb_res_l2 hand: 27s
+emb_res_l4 hand: 27s
+tau0.7 hand: 26s
+tau1.3 hand: 26s
+chunks3 hand: 52s
+neg_mean_s2.5 body: 13s
+neg_mean_s5 body: 14s
+emb_res_l2 body: 14s
+emb_res_l4 body: 14s
+tau0.7 body: 14s
+tau1.3 body: 14s
+chunks3 body: 28s

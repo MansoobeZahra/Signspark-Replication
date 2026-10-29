@@ -1,0 +1,8 @@
+cfg1 hand: 14s
+cfg5 hand: 27s
+cfg7.5 hand: 27s
+mean_text hand: 27s
+cfg1 body: 7s
+cfg5 body: 13s
+cfg7.5 body: 13s
+mean_text body: 13s

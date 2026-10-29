@@ -1,0 +1,5 @@
+=== 10:44:47 START hand t2p_cfg2.5
+=== 11:11:38 END hand t2p_cfg2.5 exit=0 Written the decoded output to /home/cvl/Desktop/Speech to sign/model_tests/signspark/ckpt/hand/debug0_eulerstepsize50_can1_anchor0_samples_textscale2.5/seed102_clampstep0_t2p_cfg2.5.npy
+=== 11:11:38 START body t2p_cfg2.5
+=== 11:22:34 END body t2p_cfg2.5 exit=0 Written the decoded output to /home/cvl/Desktop/Speech to sign/model_tests/signspark/ckpt/body/debug0_eulerstepsize50_can1_anchor0_samples_textscale2.5/seed102_clampstep0_t2p_cfg2.5.npy
+=== CFG DONE 11:22:34

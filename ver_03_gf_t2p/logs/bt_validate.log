@@ -1,0 +1,13 @@
+gt_full                            n= 2183 B1  23.03 B4  3.48 chrF  19.77 ROUGE  23.57 distinct 2125
+standing_still_full                n= 2183 B1  15.86 B4  0.32 chrF  15.92 ROUGE  15.25 distinct 28
+other_clip_gt_full                 n= 2183 B1  16.48 B4  1.10 chrF  15.08 ROUGE  15.84 distinct 2125
+gt_left_misflipped_full            n= 2183 B1  15.69 B4  0.60 chrF  14.07 ROUGE  17.67 distinct 937
+official_t2p_nocfg_50steps         n= 2183 B1  17.18 B4  0.69 chrF  16.46 ROUGE  16.03 distinct 2124
+official_t2p_cfg2.5_50steps        n= 2176 B1  17.03 B4  0.68 chrF  16.14 ROUGE  16.51 distinct 2092
+official_kf2p                      n= 2183 B1  20.74 B4  2.82 chrF  18.16 ROUGE  21.77 distinct 2108
+gt_sub200                          n=  200 B1  22.61 B4  3.26 chrF  19.67 ROUGE  22.64 distinct 200
+ours_sub200                        n=  200 B1  16.32 B4  0.00 chrF  15.87 ROUGE  15.96 distinct 200
+static_mean_sub200                 n=  200 B1  13.98 B4  0.69 chrF  14.67 ROUGE  14.15 distinct 10
+notag_sub200                       n=  200 B1  16.22 B4  0.61 chrF  15.11 ROUGE  16.75 distinct 195
+len304_sub200                      n=  200 B1  16.82 B4  0.00 chrF  17.30 ROUGE  15.00 distinct 199
+done in 314s

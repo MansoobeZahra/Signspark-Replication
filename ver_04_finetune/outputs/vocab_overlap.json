@@ -1,0 +1,2989 @@
+{
+ "lex_total": 938,
+ "lex_animated": 735,
+ "wlasl_glosses_converted": 124,
+ "wlasl_clips_converted": 1000,
+ "wlasl_clips_per_gloss_median": 8,
+ "lex_anim_and_wlasl": [
+  "accomplish",
+  "act",
+  "actor",
+  "address",
+  "adult",
+  "africa",
+  "afternoon",
+  "again",
+  "against",
+  "age",
+  "agreement",
+  "alcohol",
+  "all",
+  "alone",
+  "always",
+  "amazing",
+  "america",
+  "and",
+  "angel",
+  "angry",
+  "announce",
+  "answer",
+  "appear",
+  "apple",
+  "area",
+  "argue",
+  "arm",
+  "army",
+  "arrive",
+  "art",
+  "asia",
+  "ask",
+  "audience"
+ ],
+ "lex_anim_in_h2s_train": 682,
+ "lex_anim_h2s_count_ge10": 501,
+ "lex_anim_h2s_count_ge100": 157,
+ "wlasl_in_h2s_train": 105,
+ "h2s_train_sentences_vocab": 15165,
+ "per_gloss": {
+  "accomplish": {
+   "wlasl_clips": 7,
+   "h2s_train_count": 5
+  },
+  "act": {
+   "wlasl_clips": 5,
+   "h2s_train_count": 25
+  },
+  "actor": {
+   "wlasl_clips": 7,
+   "h2s_train_count": 5
+  },
+  "address": {
+   "wlasl_clips": 7,
+   "h2s_train_count": 14
+  },
+  "adult": {
+   "wlasl_clips": 9,
+   "h2s_train_count": 20
+  },
+  "africa": {
+   "wlasl_clips": 15,
+   "h2s_train_count": 4
+  },
+  "afternoon": {
+   "wlasl_clips": 9,
+   "h2s_train_count": 10
+  },
+  "again": {
+   "wlasl_clips": 12,
+   "h2s_train_count": 808
+  },
+  "against": {
+   "wlasl_clips": 7,
+   "h2s_train_count": 91
+  },
+  "age": {
+   "wlasl_clips": 10,
+   "h2s_train_count": 39
+  },
+  "agreement": {
+   "wlasl_clips": 5,
+   "h2s_train_count": 5
+  },
+  "alcohol": {
+   "wlasl_clips": 8,
+   "h2s_train_count": 19
+  },
+  "all": {
+   "wlasl_clips": 15,
+   "h2s_train_count": 1817
+  },
+  "alone": {
+   "wlasl_clips": 10,
+   "h2s_train_count": 18
+  },
+  "always": {
+   "wlasl_clips": 12,
+   "h2s_train_count": 460
+  },
+  "amazing": {
+   "wlasl_clips": 5,
+   "h2s_train_count": 20
+  },
+  "america": {
+   "wlasl_clips": 9,
+   "h2s_train_count": 15
+  },
+  "and": {
+   "wlasl_clips": 9,
+   "h2s_train_count": 17867
+  },
+  "angel": {
+   "wlasl_clips": 10,
+   "h2s_train_count": 0
+  },
+  "angry": {
+   "wlasl_clips": 8,
+   "h2s_train_count": 20
+  },
+  "announce": {
+   "wlasl_clips": 8,
+   "h2s_train_count": 0
+  },
+  "answer": {
+   "wlasl_clips": 10,
+   "h2s_train_count": 32
+  },
+  "appear": {
+   "wlasl_clips": 9,
+   "h2s_train_count": 5
+  },
+  "apple": {
+   "wlasl_clips": 11,
+   "h2s_train_count": 15
+  },
+  "area": {
+   "wlasl_clips": 10,
+   "h2s_train_count": 278
+  },
+  "argue": {
+   "wlasl_clips": 13,
+   "h2s_train_count": 3
+  },
+  "arm": {
+   "wlasl_clips": 8,
+   "h2s_train_count": 135
+  },
+  "army": {
+   "wlasl_clips": 8,
+   "h2s_train_count": 4
+  },
+  "arrive": {
+   "wlasl_clips": 12,
+   "h2s_train_count": 2
+  },
+  "art": {
+   "wlasl_clips": 9,
+   "h2s_train_count": 56
+  },
+  "asia": {
+   "wlasl_clips": 8,
+   "h2s_train_count": 0
+  },
+  "ask": {
+   "wlasl_clips": 9,
+   "h2s_train_count": 118
+  },
+  "audience": {
+   "wlasl_clips": 9,
+   "h2s_train_count": 27
+  },
+  "avoid": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 56
+  },
+  "award": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3
+  },
+  "awkward": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "back": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1538
+  },
+  "bacon": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 31
+  },
+  "bad": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 99
+  },
+  "balance": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 80
+  },
+  "ball": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 688
+  },
+  "balloon": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 15
+  },
+  "bar": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 62
+  },
+  "barely": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 7
+  },
+  "baseball": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 39
+  },
+  "basement": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 7
+  },
+  "basketball": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 22
+  },
+  "bath": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 16
+  },
+  "bathroom": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 22
+  },
+  "battery": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 59
+  },
+  "bear": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 13
+  },
+  "bed": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 39
+  },
+  "bedroom": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 17
+  },
+  "beg": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "behavior": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 10
+  },
+  "behind": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 137
+  },
+  "believe": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 45
+  },
+  "benefit": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 18
+  },
+  "best": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 291
+  },
+  "bet": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 22
+  },
+  "better": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 224
+  },
+  "bicycle": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 13
+  },
+  "birth": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 15
+  },
+  "black": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 152
+  },
+  "blame": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "blanket": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 68
+  },
+  "bless": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "blind": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 4
+  },
+  "blood": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 67
+  },
+  "boat": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 97
+  },
+  "body": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 481
+  },
+  "bone": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 54
+  },
+  "book": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 96
+  },
+  "boots": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 24
+  },
+  "bored": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "boss": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 9
+  },
+  "bottle": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 40
+  },
+  "bowl": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 46
+  },
+  "boy": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 11
+  },
+  "bracelet": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 25
+  },
+  "brave": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "break": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 129
+  },
+  "breakdown": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "breathe": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 38
+  },
+  "bridge": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 16
+  },
+  "bright": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 36
+  },
+  "brown": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 69
+  },
+  "brush": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 233
+  },
+  "bus": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3
+  },
+  "busy": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 12
+  },
+  "butterfly": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 18
+  },
+  "bye": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "cabinet": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 10
+  },
+  "california": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 18
+  },
+  "call": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 181
+  },
+  "camera": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 72
+  },
+  "can": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 4193
+  },
+  "canada": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3
+  },
+  "cannot": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 36
+  },
+  "canoe": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 22
+  },
+  "car": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 225
+  },
+  "careful": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 94
+  },
+  "carry": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 50
+  },
+  "cat": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 97
+  },
+  "catholic": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "celebrate": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3
+  },
+  "center": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 191
+  },
+  "cereal": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3
+  },
+  "certificate": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 5
+  },
+  "chair": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 64
+  },
+  "challenge": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 20
+  },
+  "chance": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 38
+  },
+  "change": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 124
+  },
+  "character": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 57
+  },
+  "chase": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 6
+  },
+  "chat": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3
+  },
+  "cheap": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 18
+  },
+  "check": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 138
+  },
+  "cherry": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 8
+  },
+  "children": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 57
+  },
+  "china": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 20
+  },
+  "chocolate": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 60
+  },
+  "choke": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 10
+  },
+  "chop": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 32
+  },
+  "church": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 12
+  },
+  "circle": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 66
+  },
+  "city": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 46
+  },
+  "class": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 27
+  },
+  "clean": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 230
+  },
+  "clear": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 88
+  },
+  "clock": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 36
+  },
+  "clothes": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 36
+  },
+  "clown": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 15
+  },
+  "clueless": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "coffee": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 76
+  },
+  "cold": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 61
+  },
+  "college": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 19
+  },
+  "color": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 404
+  },
+  "comb": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 60
+  },
+  "comfortable": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 151
+  },
+  "complex": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 6
+  },
+  "computer": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 73
+  },
+  "concept": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 12
+  },
+  "conflict": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 12
+  },
+  "congratulations": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "continue": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 80
+  },
+  "cook": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 45
+  },
+  "cooperate": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "copy": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 16
+  },
+  "cough": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "counselor": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "count": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 35
+  },
+  "country": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 25
+  },
+  "cousin": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "cow": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 32
+  },
+  "cracker": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 7
+  },
+  "crazy": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 19
+  },
+  "cry": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "cup": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 121
+  },
+  "curious": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "dance": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 54
+  },
+  "danger": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 9
+  },
+  "date": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 34
+  },
+  "day": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 234
+  },
+  "death": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 5
+  },
+  "deep": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 85
+  },
+  "deer": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "degree": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 55
+  },
+  "delicious": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 19
+  },
+  "demand": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "deny": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 4
+  },
+  "dessert": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "destroy": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 9
+  },
+  "devil": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 6
+  },
+  "diamond": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 14
+  },
+  "die": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 16
+  },
+  "different": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 771
+  },
+  "dinosaur": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 10
+  },
+  "dirty": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 25
+  },
+  "disappear": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 6
+  },
+  "disconnect": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3
+  },
+  "discuss": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 48
+  },
+  "divide": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 6
+  },
+  "divorce": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 7
+  },
+  "doctor": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 30
+  },
+  "document": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "dog": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 227
+  },
+  "door": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 119
+  },
+  "dormitory": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "double": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 100
+  },
+  "doubt": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 4
+  },
+  "down": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1472
+  },
+  "dream": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 9
+  },
+  "drink": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 77
+  },
+  "drive": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 62
+  },
+  "drop": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 156
+  },
+  "drug": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 14
+  },
+  "drunk": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 4
+  },
+  "dry": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 205
+  },
+  "duck": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 11
+  },
+  "dumb": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "dye": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 4
+  },
+  "eagle": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "ear": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 84
+  },
+  "earn": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "earth": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 17
+  },
+  "earthquake": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "easy": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 231
+  },
+  "egypt": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3
+  },
+  "electrician": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 4
+  },
+  "elephant": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3
+  },
+  "email": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 14
+  },
+  "embarrass": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "end": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 325
+  },
+  "enough": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 222
+  },
+  "enter": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 14
+  },
+  "equal": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 20
+  },
+  "eraser": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "escape": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 7
+  },
+  "europe": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 9
+  },
+  "event": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 17
+  },
+  "everyday": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 23
+  },
+  "evidence": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 4
+  },
+  "example": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 151
+  },
+  "expect": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 17
+  },
+  "expensive": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 26
+  },
+  "experiment": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 11
+  },
+  "expert": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 34
+  },
+  "express": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 5
+  },
+  "eyeglasses": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "face": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 234
+  },
+  "fail": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 10
+  },
+  "fake": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 40
+  },
+  "family": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 68
+  },
+  "famous": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "far": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 171
+  },
+  "farm": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 4
+  },
+  "fast": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 92
+  },
+  "fat": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 56
+  },
+  "favorite": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 51
+  },
+  "feel": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 300
+  },
+  "few": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 192
+  },
+  "fight": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 14
+  },
+  "finally": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 24
+  },
+  "finish": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 102
+  },
+  "fire": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 117
+  },
+  "first": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 809
+  },
+  "fish": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 188
+  },
+  "flag": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 16
+  },
+  "floor": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 149
+  },
+  "flower": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 47
+  },
+  "flute": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 12
+  },
+  "fly": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 41
+  },
+  "fool": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 4
+  },
+  "football": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 12
+  },
+  "for": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3386
+  },
+  "forbid": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "forest": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 10
+  },
+  "form": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 92
+  },
+  "former": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "four": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 329
+  },
+  "free": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 93
+  },
+  "freeway": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "freeze": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 14
+  },
+  "french": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 24
+  },
+  "friday": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 6
+  },
+  "friendly": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 10
+  },
+  "front": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 338
+  },
+  "fruit": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 26
+  },
+  "full": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 151
+  },
+  "fun": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 169
+  },
+  "funny": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 24
+  },
+  "furniture": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 13
+  },
+  "future": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 20
+  },
+  "gamble": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "game": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 155
+  },
+  "gas": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 14
+  },
+  "gay": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "generation": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "get": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2412
+  },
+  "ghost": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "gift": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 40
+  },
+  "girl": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 37
+  },
+  "give": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 478
+  },
+  "gloves": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 30
+  },
+  "go": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2047
+  },
+  "goal": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 39
+  },
+  "goat": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "gone": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 54
+  },
+  "gossip": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 15
+  },
+  "government": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "grandfather": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "grandmother": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 7
+  },
+  "grapes": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "grass": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 31
+  },
+  "gray": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 41
+  },
+  "green": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 147
+  },
+  "grow": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 62
+  },
+  "hair": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 729
+  },
+  "haircut": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "hanukkah": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "happen": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 72
+  },
+  "happy": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 44
+  },
+  "hard": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 196
+  },
+  "hat": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 48
+  },
+  "hawaii": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "head": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 351
+  },
+  "headache": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 5
+  },
+  "health": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 34
+  },
+  "heaven": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "heavy": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 81
+  },
+  "helicopter": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "helmet": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3
+  },
+  "help": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 394
+  },
+  "here": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2080
+  },
+  "hide": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 10
+  },
+  "history": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 18
+  },
+  "hockey": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 7
+  },
+  "home": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 185
+  },
+  "homework": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 15
+  },
+  "honest": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 7
+  },
+  "honor": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 5
+  },
+  "hope": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 35
+  },
+  "horse": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 135
+  },
+  "hospital": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "hour": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 38
+  },
+  "house": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 135
+  },
+  "how": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1641
+  },
+  "hungry": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 6
+  },
+  "hunt": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 4
+  },
+  "hurricane": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 6
+  },
+  "hurry": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 4
+  },
+  "hurt": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 37
+  },
+  "husband": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 6
+  },
+  "idea": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 118
+  },
+  "impact": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 13
+  },
+  "impossible": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 12
+  },
+  "improve": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 22
+  },
+  "in": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 7356
+  },
+  "innocent": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "inside": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 285
+  },
+  "insurance": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 5
+  },
+  "internet": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 33
+  },
+  "introduce": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 12
+  },
+  "invite": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 8
+  },
+  "iron": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 125
+  },
+  "italy": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "jacket": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 23
+  },
+  "japan": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 16
+  },
+  "jealous": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "jewish": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "join": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 13
+  },
+  "joke": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3
+  },
+  "journey": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 6
+  },
+  "jump": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 167
+  },
+  "keep": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 792
+  },
+  "key": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 95
+  },
+  "keyboard": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 6
+  },
+  "kid": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 12
+  },
+  "kitchen": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 30
+  },
+  "knife": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 88
+  },
+  "know": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 966
+  },
+  "label": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 8
+  },
+  "lamp": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 28
+  },
+  "laptop": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 30
+  },
+  "late": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 25
+  },
+  "law": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 14
+  },
+  "lawyer": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 4
+  },
+  "lazy": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 19
+  },
+  "lead": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 34
+  },
+  "leak": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 8
+  },
+  "leave": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 142
+  },
+  "lecture": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "less": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 103
+  },
+  "letter": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 26
+  },
+  "lettuce": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 15
+  },
+  "library": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "license": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 13
+  },
+  "lie": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 12
+  },
+  "lion": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "lipstick": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 29
+  },
+  "listen": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 28
+  },
+  "lobster": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3
+  },
+  "lock": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 46
+  },
+  "lonely": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "long": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 326
+  },
+  "loud": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 8
+  },
+  "lousy": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "love": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 116
+  },
+  "lucky": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 13
+  },
+  "mad": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 5
+  },
+  "magazine": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 5
+  },
+  "magic": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 22
+  },
+  "make": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2078
+  },
+  "man": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 79
+  },
+  "many": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 310
+  },
+  "marry": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "math": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 6
+  },
+  "maybe": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 349
+  },
+  "meet": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 39
+  },
+  "meeting": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 8
+  },
+  "member": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 11
+  },
+  "memorize": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "microwave": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 38
+  },
+  "minute": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 59
+  },
+  "mirror": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 73
+  },
+  "misunderstand": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "mock": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "money": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 99
+  },
+  "monkey": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 5
+  },
+  "monster": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "month": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 16
+  },
+  "moon": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 14
+  },
+  "morning": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 29
+  },
+  "mother": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 19
+  },
+  "mountain": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 17
+  },
+  "mouse": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 12
+  },
+  "mouth": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 56
+  },
+  "movie": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 12
+  },
+  "music": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 48
+  },
+  "must": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 39
+  },
+  "my": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1803
+  },
+  "napkin": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 27
+  },
+  "near": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 35
+  },
+  "necklace": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 15
+  },
+  "negative": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 43
+  },
+  "nephew": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "never": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 133
+  },
+  "newspaper": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 10
+  },
+  "next": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 564
+  },
+  "niece": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "night": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 85
+  },
+  "no": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 354
+  },
+  "normal": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 77
+  },
+  "north": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 35
+  },
+  "nose": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 77
+  },
+  "not": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1921
+  },
+  "now": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2273
+  },
+  "nurse": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 27
+  },
+  "obsess": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "ocean": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 10
+  },
+  "off": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 978
+  },
+  "office": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 33
+  },
+  "ok": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 177
+  },
+  "old": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 135
+  },
+  "on": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 4888
+  },
+  "onion": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 29
+  },
+  "open": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 290
+  },
+  "other": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 877
+  },
+  "out": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2218
+  },
+  "outside": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 166
+  },
+  "over": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 945
+  },
+  "overlook": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "owl": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "pack": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 41
+  },
+  "paint": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 188
+  },
+  "paper": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 276
+  },
+  "parade": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "parents": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 13
+  },
+  "pass": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 128
+  },
+  "past": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 28
+  },
+  "pay": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 69
+  },
+  "pepper": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 21
+  },
+  "perfect": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 83
+  },
+  "perspective": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 4
+  },
+  "piano": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "picture": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 87
+  },
+  "pie": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 18
+  },
+  "pig": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "pink": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 38
+  },
+  "pity": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "place": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 372
+  },
+  "plan": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 36
+  },
+  "plant": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 136
+  },
+  "plate": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 60
+  },
+  "play": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 239
+  },
+  "please": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 30
+  },
+  "plenty": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 24
+  },
+  "plus": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 39
+  },
+  "point": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 296
+  },
+  "poop": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "popular": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 32
+  },
+  "postpone": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "potato": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 23
+  },
+  "power": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 93
+  },
+  "precious": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "president": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3
+  },
+  "pretty": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 373
+  },
+  "price": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 26
+  },
+  "pride": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "print": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 87
+  },
+  "process": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 132
+  },
+  "promise": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 5
+  },
+  "promote": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3
+  },
+  "proof": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 8
+  },
+  "pull": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 339
+  },
+  "punish": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "purple": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 16
+  },
+  "push": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 200
+  },
+  "put": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1227
+  },
+  "puzzled": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "queen": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 28
+  },
+  "quiet": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 12
+  },
+  "rabbit": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "race": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 38
+  },
+  "rake": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 7
+  },
+  "read": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 61
+  },
+  "really": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1522
+  },
+  "red": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 125
+  },
+  "refuse": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "relationship": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 25
+  },
+  "relax": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 44
+  },
+  "remember": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 267
+  },
+  "request": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "research": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 26
+  },
+  "responsibility": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 6
+  },
+  "rest": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 105
+  },
+  "result": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 17
+  },
+  "rich": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 13
+  },
+  "road": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 34
+  },
+  "rob": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 7
+  },
+  "rock": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 55
+  },
+  "room": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 187
+  },
+  "rude": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "ruin": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 11
+  },
+  "run": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 188
+  },
+  "sad": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 5
+  },
+  "salad": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 11
+  },
+  "sandwich": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "saturday": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 4
+  },
+  "save": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 57
+  },
+  "scared": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "schedule": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 27
+  },
+  "school": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 76
+  },
+  "science": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 6
+  },
+  "scientist": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "scold": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "scream": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 8
+  },
+  "screwdriver": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 5
+  },
+  "secret": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 7
+  },
+  "secretary": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "see": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1184
+  },
+  "sell": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 57
+  },
+  "send": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 26
+  },
+  "sensitive": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 20
+  },
+  "sentence": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "sequence": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 8
+  },
+  "serious": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 17
+  },
+  "sew": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 33
+  },
+  "shame": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "shape": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 118
+  },
+  "share": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 16
+  },
+  "shave": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "sheep": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "shelf": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 23
+  },
+  "shirt": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 53
+  },
+  "shoes": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 51
+  },
+  "shovel": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "show": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 492
+  },
+  "shower": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 33
+  },
+  "shrimp": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 36
+  },
+  "sign": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 48
+  },
+  "silly": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 4
+  },
+  "since": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 80
+  },
+  "sing": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 7
+  },
+  "sister": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 4
+  },
+  "sit": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 148
+  },
+  "situation": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 53
+  },
+  "ski": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 21
+  },
+  "skill": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 15
+  },
+  "skin": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 337
+  },
+  "sleep": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 48
+  },
+  "slow": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 79
+  },
+  "smart": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 6
+  },
+  "smell": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 38
+  },
+  "smile": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 7
+  },
+  "smooth": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 81
+  },
+  "snake": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 36
+  },
+  "snow": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 45
+  },
+  "soap": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 24
+  },
+  "soccer": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 29
+  },
+  "soda": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 35
+  },
+  "sofa": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "soft": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 84
+  },
+  "some": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1577
+  },
+  "sorry": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 38
+  },
+  "sound": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 49
+  },
+  "soup": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 15
+  },
+  "sour": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 7
+  },
+  "south": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 20
+  },
+  "spider": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 10
+  },
+  "spoon": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 27
+  },
+  "spring": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 49
+  },
+  "square": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 64
+  },
+  "squirrel": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "staff": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 15
+  },
+  "stairs": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 7
+  },
+  "stamp": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 11
+  },
+  "star": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 32
+  },
+  "stare": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "start": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 751
+  },
+  "stay": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 172
+  },
+  "steal": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3
+  },
+  "sting": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 6
+  },
+  "stir": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 22
+  },
+  "straight": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 293
+  },
+  "strange": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 11
+  },
+  "street": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 22
+  },
+  "stress": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 25
+  },
+  "strong": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 77
+  },
+  "struggle": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "stubborn": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 4
+  },
+  "stuck": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 26
+  },
+  "student": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 9
+  },
+  "study": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 17
+  },
+  "subtract": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 5
+  },
+  "summer": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 14
+  },
+  "sunrise": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "sure": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1137
+  },
+  "surgery": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 9
+  },
+  "surprise": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 6
+  },
+  "suspect": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3
+  },
+  "suspend": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "swallow": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "sweep": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 37
+  },
+  "sweet": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 29
+  },
+  "sweetheart": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "swing": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 73
+  },
+  "take": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1315
+  },
+  "tan": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 12
+  },
+  "tea": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 180
+  },
+  "teacher": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 14
+  },
+  "technology": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3
+  },
+  "teeth": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 84
+  },
+  "telephone": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 13
+  },
+  "tell": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 253
+  },
+  "tennis": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 44
+  },
+  "test": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 87
+  },
+  "text": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 7
+  },
+  "that": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 9755
+  },
+  "therapy": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 29
+  },
+  "thermometer": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 10
+  },
+  "thin": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 60
+  },
+  "thirsty": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "three": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 631
+  },
+  "throw": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 209
+  },
+  "thursday": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "ticket": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2
+  },
+  "tiger": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 24
+  },
+  "tired": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 17
+  },
+  "tissue": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 40
+  },
+  "toast": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 4
+  },
+  "tobacco": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 7
+  },
+  "today": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 371
+  },
+  "toilet": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 47
+  },
+  "tomato": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 23
+  },
+  "tomorrow": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 8
+  },
+  "top": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 562
+  },
+  "tornado": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "touch": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 165
+  },
+  "tournament": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3
+  },
+  "towel": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 68
+  },
+  "traffic": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 5
+  },
+  "train": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 29
+  },
+  "transfer": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 35
+  },
+  "translate": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3
+  },
+  "tree": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 41
+  },
+  "trouble": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 30
+  },
+  "truth": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 8
+  },
+  "turn": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 358
+  },
+  "turtle": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 20
+  },
+  "two": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 934
+  },
+  "ugly": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 4
+  },
+  "uncle": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3
+  },
+  "under": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 181
+  },
+  "understand": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 48
+  },
+  "unique": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 12
+  },
+  "university": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 9
+  },
+  "up": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 2828
+  },
+  "use": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1510
+  },
+  "vacation": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "vampire": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "verb": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "violin": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "visualize": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 5
+  },
+  "voice": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 18
+  },
+  "volunteer": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "vomit": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "vote": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "wait": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 34
+  },
+  "waiter": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "walk": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 94
+  },
+  "wall": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 121
+  },
+  "wander": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 0
+  },
+  "want": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3444
+  },
+  "warn": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 5
+  },
+  "watch": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 108
+  },
+  "water": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 556
+  },
+  "way": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1374
+  },
+  "we": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3636
+  },
+  "weak": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 17
+  },
+  "weather": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 15
+  },
+  "wedding": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 33
+  },
+  "wednesday": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3
+  },
+  "weight": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 133
+  },
+  "wet": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 106
+  },
+  "whatever": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 187
+  },
+  "when": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1872
+  },
+  "where": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 873
+  },
+  "which": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 892
+  },
+  "who": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 222
+  },
+  "why": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 193
+  },
+  "wife": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 10
+  },
+  "will": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1673
+  },
+  "win": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 40
+  },
+  "wind": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 84
+  },
+  "window": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 49
+  },
+  "wine": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 69
+  },
+  "with": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3787
+  },
+  "wolf": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 3
+  },
+  "woman": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 18
+  },
+  "wonder": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 15
+  },
+  "wood": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 123
+  },
+  "work": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 545
+  },
+  "worry": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 63
+  },
+  "worse": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 14
+  },
+  "wow": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 9
+  },
+  "write": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 53
+  },
+  "yellow": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 59
+  },
+  "yes": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 74
+  },
+  "yesterday": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 1
+  },
+  "you": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 16171
+  },
+  "young": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 22
+  },
+  "your": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 6980
+  },
+  "zero": {
+   "wlasl_clips": 0,
+   "h2s_train_count": 19
+  }
+ }
+}

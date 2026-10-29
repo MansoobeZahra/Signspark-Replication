@@ -92,6 +92,18 @@ WLASL recogniser: 56.7% top-1 / 82.1% top-5 on held-out signers (124 signs, chan
 SignSparK is a strong keyframe in-betweener, but it cannot turn English into correct ASL signs as published.
 The project therefore moved to a real-sign dictionary (gloss → recorded signs → smooth joins).
 
+## Earlier SignSparK work in this repo (separate folders, not part of the replication above)
+
+These folders were written before this replication, in other project folders, and are copied in unchanged
+(code, docs, logs and small JSON results only). Each keeps its own report; none of them overwrites or is
+overwritten by the replication files.
+
+| Folder | What it is | Main finding |
+|---|---|---|
+| [`model_tests/`](model_tests/) | Official SignSparK evaluation with the authors' `sample.py` on all 2,183 How2Sign test clips (the MaDiS half of this work is in the MaDiS repo). Shared files: `REPORT.md`, `official_metric.py`, `render_side_by_side.py`, `extract_nsa_test.py` | Text-only body DTW-JPE 8.75 vs paper 6.30; standing still scores 6.41. Keyframe mode 1.18 / 3.03. Outputs cannot be matched to their sentence above chance |
+| [`ver_03_gf_t2p/`](ver_03_gf_t2p/) | Text-only (GF-T2P) tests: SOKE's DTW metric ported and verified against SOKE's code (to 1e-15), then two attempts to make text-only SignSparK sign the sentence: best-of-N seed selection by back-translation, and generation-time "residuals" (negative-prompt guidance, per-chunk conditioning, noise temperature). See `REPORT.md` | Neither works. Best-of-N raises back-translation almost as much with the *wrong* sentence; 200-way sentence retrieval stays ≤ 1% (chance 0.5%). `eval/soke_metric.py` in the replication comes from here |
+| [`ver_04_finetune/`](ver_04_finetune/) | Feasibility study (`PLAN.md`), not a training run: cost and blockers of (A) SignSparK + token cross-attention adapters, (B) MaDiS full fine-tune, (C) adding 3D-LEX / WLASL word pairs. GPU benchmarks, word-metric calibration, MaDiS tokenizer round-trip | Nothing was trained, so nothing failed. A was feasible and cheap (33.6 M trainable params, 2.3 min/epoch); MaDiS's tokenizer cannot carry 3D-LEX signs (wrist error 258 mm vs 64 mm on How2Sign). The pilot was dropped when the project moved to a real-sign dictionary |
+
 ## Licence
 
 `upstream/` is the SignSparK authors' code under Apache 2.0 (`upstream/LICENSE`).

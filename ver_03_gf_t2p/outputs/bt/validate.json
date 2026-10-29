@@ -1,0 +1,339 @@
+{
+ "gt_full": {
+  "n": 2183,
+  "bleu1": 23.029027058034337,
+  "bleu2": 10.252715212618268,
+  "bleu3": 5.682067347881944,
+  "bleu4": 3.4778651049853475,
+  "chrf": 19.767333679290992,
+  "rouge": 23.569728142691666,
+  "distinct_hyps": 2125,
+  "examples": [
+   [
+    "the aileron is the control surface in the wing that is controlled by lateral movement right and left of the stick .",
+    "a like i said this is the starting point of new you can get a nice little bend in the knees and then bring your knees in towards the chest"
+   ],
+   [
+    "by moving the stick you cause pressure to increase or decrease the angle of attack on that particular raising or lowering the wing .",
+    "and if you don't get that much tension you can put on one side of it ."
+   ],
+   [
+    "the elevator is the part that moves with the stick forward and back and that adjusts the angle of attack of the airplane in the air .",
+    "so the next step in trimming the foot is going to be trimming the base and i'm going to trim this out a little bit further ."
+   ],
+   [
+    "therefore it's either going uphill downhill or flat and that adjusts the air speed that we talked about earlier .",
+    "and then we will take the needle tool which is going to hold it for about 30 minutes ."
+   ]
+  ]
+ },
+ "standing_still_full": {
+  "n": 2183,
+  "bleu1": 15.857564527753441,
+  "bleu2": 4.079030670213984,
+  "bleu3": 1.2204924972808235,
+  "bleu4": 0.31922066741775884,
+  "chrf": 15.921702220308308,
+  "rouge": 15.251464496437755,
+  "distinct_hyps": 28,
+  "examples": [
+   [
+    "the aileron is the control surface in the wing that is controlled by lateral movement right and left of the stick .",
+    "this is an area of the series and we'll talk about the process of how to put on the next tire ."
+   ],
+   [
+    "by moving the stick you cause pressure to increase or decrease the angle of attack on that particular raising or lowering the wing .",
+    "this is a small drill that you would use when you catch the ball and at the same time it goes to the corner ."
+   ],
+   [
+    "the elevator is the part that moves with the stick forward and back and that adjusts the angle of attack of the airplane in the air .",
+    "this is an area of the series and we'll talk about the process of how to put on the next tire ."
+   ],
+   [
+    "therefore it's either going uphill downhill or flat and that adjusts the air speed that we talked about earlier .",
+    "this is a small drill that you would use when you catch the ball and at the same time it goes in the corner it would still be a pocket"
+   ]
+  ]
+ },
+ "other_clip_gt_full": {
+  "n": 2183,
+  "bleu1": 16.4781105847959,
+  "bleu2": 5.136848707781514,
+  "bleu3": 2.178229534672859,
+  "bleu4": 1.096878821827365,
+  "chrf": 15.077723159798975,
+  "rouge": 15.84203558782674,
+  "distinct_hyps": 2125,
+  "examples": [
+   [
+    "the aileron is the control surface in the wing that is controlled by lateral movement right and left of the stick .",
+    "and if you don't get that much tension you can put on one side of it ."
+   ],
+   [
+    "by moving the stick you cause pressure to increase or decrease the angle of attack on that particular raising or lowering the wing .",
+    "so the next step in trimming the foot is going to be trimming the base and i'm going to trim this out a little bit further ."
+   ],
+   [
+    "the elevator is the part that moves with the stick forward and back and that adjusts the angle of attack of the airplane in the air .",
+    "and then we will take the needle tool which is going to hold it for about 30 minutes ."
+   ],
+   [
+    "therefore it's either going uphill downhill or flat and that adjusts the air speed that we talked about earlier .",
+    "now we're going to talk about the grapevine a little bit faster ."
+   ]
+  ]
+ },
+ "gt_left_misflipped_full": {
+  "n": 2183,
+  "bleu1": 15.689213402337781,
+  "bleu2": 4.239153801439582,
+  "bleu3": 1.647599182688344,
+  "bleu4": 0.5968795638475046,
+  "chrf": 14.068090260162744,
+  "rouge": 17.666310103213153,
+  "distinct_hyps": 937,
+  "examples": [
+   [
+    "the aileron is the control surface in the wing that is controlled by lateral movement right and left of the stick .",
+    "the middle ear is a mechanical systemthe inner ear is the part of the assessment we're evaluating when we're doing the pure tone testing or the part of the assessment"
+   ],
+   [
+    "by moving the stick you cause pressure to increase or decrease the angle of attack on that particular raising or lowering the wing .",
+    "you want to hold the saw in between the middle of the door ."
+   ],
+   [
+    "the elevator is the part that moves with the stick forward and back and that adjusts the angle of attack of the airplane in the air .",
+    "you want to hold the door in place and hold the door in place and that is where the screws will hold the door in place ."
+   ],
+   [
+    "therefore it's either going uphill downhill or flat and that adjusts the air speed that we talked about earlier .",
+    "you want to hold the saw in between the middle of the paper ."
+   ]
+  ]
+ },
+ "official_t2p_nocfg_50steps": {
+  "n": 2183,
+  "bleu1": 17.176896324548252,
+  "bleu2": 4.8512291143151005,
+  "bleu3": 1.7739100794173832,
+  "bleu4": 0.6871570428343194,
+  "chrf": 16.4608860816298,
+  "rouge": 16.02688633097948,
+  "distinct_hyps": 2124,
+  "examples": [
+   [
+    "the aileron is the control surface in the wing that is controlled by lateral movement right and left of the stick .",
+    "the main thing is once they get a little bit familiar with the top of the base they are going to be able to see any of the base they"
+   ],
+   [
+    "by moving the stick you cause pressure to increase or decrease the angle of attack on that particular raising or lowering the wing .",
+    "now this is a pull loop and this is not like so ."
+   ],
+   [
+    "the elevator is the part that moves with the stick forward and back and that adjusts the angle of attack of the airplane in the air .",
+    "secondly because it is metal while it's made to use in your microwave it ."
+   ],
+   [
+    "therefore it's either going uphill downhill or flat and that adjusts the air speed that we talked about earlier .",
+    "and then i'm going to go back and i'm going to come back here and i'm going to cut this off the top and my original ."
+   ]
+  ]
+ },
+ "official_t2p_cfg2.5_50steps": {
+  "n": 2176,
+  "bleu1": 17.025549597330933,
+  "bleu2": 4.718545650986708,
+  "bleu3": 1.6169626328237174,
+  "bleu4": 0.6838730925082015,
+  "chrf": 16.136061703772288,
+  "rouge": 16.505469427968357,
+  "distinct_hyps": 2092,
+  "examples": [
+   [
+    "the aileron is the control surface in the wing that is controlled by lateral movement right and left of the stick .",
+    "the key to this side is that you have your racket back you're going to turn that out for a little bit ."
+   ],
+   [
+    "by moving the stick you cause pressure to increase or decrease the angle of attack on that particular raising or lowering the wing .",
+    "if you're going to hit the ball with your right hand you're going to take your left hand and you're going to push that forward ."
+   ],
+   [
+    "the elevator is the part that moves with the stick forward and back and that adjusts the angle of attack of the airplane in the air .",
+    "secondly it's going to be metal while it's used to use in your microwave it ."
+   ],
+   [
+    "therefore it's either going uphill downhill or flat and that adjusts the air speed that we talked about earlier .",
+    "and then i want to follow that guide and then take my second piece of tape off so that i have my tape measure up over to the other side"
+   ]
+  ]
+ },
+ "official_kf2p": {
+  "n": 2183,
+  "bleu1": 20.742555770875715,
+  "bleu2": 8.521535110895814,
+  "bleu3": 4.640859617216941,
+  "bleu4": 2.8171284284755975,
+  "chrf": 18.159780270223994,
+  "rouge": 21.768315866459144,
+  "distinct_hyps": 2108,
+  "examples": [
+   [
+    "the aileron is the control surface in the wing that is controlled by lateral movement right and left of the stick .",
+    "the bird is just happy that you're calling back ."
+   ],
+   [
+    "by moving the stick you cause pressure to increase or decrease the angle of attack on that particular raising or lowering the wing .",
+    "so what you want to do is just take it through and just rinse it off and get it to the side ."
+   ],
+   [
+    "the elevator is the part that moves with the stick forward and back and that adjusts the angle of attack of the airplane in the air .",
+    "now when i hit the ball i want to hit a ball with the heel of the ball so don't hit the ball with the heel of the hand in"
+   ],
+   [
+    "therefore it's either going uphill downhill or flat and that adjusts the air speed that we talked about earlier .",
+    "you just hold the door in place and it just helps kind of rolling it out ."
+   ]
+  ]
+ },
+ "gt_sub200": {
+  "n": 200,
+  "bleu1": 22.605225388077763,
+  "bleu2": 9.941427231056457,
+  "bleu3": 5.516903393294717,
+  "bleu4": 3.261902271349597,
+  "chrf": 19.673163306954937,
+  "rouge": 22.6353973288348,
+  "distinct_hyps": 200,
+  "examples": [
+   [
+    "that's moved by the feet and that's what actually steers the airplane right and left when you start and stop a turn .",
+    "now i'm going to take the old foam brush and i'm going to put a little bit of wax in there and then i'm going to trim it off to"
+   ],
+   [
+    "and i'm actually going to lock my wrists when i pike .",
+    "you want to take it wiggle it as you pull it up and get that whole root and don't just throw the weeds on your lawn ."
+   ],
+   [
+    "i'm having fun .",
+    "there are lots of ways to develop a character ."
+   ],
+   [
+    "so we're going to slide the front foot we're going to drag the back foot .",
+    "as you can see our feet are slightly bent slightly and then we're going to extend that leg out ."
+   ]
+  ]
+ },
+ "ours_sub200": {
+  "n": 200,
+  "bleu1": 16.324582617918264,
+  "bleu2": 4.660022883898633,
+  "bleu3": 1.6076172546853487,
+  "bleu4": 0.0,
+  "chrf": 15.87482071480159,
+  "rouge": 15.964759720845038,
+  "distinct_hyps": 200,
+  "examples": [
+   [
+    "that's moved by the feet and that's what actually steers the airplane right and left when you start and stop a turn .",
+    "i'm going to have her tilt her head gently forward and gently forward ."
+   ],
+   [
+    "and i'm actually going to lock my wrists when i pike .",
+    "you can make it a little bit easier and a little more challenging and a little bit of the hands but this is your arms are not going to be"
+   ],
+   [
+    "i'm having fun .",
+    "this is an example of an eye area ."
+   ],
+   [
+    "so we're going to slide the front foot we're going to drag the back foot .",
+    "and then bend your knees and take our feet off the ground like this that ."
+   ]
+  ]
+ },
+ "static_mean_sub200": {
+  "n": 200,
+  "bleu1": 13.984957425558708,
+  "bleu2": 3.5813615612002656,
+  "bleu3": 1.5669034785459495,
+  "bleu4": 0.6892277569300644,
+  "chrf": 14.668093095473283,
+  "rouge": 14.145233020855091,
+  "distinct_hyps": 10,
+  "examples": [
+   [
+    "that's moved by the feet and that's what actually steers the airplane right and left when you start and stop a turn .",
+    "go ahead and grab your glass and push it up and push it down ."
+   ],
+   [
+    "and i'm actually going to lock my wrists when i pike .",
+    "go ahead and grab your glass and push it up and push it down ."
+   ],
+   [
+    "i'm having fun .",
+    "let's go ahead and get started ."
+   ],
+   [
+    "so we're going to slide the front foot we're going to drag the back foot .",
+    "go ahead and grab your glass and push it up and push it down ."
+   ]
+  ]
+ },
+ "notag_sub200": {
+  "n": 200,
+  "bleu1": 16.224314409262973,
+  "bleu2": 4.656137669362335,
+  "bleu3": 1.6747668844677048,
+  "bleu4": 0.6088701216457962,
+  "chrf": 15.113294503832675,
+  "rouge": 16.752296659982807,
+  "distinct_hyps": 195,
+  "examples": [
+   [
+    "that's moved by the feet and that's what actually steers the airplane right and left when you start and stop a turn .",
+    "we are going to take our right foot step it with our left foot and cross it right in front of our left foot ."
+   ],
+   [
+    "and i'm actually going to lock my wrists when i pike .",
+    "you want to make sure that you are using the baking soda that works great with you ."
+   ],
+   [
+    "i'm having fun .",
+    "and we're going to do that right there ."
+   ],
+   [
+    "so we're going to slide the front foot we're going to drag the back foot .",
+    "step and lift squat pendulum and down ."
+   ]
+  ]
+ },
+ "len304_sub200": {
+  "n": 200,
+  "bleu1": 16.816749212066636,
+  "bleu2": 5.076242607434323,
+  "bleu3": 1.72131150936406,
+  "bleu4": 0.0,
+  "chrf": 17.30244420545491,
+  "rouge": 14.998580656456776,
+  "distinct_hyps": 199,
+  "examples": [
+   [
+    "that's moved by the feet and that's what actually steers the airplane right and left when you start and stop a turn .",
+    "i'm going to put a little bit on the base of the lid color and then this is going to hold it into the base of the lid ."
+   ],
+   [
+    "and i'm actually going to lock my wrists when i pike .",
+    "so grab a cookie cap and you just pull them all over the time ."
+   ],
+   [
+    "i'm having fun .",
+    "the natural thing that you would like to do is get the cell phone at the same time ."
+   ],
+   [
+    "so we're going to slide the front foot we're going to drag the back foot .",
+    "now depending upon the manufacturer and the features you've added to it that might or might not affect how you care for it ."
+   ]
+  ]
+ },
+ "seconds": 313.8621827730094
+}

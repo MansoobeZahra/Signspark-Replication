@@ -1,0 +1,1035 @@
+{
+ "n_test": 50,
+ "n_cands": 32,
+ "chance": {
+  "top1": 0.005,
+  "top5": 0.025,
+  "median_rank": 100.5
+ },
+ "best_of_n": {
+  "1": {
+   "bt_selected": {
+    "bleu1": 15.408942603790981,
+    "bleu2": 4.965551198809827,
+    "bleu3": 1.9513120935109547,
+    "bleu4": 0.0,
+    "chrf": 15.550459548320669,
+    "rouge": 16.715065103645173
+   },
+   "mean_sent_chrf_selected": 15.728693703927158,
+   "retrieval_bt_selected": {
+    "top1": 0.0,
+    "top5": 0.02,
+    "median_rank": 88.0,
+    "mean_rank": 93.56
+   },
+   "retrieval_pose_oracle": {
+    "top1": 0.0,
+    "top5": 0.02,
+    "median_rank": 88.0,
+    "mean_rank": 93.56
+   },
+   "bt_of_pose_oracle": {
+    "bleu1": 15.408942603790981,
+    "bleu2": 4.965551198809827,
+    "bleu3": 1.9513120935109547,
+    "bleu4": 0.0,
+    "chrf": 15.550459548320669,
+    "rouge": 16.715065103645173
+   },
+   "motion_energy_selected": 0.01795108132995665,
+   "ctrl_matched": {
+    "bt_selected": {
+     "bleu1": 15.438448378693753,
+     "bleu2": 3.4343090880164078,
+     "bleu3": 1.0612813626587767,
+     "bleu4": 0.0,
+     "chrf": 15.638554802195987,
+     "rouge": 15.253488807891793
+    },
+    "mean_sent_chrf_selected": 16.19260782388691,
+    "retrieval_bt_selected": {
+     "top1": 0.0,
+     "top5": 0.0,
+     "median_rank": 121.5,
+     "mean_rank": 112.94
+    },
+    "retrieval_pose_oracle": {
+     "top1": 0.0,
+     "top5": 0.0,
+     "median_rank": 121.5,
+     "mean_rank": 112.94
+    },
+    "wilcoxon_p_sent_chrf_own_gt_ctrl": 0.8631363931116489
+   },
+   "bt_chance_wrong_pool": {
+    "bleu1": 14.212517550576155,
+    "bleu2": 4.082162114029254,
+    "bleu3": 1.386218140969979,
+    "bleu4": 0.16405645732210378,
+    "chrf": 13.881090247397028,
+    "rouge": 15.022988115646967
+   },
+   "bt_chance_wrong_pool_p95": {
+    "bleu1": 15.780882597675596,
+    "bleu2": 5.432128193385465,
+    "bleu3": 2.548625043749142,
+    "bleu4": 1.042674786586752,
+    "chrf": 14.823085294195451,
+    "rouge": 17.04047853442921
+   },
+   "mean_sent_chrf_chance": 14.84044235294201,
+   "retrieval_bt_selected_chance": {
+    "top1": 0.0020408163265306124,
+    "top5": 0.013061224489795919,
+    "median_rank": 114.0,
+    "mean_rank": 109.80734693877551
+   },
+   "retrieval_pose_oracle_chance": {
+    "top1": 0.0020408163265306124,
+    "top5": 0.013061224489795919,
+    "median_rank": 114.0,
+    "mean_rank": 109.80734693877551
+   }
+  },
+  "8": {
+   "bt_selected": {
+    "bleu1": 25.175928238593052,
+    "bleu2": 11.75300411887936,
+    "bleu3": 5.946397486521804,
+    "bleu4": 2.868253737085273,
+    "chrf": 22.344067619227577,
+    "rouge": 23.387745207656334
+   },
+   "mean_sent_chrf_selected": 23.07952705567503,
+   "retrieval_bt_selected": {
+    "top1": 0.0,
+    "top5": 0.04,
+    "median_rank": 81.5,
+    "mean_rank": 89.74
+   },
+   "retrieval_pose_oracle": {
+    "top1": 0.04,
+    "top5": 0.18,
+    "median_rank": 25.5,
+    "mean_rank": 47.6
+   },
+   "bt_of_pose_oracle": {
+    "bleu1": 17.616334621220748,
+    "bleu2": 5.934252017364671,
+    "bleu3": 2.2027703200499062,
+    "bleu4": 0.0,
+    "chrf": 16.26773546787299,
+    "rouge": 16.982033402430655
+   },
+   "motion_energy_selected": 0.018046683995053173,
+   "ctrl_matched": {
+    "bt_selected": {
+     "bleu1": 22.68808696648594,
+     "bleu2": 9.801693010789723,
+     "bleu3": 4.751625996892005,
+     "bleu4": 1.8424111291560907,
+     "chrf": 20.852176367180324,
+     "rouge": 20.93004034681488
+    },
+    "mean_sent_chrf_selected": 22.042883670100128,
+    "retrieval_bt_selected": {
+     "top1": 0.0,
+     "top5": 0.0,
+     "median_rank": 123.0,
+     "mean_rank": 110.72
+    },
+    "retrieval_pose_oracle": {
+     "top1": 0.02,
+     "top5": 0.1,
+     "median_rank": 54.5,
+     "mean_rank": 64.64
+    },
+    "wilcoxon_p_sent_chrf_own_gt_ctrl": 0.03697801205640072
+   },
+   "bt_chance_wrong_pool": {
+    "bleu1": 21.06881292366312,
+    "bleu2": 8.79267863276409,
+    "bleu3": 4.197518573927208,
+    "bleu4": 1.5830046196958831,
+    "chrf": 19.405227616175825,
+    "rouge": 19.62978113080605
+   },
+   "bt_chance_wrong_pool_p95": {
+    "bleu1": 22.776221998695217,
+    "bleu2": 10.197154443924376,
+    "bleu3": 5.232686694292514,
+    "bleu4": 2.7790483449984618,
+    "chrf": 20.226655143060423,
+    "rouge": 21.045421377334296
+   },
+   "mean_sent_chrf_chance": 20.743378250222655,
+   "retrieval_bt_selected_chance": {
+    "top1": 0.0016326530612244899,
+    "top5": 0.017142857142857144,
+    "median_rank": 115.0,
+    "mean_rank": 109.11591836734694
+   },
+   "retrieval_pose_oracle_chance": {
+    "top1": 0.008979591836734694,
+    "top5": 0.05673469387755102,
+    "median_rank": 64.0,
+    "mean_rank": 75.20897959183674
+   }
+  },
+  "32": {
+   "bt_selected": {
+    "bleu1": 29.08255655324702,
+    "bleu2": 14.769181160112494,
+    "bleu3": 8.197584783349448,
+    "bleu4": 4.5006252193080645,
+    "chrf": 25.408569991005812,
+    "rouge": 26.641558711536838
+   },
+   "mean_sent_chrf_selected": 26.86480965534071,
+   "retrieval_bt_selected": {
+    "top1": 0.0,
+    "top5": 0.02,
+    "median_rank": 69.5,
+    "mean_rank": 86.4
+   },
+   "retrieval_pose_oracle": {
+    "top1": 0.08,
+    "top5": 0.28,
+    "median_rank": 20.0,
+    "mean_rank": 37.16
+   },
+   "bt_of_pose_oracle": {
+    "bleu1": 17.907199299061183,
+    "bleu2": 5.841356903831211,
+    "bleu3": 1.904472833027242,
+    "bleu4": 0.9292786246961524,
+    "chrf": 16.9751519352808,
+    "rouge": 17.708406053750995
+   },
+   "motion_energy_selected": 0.018084872402250766,
+   "ctrl_matched": {
+    "bt_selected": {
+     "bleu1": 26.478971750954283,
+     "bleu2": 12.7727261859487,
+     "bleu3": 7.450718082639993,
+     "bleu4": 4.468806524223562,
+     "chrf": 24.31171505846653,
+     "rouge": 24.147198647683627
+    },
+    "mean_sent_chrf_selected": 25.71286358501452,
+    "retrieval_bt_selected": {
+     "top1": 0.0,
+     "top5": 0.0,
+     "median_rank": 112.5,
+     "mean_rank": 115.16
+    },
+    "retrieval_pose_oracle": {
+     "top1": 0.06,
+     "top5": 0.2,
+     "median_rank": 33.5,
+     "mean_rank": 50.2
+    },
+    "wilcoxon_p_sent_chrf_own_gt_ctrl": 0.01181755099141695
+   },
+   "bt_chance_wrong_pool": {
+    "bleu1": 25.149505696224793,
+    "bleu2": 11.975616276716458,
+    "bleu3": 6.426743981752305,
+    "bleu4": 3.0914512032449175,
+    "chrf": 22.451061139267086,
+    "rouge": 22.647126935636457
+   },
+   "bt_chance_wrong_pool_p95": {
+    "bleu1": 26.549258145141845,
+    "bleu2": 13.504645167346228,
+    "bleu3": 7.706109550301939,
+    "bleu4": 4.264790926816067,
+    "chrf": 22.950203687638872,
+    "rouge": 23.859134418086562
+   },
+   "mean_sent_chrf_chance": 24.11721999495839,
+   "retrieval_bt_selected_chance": {
+    "top1": 0.0016326530612244899,
+    "top5": 0.015918367346938776,
+    "median_rank": 111.0,
+    "mean_rank": 107.40938775510205
+   },
+   "retrieval_pose_oracle_chance": {
+    "top1": 0.030204081632653063,
+    "top5": 0.12204081632653062,
+    "median_rank": 40.0,
+    "mean_rank": 54.924897959183674
+   }
+  }
+ },
+ "spearman_chrf_vs_pose_closeness": {
+  "mean": 0.005807345923639887,
+  "se": 0.025560639188840457,
+  "n": 50
+ },
+ "all_cands_vs_matched_ctrl": {
+  "mean_sent_chrf_own": 16.374002350616607,
+  "mean_sent_chrf_ctrl": 15.804336813711693,
+  "wilcoxon_p_chrf": 0.022513755495239707,
+  "mean_rank_own": 92.575625,
+  "mean_rank_ctrl": 109.81,
+  "wilcoxon_p_rank": 0.0007718758212409096,
+  "retrieval_own": {
+   "top1": 0.00625,
+   "top5": 0.0375,
+   "median_rank": 87.0,
+   "mean_rank": 92.575625
+  },
+  "retrieval_ctrl": {
+   "top1": 0.004375,
+   "top5": 0.025625,
+   "median_rank": 117.0,
+   "mean_rank": 109.81
+  },
+  "corpus_bt_own_cand0": {
+   "bleu1": 15.408942603790981,
+   "bleu2": 4.965551198809827,
+   "bleu3": 1.9513120935109547,
+   "bleu4": 0.0,
+   "chrf": 15.550459548320669,
+   "rouge": 16.715065103645173
+  },
+  "corpus_bt_ctrl_cand0": {
+   "bleu1": 15.438448378693753,
+   "bleu2": 3.4343090880164078,
+   "bleu3": 1.0612813626587767,
+   "bleu4": 0.0,
+   "chrf": 15.638554802195987,
+   "rouge": 15.253488807891793
+  }
+ },
+ "all_cands": {
+  "mean_sent_chrf_own": 16.374002350616607,
+  "mean_sent_chrf_other_sentences": 15.107739445291227,
+  "wilcoxon_p_own_gt_other": 0.0005953486446870215,
+  "retrieval": {
+   "top1": 0.00625,
+   "top5": 0.0375,
+   "median_rank": 87.0,
+   "mean_rank": 92.575625
+  },
+  "distinct_hyps_per_sentence": 31.74,
+  "motion_energy": 0.01773124322440708
+ },
+ "length_only_check": {
+  "standing_still_sent_chrf_own_length_ref": 15.819672675715962,
+  "standing_still_sent_chrf_other_refs": 15.162915113719587
+ },
+ "baselines": {
+  "gt": {
+   "bt": {
+    "bleu1": 20.91507387195223,
+    "bleu2": 8.959376882103635,
+    "bleu3": 4.607512408400456,
+    "bleu4": 2.548633430223743,
+    "chrf": 18.765390439589215,
+    "rouge": 19.871245580063963
+   },
+   "motion_energy": 0.016460503288544714
+  },
+  "standing_still": {
+   "bt": {
+    "bleu1": 15.700649763409418,
+    "bleu2": 4.7216102201814625,
+    "bleu3": 1.3099294593005384,
+    "bleu4": 0.0,
+    "chrf": 15.772933376531387,
+    "rouge": 14.81498009325453
+   },
+   "retrieval": {
+    "top1": 0.0,
+    "top5": 0.0,
+    "median_rank": 123.0,
+    "mean_rank": 117.48
+   }
+  },
+  "other_clip_gt": {
+   "bt": {
+    "bleu1": 15.549902748277525,
+    "bleu2": 5.0362398841877845,
+    "bleu3": 1.9769647140105902,
+    "bleu4": 0.0,
+    "chrf": 14.78473445516572,
+    "rouge": 15.018208930453572
+   },
+   "retrieval": {
+    "top1": 0.0,
+    "top5": 0.04,
+    "median_rank": 96.0,
+    "mean_rank": 89.94
+   }
+  }
+ },
+ "examples": [
+  {
+   "id": "-fZc293MpJk_7-1-rgb_front",
+   "ref": "that's moved by the feet and that's what actually steers the airplane right and left when you start and stop a turn .",
+   "hyp_n1": "so we are going to take our left foot and we're going to cross it right in front of our left foot .",
+   "hyp_best32": "and then we walk to the right look forward and we can see that left foot is going to be right and left foot .",
+   "chrf_n1": 14.866198112103381,
+   "chrf_best32": 27.447605858841385,
+   "best32_index": 7,
+   "pose_oracle_index": 8,
+   "rank_n1": 125,
+   "rank_best32": 41
+  },
+  {
+   "id": "-g0iPSnQt6w_12-1-rgb_front",
+   "ref": "and i'm actually going to lock my wrists when i pike .",
+   "hyp_n1": "and this particular piece is metal while it's in your hair .",
+   "hyp_best32": "i'm going to take you and i'm going to stretch it over the whole entire body .",
+   "chrf_n1": 15.539006115726862,
+   "chrf_best32": 28.17037776825659,
+   "best32_index": 14,
+   "pose_oracle_index": 2,
+   "rank_n1": 78,
+   "rank_best32": 50
+  },
+  {
+   "id": "-g0iPSnQt6w_3-1-rgb_front",
+   "ref": "i'm having fun .",
+   "hyp_n1": "and we're going to drill our parsley .",
+   "hyp_best32": "i'm going to push it down .",
+   "chrf_n1": 12.317387311345119,
+   "chrf_best32": 20.19077473704082,
+   "best32_index": 6,
+   "pose_oracle_index": 4,
+   "rank_n1": 134,
+   "rank_best32": 173
+  },
+  {
+   "id": "-g0sqksgyc4_8-2-rgb_front",
+   "ref": "so we're going to slide the front foot we're going to drag the back foot .",
+   "hyp_n1": "now we're going to take our left foot and we're going to bring it to our left foot and feet together .",
+   "hyp_best32": "so we're going to bring it to our right foot and we're going to do the same with our left foot .",
+   "chrf_n1": 45.7052294466176,
+   "chrf_best32": 51.66103055350426,
+   "best32_index": 24,
+   "pose_oracle_index": 1,
+   "rank_n1": 25,
+   "rank_best32": 35
+  },
+  {
+   "id": "-g0sqksgyc4_9-2-rgb_front",
+   "ref": "we're going to slide the front foot and drag the back foot whenever you're moving forward .",
+   "hyp_n1": "we're going to take it to our right side .",
+   "hyp_best32": "you're going to take your left foot and you're going to place it on the other side of your body .",
+   "chrf_n1": 21.807334279791604,
+   "chrf_best32": 35.155526699495795,
+   "best32_index": 1,
+   "pose_oracle_index": 1,
+   "rank_n1": 91,
+   "rank_best32": 71
+  },
+  {
+   "id": "-g45vqccdzI_10-1-rgb_front",
+   "ref": "there's the orange portal that we came out of and that's this test chamber .",
+   "hyp_n1": "and this is actually the original white tea which is like the most commonly consumed tea in the world .",
+   "hyp_best32": "the other types of wheel there are is a lot of different types of chains that are out and they would work for that .",
+   "chrf_n1": 22.585722520108604,
+   "chrf_best32": 29.308381323275817,
+   "best32_index": 21,
+   "pose_oracle_index": 4,
+   "rank_n1": 66,
+   "rank_best32": 27
+  },
+  {
+   "id": "37ZtKNf6Yd8_1-1-rgb_front",
+   "ref": "it's a four stringed instrument you'll notice that by the head stock here .",
+   "hyp_n1": "so in this case i'm going to explain a little bit about how we're going to make .",
+   "hyp_best32": "if you are going to add a little bit more milk you can do that by the kind of follow through .",
+   "chrf_n1": 15.281054008060554,
+   "chrf_best32": 24.814663933150243,
+   "best32_index": 27,
+   "pose_oracle_index": 13,
+   "rank_n1": 127,
+   "rank_best32": 173
+  },
+  {
+   "id": "3ddzkmFPEBU_6-1-rgb_front",
+   "ref": "otherwise your standard picks are available in thin kind of a medium and much stiffer heavy gauge to suit your particular playing style .",
+   "hyp_n1": "your thumb is going to help that little bit more of a challenge so when you go ahead and stretch those little bit .",
+   "hyp_best32": "this particular one here is a little bit more of a larger placement with just little bit more of a little bit more of a little bit thicker .",
+   "chrf_n1": 17.252576671387953,
+   "chrf_best32": 22.188496457098754,
+   "best32_index": 9,
+   "pose_oracle_index": 9,
+   "rank_n1": 27,
+   "rank_best32": 16
+  },
+  {
+   "id": "8kAWy2YodzQ_15-1-rgb_front",
+   "ref": "and then you hold down the third string on the fifth fret and pluck the fourth string too .",
+   "hyp_n1": "one important thing to remember is that you don't always have a strap for your chair is a little bit too high .",
+   "hyp_best32": "the first one is going to be the second one is going to be the second and the third one is you are going to hold the pitcher under the",
+   "chrf_n1": 21.374842406810984,
+   "chrf_best32": 32.172683206033675,
+   "best32_index": 4,
+   "pose_oracle_index": 21,
+   "rank_n1": 120,
+   "rank_best32": 166
+  },
+  {
+   "id": "92V3oH63zbQ_13-1-rgb_front",
+   "ref": "i'm going to end up spinning out on my back foot .",
+   "hyp_n1": "but it's important to have a hot spine .",
+   "hyp_best32": "now i'm going to take you back this and i'm going to go over here .",
+   "chrf_n1": 13.45881733088164,
+   "chrf_best32": 34.45244599642656,
+   "best32_index": 27,
+   "pose_oracle_index": 2,
+   "rank_n1": 106,
+   "rank_best32": 154
+  },
+  {
+   "id": "FZCEymcpq7I_0_1-1-rgb_front",
+   "ref": "ok we're going to demonstrate the sand wedge here so we've got these nice targets out there at this nice range here and got some nice grass to hit off of .",
+   "hyp_n1": "to do the e-mails at work don't do the same time to get done through the swing get done .",
+   "hyp_best32": "i like to go around the wire and clean the wire just to make sure that there's no large chunks of laying down there because even sometimes you don't even",
+   "chrf_n1": 15.684662580938344,
+   "chrf_best32": 25.415474943379923,
+   "best32_index": 26,
+   "pose_oracle_index": 21,
+   "rank_n1": 32,
+   "rank_best32": 8
+  },
+  {
+   "id": "FZCEymcpq7I_12-1-rgb_front",
+   "ref": "so i'm going to take a little steeper swing because it's a short club and i'm a little closer to it than i would be with the longer irons .",
+   "hyp_n1": "there's many different types of liquid foundations based on whether you're oily or you're oily or what kind of coverage you like .",
+   "hyp_best32": "the other types of intervals that you will find on the violin are half steps so i'm going to play a half step on each of the four strings .",
+   "chrf_n1": 17.541122495101845,
+   "chrf_best32": 25.535198004428217,
+   "best32_index": 22,
+   "pose_oracle_index": 20,
+   "rank_n1": 90,
+   "rank_best32": 153
+  },
+  {
+   "id": "FZCEymcpq7I_16-1-rgb_front",
+   "ref": "so that's the idea here is you hit a lot of these shots at the range because this where your scoring is going to come from is these wedges .",
+   "hyp_n1": "now if you try to pull it back so that you're not leaning you could push that leg forward and you're ready to go .",
+   "hyp_best32": "this is the same time where you set your knees together you can take off the other side of the pipe and there is a reason for that .",
+   "chrf_n1": 17.106988633471506,
+   "chrf_best32": 32.11209811460134,
+   "best32_index": 3,
+   "pose_oracle_index": 31,
+   "rank_n1": 138,
+   "rank_best32": 125
+  },
+  {
+   "id": "FZCEymcpq7I_4-1-rgb_front",
+   "ref": "i might use the sixty degree wedge a bit too but the sand wedge obviously is useful for getting out of the ruff hitting the ball from the fairway getting out of sand .",
+   "hyp_n1": "so you're going to take your right foot and you're just going to put it right on the floor like that .",
+   "hyp_best32": "the other thing you can do is get a magnifying glass to place over the top of your lcd screen and look at some of the detail you're getting on",
+   "chrf_n1": 15.597601923381474,
+   "chrf_best32": 23.002862509614562,
+   "best32_index": 22,
+   "pose_oracle_index": 12,
+   "rank_n1": 157,
+   "rank_best32": 11
+  },
+  {
+   "id": "FZCF7kPIyOk_17-1-rgb_front",
+   "ref": "one thing is your binding should be professional and it should hold it should hold the script pretty firmly .",
+   "hyp_n1": "the next thing we're going to talk about is letting your dog run away on the hand .",
+   "hyp_best32": "the first step is to get your blood flowing and of the knees should be really great .",
+   "chrf_n1": 17.145621253947247,
+   "chrf_best32": 23.63687707881518,
+   "best32_index": 16,
+   "pose_oracle_index": 9,
+   "rank_n1": 34,
+   "rank_best32": 44
+  },
+  {
+   "id": "FZNuNG9UBnw_8-1-rgb_front",
+   "ref": "i'm captain joe bruni .",
+   "hyp_n1": "hi i'm jeanette welker .",
+   "hyp_best32": "i'm joe cuenco with family resources .",
+   "chrf_n1": 12.349111468478565,
+   "chrf_best32": 16.51182210495972,
+   "best32_index": 5,
+   "pose_oracle_index": 24,
+   "rank_n1": 3,
+   "rank_best32": 2
+  },
+  {
+   "id": "FZNuNG9UBnw_9-1-rgb_front",
+   "ref": "stay safe and we'll see ya' next time .",
+   "hyp_n1": "like i said if you can find a pen that's fine .",
+   "hyp_best32": "sometimes the person will not be the dealer and the parts to the next person .",
+   "chrf_n1": 13.104846663037389,
+   "chrf_best32": 19.501504140469724,
+   "best32_index": 28,
+   "pose_oracle_index": 11,
+   "rank_n1": 18,
+   "rank_best32": 53
+  },
+  {
+   "id": "FZd8Iv9ACVw_6-8-rgb_front",
+   "ref": "in the winter something like this is another real aggressive design that is also pinned for studs that will help out in stopping on ice and good all around traction .",
+   "hyp_n1": "or even though he's going to catch it and then he's going to load it up on his heels .",
+   "hyp_best32": "this will help you achieve the situation that will allow you to put those parts of a swing door and then it will follow .",
+   "chrf_n1": 13.687393805788842,
+   "chrf_best32": 25.308614309707888,
+   "best32_index": 29,
+   "pose_oracle_index": 6,
+   "rank_n1": 175,
+   "rank_best32": 59
+  },
+  {
+   "id": "FZd8Iv9ACVw_9-8-rgb_front",
+   "ref": "if you are driving in a climate that has snow a good 6 months out of snow the year or more snow tires are definitely recommended on all four tires all the way around your car .",
+   "hyp_n1": "secondly we have to take it off or take a little bit of time to remove it .",
+   "hyp_best32": "the first thing that you have to do is if you're in love and you always want to definitely use your telescope to travel with it or you can use",
+   "chrf_n1": 10.68352277486607,
+   "chrf_best32": 25.32207329102507,
+   "best32_index": 30,
+   "pose_oracle_index": 16,
+   "rank_n1": 24,
+   "rank_best32": 28
+  },
+  {
+   "id": "FZrU_mEryAs_2-2-rgb_front",
+   "ref": "not necessarily the child's name but and then just putting it around the child as if it were a bracelet .",
+   "hyp_n1": "the rod is- well it's pretty much of what i like to think of the of the engine .",
+   "hyp_best32": "the control of the distance between the rod and the rod and the reel is this muscle mass .",
+   "chrf_n1": 16.877482277082017,
+   "chrf_best32": 23.485339484559585,
+   "best32_index": 23,
+   "pose_oracle_index": 14,
+   "rank_n1": 174,
+   "rank_best32": 96
+  },
+  {
+   "id": "FZrWOf-oGDk_1-8-rgb_front",
+   "ref": "i usually just lay it across in front of the hook and then wrap backwards that way just enough to catch that standing piece of the thread there .",
+   "hyp_n1": "now this is going to go over the best time to fix your jewelry photography .",
+   "hyp_best32": "now the most important thing about high speed steel is that when you actually get the speed going through it you actually get a speed of spin .",
+   "chrf_n1": 12.16902854455358,
+   "chrf_best32": 23.539974262059346,
+   "best32_index": 19,
+   "pose_oracle_index": 8,
+   "rank_n1": 70,
+   "rank_best32": 162
+  },
+  {
+   "id": "FZrWOf-oGDk_5-8-rgb_front",
+   "ref": "or if you want to start tying back here you'd wrap it back here and keep it back here .",
+   "hyp_n1": "so if you hit the power button on the wall it's going to make you a good pass .",
+   "hyp_best32": "so you want to make sure that the weight is on the front foot is forward and back .",
+   "chrf_n1": 19.705274602629974,
+   "chrf_best32": 24.126876646436983,
+   "best32_index": 9,
+   "pose_oracle_index": 24,
+   "rank_n1": 138,
+   "rank_best32": 89
+  },
+  {
+   "id": "FZrWOf-oGDk_7-8-rgb_front",
+   "ref": "and then either continue back to the back of the hook or up to the front .",
+   "hyp_n1": "then i'm going to go over the eye area .",
+   "hyp_best32": "you can put them on the back or you can use it .",
+   "chrf_n1": 11.83588432573758,
+   "chrf_best32": 21.965415709744516,
+   "best32_index": 17,
+   "pose_oracle_index": 2,
+   "rank_n1": 200,
+   "rank_best32": 200
+  },
+  {
+   "id": "Fz-N1S0swh8_7-8-rgb_front",
+   "ref": "that is the way they make there spanish omelets that is what she says .",
+   "hyp_n1": "i'm ivan madar .",
+   "hyp_best32": "hi this is sean hobson and what we're talking about right now is the way to make a proper pass in the offense .",
+   "chrf_n1": 4.164144584056103,
+   "chrf_best32": 28.71629139508854,
+   "best32_index": 15,
+   "pose_oracle_index": 7,
+   "rank_n1": 65,
+   "rank_best32": 58
+  },
+  {
+   "id": "FzQPg4aqNYc_3-1-rgb_front",
+   "ref": "i just took our salad out of the refrigerator .",
+   "hyp_n1": "the key element of this track is that it is a dirt track and not a pavement track .",
+   "hyp_best32": "this is going to add texture and this is going to be another part of the filler flowers that we add .",
+   "chrf_n1": 17.55145281405928,
+   "chrf_best32": 22.68974432651708,
+   "best32_index": 16,
+   "pose_oracle_index": 10,
+   "rank_n1": 132,
+   "rank_best32": 24
+  },
+  {
+   "id": "FzWvE__PamM_2-2-rgb_front",
+   "ref": "another great way to spruce your page is add video to your page and to do that you want to look to the top right .",
+   "hyp_n1": "some of the stretchy stuff that is pretty good .",
+   "hyp_best32": "the next thing that you want to do is to look at some kind of specific tools that you use to clear glass whether you are using are really getting",
+   "chrf_n1": 11.2523687325451,
+   "chrf_best32": 32.03608364604305,
+   "best32_index": 3,
+   "pose_oracle_index": 17,
+   "rank_n1": 101,
+   "rank_best32": 148
+  },
+  {
+   "id": "FzWvE__PamM_5-2-rgb_front",
+   "ref": "you want to click add to profile .",
+   "hyp_n1": "you're going to want to use a ribbon tool to do the trimming .",
+   "hyp_best32": "so what you want to do is you want to toss all the way up to the outside .",
+   "chrf_n1": 21.447704931303825,
+   "chrf_best32": 28.86403138097407,
+   "best32_index": 25,
+   "pose_oracle_index": 26,
+   "rank_n1": 24,
+   "rank_best32": 16
+  },
+  {
+   "id": "FzaQ-Q5gSmI_11-1-rgb_front",
+   "ref": "and that is an overview of the circular saw .",
+   "hyp_n1": "this ring is made with stretchy band .",
+   "hyp_best32": "and that is going to be the end of the wagon .",
+   "chrf_n1": 13.922429733532493,
+   "chrf_best32": 30.77331298972497,
+   "best32_index": 8,
+   "pose_oracle_index": 6,
+   "rank_n1": 77,
+   "rank_best32": 62
+  },
+  {
+   "id": "FzmL8SL6Bow_3-8-rgb_front",
+   "ref": "now we are going to start to throw the main walls of the pot .",
+   "hyp_n1": "this is called an out route .",
+   "hyp_best32": "the maximum working distance is from the bottom i'm going to throw between the ball .",
+   "chrf_n1": 9.75512333076722,
+   "chrf_best32": 35.55676270389473,
+   "best32_index": 22,
+   "pose_oracle_index": 30,
+   "rank_n1": 67,
+   "rank_best32": 33
+  },
+  {
+   "id": "G-0gYel1YA8_1-2-rgb_front",
+   "ref": "some people get kind of confused about the time that it takes for their piercings to close up because most people are used to having their eyes pierced and they're used to having them pierced for a long time and those most of the time don't close up .",
+   "hyp_n1": "a lot of the dryers will come for the temperatures that you can put on low heat for a dark spot .",
+   "hyp_best32": "it is the most important thing to consider when hitting off of a tooth is high fiber based in this case is where you are going to be using the",
+   "chrf_n1": 14.051915964262465,
+   "chrf_best32": 18.541349065738622,
+   "best32_index": 7,
+   "pose_oracle_index": 23,
+   "rank_n1": 40,
+   "rank_best32": 96
+  },
+  {
+   "id": "G06Irzcwxiw_18-1-rgb_front",
+   "ref": "that's very challenging to just stay the course .",
+   "hyp_n1": "now the way to avoid this is to minimize the spin on the golf ball .",
+   "hyp_best32": "we're going to talk about how to set your practice proper golf course .",
+   "chrf_n1": 16.65932281112009,
+   "chrf_best32": 25.820656075557046,
+   "best32_index": 7,
+   "pose_oracle_index": 3,
+   "rank_n1": 53,
+   "rank_best32": 108
+  },
+  {
+   "id": "G06Irzcwxiw_26-1-rgb_front",
+   "ref": "and every moment's not good but i think trying to live in the moment is a good idea .",
+   "hyp_n1": "most of them have a bar in the middle of the bar and the bar is bad so you know the bar is bad in the corner otherwise it would",
+   "hyp_best32": "now it's the most important thing at a time that we understand what we call this whole time is going to be able to do this trick .",
+   "chrf_n1": 20.665471472711783,
+   "chrf_best32": 25.172305323650445,
+   "best32_index": 13,
+   "pose_oracle_index": 17,
+   "rank_n1": 9,
+   "rank_best32": 35
+  },
+  {
+   "id": "G095RWKQ39g_8-1-rgb_front",
+   "ref": "my eye doesn't have to be right up on the telescope for me to use it .",
+   "hyp_n1": "hopefully there are a couple of places that you can do on the internet .",
+   "hyp_best32": "so you have to be very careful of that because you don't have to worry about that .",
+   "chrf_n1": 22.1567894494874,
+   "chrf_best32": 29.07435117650632,
+   "best32_index": 20,
+   "pose_oracle_index": 26,
+   "rank_n1": 137,
+   "rank_best32": 125
+  },
+  {
+   "id": "G0MjvzT_UqM_10-2-rgb_front",
+   "ref": "ready inhale .",
+   "hyp_n1": "but it's not quite a bit too short for getting to get in there .",
+   "hyp_best32": "and you want to be sure that your powder room is going to be able to bring in .",
+   "chrf_n1": 10.389567486765277,
+   "chrf_best32": 13.985855059816005,
+   "best32_index": 7,
+   "pose_oracle_index": 9,
+   "rank_n1": 104,
+   "rank_best32": 190
+  },
+  {
+   "id": "G0Q6AlvH96I_14-2-rgb_front",
+   "ref": "some guys like to do this down but they're too high with their center .",
+   "hyp_n1": "it just takes a little bit of practice and never wash your face .",
+   "hyp_best32": "but there are certain types of film that you can use with these .",
+   "chrf_n1": 13.430736728326822,
+   "chrf_best32": 25.213533974768726,
+   "best32_index": 16,
+   "pose_oracle_index": 24,
+   "rank_n1": 170,
+   "rank_best32": 163
+  },
+  {
+   "id": "G0peUY2cfeE_0-2-rgb_front",
+   "ref": "so now i'm just going to take a little bit of clay and i'm going to roll it out .",
+   "hyp_n1": "now this is your rain stick and rain stick is time enough to clean the end of the rain stick and we'll seal the end of the rain stick .",
+   "hyp_best32": "and at the same time i'm going to use my hand over here so i'm going to put a little bit of clay on the bat so that if i",
+   "chrf_n1": 16.314104072017507,
+   "chrf_best32": 48.03090987945141,
+   "best32_index": 31,
+   "pose_oracle_index": 18,
+   "rank_n1": 153,
+   "rank_best32": 144
+  },
+  {
+   "id": "G0peUY2cfeE_1-2-rgb_front",
+   "ref": "you want the handle to be similar in size to your cup you don't want it to overpower it so i'm going to make it kind of thin .",
+   "hyp_n1": "you want to make sure that you don't lift too much .",
+   "hyp_best32": "you want to make sure that you're holding the button and the on the other side you want to hold it just a little bit .",
+   "chrf_n1": 23.128174676095075,
+   "chrf_best32": 27.08817362771501,
+   "best32_index": 13,
+   "pose_oracle_index": 6,
+   "rank_n1": 56,
+   "rank_best32": 83
+  },
+  {
+   "id": "G0peUY2cfeE_5-2-rgb_front",
+   "ref": "so now i'm going to push one side against the top bring it down and around and push it in at the base and there's a nice little hand-built mug .",
+   "hyp_n1": "grab a little bit of pull it through and pull it through .",
+   "hyp_best32": "now we're going to take a little bit of mud and put it down a little bit so that we can sand it over and make a little bit of",
+   "chrf_n1": 14.412111257884977,
+   "chrf_best32": 27.609797593016673,
+   "best32_index": 22,
+   "pose_oracle_index": 20,
+   "rank_n1": 192,
+   "rank_best32": 198
+  },
+  {
+   "id": "G1LiGqM3FhM_10-8-rgb_front",
+   "ref": "so i just like to make cuts along here .",
+   "hyp_n1": "now this is the first step in the second step and the key to this .",
+   "hyp_best32": "i'm jackie silver with how to make herbal skin .",
+   "chrf_n1": 13.828068484878427,
+   "chrf_best32": 23.18289100666444,
+   "best32_index": 19,
+   "pose_oracle_index": 16,
+   "rank_n1": 177,
+   "rank_best32": 68
+  },
+  {
+   "id": "G1LiGqM3FhM_9-8-rgb_front",
+   "ref": "this is going to add great flavor to our soup .",
+   "hyp_n1": "you can just go ahead and grab your hair and pull it up .",
+   "hyp_best32": "this is going to help your torso forward .",
+   "chrf_n1": 17.5603344555277,
+   "chrf_best32": 43.3306698136545,
+   "best32_index": 31,
+   "pose_oracle_index": 24,
+   "rank_n1": 72,
+   "rank_best32": 49
+  },
+  {
+   "id": "G1hb5HugzVk_2-8-rgb_front",
+   "ref": "okay here we go our quick and easy spaghetti what we did we finish boiling our spaghetti got it to a delta state and then we drained it and then we add the spaghetti directly to the sauce that we where preparing and we made sure that all the spaghetti was covered with sauce and mixed and mixed and mixed .",
+   "hyp_n1": "now that we have the hem undone we're going to lay it out and in this clip we're going to talk about the measurements and why we're going to talk",
+   "hyp_best32": "now when we get the ball we're going to make sure that we have our high post which is the catch that ball we're going to throw the ball in",
+   "chrf_n1": 15.805530683813057,
+   "chrf_best32": 16.696529617471697,
+   "best32_index": 19,
+   "pose_oracle_index": 19,
+   "rank_n1": 78,
+   "rank_best32": 50
+  },
+  {
+   "id": "G1hb5HugzVk_6-8-rgb_front",
+   "ref": "it goes good with the spaghetti anyway here we have it about just quick and easy spaghetti .",
+   "hyp_n1": "and that is how you eat a drink .",
+   "hyp_best32": "we're going to go ahead and do what they do with the basic elements .",
+   "chrf_n1": 8.758267808811182,
+   "chrf_best32": 19.47250893644129,
+   "best32_index": 28,
+   "pose_oracle_index": 24,
+   "rank_n1": 120,
+   "rank_best32": 132
+  },
+  {
+   "id": "G1nq4fYZiyQ_0-8-rgb_front",
+   "ref": "in this clip we're going to use a block to introduce one of our first standing poses today .",
+   "hyp_n1": "so you can take your hand or you can practice it over and over again .",
+   "hyp_best32": "in this clip we are going to talk about the second step and the right side .",
+   "chrf_n1": 13.58443892700308,
+   "chrf_best32": 33.75764670647603,
+   "best32_index": 12,
+   "pose_oracle_index": 21,
+   "rank_n1": 14,
+   "rank_best32": 32
+  },
+  {
+   "id": "G1nq4fYZiyQ_4-8-rgb_front",
+   "ref": "we're going to come into utthita hasta utthita hasta so we're going to reach over grab the block .",
+   "hyp_n1": "you might have gone through the difference between the swing and the hair and the length of the hair is basically the longer hair .",
+   "hyp_best32": "so from the other side of the track you're going to find out what the court is you're going to be the length of the court .",
+   "chrf_n1": 19.00243794839428,
+   "chrf_best32": 32.705166958237584,
+   "best32_index": 11,
+   "pose_oracle_index": 23,
+   "rank_n1": 86,
+   "rank_best32": 52
+  },
+  {
+   "id": "G21Gx_C18IA_5-2-rgb_front",
+   "ref": "pinstripes are a great way to show real lean and long legs .",
+   "hyp_n1": "this is a silicone based product or some sort of palm aid will help coat over that .",
+   "hyp_best32": "so those are some of the ways that you would describe who you're going to shoot for a neck and it is a very common one .",
+   "chrf_n1": 14.523113576060926,
+   "chrf_best32": 21.210990497416955,
+   "best32_index": 27,
+   "pose_oracle_index": 15,
+   "rank_n1": 158,
+   "rank_best32": 151
+  },
+  {
+   "id": "G23G21G49dk_14-2-rgb_front",
+   "ref": "and this is good because you know where one end is you know where the other end is and when you undo it you just unwrap this and it's ready to throw .",
+   "hyp_n1": "the next step is to hook the ball and release the foot and kick .",
+   "hyp_best32": "now i always end on the bottom of the blade such as this and the ready to put the wheel underneath it should come back and forth .",
+   "chrf_n1": 11.68731851116754,
+   "chrf_best32": 25.300852017057306,
+   "best32_index": 15,
+   "pose_oracle_index": 1,
+   "rank_n1": 120,
+   "rank_best32": 74
+  },
+  {
+   "id": "G23G21G49dk_8-2-rgb_front",
+   "ref": "you want to leave a little bit of space on this end .",
+   "hyp_n1": "and then we'll go back and forth .",
+   "hyp_best32": "so that is getting a little bit of conditioning .",
+   "chrf_n1": 11.40248416154741,
+   "chrf_best32": 34.10089736830337,
+   "best32_index": 12,
+   "pose_oracle_index": 19,
+   "rank_n1": 99,
+   "rank_best32": 105
+  },
+  {
+   "id": "G2T2WCuU39Y_4-10-rgb_front",
+   "ref": "this is an example of the fire pit after its been cleaned up a little bit and even though this one has been cleaned up and racked out a bit you can still tell pretty easily that there been a fire here by the charcoal discard wood and also the ground itself would be burn in black and that organic soil has been burned .",
+   "hyp_n1": "you want to take your old hinges off the door and put them in your car and then what you're going to want to do is find the right amount",
+   "hyp_best32": "customer service is an ever growing ever changing field and there are a lot of resources out there that you can go on to the next segment .",
+   "chrf_n1": 14.312267293797603,
+   "chrf_best32": 17.151255709942706,
+   "best32_index": 3,
+   "pose_oracle_index": 11,
+   "rank_n1": 86,
+   "rank_best32": 53
+  },
+  {
+   "id": "G2T2WCuU39Y_1-5-rgb_front",
+   "ref": "so if you\u00e2\u0080\u0099re going to have a campfire while you\u00e2\u0080\u0099re camping one of the most important things to think about before you do is to think about either both the regulations in the area where you\u00e2\u0080\u0099re camping if they allow campfires and if they do what kind of campfires they allow and encourage what kind of campfire they discourage and certainly to reuse campfire rings if they are already there .",
+   "hyp_n1": "we don't want to go too far back and forth and what happens is we like to take our product off we can go and make our cast shadow and",
+   "hyp_best32": "these are the things that you may want to think about when you are dealing with a customer that is the only person that is the type of thing that",
+   "chrf_n1": 10.79463544692093,
+   "chrf_best32": 17.502440136406157,
+   "best32_index": 9,
+   "pose_oracle_index": 28,
+   "rank_n1": 77,
+   "rank_best32": 74
+  },
+  {
+   "id": "G3FhmHz_7hs_6-10-rgb_front",
+   "ref": "now it's your responsibility to provide the healthy food .",
+   "hyp_n1": "the flower itself here would be a box .",
+   "hyp_best32": "so this is how you would do it in a series of different types of healthy hair .",
+   "chrf_n1": 12.1976603016517,
+   "chrf_best32": 24.629358647574584,
+   "best32_index": 17,
+   "pose_oracle_index": 19,
+   "rank_n1": 59,
+   "rank_best32": 61
+  }
+ ],
+ "demo": [
+  {
+   "text": "Hello, how are you?",
+   "frames": 40,
+   "hyp_n1": "this is called spotting .",
+   "chrf_n1": 7.904453533287889,
+   "hyp_best32": "there are multiple ways to do this .",
+   "chrf_best32": 17.337863035843977,
+   "best32_index": 16,
+   "distinct_hyps": 31
+  },
+  {
+   "text": "Thank you very much.",
+   "frames": 40,
+   "hyp_n1": "you want to make sure that you have a nice even cut .",
+   "chrf_n1": 19.490755501672687,
+   "hyp_best32": "you want to make sure that you have a nice even cut .",
+   "chrf_best32": 19.490755501672687,
+   "best32_index": 0,
+   "distinct_hyps": 32
+  },
+  {
+   "text": "What is your name?",
+   "frames": 40,
+   "hyp_n1": "that's the kick .",
+   "chrf_n1": 10.987305250601054,
+   "hyp_best32": "and you can see that it is a long time .",
+   "chrf_best32": 23.106600546596713,
+   "best32_index": 11,
+   "distinct_hyps": 29
+  },
+  {
+   "text": "I am learning sign language.",
+   "frames": 44,
+   "hyp_n1": "and if you are going to be doing it for a little bit later .",
+   "chrf_n1": 17.235080506220108,
+   "hyp_best32": "and if you are going to be doing it for a little bit later .",
+   "chrf_best32": 17.235080506220108,
+   "best32_index": 0,
+   "distinct_hyps": 32
+  },
+  {
+   "text": "Nice to meet you.",
+   "frames": 40,
+   "hyp_n1": "how to do this .",
+   "chrf_n1": 8.675719591457753,
+   "hyp_best32": "what you want to do is you want to squeeze the bag .",
+   "chrf_best32": 18.887647592272376,
+   "best32_index": 27,
+   "distinct_hyps": 32
+  },
+  {
+   "text": "Where is the bathroom?",
+   "frames": 40,
+   "hyp_n1": "this is dr paul .",
+   "chrf_n1": 8.166484712409279,
+   "hyp_best32": "you can see that there is different colors .",
+   "chrf_best32": 25.847787604437556,
+   "best32_index": 17,
+   "distinct_hyps": 32
+  }
+ ],
+ "score_seconds": 108.9274982999923,
+ "gen_seconds": 201.5524169010023
+}

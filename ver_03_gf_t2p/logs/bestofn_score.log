@@ -1,0 +1,121 @@
+BT 13s
+chrF matrix 20s
+retrieval distances 104s
+N= 1 matched ctrl: B1 15.44 chrF 15.64 sent-chrF own 15.73 vs 16.19 (p 0.863) | BT-sel median rank 122 | pose-oracle top5 0.00
+N= 1: BT B1 15.41 (chance 14.21) chrF 15.55 (chance 13.88) | retr. BT-sel median 88 (chance 114) | pose-oracle top5 0.02 (chance 0.01)
+N= 8 matched ctrl: B1 22.69 chrF 20.85 sent-chrF own 23.08 vs 22.04 (p 0.037) | BT-sel median rank 123 | pose-oracle top5 0.10
+N= 8: BT B1 25.18 (chance 21.07) chrF 22.34 (chance 19.41) | retr. BT-sel median 82 (chance 115) | pose-oracle top5 0.18 (chance 0.06)
+N=32 matched ctrl: B1 26.48 chrF 24.31 sent-chrF own 26.86 vs 25.71 (p 0.012) | BT-sel median rank 112 | pose-oracle top5 0.20
+N=32: BT B1 29.08 (chance 25.15) chrF 25.41 (chance 22.45) | retr. BT-sel median 70 (chance 111) | pose-oracle top5 0.28 (chance 0.12)
+{
+ "spearman_chrf_vs_pose_closeness": {
+  "mean": 0.005807345923639887,
+  "se": 0.025560639188840457,
+  "n": 50
+ },
+ "all_cands": {
+  "mean_sent_chrf_own": 16.374002350616607,
+  "mean_sent_chrf_other_sentences": 15.107739445291227,
+  "wilcoxon_p_own_gt_other": 0.0005953486446870215,
+  "retrieval": {
+   "top1": 0.00625,
+   "top5": 0.0375,
+   "median_rank": 87.0,
+   "mean_rank": 92.575625
+  },
+  "distinct_hyps_per_sentence": 31.74,
+  "motion_energy": 0.01773124322440708
+ },
+ "all_cands_vs_matched_ctrl": {
+  "mean_sent_chrf_own": 16.374002350616607,
+  "mean_sent_chrf_ctrl": 15.804336813711693,
+  "wilcoxon_p_chrf": 0.022513755495239707,
+  "mean_rank_own": 92.575625,
+  "mean_rank_ctrl": 109.81,
+  "wilcoxon_p_rank": 0.0007718758212409096,
+  "retrieval_own": {
+   "top1": 0.00625,
+   "top5": 0.0375,
+   "median_rank": 87.0,
+   "mean_rank": 92.575625
+  },
+  "retrieval_ctrl": {
+   "top1": 0.004375,
+   "top5": 0.025625,
+   "median_rank": 117.0,
+   "mean_rank": 109.81
+  },
+  "corpus_bt_own_cand0": {
+   "bleu1": 15.408942603790981,
+   "bleu2": 4.965551198809827,
+   "bleu3": 1.9513120935109547,
+   "bleu4": 0.0,
+   "chrf": 15.550459548320669,
+   "rouge": 16.715065103645173
+  },
+  "corpus_bt_ctrl_cand0": {
+   "bleu1": 15.438448378693753,
+   "bleu2": 3.4343090880164078,
+   "bleu3": 1.0612813626587767,
+   "bleu4": 0.0,
+   "chrf": 15.638554802195987,
+   "rouge": 15.253488807891793
+  }
+ },
+ "length_only_check": {
+  "standing_still_sent_chrf_own_length_ref": 15.819672675715962,
+  "standing_still_sent_chrf_other_refs": 15.162915113719587
+ },
+ "baselines": {
+  "gt": {
+   "bt": {
+    "bleu1": 20.91507387195223,
+    "bleu2": 8.959376882103635,
+    "bleu3": 4.607512408400456,
+    "bleu4": 2.548633430223743,
+    "chrf": 18.765390439589215,
+    "rouge": 19.871245580063963
+   },
+   "motion_energy": 0.016460503288544714
+  },
+  "standing_still": {
+   "bt": {
+    "bleu1": 15.700649763409418,
+    "bleu2": 4.7216102201814625,
+    "bleu3": 1.3099294593005384,
+    "bleu4": 0.0,
+    "chrf": 15.772933376531387,
+    "rouge": 14.81498009325453
+   },
+   "retrieval": {
+    "top1": 0.0,
+    "top5": 0.0,
+    "median_rank": 123.0,
+    "mean_rank": 117.48
+   }
+  },
+  "other_clip_gt": {
+   "bt": {
+    "bleu1": 15.549902748277525,
+    "bleu2": 5.0362398841877845,
+    "bleu3": 1.9769647140105902,
+    "bleu4": 0.0,
+    "chrf": 14.78473445516572,
+    "rouge": 15.018208930453572
+   },
+   "retrieval": {
+    "top1": 0.0,
+    "top5": 0.04,
+    "median_rank": 96.0,
+    "mean_rank": 89.94
+   }
+  }
+ }
+}
+DEMO 'Hello, how are you?': n1 np.str_('this is called spotting .') (7.9) | best32 np.str_('there are multiple ways to do this .') (17.3)
+DEMO 'Thank you very much.': n1 np.str_('you want to make sure that you have a nice even cut .') (19.5) | best32 np.str_('you want to make sure that you have a nice even cut .') (19.5)
+DEMO 'What is your name?': n1 np.str_("that's the kick .") (11.0) | best32 np.str_('and you can see that it is a long time .') (23.1)
+DEMO 'I am learning sign language.': n1 np.str_('and if you are going to be doing it for a little bit later .') (17.2) | best32 np.str_('and if you are going to be doing it for a little bit later .') (17.2)
+DEMO 'Nice to meet you.': n1 np.str_('how to do this .') (8.7) | best32 np.str_('what you want to do is you want to squeeze the bag .') (18.9)
+DEMO 'Where is the bathroom?': n1 np.str_('this is dr paul .') (8.2) | best32 np.str_('you can see that there is different colors .') (25.8)
+score 109s

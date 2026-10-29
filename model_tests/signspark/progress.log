@@ -1,0 +1,11 @@
+=== 10:06:14 START hand kf2p 
+=== 10:17:00 END hand kf2p exit=0 Written the decoded output to /home/cvl/Desktop/Speech to sign/model_tests/signspark/ckpt/hand/debug0_eulerstepsize50_can1_anchor0_samples/seed102_clampstep0_kf2p.npy
+=== 10:17:00 START hand t2p eval.keyframes_mask_all=True
+=== 10:27:44 END hand t2p exit=0 Written the decoded output to /home/cvl/Desktop/Speech to sign/model_tests/signspark/ckpt/hand/debug0_eulerstepsize50_can1_anchor0_samples_20261019-10:17:12/seed102_clampstep0_t2p.npy
+=== 10:27:44 START body kf2p 
+=== 10:33:22 END body kf2p exit=0 Written the decoded output to /home/cvl/Desktop/Speech to sign/model_tests/signspark/ckpt/body/debug0_eulerstepsize50_can1_anchor0_samples/seed102_clampstep0_kf2p.npy
+=== 10:33:22 START body t2p eval.keyframes_mask_all=True
+=== 10:40:19 END body t2p exit=0 Written the decoded output to /home/cvl/Desktop/Speech to sign/model_tests/signspark/ckpt/body/debug0_eulerstepsize50_can1_anchor0_samples_20261019-10:33:36/seed102_clampstep0_t2p.npy
+=== 10:40:19 START hand kf2p_flipTrue_512 flip_left_hand=True eval.max_samples=512
+=== 10:44:43 END hand kf2p_flipTrue_512 exit=0 Written the decoded output to /home/cvl/Desktop/Speech to sign/model_tests/signspark/ckpt/hand/debug0_eulerstepsize50_can1_anchor0_samples_20261019-10:40:34/seed102_clampstep0_kf2p_flipTrue_512.npy
+=== ALL DONE 10:44:43

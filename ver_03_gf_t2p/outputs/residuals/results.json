@@ -1,0 +1,596 @@
+{
+ "baseline_cfg2.5": {
+  "bt_cand0": {
+   "bleu1": 15.408942603790981,
+   "bleu2": 4.965551198809827,
+   "bleu3": 1.9513120935109547,
+   "bleu4": 0.0,
+   "chrf": 15.550459548320669,
+   "rouge": 16.715065103645173
+  },
+  "bt_best_of_8": {
+   "bleu1": 25.175928238593052,
+   "bleu2": 11.75300411887936,
+   "bleu3": 5.946397486521804,
+   "bleu4": 2.868253737085273,
+   "chrf": 22.344067619227577,
+   "rouge": 23.387745207656334
+  },
+  "sent_chrf_own": 16.305418404746437,
+  "sent_chrf_other_refs": 14.907809782257255,
+  "specificity": 1.3976086224891815,
+  "retrieval_all": {
+   "top1": 0.005,
+   "top5": 0.045,
+   "median_rank": 86.5,
+   "mean_rank": 92.1225
+  },
+  "retrieval_best_of_8_bt_median_rank": 81.5,
+  "motion_energy": 0.01771575861494057,
+  "distinct_hyps": 395,
+  "example": [
+   "that's moved by the feet and that's what actually steers the airplane right and left when you start and stop a turn .",
+   "so we are going to take our left foot and we're going to cross it right in front of our left foot ."
+  ]
+ },
+ "ctrl_wrong_text_cfg2.5": {
+  "bt_cand0": {
+   "bleu1": 15.438448378693753,
+   "bleu2": 3.4343090880164078,
+   "bleu3": 1.0612813626587767,
+   "bleu4": 0.0,
+   "chrf": 15.638554802195987,
+   "rouge": 15.253488807891793
+  },
+  "bt_best_of_8": {
+   "bleu1": 22.68808696648594,
+   "bleu2": 9.801693010789723,
+   "bleu3": 4.751625996892005,
+   "bleu4": 1.8424111291560907,
+   "chrf": 20.852176367180324,
+   "rouge": 20.93004034681488
+  },
+  "sent_chrf_own": 16.076863656255128,
+  "sent_chrf_other_refs": 15.30427543884798,
+  "specificity": 0.7725882174071507,
+  "retrieval_all": {
+   "top1": 0.0025,
+   "top5": 0.0225,
+   "median_rank": 117.5,
+   "mean_rank": 108.5075
+  },
+  "retrieval_best_of_8_bt_median_rank": 123.0,
+  "motion_energy": 0.017164083551615476,
+  "distinct_hyps": 397,
+  "example": [
+   "that's moved by the feet and that's what actually steers the airplane right and left when you start and stop a turn .",
+   "the other thing you can do is if you are in a position of keeping your dog in the corner of the leg that swing and then of course the"
+  ],
+  "vs_baseline": {
+   "p_spec_better": 0.9703218839064309,
+   "p_rank_better": 0.9983301847174926,
+   "p_spec_worse": 0.030350700749153248,
+   "p_rank_worse": 0.001669815282507421
+  }
+ },
+ "cfg1": {
+  "bt_cand0": {
+   "bleu1": 16.16240409249302,
+   "bleu2": 4.295232852475695,
+   "bleu3": 1.2310684027795893,
+   "bleu4": 0.0,
+   "chrf": 16.075908414434263,
+   "rouge": 16.05647640659947
+  },
+  "bt_best_of_8": {
+   "bleu1": 23.20877049431497,
+   "bleu2": 9.331822645329357,
+   "bleu3": 4.59290045751091,
+   "bleu4": 2.6807564642588453,
+   "chrf": 21.59941594424056,
+   "rouge": 20.72191863222742
+  },
+  "sent_chrf_own": 16.83652358508432,
+  "sent_chrf_other_refs": 15.578292981040612,
+  "specificity": 1.2582306040437055,
+  "retrieval_all": {
+   "top1": 0.005,
+   "top5": 0.0275,
+   "median_rank": 104.0,
+   "mean_rank": 103.14
+  },
+  "retrieval_best_of_8_bt_median_rank": 99.0,
+  "motion_energy": 0.017759724240750074,
+  "distinct_hyps": 395,
+  "example": [
+   "that's moved by the feet and that's what actually steers the airplane right and left when you start and stop a turn .",
+   "so we are going to go over the best bet would be to put on if the horse is injured before you are getting injured before your horse is gone"
+  ],
+  "vs_baseline": {
+   "p_spec_better": 0.687316101427978,
+   "p_rank_better": 0.9988577237122964,
+   "p_spec_worse": 0.31608663536552584,
+   "p_rank_worse": 0.001142276287703589
+  }
+ },
+ "cfg5": {
+  "bt_cand0": {
+   "bleu1": 14.811295358464344,
+   "bleu2": 4.6249741332847485,
+   "bleu3": 2.026908703348464,
+   "bleu4": 0.0,
+   "chrf": 14.058825170021663,
+   "rouge": 16.514177092895725
+  },
+  "bt_best_of_8": {
+   "bleu1": 21.26299023147311,
+   "bleu2": 8.458487486339227,
+   "bleu3": 4.173005273843183,
+   "bleu4": 1.9888349465352557,
+   "chrf": 20.877283728273344,
+   "rouge": 21.583633901081622
+  },
+  "sent_chrf_own": 15.373001362892214,
+  "sent_chrf_other_refs": 14.224072668747926,
+  "specificity": 1.1489286941442876,
+  "retrieval_all": {
+   "top1": 0.0025,
+   "top5": 0.04,
+   "median_rank": 85.0,
+   "mean_rank": 86.5975
+  },
+  "retrieval_best_of_8_bt_median_rank": 103.0,
+  "motion_energy": 0.018089268587063997,
+  "distinct_hyps": 389,
+  "example": [
+   "that's moved by the feet and that's what actually steers the airplane right and left when you start and stop a turn .",
+   "so as you bring your knees together you want to bend your knees and stop the same direction as you do the same thing ."
+  ],
+  "vs_baseline": {
+   "p_spec_better": 0.8906687991207027,
+   "p_rank_better": 0.0402922664549519,
+   "p_spec_worse": 0.11115743807664646,
+   "p_rank_worse": 0.9597077335450481
+  }
+ },
+ "cfg7.5": {
+  "bt_cand0": {
+   "bleu1": 14.111924738985833,
+   "bleu2": 4.854319546591723,
+   "bleu3": 2.504682205651396,
+   "bleu4": 1.344501088139746,
+   "chrf": 13.904273475264025,
+   "rouge": 17.883953564501535
+  },
+  "bt_best_of_8": {
+   "bleu1": 22.818018937133022,
+   "bleu2": 10.143022774918187,
+   "bleu3": 5.391246352313211,
+   "bleu4": 2.6683950304015798,
+   "chrf": 20.52365323979287,
+   "rouge": 22.36229227280254
+  },
+  "sent_chrf_own": 14.559592877042123,
+  "sent_chrf_other_refs": 13.457384265561835,
+  "specificity": 1.1022086114802883,
+  "retrieval_all": {
+   "top1": 0.005,
+   "top5": 0.04,
+   "median_rank": 84.0,
+   "mean_rank": 86.1725
+  },
+  "retrieval_best_of_8_bt_median_rank": 81.0,
+  "motion_energy": 0.019471993094775826,
+  "distinct_hyps": 376,
+  "example": [
+   "that's moved by the feet and that's what actually steers the airplane right and left when you start and stop a turn .",
+   "so as you bring your knees together you want to bend your knees and bend your knees and keep your elbows bent a little bit ."
+  ],
+  "vs_baseline": {
+   "p_spec_better": 0.9011825158536793,
+   "p_rank_better": 0.08904554007325421,
+   "p_spec_worse": 0.10051736901411967,
+   "p_rank_worse": 0.9109544599267458
+  }
+ },
+ "neg_mean_s2.5": {
+  "bt_cand0": {
+   "bleu1": 18.36054463814,
+   "bleu2": 5.621350087477127,
+   "bleu3": 2.1263101340684147,
+   "bleu4": 1.0093164344234233,
+   "chrf": 17.08381109066038,
+   "rouge": 18.054284385274283
+  },
+  "bt_best_of_8": {
+   "bleu1": 24.75486607263429,
+   "bleu2": 11.238041795304394,
+   "bleu3": 5.637176636445902,
+   "bleu4": 2.4878846250082938,
+   "chrf": 22.44217957476707,
+   "rouge": 22.264246949969113
+  },
+  "sent_chrf_own": 16.415012576673096,
+  "sent_chrf_other_refs": 14.940600411768523,
+  "specificity": 1.4744121649045752,
+  "retrieval_all": {
+   "top1": 0.01,
+   "top5": 0.035,
+   "median_rank": 88.5,
+   "mean_rank": 93.2275
+  },
+  "retrieval_best_of_8_bt_median_rank": 87.0,
+  "motion_energy": 0.017288862793939187,
+  "distinct_hyps": 390,
+  "example": [
+   "that's moved by the feet and that's what actually steers the airplane right and left when you start and stop a turn .",
+   "so we are going to take it back and we are going to start our left foot with our left foot ."
+  ],
+  "vs_baseline": {
+   "p_spec_better": 0.322937978397543,
+   "p_rank_better": 0.6058768502532915,
+   "p_spec_worse": 0.6804952574769132,
+   "p_rank_worse": 0.3941231497467084
+  }
+ },
+ "neg_mean_s5": {
+  "bt_cand0": {
+   "bleu1": 16.635457896381244,
+   "bleu2": 5.617464377811487,
+   "bleu3": 1.8538318808042926,
+   "bleu4": 0.0,
+   "chrf": 16.36232626291471,
+   "rouge": 17.15488664690017
+  },
+  "bt_best_of_8": {
+   "bleu1": 25.476802739597044,
+   "bleu2": 11.502221278814808,
+   "bleu3": 5.442859428930917,
+   "bleu4": 0.0,
+   "chrf": 21.444045881532233,
+   "rouge": 24.14469155047609
+  },
+  "sent_chrf_own": 16.047688626249656,
+  "sent_chrf_other_refs": 14.482066469744396,
+  "specificity": 1.5656221565052584,
+  "retrieval_all": {
+   "top1": 0.01,
+   "top5": 0.05,
+   "median_rank": 77.5,
+   "mean_rank": 85.1225
+  },
+  "retrieval_best_of_8_bt_median_rank": 87.5,
+  "motion_energy": 0.01653326227562502,
+  "distinct_hyps": 379,
+  "example": [
+   "that's moved by the feet and that's what actually steers the airplane right and left when you start and stop a turn .",
+   "so i'm going to bring my toes down to the ground my toes ."
+  ],
+  "vs_baseline": {
+   "p_spec_better": 0.12061012318474429,
+   "p_rank_better": 0.029240449098637843,
+   "p_spec_worse": 0.8813235061148061,
+   "p_rank_worse": 0.9707595509013621
+  }
+ },
+ "emb_res_l2": {
+  "bt_cand0": {
+   "bleu1": 16.452166639746526,
+   "bleu2": 4.475238837418077,
+   "bleu3": 1.8184530564621524,
+   "bleu4": 0.8966049953113093,
+   "chrf": 14.747837991887339,
+   "rouge": 17.22131183676787
+  },
+  "bt_best_of_8": {
+   "bleu1": 24.83339590753621,
+   "bleu2": 11.256387356502067,
+   "bleu3": 5.901715540842994,
+   "bleu4": 2.575943633628151,
+   "chrf": 22.04318716901177,
+   "rouge": 23.03723570183984
+  },
+  "sent_chrf_own": 15.970000682585287,
+  "sent_chrf_other_refs": 14.454644684565464,
+  "specificity": 1.5153559980198212,
+  "retrieval_all": {
+   "top1": 0.0075,
+   "top5": 0.0575,
+   "median_rank": 77.0,
+   "mean_rank": 84.2325
+  },
+  "retrieval_best_of_8_bt_median_rank": 76.5,
+  "motion_energy": 0.016283123621251436,
+  "distinct_hyps": 383,
+  "example": [
+   "that's moved by the feet and that's what actually steers the airplane right and left when you start and stop a turn .",
+   "so we're going to drop and dip and drop and dip and drop and dip and drop it in and then drop it down ."
+  ],
+  "vs_baseline": {
+   "p_spec_better": 0.22450338086434574,
+   "p_rank_better": 0.023906547079266757,
+   "p_spec_worse": 0.7783666392949051,
+   "p_rank_worse": 0.9760934529207332
+  }
+ },
+ "emb_res_l4": {
+  "bt_cand0": {
+   "bleu1": 13.65383178925791,
+   "bleu2": 3.828114011202633,
+   "bleu3": 1.6195112814775947,
+   "bleu4": 0.8173095566935322,
+   "chrf": 13.951423061083057,
+   "rouge": 16.157527838199435
+  },
+  "bt_best_of_8": {
+   "bleu1": 21.479198090853256,
+   "bleu2": 9.06974233778789,
+   "bleu3": 4.644120478900082,
+   "bleu4": 2.386374925074125,
+   "chrf": 20.001245183619652,
+   "rouge": 22.058875285533954
+  },
+  "sent_chrf_own": 14.94962225240845,
+  "sent_chrf_other_refs": 13.499675975728206,
+  "specificity": 1.449946276680244,
+  "retrieval_all": {
+   "top1": 0.005,
+   "top5": 0.045,
+   "median_rank": 78.0,
+   "mean_rank": 88.6725
+  },
+  "retrieval_best_of_8_bt_median_rank": 90.0,
+  "motion_energy": 0.024167981264181435,
+  "distinct_hyps": 324,
+  "example": [
+   "that's moved by the feet and that's what actually steers the airplane right and left when you start and stop a turn .",
+   "now we're going to lift our foot and bring it across ."
+  ],
+  "vs_baseline": {
+   "p_spec_better": 0.4885516141527848,
+   "p_rank_better": 0.29940595442451123,
+   "p_spec_worse": 0.5152629137874305,
+   "p_rank_worse": 0.7005940455754888
+  }
+ },
+ "mean_text": {
+  "bt_cand0": {
+   "bleu1": 16.022474628944682,
+   "bleu2": 4.471961381412082,
+   "bleu3": 1.826480996922932,
+   "bleu4": 0.9002394196759076,
+   "chrf": 15.338798287145558,
+   "rouge": 15.082871143583294
+  },
+  "bt_best_of_8": {
+   "bleu1": 23.169082643049407,
+   "bleu2": 10.018270988003941,
+   "bleu3": 4.334957605630515,
+   "bleu4": 1.7192080375150653,
+   "chrf": 20.744130187697547,
+   "rouge": 20.92905369463174
+  },
+  "sent_chrf_own": 16.201659212050238,
+  "sent_chrf_other_refs": 15.49972045812078,
+  "specificity": 0.7019387539294556,
+  "retrieval_all": {
+   "top1": 0.0075,
+   "top5": 0.0225,
+   "median_rank": 113.5,
+   "mean_rank": 106.815
+  },
+  "retrieval_best_of_8_bt_median_rank": 104.5,
+  "motion_energy": 0.018229594653239475,
+  "distinct_hyps": 397,
+  "example": [
+   "that's moved by the feet and that's what actually steers the airplane right and left when you start and stop a turn .",
+   "the other thing you can do is if you are going to be able to control the ball or how you use it ."
+  ],
+  "vs_baseline": {
+   "p_spec_better": 0.9893881641815758,
+   "p_rank_better": 0.9999009834025291,
+   "p_spec_worse": 0.010897143351068728,
+   "p_rank_worse": 9.901659747093141e-05
+  }
+ },
+ "tau0.7": {
+  "bt_cand0": {
+   "bleu1": 14.972271079388582,
+   "bleu2": 4.240846845722369,
+   "bleu3": 1.2124621195099776,
+   "bleu4": 0.0,
+   "chrf": 15.091721923324247,
+   "rouge": 16.210300667156794
+  },
+  "bt_best_of_8": {
+   "bleu1": 23.590937516964296,
+   "bleu2": 11.061049376908214,
+   "bleu3": 5.955666082669349,
+   "bleu4": 3.0891150319869345,
+   "chrf": 21.273221629269344,
+   "rouge": 23.28502745206484
+  },
+  "sent_chrf_own": 15.119815792189966,
+  "sent_chrf_other_refs": 14.1668355156884,
+  "specificity": 0.9529802765015642,
+  "retrieval_all": {
+   "top1": 0.005,
+   "top5": 0.03,
+   "median_rank": 100.0,
+   "mean_rank": 97.2725
+  },
+  "retrieval_best_of_8_bt_median_rank": 73.5,
+  "motion_energy": 0.009934324361383915,
+  "distinct_hyps": 362,
+  "example": [
+   "that's moved by the feet and that's what actually steers the airplane right and left when you start and stop a turn .",
+   "the other end of the board is when you get ten nails which is going to be going with a coarse one card like that ."
+  ],
+  "vs_baseline": {
+   "p_spec_better": 0.912506192319956,
+   "p_rank_better": 0.9701128762998056,
+   "p_spec_worse": 0.08905052389543044,
+   "p_rank_worse": 0.029887123700194373
+  }
+ },
+ "tau1.3": {
+  "bt_cand0": {
+   "bleu1": 16.088387230604663,
+   "bleu2": 4.6304034858944,
+   "bleu3": 1.294486020743148,
+   "bleu4": 0.0,
+   "chrf": 15.51822465728338,
+   "rouge": 15.744333723433995
+  },
+  "bt_best_of_8": {
+   "bleu1": 24.084249084249084,
+   "bleu2": 9.371831980154578,
+   "bleu3": 3.5375488030869398,
+   "bleu4": 0.0,
+   "chrf": 22.242094336104394,
+   "rouge": 21.11693920233017
+  },
+  "sent_chrf_own": 16.87140583546977,
+  "sent_chrf_other_refs": 15.703393401867046,
+  "specificity": 1.1680124336027256,
+  "retrieval_all": {
+   "top1": 0.01,
+   "top5": 0.0475,
+   "median_rank": 86.0,
+   "mean_rank": 91.1775
+  },
+  "retrieval_best_of_8_bt_median_rank": 83.0,
+  "motion_energy": 0.037783716381527485,
+  "distinct_hyps": 398,
+  "example": [
+   "that's moved by the feet and that's what actually steers the airplane right and left when you start and stop a turn .",
+   "as you can see here we are going to put our rain stick in here and we are going to start by drawing the other side ."
+  ],
+  "vs_baseline": {
+   "p_spec_better": 0.631169731098078,
+   "p_rank_better": 0.38790697793363593,
+   "p_spec_worse": 0.37244794803900305,
+   "p_rank_worse": 0.6120930220663641
+  }
+ },
+ "chunks3": {
+  "bt_cand0": {
+   "bleu1": 15.808154305291525,
+   "bleu2": 5.146731409007539,
+   "bleu3": 1.993255849227266,
+   "bleu4": 0.9599281112403734,
+   "chrf": 15.221908581351059,
+   "rouge": 15.81046727009173
+  },
+  "bt_best_of_8": {
+   "bleu1": 23.973235707502994,
+   "bleu2": 10.404690152896453,
+   "bleu3": 5.359421772067308,
+   "bleu4": 2.6558231937535948,
+   "chrf": 20.743253826054506,
+   "rouge": 23.55001668342934
+  },
+  "sent_chrf_own": 15.373629197030237,
+  "sent_chrf_other_refs": 14.332401597762232,
+  "specificity": 1.0412275992680033,
+  "retrieval_all": {
+   "top1": 0.0025,
+   "top5": 0.0275,
+   "median_rank": 100.5,
+   "mean_rank": 100.1325
+  },
+  "retrieval_best_of_8_bt_median_rank": 113.5,
+  "motion_energy": 0.015990072604035958,
+  "distinct_hyps": 390,
+  "example": [
+   "that's moved by the feet and that's what actually steers the airplane right and left when you start and stop a turn .",
+   "the slower if you turn it the left it is not going to be ."
+  ],
+  "vs_baseline": {
+   "p_spec_better": 0.912506192319956,
+   "p_rank_better": 0.9998581225087767,
+   "p_spec_worse": 0.08905052389543044,
+   "p_rank_worse": 0.00014187749122327787
+  }
+ },
+ "out_res_l2": {
+  "bt_cand0": {
+   "bleu1": 16.198434227474117,
+   "bleu2": 4.760810432413021,
+   "bleu3": 2.083810465470812,
+   "bleu4": 0.9926656161595959,
+   "chrf": 15.624366008973606,
+   "rouge": 17.641673252744933
+  },
+  "bt_best_of_8": {
+   "bleu1": 23.82760121178831,
+   "bleu2": 11.333817102038386,
+   "bleu3": 6.165916825432636,
+   "bleu4": 2.9457681372604196,
+   "chrf": 21.68345307226546,
+   "rouge": 22.89232621039933
+  },
+  "sent_chrf_own": 16.09903998325831,
+  "sent_chrf_other_refs": 14.657746775680314,
+  "specificity": 1.4412932075779974,
+  "retrieval_all": {
+   "top1": 0.01,
+   "top5": 0.0425,
+   "median_rank": 81.5,
+   "mean_rank": 86.1575
+  },
+  "retrieval_best_of_8_bt_median_rank": 90.5,
+  "motion_energy": 0.01963573121931404,
+  "distinct_hyps": 394,
+  "example": [
+   "that's moved by the feet and that's what actually steers the airplane right and left when you start and stop a turn .",
+   "so i'm going to bring my left foot here and i'm just going to bring it back down like this one ."
+  ],
+  "vs_baseline": {
+   "p_spec_better": 0.6166336657815785,
+   "p_rank_better": 0.001989442934215728,
+   "p_spec_worse": 0.3870265887769424,
+   "p_rank_worse": 0.9980105570657842
+  }
+ },
+ "out_res_l3": {
+  "bt_cand0": {
+   "bleu1": 16.65963297827313,
+   "bleu2": 4.841037462620642,
+   "bleu3": 1.9169230108242459,
+   "bleu4": 0.9329087087291553,
+   "chrf": 15.27717094381238,
+   "rouge": 17.06385430430224
+  },
+  "bt_best_of_8": {
+   "bleu1": 23.581532928424476,
+   "bleu2": 10.326137161221387,
+   "bleu3": 4.920131299626266,
+   "bleu4": 1.891675898447351,
+   "chrf": 21.35338963519993,
+   "rouge": 21.64514453510217
+  },
+  "sent_chrf_own": 15.605736350531984,
+  "sent_chrf_other_refs": 14.200174974108824,
+  "specificity": 1.4055613764231594,
+  "retrieval_all": {
+   "top1": 0.01,
+   "top5": 0.0525,
+   "median_rank": 77.5,
+   "mean_rank": 84.2125
+  },
+  "retrieval_best_of_8_bt_median_rank": 82.0,
+  "motion_energy": 0.02268544218270108,
+  "distinct_hyps": 385,
+  "example": [
+   "that's moved by the feet and that's what actually steers the airplane right and left when you start and stop a turn .",
+   "now i'm going to bring my left foot up on the ground i'm going to take my left foot and i'm going to place my left foot behind my right"
+  ],
+  "vs_baseline": {
+   "p_spec_better": 0.6347760304879593,
+   "p_rank_better": 0.011794852687278244,
+   "p_spec_worse": 0.36883026890192205,
+   "p_rank_worse": 0.9882051473127218
+  }
+ }
+}

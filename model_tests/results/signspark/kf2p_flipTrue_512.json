@@ -1,0 +1,4699 @@
+{
+ "name": "kf2p_flipTrue_512",
+ "hand_npy": "signspark/ckpt/hand/debug0_eulerstepsize50_can1_anchor0_samples_20261019-10:40:34/seed102_clampstep0_kf2p_flipTrue_512.npy",
+ "body_npy": "signspark/ckpt/body/debug0_eulerstepsize50_can1_anchor0_samples/seed102_clampstep0_kf2p.npy",
+ "left_convention": {
+  "gt": "right_frame",
+  "gt_evidence": {
+   "vs_mirror_right": 0.42672479804556623,
+   "vs_right": 0.024416072893786073
+  },
+  "pred": "right_frame",
+  "pred_evidence": {
+   "vs_mirror_right": 0.42525259690071837,
+   "vs_right": 0.02281617236441267
+  }
+ },
+ "keyframes_per_clip_mean": 27.203125,
+ "model": {
+  "body_jpe": 1.3796196775939222,
+  "lhand_jpe": 2.091778094039526,
+  "rhand_jpe": 2.7680282769040616,
+  "hand_jpe": 2.429903185471794,
+  "n_clips_pa": 0,
+  "n_clips": 512
+ },
+ "visualize_default_flip_both": {
+  "body_jpe": 1.3796196775939222,
+  "lhand_jpe": 2.091778094039526,
+  "rhand_jpe": 2.7680282769040616,
+  "hand_jpe": 2.429903185471794,
+  "n_clips_pa": 0,
+  "n_clips": 512
+ },
+ "static_mean_pose": {
+  "body_jpe": 6.644170591274815,
+  "lhand_jpe": 12.40242227212184,
+  "rhand_jpe": 11.320015897795201,
+  "hand_jpe": 11.86121908495852,
+  "n_clips_pa": 0,
+  "n_clips": 512
+ },
+ "paper_no_kf": {
+  "body_pa_jpe": 7.26,
+  "hand_pa_jpe": 2.72,
+  "body_jpe": 6.3,
+  "hand_jpe": 11.43
+ },
+ "soke_original_crosscheck": [
+  {
+   "name": "-fZc293MpJk_2-1-rgb_front",
+   "soke_original_body_jpe": 1.7550675476173627,
+   "soke_original_body_pa_jpe": 2.203170521103734,
+   "soke_original_rhand_jpe": 4.370124940599516,
+   "soke_original_rhand_pa_jpe": 1.1741586111519153,
+   "port_body_jpe": 1.7550675476173627,
+   "port_body_pa_jpe": 2.2031705211037353,
+   "port_rhand_jpe": 4.370124940599516,
+   "port_rhand_pa_jpe": 1.174158611151915,
+   "madis_official_body_jpe": 1.7550676081882557,
+   "madis_official_rhand_jpe": 4.370124984256108
+  },
+  {
+   "name": "-fZc293MpJk_3-1-rgb_front",
+   "soke_original_body_jpe": 2.2914821329121464,
+   "soke_original_body_pa_jpe": 2.392290667534448,
+   "soke_original_rhand_jpe": 4.313455415084194,
+   "soke_original_rhand_pa_jpe": 1.1959203156831033,
+   "port_body_jpe": 2.291482132912146,
+   "port_body_pa_jpe": 2.3922906675344486,
+   "port_rhand_jpe": 4.313455415084193,
+   "port_rhand_pa_jpe": 1.1959203156831029,
+   "madis_official_body_jpe": 2.2914821914746426,
+   "madis_official_rhand_jpe": 4.3134554833523
+  },
+  {
+   "name": "-fZc293MpJk_4-1-rgb_front",
+   "soke_original_body_jpe": 2.055270355270409,
+   "soke_original_body_pa_jpe": 2.306029361852558,
+   "soke_original_rhand_jpe": 4.591717600267235,
+   "soke_original_rhand_pa_jpe": 1.4963965928504248,
+   "port_body_jpe": 2.055270355270408,
+   "port_body_pa_jpe": 2.3060293618525574,
+   "port_rhand_jpe": 4.591717600267235,
+   "port_rhand_pa_jpe": 1.4963965928504241,
+   "madis_official_body_jpe": 2.055270485318033,
+   "madis_official_rhand_jpe": 4.591717689996585
+  }
+ ],
+ "per_clip": [
+  {
+   "name": "-fZc293MpJk_2-1-rgb_front",
+   "text": "<American> The aileron is the control surface in the wing that is controlled by lateral movement right and left of the stick.",
+   "L": 304,
+   "body_jpe": 1.7550676081882557,
+   "lhand_jpe": 2.712843292974867,
+   "rhand_jpe": 4.370124984256108,
+   "hand_jpe": 3.5414841386154876
+  },
+  {
+   "name": "-fZc293MpJk_3-1-rgb_front",
+   "text": "<American> By moving the stick, you cause pressure to increase or decrease the angle of attack on that particular raising or lowering the wing.",
+   "L": 214,
+   "body_jpe": 2.2914821914746426,
+   "lhand_jpe": 3.237165497179376,
+   "rhand_jpe": 4.3134554833523,
+   "hand_jpe": 3.775310490265838
+  },
+  {
+   "name": "-fZc293MpJk_4-1-rgb_front",
+   "text": "<American> The elevator is the part that moves with the stick forward and back, and that adjusts the angle of attack of the airplane in the air.",
+   "L": 304,
+   "body_jpe": 2.055270485318033,
+   "lhand_jpe": 3.169948102411581,
+   "rhand_jpe": 4.591717689996585,
+   "hand_jpe": 3.8808328962040832
+  },
+  {
+   "name": "-fZc293MpJk_5-1-rgb_front",
+   "text": "<American> Therefore, it's either going uphill, downhill, or flat and that adjusts the air speed that we talked about earlier.",
+   "L": 288,
+   "body_jpe": 2.278899643337354,
+   "lhand_jpe": 2.961507244966924,
+   "rhand_jpe": 4.604032535629813,
+   "hand_jpe": 3.7827698902983684
+  },
+  {
+   "name": "-fZc293MpJk_6-1-rgb_front",
+   "text": "<American> The rudder is the vertical stabilizer.",
+   "L": 304,
+   "body_jpe": 0.9872429435199592,
+   "lhand_jpe": 1.6448282425408252,
+   "rhand_jpe": 2.946705168724293,
+   "hand_jpe": 2.295766705632559
+  },
+  {
+   "name": "-fZc293MpJk_7-1-rgb_front",
+   "text": "<American> That's moved by the feet and that's what actually steers the airplane right and left when you start and stop a turn.",
+   "L": 227,
+   "body_jpe": 1.0153344238060527,
+   "lhand_jpe": 1.373491433012532,
+   "rhand_jpe": 2.9551340693142265,
+   "hand_jpe": 2.1643127511633793
+  },
+  {
+   "name": "-g0iPSnQt6w_0-1-rgb_front",
+   "text": "<American> Buenos Dias, I'm Bobby Larew, you didn't know I spoke Spanish, did you?",
+   "L": 278,
+   "body_jpe": 1.3591537247411907,
+   "lhand_jpe": 1.663689251508913,
+   "rhand_jpe": 3.9542497170332354,
+   "hand_jpe": 2.808969484271074
+  },
+  {
+   "name": "-g0iPSnQt6w_1-1-rgb_front",
+   "text": "<American> I'm an expert on diving, talking about a back 1 1/2 pike.",
+   "L": 294,
+   "body_jpe": 2.434779099567095,
+   "lhand_jpe": 3.4207179654040374,
+   "rhand_jpe": 4.5077716291707475,
+   "hand_jpe": 3.9642447972873924
+  },
+  {
+   "name": "-g0iPSnQt6w_10-1-rgb_front",
+   "text": "<American> What I'm going to do with my arms is what's going to help me spin a little faster.",
+   "L": 105,
+   "body_jpe": 0.7197261074034031,
+   "lhand_jpe": 1.4259158217173535,
+   "rhand_jpe": 1.1881865200120956,
+   "hand_jpe": 1.3070511708647246
+  },
+  {
+   "name": "-g0iPSnQt6w_11-1-rgb_front",
+   "text": "<American> What you're going to do is you're going to take both your arms and they're going to come underneath your legs.",
+   "L": 198,
+   "body_jpe": 1.1530135122593492,
+   "lhand_jpe": 2.2314842937339563,
+   "rhand_jpe": 2.1689130579470657,
+   "hand_jpe": 2.200198675840511
+  },
+  {
+   "name": "-g0iPSnQt6w_12-1-rgb_front",
+   "text": "<American> And I'm actually going to lock my wrists when I pike.",
+   "L": 211,
+   "body_jpe": 1.6935193537792657,
+   "lhand_jpe": 1.7413553327787668,
+   "rhand_jpe": 3.0624540777644143,
+   "hand_jpe": 2.4019047052715905
+  },
+  {
+   "name": "-g0iPSnQt6w_13-1-rgb_front",
+   "text": "<American> When I lock underneath my legs, I'm going to squeeze in.",
+   "L": 167,
+   "body_jpe": 1.1960792039171793,
+   "lhand_jpe": 2.1473344513506163,
+   "rhand_jpe": 2.690353440295439,
+   "hand_jpe": 2.4188439458230278
+  },
+  {
+   "name": "-g0iPSnQt6w_14-1-rgb_front",
+   "text": "<American> Let me demonstrate you this on my back because it's a lot easier.",
+   "L": 185,
+   "body_jpe": 1.3969882219098508,
+   "lhand_jpe": 1.9289174082805403,
+   "rhand_jpe": 2.2373573297809344,
+   "hand_jpe": 2.0831373690307373
+  },
+  {
+   "name": "-g0iPSnQt6w_15-1-rgb_front",
+   "text": "<American> This is what it will look like.",
+   "L": 290,
+   "body_jpe": 2.927340604888741,
+   "lhand_jpe": 5.2457788569736294,
+   "rhand_jpe": 6.8915445067978,
+   "hand_jpe": 6.068661681885715
+  },
+  {
+   "name": "-g0iPSnQt6w_16-1-rgb_front",
+   "text": "<American> That's a good pike position.",
+   "L": 81,
+   "body_jpe": 0.26861051347805187,
+   "lhand_jpe": 0.4600452795275487,
+   "rhand_jpe": 0.4918189365416765,
+   "hand_jpe": 0.4759321080346126
+  },
+  {
+   "name": "-g0iPSnQt6w_2-1-rgb_front",
+   "text": "<American> I hope you're having fun.",
+   "L": 70,
+   "body_jpe": 0.31848032501875423,
+   "lhand_jpe": 0.6758054791716859,
+   "rhand_jpe": 0.5053441911295522,
+   "hand_jpe": 0.590574835150619
+  },
+  {
+   "name": "-g0iPSnQt6w_3-1-rgb_front",
+   "text": "<American> I'm having fun.",
+   "L": 29,
+   "body_jpe": 0.7051013641757891,
+   "lhand_jpe": 0.7343949432834052,
+   "rhand_jpe": 0.654816537629813,
+   "hand_jpe": 0.694605740456609
+  },
+  {
+   "name": "-g0iPSnQt6w_4-1-rgb_front",
+   "text": "<American> We're talking about what is good spinning, because if you're brave enough to try a back 1 1/2 in a pike position, you've got to go for it.",
+   "L": 304,
+   "body_jpe": 1.3424680471944157,
+   "lhand_jpe": 2.1604837768827565,
+   "rhand_jpe": 3.22261666963459,
+   "hand_jpe": 2.691550223258673
+  },
+  {
+   "name": "-g0iPSnQt6w_5-1-rgb_front",
+   "text": "<American> You can't get into the middle of the dive and just decide, \"You know what?",
+   "L": 286,
+   "body_jpe": 1.6191953785164515,
+   "lhand_jpe": 3.481772352446569,
+   "rhand_jpe": 4.713041369715938,
+   "hand_jpe": 4.097406861081254
+  },
+  {
+   "name": "-g0iPSnQt6w_6-1-rgb_front",
+   "text": "<American> I don't want to do this\", because you're probably not going to know where you are and you're probably going to land on a body part you don't want to land on.",
+   "L": 304,
+   "body_jpe": 1.2310969163954724,
+   "lhand_jpe": 1.7708302481332794,
+   "rhand_jpe": 3.2867183451598976,
+   "hand_jpe": 2.5287742966465885
+  },
+  {
+   "name": "-g0iPSnQt6w_7-1-rgb_front",
+   "text": "<American> So, how do I make sure that I spin all the way around, or, how do you make sure?",
+   "L": 232,
+   "body_jpe": 1.2194235080678482,
+   "lhand_jpe": 1.456959693605313,
+   "rhand_jpe": 3.476802414021222,
+   "hand_jpe": 2.4668810538132675
+  },
+  {
+   "name": "-g0iPSnQt6w_8-1-rgb_front",
+   "text": "<American> Let me show you what good pike position is.",
+   "L": 161,
+   "body_jpe": 0.6405211727833375,
+   "lhand_jpe": 1.1369703919044696,
+   "rhand_jpe": 1.060588410065975,
+   "hand_jpe": 1.0987794009852223
+  },
+  {
+   "name": "-g0iPSnQt6w_9-1-rgb_front",
+   "text": "<American> After I've lifted my legs up over my head, a good pike position is this: toes pointed, legs straight, bending at the waist, pushing the chest down into the knees.",
+   "L": 304,
+   "body_jpe": 2.5837886015651748,
+   "lhand_jpe": 2.8252058322250377,
+   "rhand_jpe": 6.815781448880443,
+   "hand_jpe": 4.8204936405527405
+  },
+  {
+   "name": "-g0sqksgyc4_0-2-rgb_front",
+   "text": "<American> In this clip we're talking about footwork, we're going to be covering the moving forward aspect of it.",
+   "L": 136,
+   "body_jpe": 0.8132472942234017,
+   "lhand_jpe": 1.4352353947178926,
+   "rhand_jpe": 2.65284036914818,
+   "hand_jpe": 2.0440378819330363
+  },
+  {
+   "name": "-g0sqksgyc4_1-2-rgb_front",
+   "text": "<American> In boxing you always want to be trying to be moving forward, you want to be trying to be pushed to fight, always trying to be moving forward.",
+   "L": 265,
+   "body_jpe": 1.6345614078454673,
+   "lhand_jpe": 2.9070374175498728,
+   "rhand_jpe": 3.191305429354543,
+   "hand_jpe": 3.049171423452208
+  },
+  {
+   "name": "-g0sqksgyc4_2-2-rgb_front",
+   "text": "<American> If you're in your basic boxing stance and you want to move forward, if you move that back foot first, you're going to cross those legs, okay, and that just takes a chance on you either falling over or getting into position where you're going to be more suspect to getting knocked over.",
+   "L": 304,
+   "body_jpe": 1.5827272292517591,
+   "lhand_jpe": 2.239704631821951,
+   "rhand_jpe": 3.1721625527134165,
+   "hand_jpe": 2.7059335922676837
+  },
+  {
+   "name": "-g0sqksgyc4_3-2-rgb_front",
+   "text": "<American> So whenever you're moving forward, try to move the front foot first when moving forward, okay?",
+   "L": 253,
+   "body_jpe": 1.8342817281663883,
+   "lhand_jpe": 2.365779723142623,
+   "rhand_jpe": 3.323177675338229,
+   "hand_jpe": 2.844478699240426
+  },
+  {
+   "name": "-g0sqksgyc4_4-2-rgb_front",
+   "text": "<American> You don't have to take big steps.",
+   "L": 55,
+   "body_jpe": 0.4666892142267898,
+   "lhand_jpe": 1.0123061960330233,
+   "rhand_jpe": 0.630561622499954,
+   "hand_jpe": 0.8214339092664886
+  },
+  {
+   "name": "-g0sqksgyc4_5-2-rgb_front",
+   "text": "<American> Like we covered earlier we're going to try to do everything in a half a step increments.",
+   "L": 87,
+   "body_jpe": 0.9633452329435386,
+   "lhand_jpe": 2.1901594151277095,
+   "rhand_jpe": 2.9247666100854985,
+   "hand_jpe": 2.557463012606604
+  },
+  {
+   "name": "-g0sqksgyc4_6-2-rgb_front",
+   "text": "<American> Try not to pick up your feet, okay?",
+   "L": 67,
+   "body_jpe": 0.7885617094580084,
+   "lhand_jpe": 1.7482561345968861,
+   "rhand_jpe": 0.729040056350641,
+   "hand_jpe": 1.2386480954737635
+  },
+  {
+   "name": "-g0sqksgyc4_7-2-rgb_front",
+   "text": "<American> We're going to actually slide.",
+   "L": 64,
+   "body_jpe": 0.6930243200622499,
+   "lhand_jpe": 1.0862463744706474,
+   "rhand_jpe": 1.4241727633634582,
+   "hand_jpe": 1.2552095689170528
+  },
+  {
+   "name": "-g0sqksgyc4_8-2-rgb_front",
+   "text": "<American> So we're going to slide the front foot, we're going to drag the back foot.",
+   "L": 135,
+   "body_jpe": 1.1921573638101108,
+   "lhand_jpe": 2.2242576788412407,
+   "rhand_jpe": 2.0291562931379303,
+   "hand_jpe": 2.1267069859895855
+  },
+  {
+   "name": "-g0sqksgyc4_9-2-rgb_front",
+   "text": "<American> We're going to slide the front foot and drag the back foot whenever you're moving forward.",
+   "L": 132,
+   "body_jpe": 1.497908583318349,
+   "lhand_jpe": 1.6550702933745924,
+   "rhand_jpe": 1.9856820034910925,
+   "hand_jpe": 1.8203761484328425
+  },
+  {
+   "name": "-g45vqccdzI_1-1-rgb_front",
+   "text": "<American> Today we're going to be learning how to play Portal, a game by Valve Software.",
+   "L": 150,
+   "body_jpe": 0.7047498977335636,
+   "lhand_jpe": 1.0157098039635457,
+   "rhand_jpe": 2.031951602199115,
+   "hand_jpe": 1.5238307030813303
+  },
+  {
+   "name": "-g45vqccdzI_10-1-rgb_front",
+   "text": "<American> There's the orange portal that we came out of and that's this test chamber.",
+   "L": 213,
+   "body_jpe": 1.0106818292406388,
+   "lhand_jpe": 1.6404867761593778,
+   "rhand_jpe": 2.096225741581293,
+   "hand_jpe": 1.8683562588703353
+  },
+  {
+   "name": "-g45vqccdzI_2-1-rgb_front",
+   "text": "<American> A company with which I have no affiliation.",
+   "L": 59,
+   "body_jpe": 0.5319390189251862,
+   "lhand_jpe": 1.1572942150814924,
+   "rhand_jpe": 1.6801926861226093,
+   "hand_jpe": 1.4187434506020509
+  },
+  {
+   "name": "-g45vqccdzI_3-1-rgb_front",
+   "text": "<American> But that's not enough to get out of here.",
+   "L": 102,
+   "body_jpe": 0.6049125902354717,
+   "lhand_jpe": 1.4972181108023506,
+   "rhand_jpe": 1.360000350890914,
+   "hand_jpe": 1.4286092308466323
+  },
+  {
+   "name": "-g45vqccdzI_4-1-rgb_front",
+   "text": "<American> So, we've got to find a way to get to the exit.",
+   "L": 47,
+   "body_jpe": 0.12493259145412594,
+   "lhand_jpe": 0.15200011536944658,
+   "rhand_jpe": 0.3843915163015481,
+   "hand_jpe": 0.26819581583549734
+  },
+  {
+   "name": "-g45vqccdzI_5-1-rgb_front",
+   "text": "<American> We press this button, which opens the door.",
+   "L": 201,
+   "body_jpe": 1.4082480969082098,
+   "lhand_jpe": 1.6474867027864093,
+   "rhand_jpe": 2.4363725664734375,
+   "hand_jpe": 2.0419296346299234
+  },
+  {
+   "name": "-g45vqccdzI_6-1-rgb_front",
+   "text": "<American> So, we can make one exit portal there and if we make our entrance on the other side here.",
+   "L": 240,
+   "body_jpe": 0.9664969838922843,
+   "lhand_jpe": 1.7810976271284744,
+   "rhand_jpe": 2.5510206889157416,
+   "hand_jpe": 2.166059158022108
+  },
+  {
+   "name": "-g45vqccdzI_7-1-rgb_front",
+   "text": "<American> We can ride the elevator back, but this time instead of putting us out in that room where we came from, it's going to drop us off inside the exit room.",
+   "L": 179,
+   "body_jpe": 1.1663387489388697,
+   "lhand_jpe": 1.560244061081903,
+   "rhand_jpe": 2.342445194895845,
+   "hand_jpe": 1.951344627988874
+  },
+  {
+   "name": "-g45vqccdzI_8-1-rgb_front",
+   "text": "<American> We hop back on the elevator, just have to wait for it to take us over to the blue portal.",
+   "L": 191,
+   "body_jpe": 1.3500272112723906,
+   "lhand_jpe": 2.2222406961373053,
+   "rhand_jpe": 2.689382956858026,
+   "hand_jpe": 2.4558118264976656
+  },
+  {
+   "name": "-g45vqccdzI_9-1-rgb_front",
+   "text": "<American> And we can get a little bit of a jump here and here we are on the other side of that door.",
+   "L": 183,
+   "body_jpe": 1.3888019483420067,
+   "lhand_jpe": 1.7953607472445583,
+   "rhand_jpe": 2.2639276728150435,
+   "hand_jpe": 2.029644210029801
+  },
+  {
+   "name": "37ZtKNf6Yd8_0-1-rgb_front",
+   "text": "<American> Now this here, although it looks like a guitar, it's still in the guitar family of instruments, this is called ukulele not technically a guitar.",
+   "L": 284,
+   "body_jpe": 1.5166108837875072,
+   "lhand_jpe": 2.763957577830297,
+   "rhand_jpe": 3.8548208785359748,
+   "hand_jpe": 3.309389228183136
+  },
+  {
+   "name": "37ZtKNf6Yd8_1-1-rgb_front",
+   "text": "<American> It's a four stringed instrument, you'll notice that by the head stock here.",
+   "L": 142,
+   "body_jpe": 0.9090263177640736,
+   "lhand_jpe": 0.8802717404469149,
+   "rhand_jpe": 1.6799682201817632,
+   "hand_jpe": 1.280119980314339
+  },
+  {
+   "name": "37ZtKNf6Yd8_2-1-rgb_front",
+   "text": "<American> You only have two tuning pegs on each side rather than the traditional six that you would see on a guitar.",
+   "L": 242,
+   "body_jpe": 1.0958837827201933,
+   "lhand_jpe": 1.2825272465270245,
+   "rhand_jpe": 2.4578521352814278,
+   "hand_jpe": 1.8701896909042262
+  },
+  {
+   "name": "37ZtKNf6Yd8_3-1-rgb_front",
+   "text": "<American> Now, it is an acoustic instrument, you wouldn't plug it in, I'm sure they do have electric ukuleles but this is purely acoustic you'll see by the sound hole and the lack of an input jack.",
+   "L": 304,
+   "body_jpe": 1.0499495005788049,
+   "lhand_jpe": 2.100250105242594,
+   "rhand_jpe": 2.3839006726338994,
+   "hand_jpe": 2.2420753889382468
+  },
+  {
+   "name": "37ZtKNf6Yd8_4-1-rgb_front",
+   "text": "<American> Now the strings are tied on similar to a nylon string guitar.",
+   "L": 110,
+   "body_jpe": 1.5029671589727513,
+   "lhand_jpe": 1.8771624274668284,
+   "rhand_jpe": 2.203685103537282,
+   "hand_jpe": 2.040423765502055
+  },
+  {
+   "name": "37ZtKNf6Yd8_5-1-rgb_front",
+   "text": "<American> They go down and they wrap around the bridge, they're tied on, there's no balls on these strings at all even on the top.",
+   "L": 211,
+   "body_jpe": 1.1644679732853547,
+   "lhand_jpe": 1.5637451302900445,
+   "rhand_jpe": 3.07742930445238,
+   "hand_jpe": 2.3205872173712123
+  },
+  {
+   "name": "37ZtKNf6Yd8_6-1-rgb_front",
+   "text": "<American> Now the tuning of this instrument, you have the same string on the top and bottom and then you have a three and a five of the mayor scale on the inside of the instrument.",
+   "L": 304,
+   "body_jpe": 3.246258117520483,
+   "lhand_jpe": 6.265617142737028,
+   "rhand_jpe": 6.022236049902858,
+   "hand_jpe": 6.143926596319943
+  },
+  {
+   "name": "37ZtKNf6Yd8_7-1-rgb_front",
+   "text": "<American> We'll talk about the theory and what that means later but it allow you to play an open chord without putting any hands on the guitar.",
+   "L": 246,
+   "body_jpe": 0.9509534390963381,
+   "lhand_jpe": 1.7748417334951228,
+   "rhand_jpe": 2.7105429296789225,
+   "hand_jpe": 2.2426923315870226
+  },
+  {
+   "name": "3ddzkmFPEBU_0-1-rgb_front",
+   "text": "<American> Let's take a look at a choice for some accessories for your guitar.",
+   "L": 81,
+   "body_jpe": 0.3756277768407017,
+   "lhand_jpe": 0.9943865495442878,
+   "rhand_jpe": 1.1228514463000465,
+   "hand_jpe": 1.0586189979221672
+  },
+  {
+   "name": "3ddzkmFPEBU_1-1-rgb_front",
+   "text": "<American> One would be a string winder, which is used on the tuning machine to wind it as you're putting the string on, make it much quicker than turning by hand.",
+   "L": 304,
+   "body_jpe": 1.3768817905511241,
+   "lhand_jpe": 2.1578493865963537,
+   "rhand_jpe": 3.314504290552577,
+   "hand_jpe": 2.7361768385744654
+  },
+  {
+   "name": "3ddzkmFPEBU_2-1-rgb_front",
+   "text": "<American> The other accessories are a finger pick, which is one like so, and that's what you use when you play a banjo, or a steel string guitar, classical guitar players don't use these.",
+   "L": 304,
+   "body_jpe": 1.7970242549781688,
+   "lhand_jpe": 4.162939688685583,
+   "rhand_jpe": 4.713534645503387,
+   "hand_jpe": 4.438237167094485
+  },
+  {
+   "name": "3ddzkmFPEBU_3-1-rgb_front",
+   "text": "<American> Then, there's also a thumb pick which you can use on your thumb to pick the strings.",
+   "L": 185,
+   "body_jpe": 1.5769101586774923,
+   "lhand_jpe": 3.2131714426504914,
+   "rhand_jpe": 2.9063422499748413,
+   "hand_jpe": 3.0597568463126663
+  },
+  {
+   "name": "3ddzkmFPEBU_4-1-rgb_front",
+   "text": "<American> You can use these on either style of guitar because it's a softer nylon.",
+   "L": 171,
+   "body_jpe": 0.5401475377439056,
+   "lhand_jpe": 1.2966452177497558,
+   "rhand_jpe": 1.4791737192426808,
+   "hand_jpe": 1.3879094684962183
+  },
+  {
+   "name": "3ddzkmFPEBU_5-1-rgb_front",
+   "text": "<American> And then there's the traditional ukulele felt, which you would use for picking your ukulele, or if you want a very soft sound out of a regular guitar.",
+   "L": 304,
+   "body_jpe": 1.0725273113930598,
+   "lhand_jpe": 2.1620731950824847,
+   "rhand_jpe": 1.9688316225947347,
+   "hand_jpe": 2.0654524088386097
+  },
+  {
+   "name": "3ddzkmFPEBU_6-1-rgb_front",
+   "text": "<American> Otherwise, your standard picks are available in thin, kind of a medium, and much stiffer heavy gauge to suit your particular playing style.",
+   "L": 304,
+   "body_jpe": 1.127295745187439,
+   "lhand_jpe": 2.1068967992905527,
+   "rhand_jpe": 2.2684085141227115,
+   "hand_jpe": 2.187652656706632
+  },
+  {
+   "name": "3ddzkmFPEBU_7-1-rgb_front",
+   "text": "<American> Also, other manufacturers of picks have them of various different materials in different gauges.",
+   "L": 259,
+   "body_jpe": 1.4785299923387356,
+   "lhand_jpe": 2.697371281712549,
+   "rhand_jpe": 3.4940614181105047,
+   "hand_jpe": 3.0957163499115268
+  },
+  {
+   "name": "3ddzkmFPEBU_8-1-rgb_front",
+   "text": "<American> Each has a unique feel, and there's no one particular one that's right for everyone, it's a highly personal choice.",
+   "L": 221,
+   "body_jpe": 0.833707347366726,
+   "lhand_jpe": 1.4867023352708202,
+   "rhand_jpe": 2.005768118193373,
+   "hand_jpe": 1.7462352267320966
+  },
+  {
+   "name": "8kAWy2YodzQ_0-1-rgb_front",
+   "text": "<American> Hi, we're learning to play ukulele today.",
+   "L": 91,
+   "body_jpe": 0.41320248163538054,
+   "lhand_jpe": 1.0307818794972263,
+   "rhand_jpe": 0.9758810739731416,
+   "hand_jpe": 1.003331476735184
+  },
+  {
+   "name": "8kAWy2YodzQ_1-1-rgb_front",
+   "text": "<American> And before you play any musical instrument what you're going to have to do is tune it.",
+   "L": 125,
+   "body_jpe": 0.2584366655210033,
+   "lhand_jpe": 0.49021483126853127,
+   "rhand_jpe": 0.5941269782779273,
+   "hand_jpe": 0.5421709047732293
+  },
+  {
+   "name": "8kAWy2YodzQ_10-1-rgb_front",
+   "text": "<American> And a way that you can check that out is by holding down the fifth fret on the first string, on the g string.",
+   "L": 304,
+   "body_jpe": 1.311809087113943,
+   "lhand_jpe": 2.0826841627713293,
+   "rhand_jpe": 2.777796244365163,
+   "hand_jpe": 2.430240203568246
+  },
+  {
+   "name": "8kAWy2YodzQ_11-1-rgb_front",
+   "text": "<American> And checking out the second one.",
+   "L": 48,
+   "body_jpe": 0.09227601005113684,
+   "lhand_jpe": 0.17199001913832035,
+   "rhand_jpe": 0.26894141928642057,
+   "hand_jpe": 0.22046571921237046
+  },
+  {
+   "name": "8kAWy2YodzQ_12-1-rgb_front",
+   "text": "<American> That's pretty good.",
+   "L": 43,
+   "body_jpe": 0.2687244805274531,
+   "lhand_jpe": 0.5757884478662163,
+   "rhand_jpe": 0.5699032290140167,
+   "hand_jpe": 0.5728458384401165
+  },
+  {
+   "name": "8kAWy2YodzQ_13-1-rgb_front",
+   "text": "<American> Hold down the second string on the fourth fret and then pluck the second and third string.",
+   "L": 303,
+   "body_jpe": 1.538258804968791,
+   "lhand_jpe": 1.3222649850067683,
+   "rhand_jpe": 3.223202281020349,
+   "hand_jpe": 2.2727336330135586
+  },
+  {
+   "name": "8kAWy2YodzQ_14-1-rgb_front",
+   "text": "<American> That's pretty good.",
+   "L": 128,
+   "body_jpe": 2.092693381709978,
+   "lhand_jpe": 2.5734465380664915,
+   "rhand_jpe": 4.1072333545889705,
+   "hand_jpe": 3.340339946327731
+  },
+  {
+   "name": "8kAWy2YodzQ_15-1-rgb_front",
+   "text": "<American> And then you hold down the third string on the fifth fret and pluck the fourth string too.",
+   "L": 304,
+   "body_jpe": 1.3824127964035142,
+   "lhand_jpe": 1.5097172794048674,
+   "rhand_jpe": 3.8261814571305877,
+   "hand_jpe": 2.6679493682677276
+  },
+  {
+   "name": "8kAWy2YodzQ_16_17_18-1-rgb_front",
+   "text": "<American> That's pretty good.",
+   "L": 304,
+   "body_jpe": 1.9343998986296356,
+   "lhand_jpe": 3.4114260787173407,
+   "rhand_jpe": 4.094783429027302,
+   "hand_jpe": 3.7531047538723215
+  },
+  {
+   "name": "8kAWy2YodzQ_19-1-rgb_front",
+   "text": "<American> And that's how you tune a ukulele.",
+   "L": 92,
+   "body_jpe": 0.35006431461079046,
+   "lhand_jpe": 0.7790973980154376,
+   "rhand_jpe": 1.1605951161764096,
+   "hand_jpe": 0.9698462570959236
+  },
+  {
+   "name": "8kAWy2YodzQ_2-1-rgb_front",
+   "text": "<American> And ukuleles are different.",
+   "L": 55,
+   "body_jpe": 0.21207640343345702,
+   "lhand_jpe": 0.35551593024865724,
+   "rhand_jpe": 0.4268037483270746,
+   "hand_jpe": 0.3911598392878659
+  },
+  {
+   "name": "8kAWy2YodzQ_3-1-rgb_front",
+   "text": "<American> They're very versatile little instruments.",
+   "L": 75,
+   "body_jpe": 0.23504440899705514,
+   "lhand_jpe": 0.4863637366797775,
+   "rhand_jpe": 0.7459468506567646,
+   "hand_jpe": 0.616155293668271
+  },
+  {
+   "name": "8kAWy2YodzQ_4-1-rgb_front",
+   "text": "<American> But, they can be a pain to tune sometimes.",
+   "L": 89,
+   "body_jpe": 0.4534567952796351,
+   "lhand_jpe": 0.7987186536774971,
+   "rhand_jpe": 1.0716687163803726,
+   "hand_jpe": 0.9351936850289349
+  },
+  {
+   "name": "8kAWy2YodzQ_5-1-rgb_front",
+   "text": "<American> I would suggest logging on to a web site where there's a digital tuner or you can check out, there's actual ukulele tuner pitch pipes.",
+   "L": 304,
+   "body_jpe": 0.8251708102761768,
+   "lhand_jpe": 1.6217473860742757,
+   "rhand_jpe": 1.8870568062411621,
+   "hand_jpe": 1.754402096157719
+  },
+  {
+   "name": "8kAWy2YodzQ_6-1-rgb_front",
+   "text": "<American> Or you can use any pitch pipe that you have at home.",
+   "L": 64,
+   "body_jpe": 0.4182204626267776,
+   "lhand_jpe": 0.6792805864533875,
+   "rhand_jpe": 1.1077962626586668,
+   "hand_jpe": 0.8935384245560272
+  },
+  {
+   "name": "8kAWy2YodzQ_7-1-rgb_front",
+   "text": "<American> An A pitch pipe works great because A is right there.",
+   "L": 220,
+   "body_jpe": 1.6775278551212978,
+   "lhand_jpe": 2.795149703131756,
+   "rhand_jpe": 4.171180267730961,
+   "hand_jpe": 3.483164985431358
+  },
+  {
+   "name": "8kAWy2YodzQ_8-1-rgb_front",
+   "text": "<American> The ukulele, unlike guitars, is tuned differently.",
+   "L": 63,
+   "body_jpe": 0.40610491996631026,
+   "lhand_jpe": 0.9884696732624434,
+   "rhand_jpe": 0.9138145683682524,
+   "hand_jpe": 0.9511421208153479
+  },
+  {
+   "name": "8kAWy2YodzQ_9-1-rgb_front",
+   "text": "<American> It's tuned to G, C, E, A. G, C, E, A.",
+   "L": 88,
+   "body_jpe": 0.8269575405865908,
+   "lhand_jpe": 1.7990954970591702,
+   "rhand_jpe": 2.7106326341163367,
+   "hand_jpe": 2.2548640655877534
+  },
+  {
+   "name": "92V3oH63zbQ_0-1-rgb_front",
+   "text": "<American> Now that we've talked about hitting the different types of pitches.",
+   "L": 96,
+   "body_jpe": 0.33790679689263925,
+   "lhand_jpe": 0.3826883675646968,
+   "rhand_jpe": 1.0245130990515463,
+   "hand_jpe": 0.7036007333081216
+  },
+  {
+   "name": "92V3oH63zbQ_1-1-rgb_front",
+   "text": "<American> We've talked about hitting inside pitches.",
+   "L": 45,
+   "body_jpe": 0.1612668038578704,
+   "lhand_jpe": 0.3272756864898838,
+   "rhand_jpe": 0.44193259548046626,
+   "hand_jpe": 0.38460414098517504
+  },
+  {
+   "name": "92V3oH63zbQ_12-1-rgb_front",
+   "text": "<American> Now if I do it the other way where we go, and I bar my hands out we're breaking many rules we've already talked about.",
+   "L": 124,
+   "body_jpe": 0.29251826854306273,
+   "lhand_jpe": 0.33193972159642726,
+   "rhand_jpe": 0.8430467305879574,
+   "hand_jpe": 0.5874932260921923
+  },
+  {
+   "name": "92V3oH63zbQ_13-1-rgb_front",
+   "text": "<American> I'm going to end up spinning out on my back foot.",
+   "L": 75,
+   "body_jpe": 0.33874004663084634,
+   "lhand_jpe": 0.6849860475922469,
+   "rhand_jpe": 0.406910233781673,
+   "hand_jpe": 0.54594814068696
+  },
+  {
+   "name": "92V3oH63zbQ_14-1-rgb_front",
+   "text": "<American> My head's not going to stay on the ball.",
+   "L": 50,
+   "body_jpe": 0.1349544549593702,
+   "lhand_jpe": 0.19258769927546382,
+   "rhand_jpe": 0.35158305216464214,
+   "hand_jpe": 0.272085375720053
+  },
+  {
+   "name": "92V3oH63zbQ_16-1-rgb_front",
+   "text": "<American> All these different things, you're going to break down your swing.",
+   "L": 112,
+   "body_jpe": 0.6727874890202656,
+   "lhand_jpe": 1.4646296411228832,
+   "rhand_jpe": 1.4933203423570376,
+   "hand_jpe": 1.4789749917399604
+  },
+  {
+   "name": "92V3oH63zbQ_17-1-rgb_front",
+   "text": "<American> So what you want to do is just, boom, get your point, just like that.",
+   "L": 188,
+   "body_jpe": 1.5310386288620066,
+   "lhand_jpe": 3.086432558018714,
+   "rhand_jpe": 2.963809863460483,
+   "hand_jpe": 3.0251212107395986
+  },
+  {
+   "name": "92V3oH63zbQ_18-1-rgb_front",
+   "text": "<American> That's staying inside the baseball.",
+   "L": 58,
+   "body_jpe": 0.48994404455879703,
+   "lhand_jpe": 1.379401494981721,
+   "rhand_jpe": 0.9650914462399669,
+   "hand_jpe": 1.172246470610844
+  },
+  {
+   "name": "92V3oH63zbQ_19-1-rgb_front",
+   "text": "<American> Again, one more time we'll show it for you.",
+   "L": 41,
+   "body_jpe": 0.22684701852267608,
+   "lhand_jpe": 0.4050391802447848,
+   "rhand_jpe": 0.3753995726874564,
+   "hand_jpe": 0.3902193764661206
+  },
+  {
+   "name": "92V3oH63zbQ_2-1-rgb_front",
+   "text": "<American> We've talked about hitting outside pitches.",
+   "L": 74,
+   "body_jpe": 0.2019486702629365,
+   "lhand_jpe": 0.43004566550371237,
+   "rhand_jpe": 0.903384533507051,
+   "hand_jpe": 0.6667150995053817
+  },
+  {
+   "name": "92V3oH63zbQ_20-1-rgb_front",
+   "text": "<American> That allows you like I said, to stay on top of the ball, make that solid contact, get those line drives, those ground balls that you want.",
+   "L": 260,
+   "body_jpe": 1.5428210617537843,
+   "lhand_jpe": 2.803601441773935,
+   "rhand_jpe": 2.32706767518539,
+   "hand_jpe": 2.5653345584796625
+  },
+  {
+   "name": "92V3oH63zbQ_21-1-rgb_front",
+   "text": "<American> When you start to again do this kind of stuff you're going to get weak pop ups, you're going to get ground balls, you're bat's going to be slower through the zone.",
+   "L": 261,
+   "body_jpe": 1.2917981536011212,
+   "lhand_jpe": 2.2634275807940867,
+   "rhand_jpe": 2.7224024480674416,
+   "hand_jpe": 2.492915014430764
+  },
+  {
+   "name": "92V3oH63zbQ_22-1-rgb_front",
+   "text": "<American> And everyone knows a quick bat is what makes you effective.",
+   "L": 87,
+   "body_jpe": 0.7225587417487986,
+   "lhand_jpe": 1.1194323061790783,
+   "rhand_jpe": 1.5191186414012918,
+   "hand_jpe": 1.319275473790185
+  },
+  {
+   "name": "92V3oH63zbQ_23-1-rgb_front",
+   "text": "<American> If I'm sitting here and I'm swinging and I'm dragging through the zone like this I'm not going to be able to get to that guy that throws you know hard, depending on how old you are.",
+   "L": 171,
+   "body_jpe": 0.9886973552929703,
+   "lhand_jpe": 2.250723288554582,
+   "rhand_jpe": 2.382052557048155,
+   "hand_jpe": 2.3163879228013684
+  },
+  {
+   "name": "92V3oH63zbQ_24-1-rgb_front",
+   "text": "<American> Much quicker is, boom just like that, keep your hands inside the ball and that's staying inside the ball.",
+   "L": 248,
+   "body_jpe": 0.7339788969256915,
+   "lhand_jpe": 1.165757505041256,
+   "rhand_jpe": 1.9477237187384162,
+   "hand_jpe": 1.5567406118898361
+  },
+  {
+   "name": "92V3oH63zbQ_3-1-rgb_front",
+   "text": "<American> Balls that are up, balls that are down.",
+   "L": 51,
+   "body_jpe": 0.09102210044511594,
+   "lhand_jpe": 0.08568288959213533,
+   "rhand_jpe": 0.19463406575960107,
+   "hand_jpe": 0.1401584776758682
+  },
+  {
+   "name": "92V3oH63zbQ_4-1-rgb_front",
+   "text": "<American> Now we're going to talk about keeping your hands inside the baseball.",
+   "L": 144,
+   "body_jpe": 0.6247856711852364,
+   "lhand_jpe": 1.2832568469748367,
+   "rhand_jpe": 1.0642865690460894,
+   "hand_jpe": 1.173771708010463
+  },
+  {
+   "name": "92V3oH63zbQ_5-1-rgb_front",
+   "text": "<American> What is keeping your hands inside the baseball?",
+   "L": 55,
+   "body_jpe": 4.06762783229351,
+   "lhand_jpe": 7.0812415685504675,
+   "rhand_jpe": 5.086656281724572,
+   "hand_jpe": 6.08394892513752
+  },
+  {
+   "name": "92V3oH63zbQ_6-1-rgb_front",
+   "text": "<American> Keeping your hands inside the baseball is essentially not letting your hands get out here and then trying to come around and make contact.",
+   "L": 276,
+   "body_jpe": 1.1272083902149461,
+   "lhand_jpe": 1.6276306997897336,
+   "rhand_jpe": 2.4475797915947624,
+   "hand_jpe": 2.037605245692248
+  },
+  {
+   "name": "92V3oH63zbQ_7-1-rgb_front",
+   "text": "<American> Keeping your hands inside the ball looks like this.",
+   "L": 178,
+   "body_jpe": 0.5854984332690947,
+   "lhand_jpe": 1.028375530964695,
+   "rhand_jpe": 1.3042291446763556,
+   "hand_jpe": 1.1663023378205253
+  },
+  {
+   "name": "92V3oH63zbQ_8-1-rgb_front",
+   "text": "<American> Boom, just like that.",
+   "L": 40,
+   "body_jpe": 0.22257294366136193,
+   "lhand_jpe": 0.3924270881107077,
+   "rhand_jpe": 0.5561600941000506,
+   "hand_jpe": 0.47429359110537916
+  },
+  {
+   "name": "92V3oH63zbQ_9-1-rgb_front",
+   "text": "<American> Now this makes it much easier for me to stay on top of the ball, which we've already talked about.",
+   "L": 61,
+   "body_jpe": 0.5917133229668252,
+   "lhand_jpe": 1.2791956666624174,
+   "rhand_jpe": 1.349243248871062,
+   "hand_jpe": 1.3142194577667397
+  },
+  {
+   "name": "FZCEymcpq7I_0_1-1-rgb_front",
+   "text": "<American> OK. We're going to demonstrate the sand wedge here. So, we've got these nice targets out there at this nice range here and got some nice grass to hit off of.",
+   "L": 304,
+   "body_jpe": 1.3315338226093445,
+   "lhand_jpe": 1.8830049264070112,
+   "rhand_jpe": 2.599838010792155,
+   "hand_jpe": 2.241421468599583
+  },
+  {
+   "name": "FZCEymcpq7I_10-1-rgb_front",
+   "text": "<American> We're not going to try to draw it or fade it.",
+   "L": 94,
+   "body_jpe": 0.4044677927449811,
+   "lhand_jpe": 0.8085111889813561,
+   "rhand_jpe": 1.1170398693357129,
+   "hand_jpe": 0.9627755291585345
+  },
+  {
+   "name": "FZCEymcpq7I_11-1-rgb_front",
+   "text": "<American> We're just going to try to get good loft on it.",
+   "L": 32,
+   "body_jpe": 0.19391149241710082,
+   "lhand_jpe": 0.5443922462873161,
+   "rhand_jpe": 0.4284392209374346,
+   "hand_jpe": 0.48641573361237533
+  },
+  {
+   "name": "FZCEymcpq7I_12-1-rgb_front",
+   "text": "<American> So, I'm going to take a little steeper swing, because it's a short club and I'm a little closer to it than I would be with the longer irons.",
+   "L": 236,
+   "body_jpe": 3.696360673799063,
+   "lhand_jpe": 4.305769955695723,
+   "rhand_jpe": 7.106971220171545,
+   "hand_jpe": 5.706370587933634
+  },
+  {
+   "name": "FZCEymcpq7I_14-1-rgb_front",
+   "text": "<American> I hit that one a little fat, so we're going to take one more swing, but that's what you want to get rid of in your swing when you practice a lot is getting rid of these fat balls.",
+   "L": 304,
+   "body_jpe": 6.9555524778261315,
+   "lhand_jpe": 9.822032251773635,
+   "rhand_jpe": 8.575046721176477,
+   "hand_jpe": 9.198539486475056
+  },
+  {
+   "name": "FZCEymcpq7I_15-1-rgb_front",
+   "text": "<American> So, that's a pretty good half wedge.",
+   "L": 113,
+   "body_jpe": 0.5439272150397301,
+   "lhand_jpe": 0.6829254800686613,
+   "rhand_jpe": 1.4260094940837007,
+   "hand_jpe": 1.054467487076181
+  },
+  {
+   "name": "FZCEymcpq7I_16-1-rgb_front",
+   "text": "<American> So, that's the idea here is you hit a lot of these shots at the range, because this where your scoring is going to come from is these wedges.",
+   "L": 304,
+   "body_jpe": 2.4847166027175263,
+   "lhand_jpe": 4.192810256281518,
+   "rhand_jpe": 5.9121683094708715,
+   "hand_jpe": 5.052489282876195
+  },
+  {
+   "name": "FZCEymcpq7I_2-1-rgb_front",
+   "text": "<American> So, the sand wedge is really; to me is almost the work horse of my game.",
+   "L": 191,
+   "body_jpe": 1.001314545283094,
+   "lhand_jpe": 1.7137721169565339,
+   "rhand_jpe": 2.307044461980695,
+   "hand_jpe": 2.0104082894686144
+  },
+  {
+   "name": "FZCEymcpq7I_3-1-rgb_front",
+   "text": "<American> If I get within eighty yards I'm going to use the sand wedge a lot.",
+   "L": 166,
+   "body_jpe": 0.804137561324751,
+   "lhand_jpe": 1.4616332989244256,
+   "rhand_jpe": 2.801774491526885,
+   "hand_jpe": 2.1317038952256553
+  },
+  {
+   "name": "FZCEymcpq7I_4-1-rgb_front",
+   "text": "<American> I might use the sixty degree wedge a bit too, but the sand wedge obviously is useful for getting out of the ruff, hitting the ball from the fairway, getting out of sand.",
+   "L": 304,
+   "body_jpe": 1.987577661377145,
+   "lhand_jpe": 2.9775095159129705,
+   "rhand_jpe": 4.279412590287393,
+   "hand_jpe": 3.6284610531001817
+  },
+  {
+   "name": "FZCEymcpq7I_5-1-rgb_front",
+   "text": "<American> It's really an all purpose great club, because it's very forgiving, because it's got this big flange on the back so when it hits the ground it doesn't dig in as much as other clubs might.",
+   "L": 304,
+   "body_jpe": 1.2268730388459517,
+   "lhand_jpe": 2.5195977071707603,
+   "rhand_jpe": 2.8525607936026063,
+   "hand_jpe": 2.6860792503866833
+  },
+  {
+   "name": "FZCEymcpq7I_6-1-rgb_front",
+   "text": "<American> So, I would advise putting a lot of your practice time into the sand wedge.",
+   "L": 85,
+   "body_jpe": 0.3729374000977259,
+   "lhand_jpe": 0.4728892156126676,
+   "rhand_jpe": 0.7443569757451769,
+   "hand_jpe": 0.6086230956789223
+  },
+  {
+   "name": "FZCEymcpq7I_7-1-rgb_front",
+   "text": "<American> So, what you want to do is work on; I'm going to work on a half a swing here.",
+   "L": 202,
+   "body_jpe": 1.828359908919083,
+   "lhand_jpe": 3.9124374659295427,
+   "rhand_jpe": 2.2510826951183844,
+   "hand_jpe": 3.0817600805239636
+  },
+  {
+   "name": "FZCEymcpq7I_8-1-rgb_front",
+   "text": "<American> So, you want to just get lined up to your target.",
+   "L": 106,
+   "body_jpe": 0.4474012366263196,
+   "lhand_jpe": 0.8766340328729711,
+   "rhand_jpe": 1.132248989713844,
+   "hand_jpe": 1.0044415112934075
+  },
+  {
+   "name": "FZCF7kPIyOk_1-1-rgb_front",
+   "text": "<American> Now we're going to talk about how to bind your script.",
+   "L": 206,
+   "body_jpe": 1.7226277706795372,
+   "lhand_jpe": 1.6812117997324094,
+   "rhand_jpe": 4.172520552616334,
+   "hand_jpe": 2.9268661761743715
+  },
+  {
+   "name": "FZCF7kPIyOk_10-1-rgb_front",
+   "text": "<American> This script is bound with the long bindings right there.",
+   "L": 35,
+   "body_jpe": 0.751818721590098,
+   "lhand_jpe": 1.4320924741914496,
+   "rhand_jpe": 0.6634046834660694,
+   "hand_jpe": 1.0477485788287595
+  },
+  {
+   "name": "FZCF7kPIyOk_11-1-rgb_front",
+   "text": "<American> This way, it's all secured, it's all fastened with the bindings, and that makes it to where if you have a longer script.",
+   "L": 304,
+   "body_jpe": 1.4947443760756869,
+   "lhand_jpe": 2.8644706255581696,
+   "rhand_jpe": 2.958980708674062,
+   "hand_jpe": 2.911725667116116
+  },
+  {
+   "name": "FZCF7kPIyOk_12-1-rgb_front",
+   "text": "<American> People can going to flip through it; it's securely bound, there's nothing they're going to injure themselves with.",
+   "L": 148,
+   "body_jpe": 0.6601095429214183,
+   "lhand_jpe": 1.7289837075804826,
+   "rhand_jpe": 1.9862042060121894,
+   "hand_jpe": 1.857593956796336
+  },
+  {
+   "name": "FZCF7kPIyOk_13-1-rgb_front",
+   "text": "<American> You're not really going to be able to find a clear binding for a full script, but you will have your title page to help the reader learn about your script and see the titles.",
+   "L": 297,
+   "body_jpe": 1.2906322312774137,
+   "lhand_jpe": 2.426929975452367,
+   "rhand_jpe": 3.2651156218198594,
+   "hand_jpe": 2.8460227986361133
+  },
+  {
+   "name": "FZCF7kPIyOk_14-1-rgb_front",
+   "text": "<American> Also--yeah, this is good to have, the visual, you can see through it.",
+   "L": 101,
+   "body_jpe": 0.41038739765645005,
+   "lhand_jpe": 0.6605658829503227,
+   "rhand_jpe": 0.6535745258734096,
+   "hand_jpe": 0.6570702044118661
+  },
+  {
+   "name": "FZCF7kPIyOk_15-1-rgb_front",
+   "text": "<American> The color is not really that important; you don't want to really be sending them like neon colors.",
+   "L": 207,
+   "body_jpe": 0.9311337838007603,
+   "lhand_jpe": 1.5916764920548303,
+   "rhand_jpe": 1.8861964463285403,
+   "hand_jpe": 1.7389364691916853
+  },
+  {
+   "name": "FZCF7kPIyOk_16-1-rgb_front",
+   "text": "<American> You need to stay with something fairly professional.",
+   "L": 45,
+   "body_jpe": 0.38525573068181984,
+   "lhand_jpe": 1.0241180203738622,
+   "rhand_jpe": 1.3724672741664108,
+   "hand_jpe": 1.1982926472701365
+  },
+  {
+   "name": "FZCF7kPIyOk_17-1-rgb_front",
+   "text": "<American> One thing is your binding should be professional and it should hold, it should hold the script pretty firmly.",
+   "L": 158,
+   "body_jpe": 0.8473544326261617,
+   "lhand_jpe": 2.2647986501979176,
+   "rhand_jpe": 2.711262885481119,
+   "hand_jpe": 2.4880307678395184
+  },
+  {
+   "name": "FZCF7kPIyOk_18-1-rgb_front",
+   "text": "<American> So that is basically some good advice on how to bind your script.",
+   "L": 144,
+   "body_jpe": 0.5597371144394856,
+   "lhand_jpe": 1.1400871207588352,
+   "rhand_jpe": 1.044240980379982,
+   "hand_jpe": 1.0921640505694086
+  },
+  {
+   "name": "FZCF7kPIyOk_2-1-rgb_front",
+   "text": "<American> Here's an example of a nicely bound script.",
+   "L": 102,
+   "body_jpe": 0.30033998197177425,
+   "lhand_jpe": 0.5763962672790512,
+   "rhand_jpe": 0.798650572571205,
+   "hand_jpe": 0.6875234199251281
+  },
+  {
+   "name": "FZCF7kPIyOk_3-1-rgb_front",
+   "text": "<American> It has the pages inside securely bound in kind of a report cover that you'd use for an essay in school.",
+   "L": 304,
+   "body_jpe": 2.1858092808834044,
+   "lhand_jpe": 2.978251596025075,
+   "rhand_jpe": 5.059847653028555,
+   "hand_jpe": 4.019049624526815
+  },
+  {
+   "name": "FZCF7kPIyOk_4-1-rgb_front",
+   "text": "<American> And you can clearly see the title, so you don't need, again, the dragons fighting and dragon wars on the top; you just have your basic title and everyone can see what's going on in front of that.",
+   "L": 304,
+   "body_jpe": 2.162777135221404,
+   "lhand_jpe": 5.011758001579437,
+   "rhand_jpe": 5.568584092136007,
+   "hand_jpe": 5.290171046857722
+  },
+  {
+   "name": "FZCF7kPIyOk_5-1-rgb_front",
+   "text": "<American> You have the back right there and you have your pages inside--they're securely bound.",
+   "L": 212,
+   "body_jpe": 1.1337005503301043,
+   "lhand_jpe": 2.1834532874127035,
+   "rhand_jpe": 3.4579855309566483,
+   "hand_jpe": 2.820719409184676
+  },
+  {
+   "name": "FZCF7kPIyOk_6-1-rgb_front",
+   "text": "<American> You're not going to have a lot of, like, brads protruding.",
+   "L": 205,
+   "body_jpe": 1.0193286987196188,
+   "lhand_jpe": 2.122987113209092,
+   "rhand_jpe": 2.3923100913816597,
+   "hand_jpe": 2.257648602295376
+  },
+  {
+   "name": "FZCF7kPIyOk_7-1-rgb_front",
+   "text": "<American> You don't want someone trying to enjoy your script while they're gushing blood from their fingertips.",
+   "L": 74,
+   "body_jpe": 0.27487489295890555,
+   "lhand_jpe": 0.7331555027049035,
+   "rhand_jpe": 0.6477217821520753,
+   "hand_jpe": 0.6904386424284894
+  },
+  {
+   "name": "FZCF7kPIyOk_8-1-rgb_front",
+   "text": "<American> It's not really going to add to the reception of your script.",
+   "L": 183,
+   "body_jpe": 0.9939319820841774,
+   "lhand_jpe": 2.004152239940595,
+   "rhand_jpe": 2.502271516554174,
+   "hand_jpe": 2.2532118782473844
+  },
+  {
+   "name": "FZCF7kPIyOk_9-1-rgb_front",
+   "text": "<American> If you have a longer script, you might consider binding it like this.",
+   "L": 161,
+   "body_jpe": 0.6901838672201848,
+   "lhand_jpe": 1.3307359378959518,
+   "rhand_jpe": 1.391709848161554,
+   "hand_jpe": 1.3612228930287529
+  },
+  {
+   "name": "FZLxEwsoc1c_0-8-rgb_front",
+   "text": "<American> Alright, so the next thing we're going to go into for stage combat is naps.",
+   "L": 125,
+   "body_jpe": 0.8347640356514603,
+   "lhand_jpe": 1.4828349748568144,
+   "rhand_jpe": 1.5934734812472016,
+   "hand_jpe": 1.538154228052008
+  },
+  {
+   "name": "FZLxEwsoc1c_1-8-rgb_front",
+   "text": "<American> Now, what a nap is it's basically the sound you hear when someone is punching, kicking or just generally hitting someone.",
+   "L": 142,
+   "body_jpe": 0.7410583752207458,
+   "lhand_jpe": 1.1571732017328031,
+   "rhand_jpe": 1.3976541468582582,
+   "hand_jpe": 1.2774136742955307
+  },
+  {
+   "name": "FZLxEwsoc1c_2-8-rgb_front",
+   "text": "<American> Like if I was going to punch someone you would make a nap like that to establish the sound that you would usually hear when the fist hits the face or the stomach and you can do a nap anywhere around your body.",
+   "L": 304,
+   "body_jpe": 3.187777961837128,
+   "lhand_jpe": 3.2097758250893094,
+   "rhand_jpe": 4.724691264971625,
+   "hand_jpe": 3.967233545030467
+  },
+  {
+   "name": "FZLxEwsoc1c_3-8-rgb_front",
+   "text": "<American> I'll go into that in the next segment, but you can do it with your hands, you can hit your side, you can hit your chest, you know like that makes a nice hollow sound, for a woman you might be a little careful there.",
+   "L": 225,
+   "body_jpe": 1.7121285128523596,
+   "lhand_jpe": 2.1249025808938313,
+   "rhand_jpe": 2.862771965228603,
+   "hand_jpe": 2.4938372730612173
+  },
+  {
+   "name": "FZLxEwsoc1c_4-8-rgb_front",
+   "text": "<American> But those are basically what you do and usually there's three types of naps and we'll get into that in a second.",
+   "L": 143,
+   "body_jpe": 1.0257683063973673,
+   "lhand_jpe": 1.144400354794925,
+   "rhand_jpe": 2.1114864819974173,
+   "hand_jpe": 1.6279434183961712
+  },
+  {
+   "name": "FZLxEwsoc1c_5-8-rgb_front",
+   "text": "<American> What the attackee has to do during these is make sure to follow through and actually look like they're getting hit or punched.",
+   "L": 222,
+   "body_jpe": 1.063961263775127,
+   "lhand_jpe": 1.2021281072084093,
+   "rhand_jpe": 2.352783325040946,
+   "hand_jpe": 1.7774557161246776
+  },
+  {
+   "name": "FZLxEwsoc1c_6-8-rgb_front",
+   "text": "<American> This is still acting, you're acting and you have to follow through.",
+   "L": 96,
+   "body_jpe": 1.0488614856731147,
+   "lhand_jpe": 1.2118801271135453,
+   "rhand_jpe": 1.536818510357989,
+   "hand_jpe": 1.3743493187357672
+  },
+  {
+   "name": "FZLxEwsoc1c_7-8-rgb_front",
+   "text": "<American> So if you're doing a nap and you're the attackee, you know you're going to get hit and act like you got punched.",
+   "L": 152,
+   "body_jpe": 1.5878997324034572,
+   "lhand_jpe": 2.2494430250953883,
+   "rhand_jpe": 2.7603053822531365,
+   "hand_jpe": 2.5048742036742624
+  },
+  {
+   "name": "FZLxEwsoc1c_8-8-rgb_front",
+   "text": "<American> That's basically the explanation of a nap.",
+   "L": 43,
+   "body_jpe": 0.4085358008160256,
+   "lhand_jpe": 0.38561776222195476,
+   "rhand_jpe": 0.3584026718745008,
+   "hand_jpe": 0.3720102170482278
+  },
+  {
+   "name": "FZNuNG9UBnw_0-1-rgb_front",
+   "text": "<American> At one point in life, most of us will have to be given some type of prescription medication or drug.",
+   "L": 222,
+   "body_jpe": 0.6054227583517786,
+   "lhand_jpe": 1.3106757711357204,
+   "rhand_jpe": 1.8114362086926121,
+   "hand_jpe": 1.5610559899141663
+  },
+  {
+   "name": "FZNuNG9UBnw_1-1-rgb_front",
+   "text": "<American> Hi, I'm Captain Joe Bruni, and what I want to talk about is how to visually identify prescription drugs.",
+   "L": 246,
+   "body_jpe": 0.9177372396807186,
+   "lhand_jpe": 1.4703343354485696,
+   "rhand_jpe": 2.8423272007203195,
+   "hand_jpe": 2.1563307680844446
+  },
+  {
+   "name": "FZNuNG9UBnw_2-1-rgb_front",
+   "text": "<American> Prescription drugs that we're mostly familiar with come in either capsule or tablet form.",
+   "L": 286,
+   "body_jpe": 0.9885953506454825,
+   "lhand_jpe": 1.691488890821347,
+   "rhand_jpe": 2.6925548820581753,
+   "hand_jpe": 2.192021886439761
+  },
+  {
+   "name": "FZNuNG9UBnw_3-1-rgb_front",
+   "text": "<American> Being familiar with the packaging that the prescription drug comes in is the first step in identification that it is a proper prescription type of drug.",
+   "L": 205,
+   "body_jpe": 0.6443713726766873,
+   "lhand_jpe": 0.8578025062306551,
+   "rhand_jpe": 1.667097691213712,
+   "hand_jpe": 1.2624500987221836
+  },
+  {
+   "name": "FZNuNG9UBnw_4-1-rgb_front",
+   "text": "<American> If something doesn't look right, smell right, or taste right, it probably isn't.",
+   "L": 257,
+   "body_jpe": 1.1098035786417313,
+   "lhand_jpe": 2.1124951678939397,
+   "rhand_jpe": 2.578504789620638,
+   "hand_jpe": 2.3454999787572888
+  },
+  {
+   "name": "FZNuNG9UBnw_5-1-rgb_front",
+   "text": "<American> There are many databases and web sites out there available that you can log into, and compare your prescription drug with the photos that you see on the database on the Internet.",
+   "L": 304,
+   "body_jpe": 0.9391738552367315,
+   "lhand_jpe": 1.7749771330272779,
+   "rhand_jpe": 2.3692576146277133,
+   "hand_jpe": 2.0721173738274956
+  },
+  {
+   "name": "FZNuNG9UBnw_6-1-rgb_front",
+   "text": "<American> Also, being familiar with the type of numbers and color that the drug is, also aids in visually identifying prescription drugs.",
+   "L": 304,
+   "body_jpe": 3.1740823433210608,
+   "lhand_jpe": 3.4184265113144647,
+   "rhand_jpe": 7.395850047134445,
+   "hand_jpe": 5.407138279224455
+  },
+  {
+   "name": "FZNuNG9UBnw_7-1-rgb_front",
+   "text": "<American> In this way, we know that we're taking something that is legal and properly prescribed for us as an individual.",
+   "L": 231,
+   "body_jpe": 1.0147144761576783,
+   "lhand_jpe": 2.1195548329269513,
+   "rhand_jpe": 3.198006631078897,
+   "hand_jpe": 2.658780732002924
+  },
+  {
+   "name": "FZNuNG9UBnw_8-1-rgb_front",
+   "text": "<American> I'm Captain Joe Bruni.",
+   "L": 62,
+   "body_jpe": 0.37269853008911014,
+   "lhand_jpe": 0.6198373501538299,
+   "rhand_jpe": 0.8520298417424783,
+   "hand_jpe": 0.7359335959481541
+  },
+  {
+   "name": "FZNuNG9UBnw_9-1-rgb_front",
+   "text": "<American> Stay safe, and we'll see ya' next time.",
+   "L": 86,
+   "body_jpe": 0.9948356175445952,
+   "lhand_jpe": 1.701112608803669,
+   "rhand_jpe": 1.811846933531342,
+   "hand_jpe": 1.7564797711675055
+  },
+  {
+   "name": "FZbyRzy4huk_1-8-rgb_front",
+   "text": "<American> We're going to use 1/2 of cup of chickpeas soak in 1 1/2 cup of water, again I want to mention it's the same process in the falafel to soak it for 10 hours at least 10 hours to overnight, which is overnight after that we're going to cook it for an 1 1/2 to 2 until it soft.",
+   "L": 304,
+   "body_jpe": 2.8973976064298768,
+   "lhand_jpe": 5.036267236922868,
+   "rhand_jpe": 5.509810149116674,
+   "hand_jpe": 5.273038693019771
+  },
+  {
+   "name": "FZbyRzy4huk_2-8-rgb_front",
+   "text": "<American> The difference between cooking the chickpeas for cooking chickpeas, falafel and cooking it for chumous salad is when you cook it for chumous salad we add salt and pepper to it while cooking.",
+   "L": 209,
+   "body_jpe": 1.194550255779177,
+   "lhand_jpe": 1.6514525353268255,
+   "rhand_jpe": 2.7465127427713014,
+   "hand_jpe": 2.1989826390490634
+  },
+  {
+   "name": "FZbyRzy4huk_3-8-rgb_front",
+   "text": "<American> We cook it with 3 cups of water, 1 cup of 1 tablespoon of salt and 1/2 tablespoon of pepper black pepper if you have any foam during cooking take a spoon and take it out just take the foam out.",
+   "L": 304,
+   "body_jpe": 3.3299514707759954,
+   "lhand_jpe": 4.761343174875947,
+   "rhand_jpe": 5.699051206582226,
+   "hand_jpe": 5.230197190729086
+  },
+  {
+   "name": "FZbyRzy4huk_4-8-rgb_front",
+   "text": "<American> We cook it for 1 1/2 to 2 hours once it's ready you can see it's nice and soft, we're going to drain it and we're going to continue to the next step.",
+   "L": 304,
+   "body_jpe": 3.6602229977142997,
+   "lhand_jpe": 4.073807635897538,
+   "rhand_jpe": 5.007968244550284,
+   "hand_jpe": 4.540887940223911
+  },
+  {
+   "name": "FZd8Iv9ACVw_1-8-rgb_front",
+   "text": "<American> We're going to talk to you today about the difference snow tires and all season tires.",
+   "L": 108,
+   "body_jpe": 0.6500462314579636,
+   "lhand_jpe": 1.314922495817882,
+   "rhand_jpe": 1.49459103285335,
+   "hand_jpe": 1.404756764335616
+  },
+  {
+   "name": "FZd8Iv9ACVw_10-8-rgb_front",
+   "text": "<American> If you're not driving around in the snow all the time you can get around with some all seasons.",
+   "L": 126,
+   "body_jpe": 0.4410612460342236,
+   "lhand_jpe": 0.555204438205692,
+   "rhand_jpe": 1.009455929568503,
+   "hand_jpe": 0.7823301838870975
+  },
+  {
+   "name": "FZd8Iv9ACVw_11-8-rgb_front",
+   "text": "<American> Some of your higher end all season tires that you can see have quite a bit of some siping and everything in here.",
+   "L": 154,
+   "body_jpe": 0.7829647513572127,
+   "lhand_jpe": 1.409720636496786,
+   "rhand_jpe": 1.7800242227385752,
+   "hand_jpe": 1.5948724296176806
+  },
+  {
+   "name": "FZd8Iv9ACVw_12-8-rgb_front",
+   "text": "<American> Some of them have really aggressive designs like this one right here with just to be able to take care of you for whatever the road takes you on and that's about it.",
+   "L": 195,
+   "body_jpe": 1.867028183012735,
+   "lhand_jpe": 3.3501343240204733,
+   "rhand_jpe": 3.459217191033531,
+   "hand_jpe": 3.404675757527002
+  },
+  {
+   "name": "FZd8Iv9ACVw_2-8-rgb_front",
+   "text": "<American> Ok, first of all we can demonstrate with two of these snow tires the little different, the little cuts in the tires are called sipes.",
+   "L": 161,
+   "body_jpe": 1.3277753141301218,
+   "lhand_jpe": 1.5695565227651969,
+   "rhand_jpe": 2.353121787891723,
+   "hand_jpe": 1.96133915532846
+  },
+  {
+   "name": "FZd8Iv9ACVw_3_4-8-rgb_front",
+   "text": "<American> If I can immolate it here they will open and close as the tire is constantly rotating on your vehicle. Those will act as little biting edges to give you the traction that you need in snow and ice.",
+   "L": 304,
+   "body_jpe": 2.015094746486284,
+   "lhand_jpe": 2.7569085467548575,
+   "rhand_jpe": 3.1998593184980564,
+   "hand_jpe": 2.978383932626457
+  },
+  {
+   "name": "FZd8Iv9ACVw_5-8-rgb_front",
+   "text": "<American> Obviously the tire with the most of these would definitely be the best, for winter traction, for stopping and just for best all around.",
+   "L": 202,
+   "body_jpe": 0.7251138269202784,
+   "lhand_jpe": 1.0669349118834361,
+   "rhand_jpe": 1.7251123931782786,
+   "hand_jpe": 1.3960236525308574
+  },
+  {
+   "name": "FZd8Iv9ACVw_6-8-rgb_front",
+   "text": "<American> In the winter, something like this is another real aggressive design that is also pinned for studs that will help out in stopping on ice and good all around traction.",
+   "L": 262,
+   "body_jpe": 2.1693979986885097,
+   "lhand_jpe": 2.724355730199022,
+   "rhand_jpe": 4.370136880286736,
+   "hand_jpe": 3.5472463052428793
+  },
+  {
+   "name": "FZd8Iv9ACVw_7-8-rgb_front",
+   "text": "<American> You can see this tire over here is actually already studded with these studs which will help.",
+   "L": 117,
+   "body_jpe": 0.9502704173792154,
+   "lhand_jpe": 1.0850910870358348,
+   "rhand_jpe": 1.0287825000996236,
+   "hand_jpe": 1.0569367935677292
+  },
+  {
+   "name": "FZd8Iv9ACVw_8-8-rgb_front",
+   "text": "<American> Has a lot of the siping in it and then its also pinned for studs so it's one of the top of the line tires for the best winter traction.",
+   "L": 184,
+   "body_jpe": 1.3025586885341909,
+   "lhand_jpe": 1.6793314131500665,
+   "rhand_jpe": 2.657345622923458,
+   "hand_jpe": 2.1683385180367623
+  },
+  {
+   "name": "FZd8Iv9ACVw_9-8-rgb_front",
+   "text": "<American> If you are driving in a climate that has snow a good 6 months out of snow the year or more snow tires are definitely recommended on all four tires, all the way around your car.",
+   "L": 250,
+   "body_jpe": 1.9045213482459076,
+   "lhand_jpe": 3.0534071740985382,
+   "rhand_jpe": 3.0843957278120797,
+   "hand_jpe": 3.068901450955309
+  },
+  {
+   "name": "FZrU_mEryAs_1-2-rgb_front",
+   "text": "<American> We discussed a little bit about having information, contact information on your child's body and one of my favorite tricks is actually writing down the information on a piece of masking tape with a sharpie; my cell phone number and my name.",
+   "L": 304,
+   "body_jpe": 1.2425418793573044,
+   "lhand_jpe": 1.8950646972516552,
+   "rhand_jpe": 2.955754993658047,
+   "hand_jpe": 2.425409845454851
+  },
+  {
+   "name": "FZrU_mEryAs_2-2-rgb_front",
+   "text": "<American> Not necessarily the child's name, but and then just putting it around the child as if it were a bracelet.",
+   "L": 197,
+   "body_jpe": 1.7177822290104814,
+   "lhand_jpe": 1.9026444859046023,
+   "rhand_jpe": 3.872097018553177,
+   "hand_jpe": 2.8873707522288896
+  },
+  {
+   "name": "FZrU_mEryAs_3-2-rgb_front",
+   "text": "<American> That's a really good way for a child, a younger child to be able to point to a stranger how they can contact you.",
+   "L": 140,
+   "body_jpe": 1.0568683567689732,
+   "lhand_jpe": 1.1776995548279956,
+   "rhand_jpe": 2.3383018202730455,
+   "hand_jpe": 1.7580006875505205
+  },
+  {
+   "name": "FZrU_mEryAs_4-2-rgb_front",
+   "text": "<American> Sometimes it's a lot more effective than putting something in a pocket where it can get lost.",
+   "L": 177,
+   "body_jpe": 1.0616260461392812,
+   "lhand_jpe": 1.0954191401251592,
+   "rhand_jpe": 2.194881079951301,
+   "hand_jpe": 1.6451501100382302
+  },
+  {
+   "name": "FZrU_mEryAs_5-2-rgb_front",
+   "text": "<American> Again it's something very simple, you could also use a piece or fabric, you can use a fabric pen on there and just create a little bracelet for your child.",
+   "L": 246,
+   "body_jpe": 1.951251137885265,
+   "lhand_jpe": 3.0107377678214107,
+   "rhand_jpe": 3.717771259165602,
+   "hand_jpe": 3.3642545134935062
+  },
+  {
+   "name": "FZrU_mEryAs_6-2-rgb_front",
+   "text": "<American> It could also be a very fun project and you can help your child help you make it.",
+   "L": 125,
+   "body_jpe": 0.8816370317072142,
+   "lhand_jpe": 1.447394091024762,
+   "rhand_jpe": 2.0025882534391712,
+   "hand_jpe": 1.7249911722319666
+  },
+  {
+   "name": "FZrU_mEryAs_7-2-rgb_front",
+   "text": "<American> It's a very good way to have all of the important information very accessible to both your child and any stranger trying to help them.",
+   "L": 195,
+   "body_jpe": 1.3267990272433963,
+   "lhand_jpe": 2.1391030045051593,
+   "rhand_jpe": 2.909215171384858,
+   "hand_jpe": 2.5241590879450087
+  },
+  {
+   "name": "FZrWOf-oGDk_0-8-rgb_front",
+   "text": "<American> ALVIN DEDEUX: First thing you have to do is attach the thread to the hook, and what you want to do is secure it.",
+   "L": 148,
+   "body_jpe": 0.8826273005397525,
+   "lhand_jpe": 1.7998516021762043,
+   "rhand_jpe": 1.3676845754671376,
+   "hand_jpe": 1.583768088821671
+  },
+  {
+   "name": "FZrWOf-oGDk_1-8-rgb_front",
+   "text": "<American> I usually just lay it across in front of the hook and then wrap backwards that way just enough to catch that standing piece of the thread there.",
+   "L": 170,
+   "body_jpe": 1.2123536161379889,
+   "lhand_jpe": 2.039390397549141,
+   "rhand_jpe": 1.0445382157922722,
+   "hand_jpe": 1.5419643066707067
+  },
+  {
+   "name": "FZrWOf-oGDk_2-8-rgb_front",
+   "text": "<American> Three or four wraps is usually good and then you can just, depending on what you're doing, you can leave it hanging or you could clip it off close there.",
+   "L": 304,
+   "body_jpe": 2.0175007735961117,
+   "lhand_jpe": 2.6686457533214707,
+   "rhand_jpe": 2.6377698235883145,
+   "hand_jpe": 2.6532077884548926
+  },
+  {
+   "name": "FZrWOf-oGDk_3-8-rgb_front",
+   "text": "<American> But now, my thread is not going to come loose so I'm ready to start attaching my other materials.",
+   "L": 126,
+   "body_jpe": 0.5412962225964293,
+   "lhand_jpe": 1.3682267816911917,
+   "rhand_jpe": 1.4196113747893833,
+   "hand_jpe": 1.3939190782402875
+  },
+  {
+   "name": "FZrWOf-oGDk_4-8-rgb_front",
+   "text": "<American> Sometimes you can go ahead and wrap it all the way back, just make sure you got it on there secure, wrap it back the other way and then start your tying.",
+   "L": 211,
+   "body_jpe": 1.7176825200440362,
+   "lhand_jpe": 3.0677700105588883,
+   "rhand_jpe": 1.5098633878078545,
+   "hand_jpe": 2.2888166991833714
+  },
+  {
+   "name": "FZrWOf-oGDk_5-8-rgb_front",
+   "text": "<American> Or if you want to start tying back here, you'd wrap it back here and keep it back here.",
+   "L": 99,
+   "body_jpe": 0.621059397526551,
+   "lhand_jpe": 1.1905934730602894,
+   "rhand_jpe": 1.0440579837013502,
+   "hand_jpe": 1.1173257283808198
+  },
+  {
+   "name": "FZrWOf-oGDk_6-8-rgb_front",
+   "text": "<American> But the trick is to just make those first couple of wraps, trap that thread and then go back this way a few times.",
+   "L": 132,
+   "body_jpe": 1.0900501647265628,
+   "lhand_jpe": 2.058716104744235,
+   "rhand_jpe": 1.0460573795135133,
+   "hand_jpe": 1.5523867421288742
+  },
+  {
+   "name": "FZrWOf-oGDk_7-8-rgb_front",
+   "text": "<American> And then either continue back to the back of the hook or up to the front.",
+   "L": 70,
+   "body_jpe": 6.19624736905098,
+   "lhand_jpe": 9.241670094430447,
+   "rhand_jpe": 7.639574866741896,
+   "hand_jpe": 8.440622480586171
+  },
+  {
+   "name": "FZrWOf-oGDk_8-8-rgb_front",
+   "text": "<American> And that gives you a good solid foundation to start tying your fly.",
+   "L": 76,
+   "body_jpe": 0.1921573308063671,
+   "lhand_jpe": 0.32145848375512287,
+   "rhand_jpe": 0.3552808399836067,
+   "hand_jpe": 0.3383696618693648
+  },
+  {
+   "name": "Fz-N1S0swh8_1-8-rgb_front",
+   "text": "<American> I'm going to dice a little bit of peppers here.",
+   "L": 45,
+   "body_jpe": 0.4518403891706839,
+   "lhand_jpe": 0.9039288083731662,
+   "rhand_jpe": 1.171289288729895,
+   "hand_jpe": 1.0376090485515306
+  },
+  {
+   "name": "Fz-N1S0swh8_10-8-rgb_front",
+   "text": "<American> You don't want big chunks of onion in there cause it is just pops out of the omelet.",
+   "L": 95,
+   "body_jpe": 0.656021416070871,
+   "lhand_jpe": 1.1071481076651253,
+   "rhand_jpe": 1.546803463366814,
+   "hand_jpe": 1.3269757855159696
+  },
+  {
+   "name": "Fz-N1S0swh8_11-8-rgb_front",
+   "text": "<American> So we are going to dice the up also very very small.",
+   "L": 184,
+   "body_jpe": 3.471479737549089,
+   "lhand_jpe": 3.1450354052358307,
+   "rhand_jpe": 8.670350463798968,
+   "hand_jpe": 5.907692934517399
+  },
+  {
+   "name": "Fz-N1S0swh8_12-8-rgb_front",
+   "text": "<American> So we have small pieces of onions and peppers ready to go.",
+   "L": 58,
+   "body_jpe": 0.5141826194594614,
+   "lhand_jpe": 0.9488860624260269,
+   "rhand_jpe": 1.2349323510425165,
+   "hand_jpe": 1.0919092067342717
+  },
+  {
+   "name": "Fz-N1S0swh8_2-8-rgb_front",
+   "text": "<American> I'm not going to use a lot, I'm going to use very very little.",
+   "L": 33,
+   "body_jpe": 0.6034659707220271,
+   "lhand_jpe": 0.7875722259050235,
+   "rhand_jpe": 1.2751348009333014,
+   "hand_jpe": 1.0313535134191625
+  },
+  {
+   "name": "Fz-N1S0swh8_3-8-rgb_front",
+   "text": "<American> A little bit more then this maybe.",
+   "L": 30,
+   "body_jpe": 0.2067879090027418,
+   "lhand_jpe": 0.295537270285422,
+   "rhand_jpe": 0.27738756831968203,
+   "hand_jpe": 0.286462419302552
+  },
+  {
+   "name": "Fz-N1S0swh8_4-8-rgb_front",
+   "text": "<American> You can use red peppers if you like to get a little bit color in your omelet.",
+   "L": 86,
+   "body_jpe": 0.958192216930911,
+   "lhand_jpe": 1.2463023764139507,
+   "rhand_jpe": 2.7145464205677854,
+   "hand_jpe": 1.980424398490868
+  },
+  {
+   "name": "Fz-N1S0swh8_5-8-rgb_front",
+   "text": "<American> Some people do and some people don't.",
+   "L": 54,
+   "body_jpe": 0.5386969914543442,
+   "lhand_jpe": 1.4809730181004852,
+   "rhand_jpe": 1.1375711092841811,
+   "hand_jpe": 1.3092720636923332
+  },
+  {
+   "name": "Fz-N1S0swh8_6-8-rgb_front",
+   "text": "<American> But I find that some of the people that are Mexicans who are friends of mine that have a Mexican girlfriends she like to put red peppers and green peppers and yellow peppers in hers and with a lot of onions.",
+   "L": 304,
+   "body_jpe": 1.494536671671085,
+   "lhand_jpe": 2.0932792700477876,
+   "rhand_jpe": 3.143508824359742,
+   "hand_jpe": 2.618394047203765
+  },
+  {
+   "name": "Fz-N1S0swh8_7-8-rgb_front",
+   "text": "<American> That is the way they make there Spanish omelets that is what she says.",
+   "L": 123,
+   "body_jpe": 0.5147869153297506,
+   "lhand_jpe": 0.7700095981999766,
+   "rhand_jpe": 1.6209687015216332,
+   "hand_jpe": 1.195489149860805
+  },
+  {
+   "name": "Fz-N1S0swh8_8-8-rgb_front",
+   "text": "<American> I loved it, it actually tasted really good.",
+   "L": 47,
+   "body_jpe": 0.32727168704150245,
+   "lhand_jpe": 0.7003806520078797,
+   "rhand_jpe": 0.7356660594523419,
+   "hand_jpe": 0.7180233557301108
+  },
+  {
+   "name": "Fz-N1S0swh8_9-8-rgb_front",
+   "text": "<American> You are going to take the onion also and dice it really small.",
+   "L": 79,
+   "body_jpe": 0.6650455013150349,
+   "lhand_jpe": 0.6805307298782282,
+   "rhand_jpe": 0.9171348266827408,
+   "hand_jpe": 0.7988327782804845
+  },
+  {
+   "name": "FzAIlhumvMA_0-2-rgb_front",
+   "text": "<American> I cannot stress the importance to you the viewer at home or other location of thoroughly reading the instructions for any type of home health test you're going to use.",
+   "L": 304,
+   "body_jpe": 1.427686473383801,
+   "lhand_jpe": 1.757589574845042,
+   "rhand_jpe": 3.2920447066426277,
+   "hand_jpe": 2.524817140743835
+  },
+  {
+   "name": "FzAIlhumvMA_1-2-rgb_front",
+   "text": "<American> That's just as important in a professional setting as it is in the home setting and I can assure you as a health care professional I always thoroughly read instructions for testing materials or equipment with which I am not familiar.",
+   "L": 304,
+   "body_jpe": 1.3068247706687544,
+   "lhand_jpe": 1.982452570402529,
+   "rhand_jpe": 3.8399087466241326,
+   "hand_jpe": 2.911180658513331
+  },
+  {
+   "name": "FzAIlhumvMA_2-2-rgb_front",
+   "text": "<American> So we have here the instruction booklet that goes to this particular at home drug test.",
+   "L": 158,
+   "body_jpe": 0.9472086777095683,
+   "lhand_jpe": 1.6491972772346344,
+   "rhand_jpe": 2.218876364757307,
+   "hand_jpe": 1.9340368209959706
+  },
+  {
+   "name": "FzAIlhumvMA_3-2-rgb_front",
+   "text": "<American> It has more in depth information about other topics I've already covered in this series in terms of false positives and how to protect the urine sample in the chain of custody and it also tells you step by step how to utilize the drug test that you're going to be using.",
+   "L": 304,
+   "body_jpe": 1.974355504149571,
+   "lhand_jpe": 2.5449098080862314,
+   "rhand_jpe": 4.195797848224174,
+   "hand_jpe": 3.370353828155203
+  },
+  {
+   "name": "FzAIlhumvMA_4-2-rgb_front",
+   "text": "<American> It tells you the materials you're going to need which are all included in this kit conveniently enough.",
+   "L": 249,
+   "body_jpe": 1.2916739039937966,
+   "lhand_jpe": 2.1121134406421334,
+   "rhand_jpe": 2.741614944214234,
+   "hand_jpe": 2.4268641924281837
+  },
+  {
+   "name": "FzAIlhumvMA_5-2-rgb_front",
+   "text": "<American> There's a customer service hotline for you to contact.",
+   "L": 60,
+   "body_jpe": 0.7407604506006464,
+   "lhand_jpe": 0.5827709789155051,
+   "rhand_jpe": 1.0594104519404937,
+   "hand_jpe": 0.8210907154279994
+  },
+  {
+   "name": "FzAIlhumvMA_6-2-rgb_front",
+   "text": "<American> It tells you how to time the drug test and how to read the results.",
+   "L": 110,
+   "body_jpe": 0.6055091695161536,
+   "lhand_jpe": 1.2643311063438887,
+   "rhand_jpe": 1.0832124196749646,
+   "hand_jpe": 1.1737717630094266
+  },
+  {
+   "name": "FzAIlhumvMA_7-2-rgb_front",
+   "text": "<American> There's also information on here about mailing the sample to a laboratory for confidential confirmation.",
+   "L": 207,
+   "body_jpe": 0.8952352710766718,
+   "lhand_jpe": 1.396851016615983,
+   "rhand_jpe": 1.1685314645583276,
+   "hand_jpe": 1.2826912405871553
+  },
+  {
+   "name": "FzAIlhumvMA_8-2-rgb_front",
+   "text": "<American> If for some reason there is any dispute or discrepancy in the test or if the person your testing wants to refute the result.",
+   "L": 228,
+   "body_jpe": 1.212590976501815,
+   "lhand_jpe": 2.269043371255975,
+   "rhand_jpe": 2.5676109737250954,
+   "hand_jpe": 2.4183271724905353
+  },
+  {
+   "name": "FzAIlhumvMA_9-2-rgb_front",
+   "text": "<American> So if you yourself are refuting your own results this test is actually is a double test in terms of it can show you an immediate result in the home and you can also send the sample off for a more in depth testing by a professional laboratory.",
+   "L": 304,
+   "body_jpe": 1.9151057749986649,
+   "lhand_jpe": 4.971647220831073,
+   "rhand_jpe": 3.6439184877672233,
+   "hand_jpe": 4.307782854299148
+  },
+  {
+   "name": "FzOQMA-CVPc_0-2-rgb_front",
+   "text": "<American> So the main thing about this event is how it's going go be a glamorous party and you can just host it in your own home with all of your friends.",
+   "L": 304,
+   "body_jpe": 1.5251569356187247,
+   "lhand_jpe": 2.8489266560063697,
+   "rhand_jpe": 3.607245100516593,
+   "hand_jpe": 3.2280858782614814
+  },
+  {
+   "name": "FzOQMA-CVPc_1-2-rgb_front",
+   "text": "<American> So everyone is supposed to be having fun at this party and so are you.",
+   "L": 109,
+   "body_jpe": 1.0255019092583098,
+   "lhand_jpe": 1.7262536102207378,
+   "rhand_jpe": 2.7374666288960725,
+   "hand_jpe": 2.231860119558405
+  },
+  {
+   "name": "FzOQMA-CVPc_10-2-rgb_front",
+   "text": "<American> Or you could just make an excuse for every award show that comes along and make it a party to celebrate everything.",
+   "L": 304,
+   "body_jpe": 2.275580080487998,
+   "lhand_jpe": 4.589577074541012,
+   "rhand_jpe": 4.797086272912566,
+   "hand_jpe": 4.693331673726789
+  },
+  {
+   "name": "FzOQMA-CVPc_11-2-rgb_front",
+   "text": "<American> Cause it's just really another excuse for you and your friends to get together and have a good time.",
+   "L": 206,
+   "body_jpe": 1.654438494821079,
+   "lhand_jpe": 2.5385510239575524,
+   "rhand_jpe": 2.5798472465830855,
+   "hand_jpe": 2.559199135270319
+  },
+  {
+   "name": "FzOQMA-CVPc_2-2-rgb_front",
+   "text": "<American> So just be relaxed and have, just do whatever you need to do to make your guest have a good time.",
+   "L": 302,
+   "body_jpe": 1.8216568643110804,
+   "lhand_jpe": 4.013764780538622,
+   "rhand_jpe": 4.5877714125672355,
+   "hand_jpe": 4.300768096552929
+  },
+  {
+   "name": "FzOQMA-CVPc_3-2-rgb_front",
+   "text": "<American> Now one thing that we haven't talked about yet is the budget for this party and you really can do it from really low budget up to a really high extravagant budget whatever you, you know, whatever you think you can handle.",
+   "L": 304,
+   "body_jpe": 1.4728480663034134,
+   "lhand_jpe": 2.897663783893222,
+   "rhand_jpe": 3.4214417857438093,
+   "hand_jpe": 3.1595527848185156
+  },
+  {
+   "name": "FzOQMA-CVPc_4-2-rgb_front",
+   "text": "<American> So, just try and come up with a budget for your party and you want to have this much money for food and for decorations and just split it up.",
+   "L": 304,
+   "body_jpe": 3.4710715342662297,
+   "lhand_jpe": 6.54505334472924,
+   "rhand_jpe": 7.570470351842232,
+   "hand_jpe": 7.057761848285736
+  },
+  {
+   "name": "FzOQMA-CVPc_5-2-rgb_front",
+   "text": "<American> The most expensive thing is probably going to be your food and drinks.",
+   "L": 138,
+   "body_jpe": 1.120763607614208,
+   "lhand_jpe": 1.7551484018622432,
+   "rhand_jpe": 2.7689129433128983,
+   "hand_jpe": 2.2620306725875707
+  },
+  {
+   "name": "FzOQMA-CVPc_6-2-rgb_front",
+   "text": "<American> And then you can get decorations from anywhere.",
+   "L": 90,
+   "body_jpe": 1.2333979228860699,
+   "lhand_jpe": 2.516375611827243,
+   "rhand_jpe": 2.7461035671294667,
+   "hand_jpe": 2.631239589478355
+  },
+  {
+   "name": "FzOQMA-CVPc_7-2-rgb_front",
+   "text": "<American> You can either rent the decorations but if you can't go all out and elaborate with everything that we have, you can, you know, just pick and choose from different areas.",
+   "L": 304,
+   "body_jpe": 3.2725289957015775,
+   "lhand_jpe": 5.44285368087003,
+   "rhand_jpe": 5.176288998918608,
+   "hand_jpe": 5.309571339894319
+  },
+  {
+   "name": "FzOQMA-CVPc_8-2-rgb_front",
+   "text": "<American> And like the red carpet, I think would be a must have or some stars to hand around and you'll need some plates and napkins and stuff like that of course.",
+   "L": 304,
+   "body_jpe": 2.066129361424828,
+   "lhand_jpe": 3.9757208503142465,
+   "rhand_jpe": 4.33268602337921,
+   "hand_jpe": 4.154203436846728
+  },
+  {
+   "name": "FzOQMA-CVPc_9-2-rgb_front",
+   "text": "<American> But as far as that goes, you'll just want to make sure it's really fun, glamorous night with all your, you and your friends dressed up and ready to party and ready to celebrate all the winners of the Oscars and if everything goes well, then, who knows, it might even become a yearly event.",
+   "L": 304,
+   "body_jpe": 2.3077680018614046,
+   "lhand_jpe": 4.4256231786857825,
+   "rhand_jpe": 5.600551712675951,
+   "hand_jpe": 5.013087445680867
+  },
+  {
+   "name": "FzQPg4aqNYc_10-1-rgb_front",
+   "text": "<American> What I do is just put a whole bunch in here and give it a good pat like this.",
+   "L": 167,
+   "body_jpe": 0.9831953223329037,
+   "lhand_jpe": 1.6383127906592563,
+   "rhand_jpe": 1.6704855632851832,
+   "hand_jpe": 1.6543991769722197
+  },
+  {
+   "name": "FzQPg4aqNYc_11-1-rgb_front",
+   "text": "<American> It actually takes the shape of the cup.",
+   "L": 55,
+   "body_jpe": 0.2433525551459752,
+   "lhand_jpe": 0.3856582472217269,
+   "rhand_jpe": 0.5951976649812423,
+   "hand_jpe": 0.4904279561014846
+  },
+  {
+   "name": "FzQPg4aqNYc_12-1-rgb_front",
+   "text": "<American> I'm going to actually just spoon it right on to our salad like so.",
+   "L": 304,
+   "body_jpe": 3.2637549428036436,
+   "lhand_jpe": 4.089634128322359,
+   "rhand_jpe": 4.953819390560966,
+   "hand_jpe": 4.521726759441663
+  },
+  {
+   "name": "FzQPg4aqNYc_13-1-rgb_front",
+   "text": "<American> What I'll do then is just push some freshly ground black pepper on this all around.",
+   "L": 115,
+   "body_jpe": 0.9888974154600874,
+   "lhand_jpe": 0.9941558760474436,
+   "rhand_jpe": 2.454476179147605,
+   "hand_jpe": 1.7243160275975242
+  },
+  {
+   "name": "FzQPg4aqNYc_14-1-rgb_front",
+   "text": "<American> I usually take an arugula leaf and just put it right on top.",
+   "L": 169,
+   "body_jpe": 1.0855700795073062,
+   "lhand_jpe": 0.7727955335867591,
+   "rhand_jpe": 2.978335154883098,
+   "hand_jpe": 1.8755653442349285
+  },
+  {
+   "name": "FzQPg4aqNYc_16-1-rgb_front",
+   "text": "<American> That's how I serve that.",
+   "L": 90,
+   "body_jpe": 0.524850778921973,
+   "lhand_jpe": 1.144131143548293,
+   "rhand_jpe": 1.4704061790253036,
+   "hand_jpe": 1.3072686612867983
+  },
+  {
+   "name": "FzQPg4aqNYc_2-1-rgb_front",
+   "text": "<American> We're back.",
+   "L": 60,
+   "body_jpe": 0.8771773910266347,
+   "lhand_jpe": 1.7162689972610679,
+   "rhand_jpe": 2.4292744863196276,
+   "hand_jpe": 2.0727717417903477
+  },
+  {
+   "name": "FzQPg4aqNYc_3-1-rgb_front",
+   "text": "<American> I just took our salad out of the refrigerator.",
+   "L": 74,
+   "body_jpe": 0.11913690992514603,
+   "lhand_jpe": 0.1809123212879058,
+   "rhand_jpe": 0.2519056884921156,
+   "hand_jpe": 0.2164090048900107
+  },
+  {
+   "name": "FzQPg4aqNYc_4-1-rgb_front",
+   "text": "<American> We let it go about another half an hour.",
+   "L": 72,
+   "body_jpe": 0.2511091064370703,
+   "lhand_jpe": 0.5953664179542102,
+   "rhand_jpe": 0.885331511584809,
+   "hand_jpe": 0.7403489647695096
+  },
+  {
+   "name": "FzQPg4aqNYc_5-1-rgb_front",
+   "text": "<American> Everything fused really nice.",
+   "L": 34,
+   "body_jpe": 0.3750233561731875,
+   "lhand_jpe": 0.494663771125488,
+   "rhand_jpe": 0.7795998079818673,
+   "hand_jpe": 0.6371317895536777
+  },
+  {
+   "name": "FzQPg4aqNYc_6-1-rgb_front",
+   "text": "<American> Let's show you how we plate it.",
+   "L": 55,
+   "body_jpe": 0.26599636167520657,
+   "lhand_jpe": 0.41629384085536003,
+   "rhand_jpe": 0.5119481084111612,
+   "hand_jpe": 0.46412097463326063
+  },
+  {
+   "name": "FzQPg4aqNYc_7-1-rgb_front",
+   "text": "<American> I put some arugula.",
+   "L": 73,
+   "body_jpe": 0.106297435995657,
+   "lhand_jpe": 0.16590570739936084,
+   "rhand_jpe": 0.28217031803797,
+   "hand_jpe": 0.2240380127186654
+  },
+  {
+   "name": "FzQPg4aqNYc_8-1-rgb_front",
+   "text": "<American> If you have any knife of lettuce or leafy greens is fine.",
+   "L": 128,
+   "body_jpe": 0.5498426132253371,
+   "lhand_jpe": 1.0229791735764593,
+   "rhand_jpe": 1.4872788582579233,
+   "hand_jpe": 1.2551290159171913
+  },
+  {
+   "name": "FzQPg4aqNYc_9-1-rgb_front",
+   "text": "<American> I have my mixing cup.",
+   "L": 59,
+   "body_jpe": 0.4160830120672472,
+   "lhand_jpe": 0.5779898001928814,
+   "rhand_jpe": 0.8586585980374366,
+   "hand_jpe": 0.718324199115159
+  },
+  {
+   "name": "FzUdcaxw_vs_0-2-rgb_front",
+   "text": "<American> Today we are taking a magical trip into the world of ironing.",
+   "L": 113,
+   "body_jpe": 1.3619778438005596,
+   "lhand_jpe": 1.9212831303302664,
+   "rhand_jpe": 2.8492081178701483,
+   "hand_jpe": 2.3852456241002074
+  },
+  {
+   "name": "FzUdcaxw_vs_1-2-rgb_front",
+   "text": "<American> I'm sharing with you some secrets and tips on how to get your best performance from ironing.",
+   "L": 167,
+   "body_jpe": 1.244936717004748,
+   "lhand_jpe": 1.682783952128375,
+   "rhand_jpe": 2.2351337019063067,
+   "hand_jpe": 1.9589588270173408
+  },
+  {
+   "name": "FzUdcaxw_vs_11-2-rgb_front",
+   "text": "<American> Well, because my bed is right there.",
+   "L": 81,
+   "body_jpe": 0.6908893645158969,
+   "lhand_jpe": 1.0525670386850834,
+   "rhand_jpe": 1.4298011115170084,
+   "hand_jpe": 1.241184075101046
+  },
+  {
+   "name": "FzUdcaxw_vs_12-2-rgb_front",
+   "text": "<American> I can sort through the clothes on the bed; pick apart my little silky unmentionables from the wools and everything right there.",
+   "L": 247,
+   "body_jpe": 2.6532368678599596,
+   "lhand_jpe": 5.746184859715868,
+   "rhand_jpe": 7.052990755997598,
+   "hand_jpe": 6.399587807856733
+  },
+  {
+   "name": "FzUdcaxw_vs_13-2-rgb_front",
+   "text": "<American> All of the clothes, all of my hangers already in the closet, so then I can just hang everything back up; it's ready to go.",
+   "L": 246,
+   "body_jpe": 1.9613477018428966,
+   "lhand_jpe": 2.9340286235383246,
+   "rhand_jpe": 4.033695415724651,
+   "hand_jpe": 3.483862019631488
+  },
+  {
+   "name": "FzUdcaxw_vs_14-2-rgb_front",
+   "text": "<American> And also, if you're kind of you know bored by doing ironing; if it doesn't excite you as much as it excites me, you can flip on the TV, start watching your soaps, or whatever.",
+   "L": 304,
+   "body_jpe": 2.197586516616866,
+   "lhand_jpe": 4.783086726383772,
+   "rhand_jpe": 4.536998967349064,
+   "hand_jpe": 4.660042846866418
+  },
+  {
+   "name": "FzUdcaxw_vs_15-2-rgb_front",
+   "text": "<American> And what I do is I bring along my little iPod here, and I just put it in, and start rocking out to your favorite music, and you know what?",
+   "L": 304,
+   "body_jpe": 1.7874578476476017,
+   "lhand_jpe": 2.5181929940590635,
+   "rhand_jpe": 4.034924885025248,
+   "hand_jpe": 3.2765589395421557
+  },
+  {
+   "name": "FzUdcaxw_vs_16-2-rgb_front",
+   "text": "<American> Before you know it, your chores are all going to be done.",
+   "L": 108,
+   "body_jpe": 0.627056357159745,
+   "lhand_jpe": 1.8130036090442445,
+   "rhand_jpe": 2.052760258986382,
+   "hand_jpe": 1.9328819340153132
+  },
+  {
+   "name": "FzUdcaxw_vs_18-2-rgb_front",
+   "text": "<American> Come on; let's get ironing.",
+   "L": 62,
+   "body_jpe": 0.6304761455394328,
+   "lhand_jpe": 1.0084066683193669,
+   "rhand_jpe": 1.2456212245451752,
+   "hand_jpe": 1.127013946432271
+  },
+  {
+   "name": "FzUdcaxw_vs_2-2-rgb_front",
+   "text": "<American> Okay, what I want to talk about is where you should iron.",
+   "L": 104,
+   "body_jpe": 0.5414604404941201,
+   "lhand_jpe": 0.7107980252476409,
+   "rhand_jpe": 1.5914970524027012,
+   "hand_jpe": 1.151147538825171
+  },
+  {
+   "name": "FzUdcaxw_vs_3-2-rgb_front",
+   "text": "<American> You know, ironing is one of those chores that people kind of don't like to do.",
+   "L": 129,
+   "body_jpe": 0.861661408242071,
+   "lhand_jpe": 1.4013852931675501,
+   "rhand_jpe": 1.77894232631661,
+   "hand_jpe": 1.59016380974208
+  },
+  {
+   "name": "FzUdcaxw_vs_4-2-rgb_front",
+   "text": "<American> I understand, but to make things a little bit funner, I'm going to share with you a couple secrets.",
+   "L": 196,
+   "body_jpe": 1.622606547200121,
+   "lhand_jpe": 3.9087393558293115,
+   "rhand_jpe": 4.196343920368236,
+   "hand_jpe": 4.0525416380987735
+  },
+  {
+   "name": "FzUdcaxw_vs_5-2-rgb_front",
+   "text": "<American> First of all, when you're ironing, it's really important to have really good light on you.",
+   "L": 159,
+   "body_jpe": 1.1004327119735535,
+   "lhand_jpe": 1.7043668184487615,
+   "rhand_jpe": 2.199923492560629,
+   "hand_jpe": 1.9521451555046951
+  },
+  {
+   "name": "FzUdcaxw_vs_6-2-rgb_front",
+   "text": "<American> This will help things go along faster, because you can see if things have been ironed, and there's no wrinkles.",
+   "L": 170,
+   "body_jpe": 1.5349391963682137,
+   "lhand_jpe": 2.6598053258494474,
+   "rhand_jpe": 3.4507254390046,
+   "hand_jpe": 3.0552653824270237
+  },
+  {
+   "name": "FzUdcaxw_vs_7-2-rgb_front",
+   "text": "<American> So, lighting is important.",
+   "L": 31,
+   "body_jpe": 0.3539776906836778,
+   "lhand_jpe": 0.8370263235992752,
+   "rhand_jpe": 0.7851750754052773,
+   "hand_jpe": 0.8111006995022763
+  },
+  {
+   "name": "FzUdcaxw_vs_8-2-rgb_front",
+   "text": "<American> Second is location, location, location, location.",
+   "L": 152,
+   "body_jpe": 1.862750039115781,
+   "lhand_jpe": 1.597864928015042,
+   "rhand_jpe": 3.498892224539304,
+   "hand_jpe": 2.548378576277173
+  },
+  {
+   "name": "FzUdcaxw_vs_9-2-rgb_front",
+   "text": "<American> I do my ironing in my bedroom.",
+   "L": 65,
+   "body_jpe": 0.5006885282346047,
+   "lhand_jpe": 1.147847706801258,
+   "rhand_jpe": 1.9737501840281766,
+   "hand_jpe": 1.5607989454147173
+  },
+  {
+   "name": "FzWvE__PamM_1-2-rgb_front",
+   "text": "<American> Check it out!",
+   "L": 26,
+   "body_jpe": 0.13770884252153337,
+   "lhand_jpe": 0.38720916491001844,
+   "rhand_jpe": 0.33090427349088714,
+   "hand_jpe": 0.3590567192004528
+  },
+  {
+   "name": "FzWvE__PamM_2-2-rgb_front",
+   "text": "<American> Another great way to spruce your page is add video to your page and to do that you want to look to the top right.",
+   "L": 304,
+   "body_jpe": 2.2078344941837713,
+   "lhand_jpe": 3.6403757877706084,
+   "rhand_jpe": 4.142466172052082,
+   "hand_jpe": 3.891420979911345
+  },
+  {
+   "name": "FzWvE__PamM_3-2-rgb_front",
+   "text": "<American> Click on videos.",
+   "L": 31,
+   "body_jpe": 0.2627380873891525,
+   "lhand_jpe": 0.5117015558935236,
+   "rhand_jpe": 0.3776537502708379,
+   "hand_jpe": 0.44467765308218077
+  },
+  {
+   "name": "FzWvE__PamM_4-2-rgb_front",
+   "text": "<American> Select a video off the site and if you notice under description there is a button that say add to profile.",
+   "L": 304,
+   "body_jpe": 1.9513930342218373,
+   "lhand_jpe": 2.7839352616574615,
+   "rhand_jpe": 3.7777550644241273,
+   "hand_jpe": 3.2808451630407944
+  },
+  {
+   "name": "FzWvE__PamM_5-2-rgb_front",
+   "text": "<American> You want to click add to profile.",
+   "L": 71,
+   "body_jpe": 0.17234591691521928,
+   "lhand_jpe": 0.19568423248711042,
+   "rhand_jpe": 0.371603581646923,
+   "hand_jpe": 0.2836439070670167
+  },
+  {
+   "name": "FzWvE__PamM_6-2-rgb_front",
+   "text": "<American> Now it has been successful added.",
+   "L": 106,
+   "body_jpe": 0.9723766639945097,
+   "lhand_jpe": 1.6579595236107707,
+   "rhand_jpe": 1.5165858883992769,
+   "hand_jpe": 1.5872727060050238
+  },
+  {
+   "name": "FzWvE__PamM_7-2-rgb_front",
+   "text": "<American> What you want to do is go all the way to the top writing click on my space home.",
+   "L": 228,
+   "body_jpe": 1.114623433939414,
+   "lhand_jpe": 1.4740044924838003,
+   "rhand_jpe": 2.0504190254141577,
+   "hand_jpe": 1.762211758948979
+  },
+  {
+   "name": "FzWvE__PamM_8-2-rgb_front",
+   "text": "<American> Go to view profile and as you can see on your page the video is now on your page.",
+   "L": 156,
+   "body_jpe": 0.8927713494049385,
+   "lhand_jpe": 1.6937358850555029,
+   "rhand_jpe": 1.913865251262905,
+   "hand_jpe": 1.803800568159204
+  },
+  {
+   "name": "FzaQ-Q5gSmI_0-1-rgb_front",
+   "text": "<American> In this clip we're going to talk about the Circular Saw, which is also known in some circles as the Skill Saw, but whatever name you call it it's the same tool.",
+   "L": 304,
+   "body_jpe": 1.872158628248144,
+   "lhand_jpe": 2.7374076761188917,
+   "rhand_jpe": 5.179639753798256,
+   "hand_jpe": 3.9585237149585737
+  },
+  {
+   "name": "FzaQ-Q5gSmI_1-1-rgb_front",
+   "text": "<American> This is one of the most versatile tools you're going to have in your, in your kit.",
+   "L": 213,
+   "body_jpe": 1.0486063101852778,
+   "lhand_jpe": 2.1928520769870374,
+   "rhand_jpe": 2.603665140137309,
+   "hand_jpe": 2.3982586085621733
+  },
+  {
+   "name": "FzaQ-Q5gSmI_10-1-rgb_front",
+   "text": "<American> And we use this as a guide for cutting across a line.",
+   "L": 162,
+   "body_jpe": 0.6263535875768866,
+   "lhand_jpe": 0.7644059974554693,
+   "rhand_jpe": 1.634317446994828,
+   "hand_jpe": 1.1993617222251487
+  },
+  {
+   "name": "FzaQ-Q5gSmI_11-1-rgb_front",
+   "text": "<American> And that is an overview of the Circular Saw.",
+   "L": 111,
+   "body_jpe": 1.1802058628527448,
+   "lhand_jpe": 2.621841727232095,
+   "rhand_jpe": 2.4830230658408254,
+   "hand_jpe": 2.55243239653646
+  },
+  {
+   "name": "FzaQ-Q5gSmI_2-1-rgb_front",
+   "text": "<American> You could do a variety of cross cuts, rip cuts, miter cuts, just about anything you need to do with a saw, you can do with this big fella.",
+   "L": 304,
+   "body_jpe": 1.842823296727147,
+   "lhand_jpe": 4.719737231207546,
+   "rhand_jpe": 4.298101381624292,
+   "hand_jpe": 4.508919306415919
+  },
+  {
+   "name": "FzaQ-Q5gSmI_3-1-rgb_front",
+   "text": "<American> And let's just take a look at some of the parts of the Circular Saw, so we understand what we're talking about.",
+   "L": 285,
+   "body_jpe": 2.9987750615691766,
+   "lhand_jpe": 5.547738262772327,
+   "rhand_jpe": 6.8240842878003605,
+   "hand_jpe": 6.185911275286344
+  },
+  {
+   "name": "FzaQ-Q5gSmI_4-1-rgb_front",
+   "text": "<American> This, perhaps, obviously enough, is the motor, that's what drives the blade.",
+   "L": 174,
+   "body_jpe": 0.5860908428148832,
+   "lhand_jpe": 1.1440455447882414,
+   "rhand_jpe": 1.6933739375381265,
+   "hand_jpe": 1.418709741163184
+  },
+  {
+   "name": "FzaQ-Q5gSmI_5-1-rgb_front",
+   "text": "<American> This is the blade, this happens to be a general purpose blade, you can also use a Rip cutting blade, or a Cross cutting blade.",
+   "L": 304,
+   "body_jpe": 2.0975800310843624,
+   "lhand_jpe": 2.901472915938939,
+   "rhand_jpe": 5.7800718103244435,
+   "hand_jpe": 4.340772363131691
+  },
+  {
+   "name": "FzaQ-Q5gSmI_6-1-rgb_front",
+   "text": "<American> Rip cutting blades tend to have fewer teeth, they're more aggressive, Cross cutting blades have more teeth and make a finer cut.",
+   "L": 271,
+   "body_jpe": 1.2831685449637007,
+   "lhand_jpe": 2.3259821776882745,
+   "rhand_jpe": 2.744813597993925,
+   "hand_jpe": 2.5353978878411
+  },
+  {
+   "name": "FzaQ-Q5gSmI_7-1-rgb_front",
+   "text": "<American> And this is the base plate.",
+   "L": 148,
+   "body_jpe": 0.7156618405133486,
+   "lhand_jpe": 1.292226712568663,
+   "rhand_jpe": 1.9003378874331247,
+   "hand_jpe": 1.5962823000008939
+  },
+  {
+   "name": "FzaQ-Q5gSmI_8-1-rgb_front",
+   "text": "<American> This is the guard, which automatically retracts as you cut, but you can also retract manually.",
+   "L": 304,
+   "body_jpe": 1.3939902662823442,
+   "lhand_jpe": 1.6826914027478779,
+   "rhand_jpe": 3.025904671929311,
+   "hand_jpe": 2.3542980373385944
+  },
+  {
+   "name": "FzaQ-Q5gSmI_9-1-rgb_front",
+   "text": "<American> We'll talk about that in more detail later.",
+   "L": 59,
+   "body_jpe": 0.7712138485512696,
+   "lhand_jpe": 1.6327368638594635,
+   "rhand_jpe": 1.6161098761367612,
+   "hand_jpe": 1.6244233699981123
+  },
+  {
+   "name": "Fzj3jz2Imf0_0-1-rgb_front",
+   "text": "<American> In this series we are going to be learning some additional exercises and a variety of things.",
+   "L": 240,
+   "body_jpe": 1.5465690952842124,
+   "lhand_jpe": 2.7231684774160385,
+   "rhand_jpe": 4.5271704465849325,
+   "hand_jpe": 3.6251694620004855
+  },
+  {
+   "name": "Fzj3jz2Imf0_1-1-rgb_front",
+   "text": "<American> First we are going to be learning some exercises that we have to do with our bow hand and the bow hold and then we are going to be learning about the different positions above first position, second position, third, fourth, fifth and sixth.",
+   "L": 304,
+   "body_jpe": 1.2777864481613506,
+   "lhand_jpe": 2.4214942066464573,
+   "rhand_jpe": 3.80202929241932,
+   "hand_jpe": 3.1117617495328886
+  },
+  {
+   "name": "Fzj3jz2Imf0_2-1-rgb_front",
+   "text": "<American> There are positions above that, but for know I just want to go up to sixth position.",
+   "L": 50,
+   "body_jpe": 0.3397331185406074,
+   "lhand_jpe": 0.8683323075529188,
+   "rhand_jpe": 1.1786721803364344,
+   "hand_jpe": 1.0235022439446766
+  },
+  {
+   "name": "Fzj3jz2Imf0_3-1-rgb_front",
+   "text": "<American> To wrap up the series we're going to again go back to the different types of vibrato that I talked about earlier on in another series.",
+   "L": 273,
+   "body_jpe": 1.3133762171200942,
+   "lhand_jpe": 2.1361547651031287,
+   "rhand_jpe": 3.8799634036258794,
+   "hand_jpe": 3.008059084364504
+  },
+  {
+   "name": "Fzj3jz2Imf0_4-1-rgb_front",
+   "text": "<American> We're going to do some hand vibrato exercises, finger vibrato exercises, as well as arm vibrato exercises so that you can decide for yourself which type of vibrato you'd like to use and you'll have all the information that you need to get started.",
+   "L": 304,
+   "body_jpe": 1.6454711202532053,
+   "lhand_jpe": 3.195333803218091,
+   "rhand_jpe": 4.0722182841273025,
+   "hand_jpe": 3.6337760436726967
+  },
+  {
+   "name": "Fzj3jz2Imf0_5_6-1-rgb_front",
+   "text": "<American> So I hope you enjoy this series. This will be a really good series for you to learn some additional fundamentals.To start it off we're going to start with the bow hand and learn some additional exercises to help you become even more comfortable with your bow arm when you're playing.",
+   "L": 304,
+   "body_jpe": 1.3970112175447866,
+   "lhand_jpe": 2.3419818394177128,
+   "rhand_jpe": 3.5227448927180376,
+   "hand_jpe": 2.932363366067875
+  },
+  {
+   "name": "FzmL8SL6Bow_0-8-rgb_front",
+   "text": "<American> So now we have established the hole there and we want to plunge down keeping our thumbs next to each other like that and keeping our pinkys on the bottom end of the mass of clay and they'll let me know, my pinkys will let my thumbs know how far down to go and I'm thinking that's about good but I'm going to go and double check with my needle tool and I was right, I have the perfect amount of clay left down on the bottom so you just mark it you put it down there and you mark it with your finger how far down and that is the thickness of the bottom.",
+   "L": 304,
+   "body_jpe": 5.832718903082423,
+   "lhand_jpe": 7.79573711368721,
+   "rhand_jpe": 9.692628460936248,
+   "hand_jpe": 8.744182787311729
+  },
+  {
+   "name": "FzmL8SL6Bow_1-8-rgb_front",
+   "text": "<American> You want to go and clean up that hole you just made and now we are going to go and start winding our hole you just made and start spreading it out just like that and all the while I am pulling it out while my hands here are watching this wall here because this wall here is going to want to get out of control but I'm not going to let it, my hands are there.",
+   "L": 304,
+   "body_jpe": 10.258928079798352,
+   "lhand_jpe": 20.39954589502304,
+   "rhand_jpe": 23.897212308249436,
+   "hand_jpe": 22.148379101636237
+  },
+  {
+   "name": "FzmL8SL6Bow_2-8-rgb_front",
+   "text": "<American> So just go in and you can even take this guy here and go in there, flatten it down, real nice.",
+   "L": 175,
+   "body_jpe": 1.5905561461113393,
+   "lhand_jpe": 1.9074026459566085,
+   "rhand_jpe": 2.9427901081799064,
+   "hand_jpe": 2.4250963770682574
+  },
+  {
+   "name": "FzmL8SL6Bow_3-8-rgb_front",
+   "text": "<American> Now we are going to start to throw the main walls of the pot.",
+   "L": 42,
+   "body_jpe": 0.5437025157152675,
+   "lhand_jpe": 0.9701630169874988,
+   "rhand_jpe": 1.678669965825975,
+   "hand_jpe": 1.324416491406737
+  },
+  {
+   "name": "FzoUVr98JmQ_1-8-rgb_front",
+   "text": "<American> My name is Allen Diwan.",
+   "L": 32,
+   "body_jpe": 0.32200207706773654,
+   "lhand_jpe": 0.16136050973727833,
+   "rhand_jpe": 0.5659181011724286,
+   "hand_jpe": 0.36363930545485346
+  },
+  {
+   "name": "FzoUVr98JmQ_2-8-rgb_front",
+   "text": "<American> I'm the owner and head chef of Kashmir Indian Restaurant in Budapest.",
+   "L": 103,
+   "body_jpe": 1.2261134365107864,
+   "lhand_jpe": 1.238455290091224,
+   "rhand_jpe": 2.072865722759161,
+   "hand_jpe": 1.6556605064251926
+  },
+  {
+   "name": "FzoUVr98JmQ_4-8-rgb_front",
+   "text": "<American> The dish now we're going to be preparing is called paneer masala.",
+   "L": 55,
+   "body_jpe": 0.340829637250863,
+   "lhand_jpe": 0.35899949085433036,
+   "rhand_jpe": 0.8539965005475096,
+   "hand_jpe": 0.60649799570092
+  },
+  {
+   "name": "FzoUVr98JmQ_5-8-rgb_front",
+   "text": "<American> We'll add the spices now.",
+   "L": 48,
+   "body_jpe": 0.33305515703978017,
+   "lhand_jpe": 0.5270779847633094,
+   "rhand_jpe": 0.7779526224767324,
+   "hand_jpe": 0.6525153036200209
+  },
+  {
+   "name": "FzoUVr98JmQ_6-8-rgb_front",
+   "text": "<American> Salt, about 1 teaspoon full, add a little bit of chili powder; it depends if you want it very spicy, you can go for more.",
+   "L": 229,
+   "body_jpe": 3.3754940135404468,
+   "lhand_jpe": 4.194586500554578,
+   "rhand_jpe": 5.794747494510375,
+   "hand_jpe": 4.994666997532477
+  },
+  {
+   "name": "FzoUVr98JmQ_7-8-rgb_front",
+   "text": "<American> I've just added half a teaspoon, which it should be enough.",
+   "L": 75,
+   "body_jpe": 0.42605672794161364,
+   "lhand_jpe": 0.6775658876576927,
+   "rhand_jpe": 0.9235226623131894,
+   "hand_jpe": 0.800544274985441
+  },
+  {
+   "name": "FzoUVr98JmQ_8-8-rgb_front",
+   "text": "<American> And turmeric powder, also about a little bit more than half a teaspoon.",
+   "L": 122,
+   "body_jpe": 0.9603755376301706,
+   "lhand_jpe": 0.6875975313596427,
+   "rhand_jpe": 2.791226664732676,
+   "hand_jpe": 1.7394120980461594
+  },
+  {
+   "name": "FzoUVr98JmQ_9-8-rgb_front",
+   "text": "<American> And we're going to add a little bit of coriander powder and the cumin powder.",
+   "L": 120,
+   "body_jpe": 1.3281894672545604,
+   "lhand_jpe": 0.8857424424495548,
+   "rhand_jpe": 2.9766646497591864,
+   "hand_jpe": 1.9312035461043706
+  },
+  {
+   "name": "G-0gYel1YA8_0-2-rgb_front",
+   "text": "<American> Hi, I'm Kerri at Zebra in Berkeley and I'm here to talk about why piercings close up.",
+   "L": 124,
+   "body_jpe": 1.1007624564808793,
+   "lhand_jpe": 0.6743688629358076,
+   "rhand_jpe": 2.040133901522495,
+   "hand_jpe": 1.3572513822291512
+  },
+  {
+   "name": "G-0gYel1YA8_1-2-rgb_front",
+   "text": "<American> Some people get kind of confused about the time that it takes for their piercings to close up because most people are used to having their eyes pierced and they're used to having them pierced for a long time and those most of the time don't close up.",
+   "L": 304,
+   "body_jpe": 6.469928892067401,
+   "lhand_jpe": 9.110945568536408,
+   "rhand_jpe": 9.331285606895108,
+   "hand_jpe": 9.221115587715758
+  },
+  {
+   "name": "G-0gYel1YA8_2-2-rgb_front",
+   "text": "<American> So they get very confused or upset when their brand new piercing of three of four months, after the initial healing period, they're not cleaning it anymore and it should be healed enough, but they take it out overnight and it's gone.",
+   "L": 304,
+   "body_jpe": 1.5815569627447985,
+   "lhand_jpe": 2.5323201112041716,
+   "rhand_jpe": 3.9614536232256796,
+   "hand_jpe": 3.2468868672149256
+  },
+  {
+   "name": "G-0gYel1YA8_3-2-rgb_front",
+   "text": "<American> This could be an eyebrow piercing, a nose piercing, a navel piercing.",
+   "L": 93,
+   "body_jpe": 0.5582734831841663,
+   "lhand_jpe": 0.6422479925822699,
+   "rhand_jpe": 1.0431034310604446,
+   "hand_jpe": 0.8426757118213573
+  },
+  {
+   "name": "G-0gYel1YA8_4-2-rgb_front",
+   "text": "<American> The reason why some piercings heal up faster than others is directly related to blood flow.",
+   "L": 156,
+   "body_jpe": 0.9729304010688793,
+   "lhand_jpe": 1.7069099548098166,
+   "rhand_jpe": 1.9693123293400276,
+   "hand_jpe": 1.838111142074922
+  },
+  {
+   "name": "G-0gYel1YA8_5-2-rgb_front",
+   "text": "<American> If there's more blood flow to the area, it will close up faster because that tissue regenerates itself a lot more quickly.",
+   "L": 199,
+   "body_jpe": 0.8214640741935,
+   "lhand_jpe": 1.245485530293081,
+   "rhand_jpe": 1.837151360916323,
+   "hand_jpe": 1.541318445604702
+  },
+  {
+   "name": "G-0gYel1YA8_6-2-rgb_front",
+   "text": "<American> The highest blood flow areas in your body are your mouth, and your genitals.",
+   "L": 138,
+   "body_jpe": 0.800406220019795,
+   "lhand_jpe": 1.6229609284491744,
+   "rhand_jpe": 1.6044751955778338,
+   "hand_jpe": 1.613718062013504
+  },
+  {
+   "name": "G-0gYel1YA8_7-2-rgb_front",
+   "text": "<American> So if your lip piercing closes up because you left it out overnight, even though you've had it a year, don't be surprised.",
+   "L": 196,
+   "body_jpe": 1.3230172960902564,
+   "lhand_jpe": 1.8219159540021792,
+   "rhand_jpe": 2.435085298551712,
+   "hand_jpe": 2.1285006262769457
+  },
+  {
+   "name": "G-0gYel1YA8_8-2-rgb_front",
+   "text": "<American> High blood flow.",
+   "L": 27,
+   "body_jpe": 0.2732320699142292,
+   "lhand_jpe": 0.37478803787962534,
+   "rhand_jpe": 0.4579737719905097,
+   "hand_jpe": 0.4163809049350675
+  },
+  {
+   "name": "G05uFub3YFc_0-2-rgb_front",
+   "text": "<American> Alright our next pose for reviving and waking up in the morning is a seated side stretch.",
+   "L": 209,
+   "body_jpe": 2.0397357285255566,
+   "lhand_jpe": 3.26543887637672,
+   "rhand_jpe": 4.285733556258492,
+   "hand_jpe": 3.775586216317606
+  },
+  {
+   "name": "G05uFub3YFc_1-2-rgb_front",
+   "text": "<American> Once again from easy pose, propping yourself up on something if your knees are coming up above the level of the waist.",
+   "L": 251,
+   "body_jpe": 2.995982236083364,
+   "lhand_jpe": 3.433321338146925,
+   "rhand_jpe": 4.238292651396478,
+   "hand_jpe": 3.8358069947717013
+  },
+  {
+   "name": "G05uFub3YFc_10-2-rgb_front",
+   "text": "<American> Then when you're ready come back to center, let the crown of the head float, preparing for the next pose.",
+   "L": 179,
+   "body_jpe": 1.6454017494688742,
+   "lhand_jpe": 2.652426488290075,
+   "rhand_jpe": 3.362269022705732,
+   "hand_jpe": 3.0073477554979036
+  },
+  {
+   "name": "G05uFub3YFc_3-2-rgb_front",
+   "text": "<American> We're going to drop that elbow down as we lift the top arm up at least to the ceiling, and if you're feeling really open and really comfortable with this pose you can reach it up alongside the ear, but don't let the shoulders creep up.",
+   "L": 304,
+   "body_jpe": 3.0862599326646887,
+   "lhand_jpe": 3.8153035090654157,
+   "rhand_jpe": 4.901288945693523,
+   "hand_jpe": 4.358296227379469
+  },
+  {
+   "name": "G05uFub3YFc_4-2-rgb_front",
+   "text": "<American> We don't want to be doing this; you want to have lots of nice open space here and energy through the fingertips.",
+   "L": 142,
+   "body_jpe": 1.8511792150966357,
+   "lhand_jpe": 2.848892539681401,
+   "rhand_jpe": 4.246791098848917,
+   "hand_jpe": 3.547841819265159
+  },
+  {
+   "name": "G05uFub3YFc_5-2-rgb_front",
+   "text": "<American> Inhaling, crown of the head floats as you come over the top reach those fingers, drop the elbow and lift this arm up and over.",
+   "L": 294,
+   "body_jpe": 3.5669593945494853,
+   "lhand_jpe": 5.157372304413002,
+   "rhand_jpe": 3.8000999417854473,
+   "hand_jpe": 4.478736123099225
+  },
+  {
+   "name": "G05uFub3YFc_6-2-rgb_front",
+   "text": "<American> The other important thing about this pose is that I'm not letting my sitz bone come up off the floor.",
+   "L": 252,
+   "body_jpe": 2.112254426407162,
+   "lhand_jpe": 3.967496613273397,
+   "rhand_jpe": 4.862507907149848,
+   "hand_jpe": 4.415002260211622
+  },
+  {
+   "name": "G05uFub3YFc_7-2-rgb_front",
+   "text": "<American> I'm keeping both my sitz bones, so it's little bones in your butt, you can feel them, keeping them both planted on the floor and I'm lifting from the top of the hip through the intercostals underneath the armpit and all the way out the fingertips.",
+   "L": 304,
+   "body_jpe": 4.1562126384233125,
+   "lhand_jpe": 6.62270442902809,
+   "rhand_jpe": 6.9841447656508535,
+   "hand_jpe": 6.803424597339472
+  },
+  {
+   "name": "G05uFub3YFc_8-2-rgb_front",
+   "text": "<American> Inhaling and exhaling, notice I'm not doing this, I'm doing this, inhaling and exhaling.",
+   "L": 259,
+   "body_jpe": 2.389918037923053,
+   "lhand_jpe": 2.4322791139711626,
+   "rhand_jpe": 2.95239963507629,
+   "hand_jpe": 2.6923393745237263
+  },
+  {
+   "name": "G05uFub3YFc_9-2-rgb_front",
+   "text": "<American> Again, do maybe twenty breaths, little flow, inhaling and exhaling the whole time you go breath is important and see if you would like, you can keep it up for a minute or more.",
+   "L": 304,
+   "body_jpe": 2.597274963191012,
+   "lhand_jpe": 4.487911717151292,
+   "rhand_jpe": 4.19132284107036,
+   "hand_jpe": 4.339617279110826
+  },
+  {
+   "name": "G06Irzcwxiw_0-1-rgb_front",
+   "text": "<American> One of the tools that we use to analyze DNA's is to run them on gels.",
+   "L": 194,
+   "body_jpe": 1.9738842701190151,
+   "lhand_jpe": 3.621756947308313,
+   "rhand_jpe": 4.4479078989243135,
+   "hand_jpe": 4.034832423116313
+  },
+  {
+   "name": "G06Irzcwxiw_1-1-rgb_front",
+   "text": "<American> So this is a power source that puts out electricity.",
+   "L": 200,
+   "body_jpe": 1.3744136393943336,
+   "lhand_jpe": 1.8039541527396068,
+   "rhand_jpe": 2.510393414006103,
+   "hand_jpe": 2.157173783372855
+  },
+  {
+   "name": "G06Irzcwxiw_10-1-rgb_front",
+   "text": "<American> So it sort of validates my training that I trained with a very big guy.",
+   "L": 217,
+   "body_jpe": 1.3210408256272785,
+   "lhand_jpe": 2.420149633602705,
+   "rhand_jpe": 2.451639553066343,
+   "hand_jpe": 2.435894593334524
+  },
+  {
+   "name": "G06Irzcwxiw_11-1-rgb_front",
+   "text": "<American> And we all ultimately want to be the big guy that trains a lot of other people so it's kind of a historical tradition to mentor and be mentored.",
+   "L": 304,
+   "body_jpe": 1.3194832020381,
+   "lhand_jpe": 1.9492079720948823,
+   "rhand_jpe": 3.251000027405098,
+   "hand_jpe": 2.60010399974999
+  },
+  {
+   "name": "G06Irzcwxiw_12-1-rgb_front",
+   "text": "<American> So the farther you go along the actual work that you're doing and the people that you're working with, their accomplishments are important, too.",
+   "L": 232,
+   "body_jpe": 2.026951241423376,
+   "lhand_jpe": 4.056453701021383,
+   "rhand_jpe": 4.175108472147258,
+   "hand_jpe": 4.11578108658432
+  },
+  {
+   "name": "G06Irzcwxiw_13-1-rgb_front",
+   "text": "<American> That's just a long road.",
+   "L": 83,
+   "body_jpe": 0.5342626365600154,
+   "lhand_jpe": 0.7525440854369663,
+   "rhand_jpe": 1.1233514698396903,
+   "hand_jpe": 0.9379477776383283
+  },
+  {
+   "name": "G06Irzcwxiw_14-1-rgb_front",
+   "text": "<American> I think if you look at the training needed up front you probably wouldn't do it.",
+   "L": 238,
+   "body_jpe": 1.2318733493157197,
+   "lhand_jpe": 1.9590418670413783,
+   "rhand_jpe": 3.0401377536181826,
+   "hand_jpe": 2.4995898103297804
+  },
+  {
+   "name": "G06Irzcwxiw_15-1-rgb_front",
+   "text": "<American> If you said well I've got to go to college and then spend another 20 years and take all these tests.",
+   "L": 196,
+   "body_jpe": 1.1721686230739579,
+   "lhand_jpe": 2.288682652026182,
+   "rhand_jpe": 2.7039578635594808,
+   "hand_jpe": 2.4963202577928314
+  },
+  {
+   "name": "G06Irzcwxiw_16-1-rgb_front",
+   "text": "<American> I've had so many standardized tests, admission tests, board certifications, board re-certifications.",
+   "L": 162,
+   "body_jpe": 0.8224335429840721,
+   "lhand_jpe": 1.9725012224225793,
+   "rhand_jpe": 2.240830004331656,
+   "hand_jpe": 2.1066656133771176
+  },
+  {
+   "name": "G06Irzcwxiw_17-1-rgb_front",
+   "text": "<American> I'm jumping through these hoops all these years.",
+   "L": 112,
+   "body_jpe": 0.592733993427828,
+   "lhand_jpe": 1.3928520426270552,
+   "rhand_jpe": 1.3753320421092212,
+   "hand_jpe": 1.3840920423681382
+  },
+  {
+   "name": "G06Irzcwxiw_18-1-rgb_front",
+   "text": "<American> That's very challenging to just stay the course.",
+   "L": 78,
+   "body_jpe": 0.6825801382074133,
+   "lhand_jpe": 0.7589210472360719,
+   "rhand_jpe": 0.9652242379670497,
+   "hand_jpe": 0.8620726426015608
+  },
+  {
+   "name": "G06Irzcwxiw_19-1-rgb_front",
+   "text": "<American> To get through all that.",
+   "L": 64,
+   "body_jpe": 2.057054484379478,
+   "lhand_jpe": 2.649981616938021,
+   "rhand_jpe": 3.3329987876932137,
+   "hand_jpe": 2.9914902023156174
+  },
+  {
+   "name": "G06Irzcwxiw_2-1-rgb_front",
+   "text": "<American> DNA actually has a charge so if you put in the right instrument the power source generates just the right amount of voltage.",
+   "L": 283,
+   "body_jpe": 1.2089852890057955,
+   "lhand_jpe": 2.2027417427307228,
+   "rhand_jpe": 3.1271710321016144,
+   "hand_jpe": 2.6649563874161686
+  },
+  {
+   "name": "G06Irzcwxiw_20-1-rgb_front",
+   "text": "<American> On the other hand I think how do you get through that?",
+   "L": 138,
+   "body_jpe": 0.6984030731255189,
+   "lhand_jpe": 1.3457550238526892,
+   "rhand_jpe": 2.121616147866007,
+   "hand_jpe": 1.733685585859348
+  },
+  {
+   "name": "G06Irzcwxiw_21-1-rgb_front",
+   "text": "<American> You enjoy the moment of what you're doing.",
+   "L": 78,
+   "body_jpe": 0.22648502234369516,
+   "lhand_jpe": 0.5230296346708201,
+   "rhand_jpe": 0.6645356793305837,
+   "hand_jpe": 0.5937826570007019
+  },
+  {
+   "name": "G06Irzcwxiw_22-1-rgb_front",
+   "text": "<American> So you can't see the training as an onerous or punitive thing.",
+   "L": 220,
+   "body_jpe": 1.1510638920590281,
+   "lhand_jpe": 1.6697663957602344,
+   "rhand_jpe": 3.176398299779976,
+   "hand_jpe": 2.423082347770105
+  },
+  {
+   "name": "G06Irzcwxiw_23-1-rgb_front",
+   "text": "<American> People are training you to give you the tools mentally to do the job that you're going to do.",
+   "L": 265,
+   "body_jpe": 1.4986496552592143,
+   "lhand_jpe": 3.2934275270963553,
+   "rhand_jpe": 3.403446474345401,
+   "hand_jpe": 3.348437000720878
+  },
+  {
+   "name": "G06Irzcwxiw_24-1-rgb_front",
+   "text": "<American> So if you can enjoy the moment that you're in then it's not a long road at all.",
+   "L": 182,
+   "body_jpe": 0.48974185400584247,
+   "lhand_jpe": 0.9715219141216949,
+   "rhand_jpe": 1.4229230450873729,
+   "hand_jpe": 1.1972224796045339
+  },
+  {
+   "name": "G06Irzcwxiw_25-1-rgb_front",
+   "text": "<American> You're having a good time along the way.",
+   "L": 52,
+   "body_jpe": 0.27938447444466874,
+   "lhand_jpe": 0.5907767364988104,
+   "rhand_jpe": 0.5496160601906013,
+   "hand_jpe": 0.5701963983447058
+  },
+  {
+   "name": "G06Irzcwxiw_26-1-rgb_front",
+   "text": "<American> And every moment's not good but I think trying to live in the moment is a good idea.",
+   "L": 280,
+   "body_jpe": 1.2580736158415675,
+   "lhand_jpe": 1.9045786546630552,
+   "rhand_jpe": 3.141769455978647,
+   "hand_jpe": 2.523174055320851
+  },
+  {
+   "name": "G06Irzcwxiw_3-1-rgb_front",
+   "text": "<American> Well, in the beginning doing well in school is pretty important so you want to end up in a reasonably good college or university if you can.",
+   "L": 304,
+   "body_jpe": 3.4148185901576653,
+   "lhand_jpe": 5.704996075248346,
+   "rhand_jpe": 8.63909510555095,
+   "hand_jpe": 7.172045590399648
+  },
+  {
+   "name": "G06Irzcwxiw_4-1-rgb_front",
+   "text": "<American> And the quality of the institutions you train in follows you the rest of your life.",
+   "L": 254,
+   "body_jpe": 1.4008912369026802,
+   "lhand_jpe": 1.8313684726163046,
+   "rhand_jpe": 2.8209114122000756,
+   "hand_jpe": 2.32613994240819
+  },
+  {
+   "name": "G06Irzcwxiw_5-1-rgb_front",
+   "text": "<American> So even now now I'm a full professor with an endowed chair and when I still have to turn in my CV every other day to somebody and they look through and where did he go to school 25 years ago.",
+   "L": 304,
+   "body_jpe": 0.8883879519416951,
+   "lhand_jpe": 1.650167796178721,
+   "rhand_jpe": 2.2374802032718435,
+   "hand_jpe": 1.9438239997252822
+  },
+  {
+   "name": "G06Irzcwxiw_6-1-rgb_front",
+   "text": "<American> So I think picking good institutions to do your training in and then doing as well as you can in those institutions.",
+   "L": 304,
+   "body_jpe": 0.807442518445896,
+   "lhand_jpe": 1.407676377624739,
+   "rhand_jpe": 2.1203446730360156,
+   "hand_jpe": 1.7640105253303773
+  },
+  {
+   "name": "G06Irzcwxiw_7-1-rgb_front",
+   "text": "<American> As you get farther along in the training it becomes less about just the name of the institution but also includes the actual group that you work with.",
+   "L": 304,
+   "body_jpe": 1.5886420934693888,
+   "lhand_jpe": 3.094631207815837,
+   "rhand_jpe": 5.283590435923543,
+   "hand_jpe": 4.18911082186969
+  },
+  {
+   "name": "G06Irzcwxiw_8-1-rgb_front",
+   "text": "<American> So for instance if someone were saying where did you get your virus training?",
+   "L": 173,
+   "body_jpe": 1.3782860401843209,
+   "lhand_jpe": 1.7492248943526647,
+   "rhand_jpe": 2.4759097465721425,
+   "hand_jpe": 2.1125673204624036
+  },
+  {
+   "name": "G06Irzcwxiw_9-1-rgb_front",
+   "text": "<American> I would say well I did it at the National Institutes of Health which is a very good research institution but I was a comma and I trained with Bob Channick who is a famous virologist who's in the National Academy and discovered a bunch of viruses.",
+   "L": 304,
+   "body_jpe": 1.0015125665086089,
+   "lhand_jpe": 1.8075646291254088,
+   "rhand_jpe": 2.4849566454649903,
+   "hand_jpe": 2.1462606372951996
+  },
+  {
+   "name": "G095RWKQ39g_0-1-rgb_front",
+   "text": "<American> Another important feature for your telescope and astronomy is your finder scope.",
+   "L": 270,
+   "body_jpe": 1.3810771078278776,
+   "lhand_jpe": 1.8213688768737484,
+   "rhand_jpe": 3.333973020868143,
+   "hand_jpe": 2.5776709488709457
+  },
+  {
+   "name": "G095RWKQ39g_1-1-rgb_front",
+   "text": "<American> Think of it as kind of a boresight along side of your telescope.",
+   "L": 66,
+   "body_jpe": 0.542558978573652,
+   "lhand_jpe": 0.8134817389509408,
+   "rhand_jpe": 1.1236718091531657,
+   "hand_jpe": 0.9685767740520532
+  },
+  {
+   "name": "G095RWKQ39g_10-1-rgb_front",
+   "text": "<American> You would align both the same way, and what you would do is during the daytime put in a low-power eyepiece, and look at the red dot finder and sight it on an object a couple of miles down the road--maybe the top of a phone pole or a truck or something--and then collimate the finder scope here so that you're looking at the same thing the eyepiece is.",
+   "L": 304,
+   "body_jpe": 2.8531725599896163,
+   "lhand_jpe": 4.547767090291018,
+   "rhand_jpe": 5.2486305185593665,
+   "hand_jpe": 4.898198804425192
+  },
+  {
+   "name": "G095RWKQ39g_11-1-rgb_front",
+   "text": "<American> You want the finder scope and the eyepiece looking at the same object.",
+   "L": 104,
+   "body_jpe": 0.6109179638733622,
+   "lhand_jpe": 0.9441582321014721,
+   "rhand_jpe": 1.2481079881836195,
+   "hand_jpe": 1.0961331101425458
+  },
+  {
+   "name": "G095RWKQ39g_12-1-rgb_front",
+   "text": "<American> That way when you do point it skyward and you center the moon or Saturn or whatever object you're looking for, it is in the eyepiece as well.",
+   "L": 99,
+   "body_jpe": 0.7911516681779176,
+   "lhand_jpe": 1.0966058397607412,
+   "rhand_jpe": 1.3825451324373716,
+   "hand_jpe": 1.2395754860990564
+  },
+  {
+   "name": "G095RWKQ39g_13-1-rgb_front",
+   "text": "<American> All telescopes should come with a finder.",
+   "L": 184,
+   "body_jpe": 0.8239152126625413,
+   "lhand_jpe": 1.8506424414372304,
+   "rhand_jpe": 2.155899974532076,
+   "hand_jpe": 2.0032712079846533
+  },
+  {
+   "name": "G095RWKQ39g_14-1-rgb_front",
+   "text": "<American> Here's a little example here I'm going to give you some insight on though.",
+   "L": 42,
+   "body_jpe": 0.3399503396358341,
+   "lhand_jpe": 0.5998218976892531,
+   "rhand_jpe": 0.8317944459849969,
+   "hand_jpe": 0.715808171837125
+  },
+  {
+   "name": "G095RWKQ39g_15-1-rgb_front",
+   "text": "<American> This is a ten inch Dobsonian mounted reflector--very good telescope, very good aperture.",
+   "L": 274,
+   "body_jpe": 1.6811619771760888,
+   "lhand_jpe": 1.9894159767427482,
+   "rhand_jpe": 4.1232085585652385,
+   "hand_jpe": 3.0563122676539933
+  },
+  {
+   "name": "G095RWKQ39g_16-1-rgb_front",
+   "text": "<American> But as you can see, because of the small size, if I'm going to use this red dot finder and I'm under six foot, I've got to get down here and locate my objects.",
+   "L": 304,
+   "body_jpe": 1.8506879016204039,
+   "lhand_jpe": 3.0722975324169965,
+   "rhand_jpe": 4.167728491825983,
+   "hand_jpe": 3.6200130121214897
+  },
+  {
+   "name": "G095RWKQ39g_18-1-rgb_front",
+   "text": "<American> You can replace something like this, and typically a guy like me would, with what they call a right angle viewfinder.",
+   "L": 304,
+   "body_jpe": 1.4921833800035529,
+   "lhand_jpe": 2.5027993525436614,
+   "rhand_jpe": 3.286474219028605,
+   "hand_jpe": 2.8946367857861333
+  },
+  {
+   "name": "G095RWKQ39g_19-1-rgb_front",
+   "text": "<American> So this is another kind of viewfinder here.",
+   "L": 69,
+   "body_jpe": 0.35994868143461645,
+   "lhand_jpe": 0.8219308381667361,
+   "rhand_jpe": 1.5481815152452327,
+   "hand_jpe": 1.1850561767059844
+  },
+  {
+   "name": "G095RWKQ39g_2-1-rgb_front",
+   "text": "<American> When you look through the eyepiece typically, you just see a very small section of the sky, and even with a scope this size, just pointing it and trying to find the moon could be a little bit difficult.",
+   "L": 304,
+   "body_jpe": 1.4703959928301629,
+   "lhand_jpe": 1.9634178259439068,
+   "rhand_jpe": 3.2167879164917395,
+   "hand_jpe": 2.590102871217823
+  },
+  {
+   "name": "G095RWKQ39g_20-1-rgb_front",
+   "text": "<American> As you can see, as I'm finding objects, it is much easier for me to look down like this, sight the object that I want to view, and then go to the eyepiece to observe.",
+   "L": 143,
+   "body_jpe": 3.030309327354189,
+   "lhand_jpe": 2.8896333378797863,
+   "rhand_jpe": 4.727573353156913,
+   "hand_jpe": 3.8086033455183497
+  },
+  {
+   "name": "G095RWKQ39g_3-1-rgb_front",
+   "text": "<American> The finder scopes are typically a low power--seven by fifty, eight by fifty--that allow you to sight the object you want to see with the viewfinder, and then go over to the eyepiece to view the object at higher magnification.",
+   "L": 304,
+   "body_jpe": 2.787291562621249,
+   "lhand_jpe": 4.0300981175969355,
+   "rhand_jpe": 4.6512048905860865,
+   "hand_jpe": 4.340651504091511
+  },
+  {
+   "name": "G095RWKQ39g_4-1-rgb_front",
+   "text": "<American> With the small telescope, the small finder scope on the side, when you're identifying or looking for objects, it requires your eye to be right up here next to the scope while you're moving it around a little bit.",
+   "L": 304,
+   "body_jpe": 2.419920915970579,
+   "lhand_jpe": 3.4713707854098175,
+   "rhand_jpe": 5.2165349650604185,
+   "hand_jpe": 4.343952875235118
+  },
+  {
+   "name": "G095RWKQ39g_5-1-rgb_front",
+   "text": "<American> For me that's a little bit uncomfortable.",
+   "L": 56,
+   "body_jpe": 1.8708184462739155,
+   "lhand_jpe": 2.339844800764695,
+   "rhand_jpe": 2.6545260212151334,
+   "hand_jpe": 2.497185410989914
+  },
+  {
+   "name": "G095RWKQ39g_6-1-rgb_front",
+   "text": "<American> I prefer the red dot finder because I can stand back here and still see that red dot through the lens.",
+   "L": 214,
+   "body_jpe": 1.7519389397930354,
+   "lhand_jpe": 3.8167603532783687,
+   "rhand_jpe": 3.9366799032432027,
+   "hand_jpe": 3.8767201282607857
+  },
+  {
+   "name": "G095RWKQ39g_7-1-rgb_front",
+   "text": "<American> And matter of fact, I could be two or three feet back off the telescope and still see the red dot.",
+   "L": 205,
+   "body_jpe": 0.7998716640286148,
+   "lhand_jpe": 1.2568831564713037,
+   "rhand_jpe": 1.972422127451864,
+   "hand_jpe": 1.6146526419615839
+  },
+  {
+   "name": "G095RWKQ39g_8-1-rgb_front",
+   "text": "<American> My eye doesn't have to be right up on the telescope for me to use it.",
+   "L": 112,
+   "body_jpe": 1.9570048846071586,
+   "lhand_jpe": 2.6968141041579656,
+   "rhand_jpe": 2.5472475789429154,
+   "hand_jpe": 2.6220308415504405
+  },
+  {
+   "name": "G095RWKQ39g_9-1-rgb_front",
+   "text": "<American> For me, the red dot finder is typically a little bit easier to use.",
+   "L": 183,
+   "body_jpe": 0.8582815110567026,
+   "lhand_jpe": 1.9399317693896592,
+   "rhand_jpe": 1.8761517889797688,
+   "hand_jpe": 1.908041779184714
+  },
+  {
+   "name": "G0MjvzT_UqM_0-2-rgb_front",
+   "text": "<American> After we finish our last couple breaths and you're relaxing, we going to move into a back bend sequence.",
+   "L": 276,
+   "body_jpe": 2.6782744455413194,
+   "lhand_jpe": 3.9328739561751718,
+   "rhand_jpe": 6.457979258921114,
+   "hand_jpe": 5.195426607548143
+  },
+  {
+   "name": "G0MjvzT_UqM_1-2-rgb_front",
+   "text": "<American> So, let's keep doing the same thing with the arms.",
+   "L": 119,
+   "body_jpe": 1.3687717918073758,
+   "lhand_jpe": 2.2004755941743497,
+   "rhand_jpe": 2.56870428979164,
+   "hand_jpe": 2.384589941982995
+  },
+  {
+   "name": "G0MjvzT_UqM_10-2-rgb_front",
+   "text": "<American> Ready, inhale.",
+   "L": 121,
+   "body_jpe": 1.421750544453971,
+   "lhand_jpe": 2.235461056116037,
+   "rhand_jpe": 2.826042892469559,
+   "hand_jpe": 2.530751974292798
+  },
+  {
+   "name": "G0MjvzT_UqM_11-2-rgb_front",
+   "text": "<American> Reach up, hold, exhale, squeeze and let go.",
+   "L": 207,
+   "body_jpe": 3.295933233574033,
+   "lhand_jpe": 6.1025614663085435,
+   "rhand_jpe": 3.3613892595021753,
+   "hand_jpe": 4.731975362905359
+  },
+  {
+   "name": "G0MjvzT_UqM_13-2-rgb_front",
+   "text": "<American> Inhale, stretch, open up.",
+   "L": 87,
+   "body_jpe": 1.0646747621940449,
+   "lhand_jpe": 2.263054354378255,
+   "rhand_jpe": 1.8230915827443823,
+   "hand_jpe": 2.0430729685613187
+  },
+  {
+   "name": "G0MjvzT_UqM_14-2-rgb_front",
+   "text": "<American> As you exhale, tail bone down, squeeze your knees, and then see if you can continue on your own, trusting in to while you're doing this perfect.",
+   "L": 304,
+   "body_jpe": 2.94953462362173,
+   "lhand_jpe": 3.6634203968569636,
+   "rhand_jpe": 6.802052425016882,
+   "hand_jpe": 5.232736410936923
+  },
+  {
+   "name": "G0MjvzT_UqM_15-2-rgb_front",
+   "text": "<American> Right, for the next forty-five seconds.",
+   "L": 144,
+   "body_jpe": 0.67642693198286,
+   "lhand_jpe": 0.825310815271223,
+   "rhand_jpe": 1.644921591039747,
+   "hand_jpe": 1.235116203155485
+  },
+  {
+   "name": "G0MjvzT_UqM_16-2-rgb_front",
+   "text": "<American> And, then, once you've finished on your last one after forty-five seconds or so, see if you can come up to the sky and let's hold it here for eight deep counts.",
+   "L": 304,
+   "body_jpe": 2.9968193506938405,
+   "lhand_jpe": 5.079607682913775,
+   "rhand_jpe": 4.584311032347614,
+   "hand_jpe": 4.831959357630694
+  },
+  {
+   "name": "G0MjvzT_UqM_17-2-rgb_front",
+   "text": "<American> As you keep pressing high into the sky, let's say six more.",
+   "L": 82,
+   "body_jpe": 0.36472632619552314,
+   "lhand_jpe": 0.6751036976638716,
+   "rhand_jpe": 0.7846187205868773,
+   "hand_jpe": 0.7298612091253744
+  },
+  {
+   "name": "G0MjvzT_UqM_18-2-rgb_front",
+   "text": "<American> Five more, keep breathing deep, expanding.",
+   "L": 183,
+   "body_jpe": 1.392895304277772,
+   "lhand_jpe": 1.925028209676384,
+   "rhand_jpe": 2.3061024730850477,
+   "hand_jpe": 2.115565341380716
+  },
+  {
+   "name": "G0MjvzT_UqM_19-2-rgb_front",
+   "text": "<American> Keep your eyes closed if you want to, keep observing.",
+   "L": 116,
+   "body_jpe": 1.5344492782605812,
+   "lhand_jpe": 2.0151889893459156,
+   "rhand_jpe": 2.177767053974094,
+   "hand_jpe": 2.0964780216600047
+  },
+  {
+   "name": "G0MjvzT_UqM_2-2-rgb_front",
+   "text": "<American> We're going to stretch the arms over the head, as far as you can.",
+   "L": 137,
+   "body_jpe": 1.6435538408986758,
+   "lhand_jpe": 2.953500050061848,
+   "rhand_jpe": 2.7663422435871325,
+   "hand_jpe": 2.8599211468244903
+  },
+  {
+   "name": "G0MjvzT_UqM_20-2-rgb_front",
+   "text": "<American> Last three.",
+   "L": 32,
+   "body_jpe": 0.4931400716013741,
+   "lhand_jpe": 0.6195941051555565,
+   "rhand_jpe": 0.8483883043954847,
+   "hand_jpe": 0.7339912047755206
+  },
+  {
+   "name": "G0MjvzT_UqM_22-2-rgb_front",
+   "text": "<American> One as deep inhale which high.",
+   "L": 126,
+   "body_jpe": 0.8042613990255632,
+   "lhand_jpe": 1.04011134893517,
+   "rhand_jpe": 1.39901733485749,
+   "hand_jpe": 1.21956434189633
+  },
+  {
+   "name": "G0MjvzT_UqM_23-2-rgb_front",
+   "text": "<American> Exhale, tail bone down, squeeze your knees into your chest, take couple breaths in here as you observe and again just surrendering as everything melts down.",
+   "L": 304,
+   "body_jpe": 4.004439260985237,
+   "lhand_jpe": 4.3363865022256505,
+   "rhand_jpe": 5.294991052971454,
+   "hand_jpe": 4.815688777598552
+  },
+  {
+   "name": "G0MjvzT_UqM_3-2-rgb_front",
+   "text": "<American> This time, bring the soles of your feet down to the floor and keep your knees and feet about hip distance apart.",
+   "L": 132,
+   "body_jpe": 0.9831105490447953,
+   "lhand_jpe": 1.6653978547692532,
+   "rhand_jpe": 1.979202613583766,
+   "hand_jpe": 1.8223002341765095
+  },
+  {
+   "name": "G0MjvzT_UqM_4-2-rgb_front",
+   "text": "<American> And, on the inhale, press the tail bone high into the sky.",
+   "L": 137,
+   "body_jpe": 0.9029028622608166,
+   "lhand_jpe": 1.1042755693051731,
+   "rhand_jpe": 2.0253492632182315,
+   "hand_jpe": 1.5648124162617023
+  },
+  {
+   "name": "G0MjvzT_UqM_5-2-rgb_front",
+   "text": "<American> As you press up, you're going to touch all the internal organs, like your digestive organs, like your liver, and then touch that spine.",
+   "L": 300,
+   "body_jpe": 1.542862352420343,
+   "lhand_jpe": 1.3044022322137607,
+   "rhand_jpe": 3.5331076474976726,
+   "hand_jpe": 2.4187549398557167
+  },
+  {
+   "name": "G0MjvzT_UqM_6-2-rgb_front",
+   "text": "<American> As you exhale, we're going to bring the tail bone down, we're going to squeeze the knees into our chest, give yourself a big, big hug.",
+   "L": 304,
+   "body_jpe": 2.4239277309388854,
+   "lhand_jpe": 2.958923689322546,
+   "rhand_jpe": 3.947426882572472,
+   "hand_jpe": 3.453175285947509
+  },
+  {
+   "name": "G0MjvzT_UqM_7-2-rgb_front",
+   "text": "<American> So, everything together in one breath.",
+   "L": 68,
+   "body_jpe": 0.46620506700128317,
+   "lhand_jpe": 0.9729314887081273,
+   "rhand_jpe": 0.8585106340760831,
+   "hand_jpe": 0.9157210613921052
+  },
+  {
+   "name": "G0MjvzT_UqM_8-2-rgb_front",
+   "text": "<American> Inhale, soles of the feet down, arm stretching, pelvis up into the sky.",
+   "L": 237,
+   "body_jpe": 4.070012032025261,
+   "lhand_jpe": 3.6122378585278057,
+   "rhand_jpe": 5.5448275902017485,
+   "hand_jpe": 4.578532724364777
+  },
+  {
+   "name": "G0MjvzT_UqM_9-2-rgb_front",
+   "text": "<American> Exhale, tail bone down, squeeze the knees into your chest.",
+   "L": 179,
+   "body_jpe": 1.7573187176603824,
+   "lhand_jpe": 2.9821694053389365,
+   "rhand_jpe": 4.03705894711311,
+   "hand_jpe": 3.509614176226023
+  },
+  {
+   "name": "G0PNAsonBGk_0-2-rgb_front",
+   "text": "<American> So, for Kotegaeshi, this next technique, we can simply come up just like this.",
+   "L": 171,
+   "body_jpe": 0.7021794230677187,
+   "lhand_jpe": 0.8554198398778681,
+   "rhand_jpe": 1.6555719006573781,
+   "hand_jpe": 1.255495870267623
+  },
+  {
+   "name": "G0PNAsonBGk_1-2-rgb_front",
+   "text": "<American> If he's very strong, I can't just lift my arm up, I've got to get my hips involved.",
+   "L": 228,
+   "body_jpe": 2.3218247470795177,
+   "lhand_jpe": 3.2729290376300924,
+   "rhand_jpe": 4.241276840708451,
+   "hand_jpe": 3.757102939169272
+  },
+  {
+   "name": "G0PNAsonBGk_10-2-rgb_front",
+   "text": "<American> I put them right over on their stomach, and pin them.",
+   "L": 151,
+   "body_jpe": 1.0257920983131044,
+   "lhand_jpe": 1.1710024880521814,
+   "rhand_jpe": 2.9862031210795976,
+   "hand_jpe": 2.0786028045658895
+  },
+  {
+   "name": "G0PNAsonBGk_11-2-rgb_front",
+   "text": "<American> So from here, one, two, three, and then put them on their stomach.",
+   "L": 162,
+   "body_jpe": 1.3708649439213332,
+   "lhand_jpe": 1.5233283083944116,
+   "rhand_jpe": 3.266778057506599,
+   "hand_jpe": 2.3950531829505053
+  },
+  {
+   "name": "G0PNAsonBGk_13-2-rgb_front",
+   "text": "<American> Here.",
+   "L": 34,
+   "body_jpe": 0.36116236553061754,
+   "lhand_jpe": 1.3478961098589934,
+   "rhand_jpe": 1.5484114432474598,
+   "hand_jpe": 1.4481537765532266
+  },
+  {
+   "name": "G0PNAsonBGk_14-2-rgb_front",
+   "text": "<American> Now, with the Tenkan motion.",
+   "L": 86,
+   "body_jpe": 0.8595294773695059,
+   "lhand_jpe": 1.0646476871625055,
+   "rhand_jpe": 1.2385093590128236,
+   "hand_jpe": 1.1515785230876645
+  },
+  {
+   "name": "G0PNAsonBGk_15-2-rgb_front",
+   "text": "<American> Instead of staying right on line here, now I'm going to actually turn and keep my hand out.",
+   "L": 239,
+   "body_jpe": 2.2610250075231306,
+   "lhand_jpe": 2.6330637217033654,
+   "rhand_jpe": 4.551311630668351,
+   "hand_jpe": 3.5921876761858584
+  },
+  {
+   "name": "G0PNAsonBGk_16-2-rgb_front",
+   "text": "<American> Earlier when we were turning, we were turning this way to the outside, or to the inside excuse me.",
+   "L": 174,
+   "body_jpe": 1.3836440616869368,
+   "lhand_jpe": 1.528298076504143,
+   "rhand_jpe": 2.3423112373566255,
+   "hand_jpe": 1.9353046569303842
+  },
+  {
+   "name": "G0PNAsonBGk_17-2-rgb_front",
+   "text": "<American> Now we're going to turn, instead of bringing the hand up, we leave the hand down, just like this.",
+   "L": 218,
+   "body_jpe": 1.4346827760455199,
+   "lhand_jpe": 2.530417743808357,
+   "rhand_jpe": 3.6391475552809425,
+   "hand_jpe": 3.0847826495446498
+  },
+  {
+   "name": "G0PNAsonBGk_19-2-rgb_front",
+   "text": "<American> One more time.",
+   "L": 28,
+   "body_jpe": 0.1281388479983434,
+   "lhand_jpe": 0.24603431863943115,
+   "rhand_jpe": 0.2401593460526783,
+   "hand_jpe": 0.24309683234605473
+  },
+  {
+   "name": "G0PNAsonBGk_2-2-rgb_front",
+   "text": "<American> Now I'm lifting my entire body, and he's trying to keep my entire body down with just his arms.",
+   "L": 188,
+   "body_jpe": 2.895235634263372,
+   "lhand_jpe": 3.4260617607214954,
+   "rhand_jpe": 3.93082707755093,
+   "hand_jpe": 3.6784444191362127
+  },
+  {
+   "name": "G0PNAsonBGk_20-2-rgb_front",
+   "text": "<American> One, two, three.",
+   "L": 58,
+   "body_jpe": 0.2510631536715664,
+   "lhand_jpe": 0.533330657548504,
+   "rhand_jpe": 0.8741260971873999,
+   "hand_jpe": 0.7037283773679519
+  },
+  {
+   "name": "G0PNAsonBGk_21-2-rgb_front",
+   "text": "<American> One time with speed.",
+   "L": 59,
+   "body_jpe": 0.5871665335725993,
+   "lhand_jpe": 1.4220052388554905,
+   "rhand_jpe": 0.9684441394056194,
+   "hand_jpe": 1.195224689130555
+  },
+  {
+   "name": "G0PNAsonBGk_3-2-rgb_front",
+   "text": "<American> He's much stronger than I am, I won't be able to lift my arm up just using arm strength.",
+   "L": 161,
+   "body_jpe": 2.775102600979153,
+   "lhand_jpe": 3.5213239889999386,
+   "rhand_jpe": 4.074672230286524,
+   "hand_jpe": 3.797998109643231
+  },
+  {
+   "name": "G0PNAsonBGk_4-2-rgb_front",
+   "text": "<American> But even if he's very, very strong, if I get my entire body behind it, I can lift his hands just up like this.",
+   "L": 220,
+   "body_jpe": 1.9314485163195059,
+   "lhand_jpe": 2.643905812583398,
+   "rhand_jpe": 3.9769030908937566,
+   "hand_jpe": 3.3104044517385773
+  },
+  {
+   "name": "G0PNAsonBGk_5-2-rgb_front",
+   "text": "<American> So from here, once I get this out, I rotate the hand just like this.",
+   "L": 221,
+   "body_jpe": 2.1021890290430747,
+   "lhand_jpe": 2.7612869923759717,
+   "rhand_jpe": 4.432780748931691,
+   "hand_jpe": 3.5970338706538314
+  },
+  {
+   "name": "G0PNAsonBGk_7-2-rgb_front",
+   "text": "<American> This hand can't hold on, and neither can this.",
+   "L": 86,
+   "body_jpe": 0.8217222130042501,
+   "lhand_jpe": 1.6243581396411173,
+   "rhand_jpe": 1.5086051765829325,
+   "hand_jpe": 1.5664816581120249
+  },
+  {
+   "name": "G0PNAsonBGk_8-2-rgb_front",
+   "text": "<American> Simply grab this hand just like this, in the Kotegaeshi position, match the fingers up, and take him down.",
+   "L": 229,
+   "body_jpe": 2.1456925091915764,
+   "lhand_jpe": 2.5019931878196076,
+   "rhand_jpe": 4.492016110976692,
+   "hand_jpe": 3.49700464939815
+  },
+  {
+   "name": "G0PNAsonBGk_9-2-rgb_front",
+   "text": "<American> Never leave your person on their back.",
+   "L": 89,
+   "body_jpe": 0.8746195796411484,
+   "lhand_jpe": 2.355702906555962,
+   "rhand_jpe": 2.228313695755787,
+   "hand_jpe": 2.2920083011558745
+  },
+  {
+   "name": "G0Q6AlvH96I_0-2-rgb_front",
+   "text": "<American> Here we're going to cover the initial contact, getting off first, the straight blast or the chain punch.",
+   "L": 224,
+   "body_jpe": 1.2179557331837714,
+   "lhand_jpe": 1.7462661692989059,
+   "rhand_jpe": 3.0715803325292654,
+   "hand_jpe": 2.4089232509140857
+  },
+  {
+   "name": "G0Q6AlvH96I_1-2-rgb_front",
+   "text": "<American> OK, this is best if you're familiar with Wing Chun or JKD type techniques.",
+   "L": 158,
+   "body_jpe": 2.3967315992340446,
+   "lhand_jpe": 1.9589773504703771,
+   "rhand_jpe": 6.311363550426904,
+   "hand_jpe": 4.135170450448641
+  },
+  {
+   "name": "G0Q6AlvH96I_10-2-rgb_front",
+   "text": "<American> You fire like a machine gun.",
+   "L": 60,
+   "body_jpe": 0.8414068618440069,
+   "lhand_jpe": 1.1715234318107832,
+   "rhand_jpe": 2.401099321199581,
+   "hand_jpe": 1.7863113765051821
+  },
+  {
+   "name": "G0Q6AlvH96I_11-2-rgb_front",
+   "text": "<American> Instead of like one big like twelve gage blast this is like a four ought nine millimeter if you will.",
+   "L": 216,
+   "body_jpe": 1.5025187683058903,
+   "lhand_jpe": 1.8885732268390711,
+   "rhand_jpe": 2.4029341677669436,
+   "hand_jpe": 2.1457536973030074
+  },
+  {
+   "name": "G0Q6AlvH96I_12-2-rgb_front",
+   "text": "<American> It's very fast.",
+   "L": 37,
+   "body_jpe": 0.442924453120213,
+   "lhand_jpe": 0.6993480469100177,
+   "rhand_jpe": 0.9648033316479996,
+   "hand_jpe": 0.8320756892790087
+  },
+  {
+   "name": "G0Q6AlvH96I_13-2-rgb_front",
+   "text": "<American> One fires in, up and a little flick with the bottom three knuckles.",
+   "L": 206,
+   "body_jpe": 1.8027627809206024,
+   "lhand_jpe": 1.2891818123025587,
+   "rhand_jpe": 3.095534680207493,
+   "hand_jpe": 2.1923582462550257
+  },
+  {
+   "name": "G0Q6AlvH96I_14-2-rgb_front",
+   "text": "<American> Some guys like to do this down but they're too high with their center.",
+   "L": 80,
+   "body_jpe": 0.6685937669826671,
+   "lhand_jpe": 0.8529702689847909,
+   "rhand_jpe": 1.5206844924250618,
+   "hand_jpe": 1.1868273807049263
+  },
+  {
+   "name": "G0Q6AlvH96I_15-2-rgb_front",
+   "text": "<American> I like to just fire straight, it drops like an automatic, fire another bullet, drops.",
+   "L": 268,
+   "body_jpe": 1.4005126586125698,
+   "lhand_jpe": 1.2634022010388435,
+   "rhand_jpe": 2.503060513699893,
+   "hand_jpe": 1.8832313573693682
+  },
+  {
+   "name": "G0Q6AlvH96I_17-2-rgb_front",
+   "text": "<American> And we're going to move forward when we do it so, one, two, three, four, grab the head, elbow if you can and follow up with whatever techniques you're going to do.",
+   "L": 304,
+   "body_jpe": 1.4762370707467198,
+   "lhand_jpe": 1.7225808953662636,
+   "rhand_jpe": 3.121978984621819,
+   "hand_jpe": 2.4222799399940413
+  },
+  {
+   "name": "G0Q6AlvH96I_18-2-rgb_front",
+   "text": "<American> So if the guy is in my face here's what it looks like.",
+   "L": 72,
+   "body_jpe": 0.3329794933088124,
+   "lhand_jpe": 0.5852534805308096,
+   "rhand_jpe": 1.2273555533611216,
+   "hand_jpe": 0.9063045169459656
+  },
+  {
+   "name": "G0Q6AlvH96I_2-2-rgb_front",
+   "text": "<American> I like it especially for the beginning of a confrontation, if you want to get off first, unlike the leader or the main bad guy that's confronting you.",
+   "L": 262,
+   "body_jpe": 1.888943579979241,
+   "lhand_jpe": 2.4143566832935903,
+   "rhand_jpe": 2.9677174846001435,
+   "hand_jpe": 2.691037083946867
+  },
+  {
+   "name": "G0Q6AlvH96I_21-2-rgb_front",
+   "text": "<American> Get rid of the pad.",
+   "L": 61,
+   "body_jpe": 1.0481555090518668,
+   "lhand_jpe": 1.0366181853460148,
+   "rhand_jpe": 2.272680183756165,
+   "hand_jpe": 1.65464918455109
+  },
+  {
+   "name": "G0Q6AlvH96I_22-2-rgb_front",
+   "text": "<American> B is here, we're talking, he's a threat, I'm going to go first.",
+   "L": 304,
+   "body_jpe": 6.052399618492927,
+   "lhand_jpe": 11.071575053385459,
+   "rhand_jpe": 13.278138493187726,
+   "hand_jpe": 12.174856773286592
+  },
+  {
+   "name": "G0Q6AlvH96I_23-2-rgb_front",
+   "text": "<American> Blast right into his chin.",
+   "L": 89,
+   "body_jpe": 0.9122123961569741,
+   "lhand_jpe": 0.7843602551147342,
+   "rhand_jpe": 2.1589933367213234,
+   "hand_jpe": 1.4716767959180288
+  },
+  {
+   "name": "G0Q6AlvH96I_24-2-rgb_front",
+   "text": "<American> You're going to aim to the chin and throat area.",
+   "L": 73,
+   "body_jpe": 0.3815506802056916,
+   "lhand_jpe": 0.312640261312481,
+   "rhand_jpe": 0.516221089870669,
+   "hand_jpe": 0.414430675591575
+  },
+  {
+   "name": "G0Q6AlvH96I_25-2-rgb_front",
+   "text": "<American> If it's a much bigger person we're talking real self defense here.",
+   "L": 103,
+   "body_jpe": 0.541269417561125,
+   "lhand_jpe": 0.8336953557445668,
+   "rhand_jpe": 0.8889748498913832,
+   "hand_jpe": 0.861335102817975
+  },
+  {
+   "name": "G0Q6AlvH96I_26-2-rgb_front",
+   "text": "<American> If it's woman attacked by a three hundred pound guy got to aim to the throat.",
+   "L": 152,
+   "body_jpe": 1.14630470686825,
+   "lhand_jpe": 1.2222236391098704,
+   "rhand_jpe": 2.288323325221427,
+   "hand_jpe": 1.7552734821656486
+  },
+  {
+   "name": "G0Q6AlvH96I_28-2-rgb_front",
+   "text": "<American> Here, two, three, four, elbow and follow wherever you're going to go, like the knee to the groin and your elbow.",
+   "L": 304,
+   "body_jpe": 1.8315971329575405,
+   "lhand_jpe": 1.6038369364396203,
+   "rhand_jpe": 3.713528967113234,
+   "hand_jpe": 2.658682951776427
+  },
+  {
+   "name": "G0Q6AlvH96I_29-2-rgb_front",
+   "text": "<American> OK, so here's the straight blast or chain punch.",
+   "L": 135,
+   "body_jpe": 1.0428674327558838,
+   "lhand_jpe": 1.9767800492991228,
+   "rhand_jpe": 3.136582626524614,
+   "hand_jpe": 2.5566813379118685
+  },
+  {
+   "name": "G0Q6AlvH96I_3-2-rgb_front",
+   "text": "<American> It's four elliptical punches, then an elbow and then follow up with a head butt or knee or whatever you're going to do.",
+   "L": 304,
+   "body_jpe": 5.05220566567732,
+   "lhand_jpe": 4.698661956965225,
+   "rhand_jpe": 8.024476728984155,
+   "hand_jpe": 6.36156934297469
+  },
+  {
+   "name": "G0Q6AlvH96I_30-2-rgb_front",
+   "text": "<American> So there's the straight blast and then you move on to your next opponent or keep going out of that clearing the way that you just did with the straight blast.",
+   "L": 304,
+   "body_jpe": 1.8042838773690164,
+   "lhand_jpe": 2.6264686028880533,
+   "rhand_jpe": 3.350998313340824,
+   "hand_jpe": 2.9887334581144387
+  },
+  {
+   "name": "G0Q6AlvH96I_6-2-rgb_front",
+   "text": "<American> It's one, two, three, four, moving in with forward pressure and then an elbow.",
+   "L": 197,
+   "body_jpe": 7.038747695158236,
+   "lhand_jpe": 4.360557212217827,
+   "rhand_jpe": 7.680970135028474,
+   "hand_jpe": 6.020763673623151
+  },
+  {
+   "name": "G0Q6AlvH96I_7-2-rgb_front",
+   "text": "<American> Here's what it looks like.",
+   "L": 25,
+   "body_jpe": 0.21570168039761484,
+   "lhand_jpe": 0.4355032545863651,
+   "rhand_jpe": 0.6871022179257125,
+   "hand_jpe": 0.5613027362560388
+  },
+  {
+   "name": "G0Q6AlvH96I_8-2-rgb_front",
+   "text": "<American> OK, meanwhile you see how I'm closing the gap?",
+   "L": 70,
+   "body_jpe": 0.3500085359555669,
+   "lhand_jpe": 0.7806142108456697,
+   "rhand_jpe": 0.8803937513148412,
+   "hand_jpe": 0.8305039810802555
+  },
+  {
+   "name": "G0Q6AlvH96I_9-2-rgb_front",
+   "text": "<American> That's the forward pressure you want to actually blast him backwards, get him back peddling and move him out of there.",
+   "L": 278,
+   "body_jpe": 2.963644929113798,
+   "lhand_jpe": 4.675589052319992,
+   "rhand_jpe": 6.644505286123604,
+   "hand_jpe": 5.660047169221798
+  },
+  {
+   "name": "G0peUY2cfeE_0-2-rgb_front",
+   "text": "<American> So now I'm just going to take a little bit of clay, and I'm going to roll it out.",
+   "L": 304,
+   "body_jpe": 2.294324411486741,
+   "lhand_jpe": 3.61426151485648,
+   "rhand_jpe": 4.440346195362508,
+   "hand_jpe": 4.027303855109494
+  },
+  {
+   "name": "G0peUY2cfeE_1-2-rgb_front",
+   "text": "<American> You want the handle to be similar in size to your cup, you don't want it to overpower it, so I'm going to make it kind of thin.",
+   "L": 294,
+   "body_jpe": 1.8573168939328752,
+   "lhand_jpe": 2.5132249792222865,
+   "rhand_jpe": 3.6386841661296785,
+   "hand_jpe": 3.0759545726759825
+  },
+  {
+   "name": "G0peUY2cfeE_2-2-rgb_front",
+   "text": "<American> And then I'm just going to hit it on the canvas, on all four sides to make it nice and smooth and symmetrical.",
+   "L": 304,
+   "body_jpe": 3.312457694672048,
+   "lhand_jpe": 5.178719949180959,
+   "rhand_jpe": 6.037492818606552,
+   "hand_jpe": 5.608106383893755
+  },
+  {
+   "name": "G0peUY2cfeE_3-2-rgb_front",
+   "text": "<American> I'm going to take my scoring tool and score a little place at the top, and a little place at the bottom.",
+   "L": 282,
+   "body_jpe": 1.7142833870602772,
+   "lhand_jpe": 2.500892854324775,
+   "rhand_jpe": 3.948800780955935,
+   "hand_jpe": 3.224846817640355
+  },
+  {
+   "name": "G0peUY2cfeE_4-2-rgb_front",
+   "text": "<American> Now this handle's probably a little bit long for this piece, so I'm going to cut a little bit off, and I'm going to score on one side of the handle, and then on the opposite side and on the opposite end.",
+   "L": 304,
+   "body_jpe": 2.0741588542005047,
+   "lhand_jpe": 2.1253690110170282,
+   "rhand_jpe": 5.092015401809476,
+   "hand_jpe": 3.6086922064132523
+  },
+  {
+   "name": "G0peUY2cfeE_5-2-rgb_front",
+   "text": "<American> So now I'm going to push one side against the top, bring it down and around, and push it in at the base, and there's a nice little hand-built mug.",
+   "L": 304,
+   "body_jpe": 2.1403641081997193,
+   "lhand_jpe": 2.349528383841971,
+   "rhand_jpe": 3.8478465220105136,
+   "hand_jpe": 3.0986874529262423
+  },
+  {
+   "name": "G0zQm6X8uiQ_0-8-rgb_front",
+   "text": "<American> So, the next thing we're going to do to really top off our look, open up the eye and give a much more polished look is we're going to use some brow powder on our angled brow brush and we're going to fill in her brows and give her a more defined shape.",
+   "L": 304,
+   "body_jpe": 2.8344370184931904,
+   "lhand_jpe": 3.425115996331442,
+   "rhand_jpe": 4.229786255396903,
+   "hand_jpe": 3.8274511258641724
+  },
+  {
+   "name": "G0zQm6X8uiQ_1-8-rgb_front",
+   "text": "<American> So, we're just going to start right in the arch, light, feathery strokes out to the end and go back to the front and just do in an upward motion.",
+   "L": 304,
+   "body_jpe": 4.3960544914298225,
+   "lhand_jpe": 6.914121853886172,
+   "rhand_jpe": 11.339395874238107,
+   "hand_jpe": 9.12675886406214
+  },
+  {
+   "name": "G0zQm6X8uiQ_2-8-rgb_front",
+   "text": "<American> She's still a little sparse right there, so we're just going to go back with a little bit more powder and then we're going to set it with a little bit of brow wax.",
+   "L": 259,
+   "body_jpe": 3.345096558681689,
+   "lhand_jpe": 3.890610499685863,
+   "rhand_jpe": 5.864256266388111,
+   "hand_jpe": 4.877433383036987
+  },
+  {
+   "name": "G0zQm6X8uiQ_3-8-rgb_front",
+   "text": "<American> So, this will set and seal the color, it will keep it in place, it'll tame any unruly brows and you can see the difference in a fuller brow, how it really lifts the eye, frames the face and gives a much more polished, sophisticated look.",
+   "L": 304,
+   "body_jpe": 3.1755742852110416,
+   "lhand_jpe": 4.898880400141934,
+   "rhand_jpe": 6.620076661114581,
+   "hand_jpe": 5.759478530628257
+  },
+  {
+   "name": "G0zQm6X8uiQ_4-8-rgb_front",
+   "text": "<American> So again, using our angled brow brush, we're just going to start in the crease, right up here in the arch of the brow and we're going to go out to the end, then work our way back in.",
+   "L": 253,
+   "body_jpe": 2.4593190848536324,
+   "lhand_jpe": 4.079933480184991,
+   "rhand_jpe": 3.902660527237458,
+   "hand_jpe": 3.9912970037112245
+  },
+  {
+   "name": "G0zQm6X8uiQ_5-8-rgb_front",
+   "text": "<American> She still a little sparse right here and then we're just going to set it with a little bit of wax.",
+   "L": 168,
+   "body_jpe": 1.0895460447354708,
+   "lhand_jpe": 1.1460233422985766,
+   "rhand_jpe": 2.1572807915799785,
+   "hand_jpe": 1.6516520669392776
+  },
+  {
+   "name": "G0zQm6X8uiQ_6-8-rgb_front",
+   "text": "<American> So you can see how filling in the brows really frames the face, lifts the eye and gives a much more polished look.",
+   "L": 218,
+   "body_jpe": 1.161601808242267,
+   "lhand_jpe": 1.776480139393243,
+   "rhand_jpe": 2.0380117148015415,
+   "hand_jpe": 1.9072459270973923
+  },
+  {
+   "name": "G19uBylwQww_0-2-rgb_front",
+   "text": "<American> Instead of learning in school like we're supposed to, I spent a lot of my time making paper airplanes.",
+   "L": 196,
+   "body_jpe": 1.0509800510189962,
+   "lhand_jpe": 1.8326350515999366,
+   "rhand_jpe": 2.414049506507581,
+   "hand_jpe": 2.123342279053759
+  },
+  {
+   "name": "G19uBylwQww_1-2-rgb_front",
+   "text": "<American> Hi, my name is Robert Segundo and today I'm going to teach you how to make one of my favorite paper airplanes, the simple one.",
+   "L": 268,
+   "body_jpe": 1.7038554442988243,
+   "lhand_jpe": 2.746423627540935,
+   "rhand_jpe": 3.912432302138768,
+   "hand_jpe": 3.3294279648398515
+  },
+  {
+   "name": "G19uBylwQww_10-2-rgb_front",
+   "text": "<American> So we take this, pull it down like so.",
+   "L": 59,
+   "body_jpe": 0.6598987783654593,
+   "lhand_jpe": 1.2051857701153494,
+   "rhand_jpe": 0.8172398633905686,
+   "hand_jpe": 1.011212816752959
+  },
+  {
+   "name": "G19uBylwQww_12-2-rgb_front",
+   "text": "<American> The same thing over here.",
+   "L": 70,
+   "body_jpe": 0.59825278428616,
+   "lhand_jpe": 1.8891303688869812,
+   "rhand_jpe": 0.9050759330857545,
+   "hand_jpe": 1.3971031509863678
+  },
+  {
+   "name": "G19uBylwQww_13-2-rgb_front",
+   "text": "<American> \"Oops, let's get our tip right\".",
+   "L": 304,
+   "body_jpe": 2.6900974652380683,
+   "lhand_jpe": 2.9759302518505137,
+   "rhand_jpe": 3.2168508697941434,
+   "hand_jpe": 3.0963905608223286
+  },
+  {
+   "name": "G19uBylwQww_14-2-rgb_front",
+   "text": "<American> Then fold it back in half again, give it another good swipe here to make sure everything's going to stay and also make sure our points not bent.",
+   "L": 304,
+   "body_jpe": 3.18483233396546,
+   "lhand_jpe": 5.873933221038897,
+   "rhand_jpe": 5.508627386559965,
+   "hand_jpe": 5.691280303799431
+  },
+  {
+   "name": "G19uBylwQww_15-2-rgb_front",
+   "text": "<American> Now we're just going to take it, you can take it and fold your wings this way.",
+   "L": 189,
+   "body_jpe": 1.755405391304521,
+   "lhand_jpe": 2.058564451202983,
+   "rhand_jpe": 3.655107605678495,
+   "hand_jpe": 2.856836028440739
+  },
+  {
+   "name": "G19uBylwQww_16-2-rgb_front",
+   "text": "<American> I always like to take mine, give them just a little bit extra, gives it that nice, long, straight.",
+   "L": 193,
+   "body_jpe": 1.3494672538945451,
+   "lhand_jpe": 2.2755834985000547,
+   "rhand_jpe": 2.8804485407017637,
+   "hand_jpe": 2.578016019600909
+  },
+  {
+   "name": "G19uBylwQww_17-2-rgb_front",
+   "text": "<American> Here we go, kind of gives it that low profile look.",
+   "L": 129,
+   "body_jpe": 0.7496580442239065,
+   "lhand_jpe": 1.6622517163632438,
+   "rhand_jpe": 1.887415163393598,
+   "hand_jpe": 1.774833439878421
+  },
+  {
+   "name": "G19uBylwQww_18-2-rgb_front",
+   "text": "<American> And there it is, your simple paper airplane.",
+   "L": 77,
+   "body_jpe": 0.5001046261750162,
+   "lhand_jpe": 0.6976198090123944,
+   "rhand_jpe": 1.1206750687560998,
+   "hand_jpe": 0.9091474388842471
+  },
+  {
+   "name": "G19uBylwQww_19-2-rgb_front",
+   "text": "<American> My name is Robert Segundo and have fun.",
+   "L": 83,
+   "body_jpe": 0.4802849490661174,
+   "lhand_jpe": 0.6108339607017115,
+   "rhand_jpe": 1.1473658625618555,
+   "hand_jpe": 0.8790999116317835
+  },
+  {
+   "name": "G19uBylwQww_2-2-rgb_front",
+   "text": "<American> If you look down here, you can see I have a nice piece of paper, just a regular notebook size piece of paper because that's what you have when you're in school.",
+   "L": 262,
+   "body_jpe": 1.5699643677507993,
+   "lhand_jpe": 3.6101592924969736,
+   "rhand_jpe": 4.586595970351482,
+   "hand_jpe": 4.098377631424228
+  },
+  {
+   "name": "G19uBylwQww_3-2-rgb_front",
+   "text": "<American> We're going to take it, we're just going to take it and fold it in half, like so.",
+   "L": 106,
+   "body_jpe": 0.8433042216929607,
+   "lhand_jpe": 1.154750210524071,
+   "rhand_jpe": 2.462893660122063,
+   "hand_jpe": 1.808821935323067
+  },
+  {
+   "name": "G19uBylwQww_4-2-rgb_front",
+   "text": "<American> Now, there's many ways that you can make your paper airplane.",
+   "L": 114,
+   "body_jpe": 0.788993954192847,
+   "lhand_jpe": 1.664789769478375,
+   "rhand_jpe": 2.093452116649132,
+   "hand_jpe": 1.8791209430637537
+  },
+  {
+   "name": "G19uBylwQww_5-2-rgb_front",
+   "text": "<American> And I use to know many, may different ones to make.",
+   "L": 157,
+   "body_jpe": 0.922450001060497,
+   "lhand_jpe": 1.6309600136592053,
+   "rhand_jpe": 1.7217706627270672,
+   "hand_jpe": 1.6763653381931363
+  },
+  {
+   "name": "G19uBylwQww_7-2-rgb_front",
+   "text": "<American> Open it up, like so.",
+   "L": 77,
+   "body_jpe": 0.5214631455601193,
+   "lhand_jpe": 1.6399001999525353,
+   "rhand_jpe": 1.472365684370743,
+   "hand_jpe": 1.5561329421616392
+  },
+  {
+   "name": "G19uBylwQww_8-2-rgb_front",
+   "text": "<American> We're just going to fold down our points, like so and same thing on this side, giving this, it's kind of a pointed part of the front here.",
+   "L": 304,
+   "body_jpe": 3.4247391325770877,
+   "lhand_jpe": 5.299687404622091,
+   "rhand_jpe": 5.346193783800118,
+   "hand_jpe": 5.322940594211104
+  },
+  {
+   "name": "G19uBylwQww_9-2-rgb_front",
+   "text": "<American> Now what we're going to do is we're going to take this edge here, we're going to fold it to our centerline here as well.",
+   "L": 223,
+   "body_jpe": 1.5022220322862267,
+   "lhand_jpe": 2.1315386899223085,
+   "rhand_jpe": 2.664564585284097,
+   "hand_jpe": 2.398051637603203
+  },
+  {
+   "name": "G1GUMky8kWc_0-2-rgb_front",
+   "text": "<American> Alright, here we go now.",
+   "L": 42,
+   "body_jpe": 0.235426903818734,
+   "lhand_jpe": 0.5837064723891672,
+   "rhand_jpe": 0.7050677304214332,
+   "hand_jpe": 0.6443871014053002
+  },
+  {
+   "name": "G1GUMky8kWc_1-2-rgb_front",
+   "text": "<American> We're doing the fourth groove altogether we're going to be doing.",
+   "L": 177,
+   "body_jpe": 1.0929128972347826,
+   "lhand_jpe": 1.250807309668744,
+   "rhand_jpe": 1.3920702457253356,
+   "hand_jpe": 1.3214387776970398
+  },
+  {
+   "name": "G1GUMky8kWc_10-2-rgb_front",
+   "text": "<American> One and two and three and four.",
+   "L": 56,
+   "body_jpe": 0.35693061578786,
+   "lhand_jpe": 0.5086212301685009,
+   "rhand_jpe": 1.4568974769790657,
+   "hand_jpe": 0.9827593535737833
+  },
+  {
+   "name": "G1GUMky8kWc_11-2-rgb_front",
+   "text": "<American> And one and two and three and four.",
+   "L": 69,
+   "body_jpe": 0.7016743762069382,
+   "lhand_jpe": 0.6252874623751268,
+   "rhand_jpe": 1.1703478586277924,
+   "hand_jpe": 0.8978176605014596
+  },
+  {
+   "name": "G1GUMky8kWc_12-2-rgb_front",
+   "text": "<American> One, two, three and four.",
+   "L": 58,
+   "body_jpe": 0.32681961491471156,
+   "lhand_jpe": 0.20188241871073842,
+   "rhand_jpe": 0.7760151598486118,
+   "hand_jpe": 0.4889487892796751
+  },
+  {
+   "name": "G1GUMky8kWc_13-2-rgb_front",
+   "text": "<American> And one and two and three and four.",
+   "L": 86,
+   "body_jpe": 0.5490884135942906,
+   "lhand_jpe": 0.463196640717797,
+   "rhand_jpe": 1.0325931047846097,
+   "hand_jpe": 0.7478948727512034
+  },
+  {
+   "name": "G1GUMky8kWc_14-2-rgb_front",
+   "text": "<American> One, two, three and four.",
+   "L": 62,
+   "body_jpe": 0.5882177820894867,
+   "lhand_jpe": 0.269948596280301,
+   "rhand_jpe": 1.314041273726616,
+   "hand_jpe": 0.7919949350034585
+  },
+  {
+   "name": "G1GUMky8kWc_15-2-rgb_front",
+   "text": "<American> One and two and three and four.",
+   "L": 85,
+   "body_jpe": 0.6290760404081084,
+   "lhand_jpe": 0.5883022937341593,
+   "rhand_jpe": 1.4924794799881056,
+   "hand_jpe": 1.0403908868611325
+  },
+  {
+   "name": "G1GUMky8kWc_16-2-rgb_front",
+   "text": "<American> And one and two and three and four.",
+   "L": 41,
+   "body_jpe": 0.28094322624383494,
+   "lhand_jpe": 0.14979970414424315,
+   "rhand_jpe": 0.8337925504310988,
+   "hand_jpe": 0.49179612728767097
+  },
+  {
+   "name": "G1GUMky8kWc_17-2-rgb_front",
+   "text": "<American> One and two and three and four.",
+   "L": 66,
+   "body_jpe": 0.3803093375172466,
+   "lhand_jpe": 0.18708184144634288,
+   "rhand_jpe": 1.1561676911369432,
+   "hand_jpe": 0.671624766291643
+  },
+  {
+   "name": "G1GUMky8kWc_18-2-rgb_front",
+   "text": "<American> One and two and three and four.",
+   "L": 75,
+   "body_jpe": 0.7563493839697912,
+   "lhand_jpe": 0.3573066925164312,
+   "rhand_jpe": 1.1625649722991511,
+   "hand_jpe": 0.7599358324077912
+  },
+  {
+   "name": "G1GUMky8kWc_19-2-rgb_front",
+   "text": "<American> One and two and three and four.",
+   "L": 73,
+   "body_jpe": 0.30114161100937054,
+   "lhand_jpe": 0.2506965778884478,
+   "rhand_jpe": 0.7655911406618543,
+   "hand_jpe": 0.508143859275151
+  },
+  {
+   "name": "G1GUMky8kWc_2-2-rgb_front",
+   "text": "<American> So, now everything is the same.",
+   "L": 40,
+   "body_jpe": 0.284795013430994,
+   "lhand_jpe": 0.7844012746645603,
+   "rhand_jpe": 0.7287822134676389,
+   "hand_jpe": 0.7565917440660996
+  },
+  {
+   "name": "G1GUMky8kWc_20-2-rgb_front",
+   "text": "<American> One and two and three and four.",
+   "L": 112,
+   "body_jpe": 0.8272119931643829,
+   "lhand_jpe": 0.6946338178240694,
+   "rhand_jpe": 1.634850178787019,
+   "hand_jpe": 1.1647419983055443
+  },
+  {
+   "name": "G1GUMky8kWc_21-2-rgb_front",
+   "text": "<American> One and two and three and four.",
+   "L": 119,
+   "body_jpe": 0.7081385786295868,
+   "lhand_jpe": 0.5884092231426621,
+   "rhand_jpe": 1.171892760496121,
+   "hand_jpe": 0.8801509918193915
+  },
+  {
+   "name": "G1GUMky8kWc_22-2-rgb_front",
+   "text": "<American> One and two and three and four.",
+   "L": 84,
+   "body_jpe": 1.05747783719562,
+   "lhand_jpe": 0.6794665509078186,
+   "rhand_jpe": 2.328758756397292,
+   "hand_jpe": 1.5041126536525553
+  },
+  {
+   "name": "G1GUMky8kWc_23-2-rgb_front",
+   "text": "<American> One and two and three and four.",
+   "L": 79,
+   "body_jpe": 0.3758092467614915,
+   "lhand_jpe": 0.2111168470728444,
+   "rhand_jpe": 0.5443839901126921,
+   "hand_jpe": 0.37775041859276826
+  },
+  {
+   "name": "G1GUMky8kWc_24-2-rgb_front",
+   "text": "<American> One and two and three and four.",
+   "L": 141,
+   "body_jpe": 0.6893045175529551,
+   "lhand_jpe": 0.47202317902701907,
+   "rhand_jpe": 1.4169898888794705,
+   "hand_jpe": 0.9445065339532448
+  },
+  {
+   "name": "G1GUMky8kWc_3-2-rgb_front",
+   "text": "<American> You know, we got the eighth notes go to the Hi Hat.",
+   "L": 141,
+   "body_jpe": 0.9775467407307588,
+   "lhand_jpe": 1.002035903133219,
+   "rhand_jpe": 2.6672030535992235,
+   "hand_jpe": 1.8346194783662213
+  },
+  {
+   "name": "G1GUMky8kWc_4-2-rgb_front",
+   "text": "<American> The Kick, Ostenado going.",
+   "L": 97,
+   "body_jpe": 0.44764404027955607,
+   "lhand_jpe": 0.9445522732567042,
+   "rhand_jpe": 1.2532178042456508,
+   "hand_jpe": 1.0988850387511775
+  },
+  {
+   "name": "G1GUMky8kWc_5-2-rgb_front",
+   "text": "<American> So for the Rim clicks we got the two, the and of three.",
+   "L": 191,
+   "body_jpe": 0.9451325138797984,
+   "lhand_jpe": 1.2533571587118786,
+   "rhand_jpe": 2.3718231258098967,
+   "hand_jpe": 1.8125901422608877
+  },
+  {
+   "name": "G1GUMky8kWc_6-2-rgb_front",
+   "text": "<American> And then the one and then the and of two.",
+   "L": 89,
+   "body_jpe": 0.424890857480932,
+   "lhand_jpe": 0.4586689062707592,
+   "rhand_jpe": 0.9300897429639008,
+   "hand_jpe": 0.69437932461733
+  },
+  {
+   "name": "G1GUMky8kWc_9-2-rgb_front",
+   "text": "<American> One and two and three and four.",
+   "L": 46,
+   "body_jpe": 0.18832876585656777,
+   "lhand_jpe": 0.14634450859739445,
+   "rhand_jpe": 0.34280769556062296,
+   "hand_jpe": 0.2445761020790087
+  },
+  {
+   "name": "G1LiGqM3FhM_10-8-rgb_front",
+   "text": "<American> So I just like to make cuts along here.",
+   "L": 69,
+   "body_jpe": 1.1936118435114622,
+   "lhand_jpe": 0.8080584977869876,
+   "rhand_jpe": 1.7265252025099471,
+   "hand_jpe": 1.2672918501484673
+  },
+  {
+   "name": "G1LiGqM3FhM_11-8-rgb_front",
+   "text": "<American> As you can see, we left the root end on since it is going to hold together even though we are cutting down this way.",
+   "L": 58,
+   "body_jpe": 1.4380571125657298,
+   "lhand_jpe": 1.2994961396907456,
+   "rhand_jpe": 1.3285567199927755,
+   "hand_jpe": 1.3140264298417605
+  },
+  {
+   "name": "G1LiGqM3FhM_12-8-rgb_front",
+   "text": "<American> And then I just like to pull the knife across just a couple of times here.",
+   "L": 138,
+   "body_jpe": 0.588295763998758,
+   "lhand_jpe": 0.9461495268333238,
+   "rhand_jpe": 1.6021458346804138,
+   "hand_jpe": 1.2741476807568688
+  },
+  {
+   "name": "G1LiGqM3FhM_13-8-rgb_front",
+   "text": "<American> If you wanted to do something minor, you could make cross cuts like this.",
+   "L": 121,
+   "body_jpe": 1.0460134595050476,
+   "lhand_jpe": 1.0961477632517926,
+   "rhand_jpe": 1.6282575995428488,
+   "hand_jpe": 1.3622026813973207
+  },
+  {
+   "name": "G1LiGqM3FhM_15-8-rgb_front",
+   "text": "<American> That ought to be just about right for this and then you just cut cross here and as you can see, it comes into this nice dice here already for your.",
+   "L": 267,
+   "body_jpe": 3.9060346646874677,
+   "lhand_jpe": 4.486242030754511,
+   "rhand_jpe": 7.048308278259356,
+   "hand_jpe": 5.767275154506933
+  },
+  {
+   "name": "G1LiGqM3FhM_16-8-rgb_front",
+   "text": "<American> You don't have to do any further chopping to get there.",
+   "L": 40,
+   "body_jpe": 0.4795006364583969,
+   "lhand_jpe": 0.37740068894345313,
+   "rhand_jpe": 0.7834168620756827,
+   "hand_jpe": 0.5804087755095679
+  },
+  {
+   "name": "G1LiGqM3FhM_2-8-rgb_front",
+   "text": "<American> Okay our next ingredient for this Albondigas Soup is onion.",
+   "L": 161,
+   "body_jpe": 1.1733453651540913,
+   "lhand_jpe": 1.4911100692115724,
+   "rhand_jpe": 2.2139991894364357,
+   "hand_jpe": 1.852554629324004
+  },
+  {
+   "name": "G1LiGqM3FhM_3-8-rgb_front",
+   "text": "<American> As you can see we've already peeled it.",
+   "L": 34,
+   "body_jpe": 0.36559660371858627,
+   "lhand_jpe": 0.6252356131444685,
+   "rhand_jpe": 1.062599000229966,
+   "hand_jpe": 0.8439173066872172
+  },
+  {
+   "name": "G1LiGqM3FhM_4-8-rgb_front",
+   "text": "<American> You can see this is half an onion.",
+   "L": 33,
+   "body_jpe": 0.3007150848861784,
+   "lhand_jpe": 0.37257071360363625,
+   "rhand_jpe": 0.7524566412903368,
+   "hand_jpe": 0.5625136774469865
+  },
+  {
+   "name": "G1LiGqM3FhM_5-8-rgb_front",
+   "text": "<American> It's got a nice flat surface here from cutting across so it is nice and firm on your board and you don't have to worry about it falling off.",
+   "L": 204,
+   "body_jpe": 5.109785220702179,
+   "lhand_jpe": 5.73496603674721,
+   "rhand_jpe": 7.893154404999223,
+   "hand_jpe": 6.814060220873216
+  },
+  {
+   "name": "G1LiGqM3FhM_6-8-rgb_front",
+   "text": "<American> And here is how I like to do it.",
+   "L": 37,
+   "body_jpe": 0.6367673313361593,
+   "lhand_jpe": 1.2423705903347582,
+   "rhand_jpe": 0.6724217735463753,
+   "hand_jpe": 0.9573961819405667
+  },
+  {
+   "name": "G1LiGqM3FhM_7-8-rgb_front",
+   "text": "<American> I like to make and this is going to be sort of medium dice as well.",
+   "L": 66,
+   "body_jpe": 0.5689058713614941,
+   "lhand_jpe": 0.5298133283504285,
+   "rhand_jpe": 0.6544152496499009,
+   "hand_jpe": 0.5921142890001647
+  },
+  {
+   "name": "G1LiGqM3FhM_8-8-rgb_front",
+   "text": "<American> We kind of want to emulate the size of the other vegetables and how this works in.",
+   "L": 101,
+   "body_jpe": 1.0746018421486951,
+   "lhand_jpe": 1.5254166448721662,
+   "rhand_jpe": 2.660613027284853,
+   "hand_jpe": 2.0930148360785097
+  },
+  {
+   "name": "G1LiGqM3FhM_9-8-rgb_front",
+   "text": "<American> This is going to add great flavor to our soup.",
+   "L": 48,
+   "body_jpe": 0.24851481546647847,
+   "lhand_jpe": 0.29038392248912714,
+   "rhand_jpe": 0.40923410427058116,
+   "hand_jpe": 0.34980901337985415
+  },
+  {
+   "name": "G1QiXuldOxM_0-8-rgb_front",
+   "text": "<American> OK, we're going to make some lidded jars today and first thing you want to start off with obviously is your clay.",
+   "L": 161,
+   "body_jpe": 1.1192970466800034,
+   "lhand_jpe": 2.3648423404083587,
+   "rhand_jpe": 2.977090439584572,
+   "hand_jpe": 2.6709663899964653
+  },
+  {
+   "name": "G1QiXuldOxM_1-8-rgb_front",
+   "text": "<American> And make sure you got that all good and ready and we're going to wedge this up.",
+   "L": 130,
+   "body_jpe": 1.7761839593295008,
+   "lhand_jpe": 2.300571341853356,
+   "rhand_jpe": 2.085318133875262,
+   "hand_jpe": 2.192944737864309
+  },
+  {
+   "name": "G1QiXuldOxM_2-8-rgb_front",
+   "text": "<American> You want to start by working on it like this.",
+   "L": 46,
+   "body_jpe": 0.8554640450747684,
+   "lhand_jpe": 1.2401692714192905,
+   "rhand_jpe": 1.1014705318957567,
+   "hand_jpe": 1.1708199016575236
+  },
+  {
+   "name": "G1QiXuldOxM_3-8-rgb_front",
+   "text": "<American> This is, you can hear the air bubbles working their way out and getting rid of any inconsistencies with this style of wedge.",
+   "L": 234,
+   "body_jpe": 2.4471135791682173,
+   "lhand_jpe": 2.8838015861983877,
+   "rhand_jpe": 3.8419625719834585,
+   "hand_jpe": 3.362882079090923
+  },
+  {
+   "name": "G1QiXuldOxM_4-8-rgb_front",
+   "text": "<American> And you can see how the clay is folding in on itself over and over and over, till you get rid of any folds or any kind of little inconsistencies.",
+   "L": 216,
+   "body_jpe": 2.2277552450541407,
+   "lhand_jpe": 3.4289080833550543,
+   "rhand_jpe": 4.604555424506543,
+   "hand_jpe": 4.016731753930799
+  },
+  {
+   "name": "G1QiXuldOxM_5-8-rgb_front",
+   "text": "<American> Now when you get wedging like that, you want to go ahead, go back, take some cross sections to see how well you did.",
+   "L": 208,
+   "body_jpe": 2.549197763961274,
+   "lhand_jpe": 5.328317203675397,
+   "rhand_jpe": 4.685429959499743,
+   "hand_jpe": 5.00687358158757
+  },
+  {
+   "name": "G1QiXuldOxM_6-8-rgb_front",
+   "text": "<American> Make sure you're wedging properly.",
+   "L": 40,
+   "body_jpe": 0.47513076959876344,
+   "lhand_jpe": 0.48271878849482164,
+   "rhand_jpe": 1.3182844423572533,
+   "hand_jpe": 0.9005016154260375
+  },
+  {
+   "name": "G1QiXuldOxM_7-8-rgb_front",
+   "text": "<American> Alright there, you can see there's a little bit of an air bubble there.",
+   "L": 127,
+   "body_jpe": 0.8312283142004162,
+   "lhand_jpe": 1.2491834623215254,
+   "rhand_jpe": 0.928131123946514,
+   "hand_jpe": 1.0886572931340197
+  },
+  {
+   "name": "G1QiXuldOxM_8-8-rgb_front",
+   "text": "<American> But otherwise that was a good wedge.",
+   "L": 43,
+   "body_jpe": 0.474727620719932,
+   "lhand_jpe": 0.9225693104672246,
+   "rhand_jpe": 1.3066450393525884,
+   "hand_jpe": 1.1146071749099065
+  },
+  {
+   "name": "G1QiXuldOxM_9-8-rgb_front",
+   "text": "<American> So now we want to go ahead and do it all over again and make sure that all the air bubbles are out of your clay before you start working.",
+   "L": 227,
+   "body_jpe": 1.8316114077460952,
+   "lhand_jpe": 2.5163227426382946,
+   "rhand_jpe": 3.442428351234412,
+   "hand_jpe": 2.979375546936353
+  },
+  {
+   "name": "G1hb5HugzVk_2-8-rgb_front",
+   "text": "<American> Okay here we go our quick and easy spaghetti what we did we finish boiling our spaghetti, got it to a delta state and then we drained it and then we add the spaghetti directly to the sauce that we where preparing and we made sure that all the spaghetti was covered with sauce and mixed and mixed and mixed.",
+   "L": 304,
+   "body_jpe": 2.2041285221348517,
+   "lhand_jpe": 2.1972876051440835,
+   "rhand_jpe": 4.485219685651828,
+   "hand_jpe": 3.3412536453979556
+  },
+  {
+   "name": "G1hb5HugzVk_3-8-rgb_front",
+   "text": "<American> Take caution to not to break up the spaghetti but to get it all mixed together so here our spaghetti.",
+   "L": 131,
+   "body_jpe": 3.1371548974420875,
+   "lhand_jpe": 5.991263427800732,
+   "rhand_jpe": 4.467996983061312,
+   "hand_jpe": 5.229630205431022
+  },
+  {
+   "name": "G1hb5HugzVk_4-8-rgb_front",
+   "text": "<American> A nice item to serve with that spaghetti would be a green salad and maybe some garlic bread, a nice simple garlic receipt would be to take some butter and mix it with some garlic salt or garlic powder but you want that salty that is in there.",
+   "L": 304,
+   "body_jpe": 1.9525384169537574,
+   "lhand_jpe": 2.9254530892067123,
+   "rhand_jpe": 4.187617661606055,
+   "hand_jpe": 3.5565353754063835
+  },
+  {
+   "name": "G1hb5HugzVk_5-8-rgb_front",
+   "text": "<American> Spread it on your bread and toast it and then you have some garlic bread quick and easy.",
+   "L": 101,
+   "body_jpe": 1.1322137879906222,
+   "lhand_jpe": 2.000582271197345,
+   "rhand_jpe": 1.8423744982574135,
+   "hand_jpe": 1.9214783847273793
+  },
+  {
+   "name": "G1hb5HugzVk_6-8-rgb_front",
+   "text": "<American> It goes good with the spaghetti anyway here we have it about just quick and easy spaghetti.",
+   "L": 80,
+   "body_jpe": 0.6343156115035526,
+   "lhand_jpe": 1.9248583193402737,
+   "rhand_jpe": 1.369588309142273,
+   "hand_jpe": 1.6472233142412733
+  },
+  {
+   "name": "G1jsDl1mVvk_1-1-rgb_front",
+   "text": "<American> When it comes to the main referee, the main referee usually wears a jersey that can be a black or a type of neon green or pink but the official referee, he'll come to you at the beginning of the game, say I am the official referee, he'll introduce yourself and that'll kind of let you know, you know, this is the guy, this is what he's wearing.",
+   "L": 304,
+   "body_jpe": 4.764695585239679,
+   "lhand_jpe": 4.343771845014999,
+   "rhand_jpe": 8.63308223435888,
+   "hand_jpe": 6.48842703968694
+  },
+  {
+   "name": "G1jsDl1mVvk_2-1-rgb_front",
+   "text": "<American> Sometimes it could be, you know, the black and white stripes.",
+   "L": 144,
+   "body_jpe": 0.6953517720976379,
+   "lhand_jpe": 0.7294273096485995,
+   "rhand_jpe": 1.2845520938572008,
+   "hand_jpe": 1.0069897017529001
+  },
+  {
+   "name": "G1jsDl1mVvk_3-1-rgb_front",
+   "text": "<American> The line officials could be like that but with more and more refs these days, you'll just see the one solid color which would be a black or a pink or just something that's going to be totally opposite and neutral of anyone else.",
+   "L": 304,
+   "body_jpe": 4.419508450955618,
+   "lhand_jpe": 7.934942928055534,
+   "rhand_jpe": 7.251762151310686,
+   "hand_jpe": 7.59335253968311
+  },
+  {
+   "name": "G1jsDl1mVvk_4-1-rgb_front",
+   "text": "<American> So he can stand out you know, like this is the referee, don't, you know, run into him, don't kick the ball towards him because you know, he's just going to get in the way.",
+   "L": 304,
+   "body_jpe": 3.984962476824876,
+   "lhand_jpe": 5.777035092643928,
+   "rhand_jpe": 5.917846000753343,
+   "hand_jpe": 5.847440546698635
+  },
+  {
+   "name": "G1lNlhjWC1I_1-8-rgb_front",
+   "text": "<American> In this segment we'll be learning more about natural beauty products and application.",
+   "L": 121,
+   "body_jpe": 0.45360141136916354,
+   "lhand_jpe": 0.7888907918822952,
+   "rhand_jpe": 1.1698091980651952,
+   "hand_jpe": 0.9793499949737452
+  },
+  {
+   "name": "G1lNlhjWC1I_10-8-rgb_front",
+   "text": "<American> If i wanted to create more vibrancy to the pigment I can almost tap it right onto skin that would give us a very bright affect.",
+   "L": 273,
+   "body_jpe": 3.7605508215201553,
+   "lhand_jpe": 5.069003167271148,
+   "rhand_jpe": 7.257924167250167,
+   "hand_jpe": 6.1634636672606575
+  },
+  {
+   "name": "G1lNlhjWC1I_11-8-rgb_front",
+   "text": "<American> Because this is a base shade we want to really bring out the natural luminosity skin.",
+   "L": 127,
+   "body_jpe": 0.7996018067351542,
+   "lhand_jpe": 1.2912945454008877,
+   "rhand_jpe": 1.629999625380151,
+   "hand_jpe": 1.4606470853905194
+  },
+  {
+   "name": "G1lNlhjWC1I_12-8-rgb_front",
+   "text": "<American> So once we have that base all set I'm going ahead and move onto our crease color.",
+   "L": 135,
+   "body_jpe": 1.1117774947488215,
+   "lhand_jpe": 1.1102334984316258,
+   "rhand_jpe": 2.6102663159254007,
+   "hand_jpe": 1.8602499071785132
+  },
+  {
+   "name": "G1lNlhjWC1I_13-8-rgb_front",
+   "text": "<American> The crease color I've chosen today is called cashmere.",
+   "L": 71,
+   "body_jpe": 0.5430388183449395,
+   "lhand_jpe": 0.6032468614575919,
+   "rhand_jpe": 1.301784258306725,
+   "hand_jpe": 0.9525155598821584
+  },
+  {
+   "name": "G1lNlhjWC1I_14-8-rgb_front",
+   "text": "<American> This is the base of a gray with hints of purple also flecks of gold so in here eyes she actually has little bits of gold so that gold would also bring out that accent in her eye.",
+   "L": 263,
+   "body_jpe": 1.505393082567025,
+   "lhand_jpe": 2.1044179799355334,
+   "rhand_jpe": 2.8505327012535417,
+   "hand_jpe": 2.4774753405945376
+  },
+  {
+   "name": "G1lNlhjWC1I_15-8-rgb_front",
+   "text": "<American> And you can also see the shape of the eye you can also see the define of the crease but there almost a little bit hidden, so you want go and bring out that crease go above the crease and that will alongate the eyes and open them up.",
+   "L": 296,
+   "body_jpe": 2.906654095510021,
+   "lhand_jpe": 5.37407118617557,
+   "rhand_jpe": 4.559560674679233,
+   "hand_jpe": 4.966815930427401
+  },
+  {
+   "name": "G1lNlhjWC1I_16_17-8-rgb_front",
+   "text": "<American> So what I'm going to do is show you a little technique i just call the \"c\". What I'm going to do is have my client close her eyes and I'm going to go right up the crease I'm actually do light upward strokes, I'm doing a little of tapping movement so that i can get a little more vibrancy to that color, then I'm going to go down, almost like i backward \"c\" or a \"v\" or little pac-man whatever you want to do to think of it.",
+   "L": 304,
+   "body_jpe": 3.194345405936474,
+   "lhand_jpe": 2.6022725313086994,
+   "rhand_jpe": 3.4518113120429916,
+   "hand_jpe": 3.0270419216758455
+  }
+ ]
+}

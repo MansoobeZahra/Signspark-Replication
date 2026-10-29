@@ -1,0 +1,9 @@
+- data_v2=body
+- data_v2/common@common=inference
+- eval.model_path=/home/cvl/Desktop/Speech to sign/model_tests/signspark/ckpt/body/ema_0.9999_200000.pt
+- eval.split=test
+- eval.ode_stepnum=50
+- test_data=[How2Sign]
+- eval.note=t2p_cfg2.5
+- eval.keyframes_mask_all=True
+- eval.text_guidance_scale=2.5

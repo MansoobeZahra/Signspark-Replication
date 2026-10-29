@@ -1,0 +1,24 @@
+/home/cvl/Desktop/Speech to sign/ver-01/.venv-signspark/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2274: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/home/cvl/Desktop/Speech to sign/ver-01/.venv-signspark/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2274: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+Logging to /tmp/openai-2026-10-22-12-10-26-151380
+### Creating model and flow...
+Using UNET with: Input Dim 60 | Latent Dim: 512 | Mults: (2, 2, 2, 2) | Added channels: 120
+AdaGN: True | Zero: True | Attention: False
+[TemporalUnetLarge] channel dims : [60, 512, 1024, 2048, 2048]
+[TemporalUnetLarge] bottleneck   : 1024
+[TemporalUnetLarge] attn at depth: (2, 3)
+[TemporalUnetLarge] Total parameters: 0.832B
+Text Conditioning Enabled. Loading CLIP M-CLIP/XLM-Roberta-Large-Vit-B-16Plus...
+### RFlow with lbd_flow 1.0, lbd_recon 1.0, lbd_velocity 1.0
+### The parameter count is 1395037372
+/home/cvl/Desktop/Speech to sign/ver_04_finetune/scripts/bench_a_signspark_xattn.py:139: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  "loss": float(loss)}
+body mid adapters 33.6 M (identity at init: max diff 0.00e+00) B=16: 0.102 s/step (text enc 0.021), peak 7.3 GB, 3.1 min/epoch on How2Sign train
+body mid adapters 33.6 M (identity at init: max diff 0.00e+00) B=32: 0.173 s/step (text enc 0.036), peak 8.7 GB, 2.6 min/epoch on How2Sign train
+body mid adapters 33.6 M (identity at init: max diff 0.00e+00) B=64: 0.299 s/step (text enc 0.059), peak 10.9 GB, 2.3 min/epoch on How2Sign train
+body mid+lev adapters 67.2 M (identity at init: max diff 0.00e+00) B=16: 0.125 s/step (text enc 0.020), peak 8.9 GB, 3.8 min/epoch on How2Sign train
+body mid+lev adapters 67.2 M (identity at init: max diff 0.00e+00) B=32: 0.215 s/step (text enc 0.037), peak 11.5 GB, 3.2 min/epoch on How2Sign train
+body mid+lev adapters 67.2 M (identity at init: max diff 0.00e+00) B=64: 0.377 s/step (text enc 0.060), peak 15.6 GB, 2.8 min/epoch on How2Sign train

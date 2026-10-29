@@ -1,0 +1,23 @@
+The new embeddings will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
+{'lex_tokenize_sec_total': 7.026549577713013, 'lex_tokens_median': 20.0, 'h2s_tokens_median': 29.0, 'h2s_released_token_agreement': 0.005550346976030283}
+{'vae.encoder': [9.25, 0.0], 'vae.decoder': [9.51, 0.0], 'hand_vae.encoder': [9.25, 0.0], 'hand_vae.decoder': [9.51, 0.0], 'rhand_vae.encoder': [9.25, 0.0], 'rhand_vae.decoder': [9.51, 0.0], 'lm.language_model': [0.0, 482.79], 'mlp_body.linear1': [0.0, 3.15], 'mlp_body.linear2': [0.0, 1.57], 'mlp_lhand.linear1': [0.0, 3.15], 'mlp_lhand.linear2': [0.0, 1.57], 'mlp_rhand.linear1': [0.0, 3.15], 'mlp_rhand.linear2': [0.0, 1.57]}
+/home/cvl/Desktop/Speech to sign/ver_04_finetune/scripts/bench_b_madis.py:168: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  res["runs"][key] = {"sec_per_step": s, "peak_GB": torch.cuda.max_memory_allocated() / 1e9, "loss": float(loss),
+h2s_32-true_B8: 0.140 s/step, peak 14.7 GB, loss 12.055
+h2s_32-true_B16: 0.271 s/step, peak 23.2 GB, loss 8.144
+h2s_32-true_B32: OOM
+h2s_32-true_B64: OOM
+h2s_bf16-mixed_B8: 0.116 s/step, peak 13.6 GB, loss 10.963
+h2s_bf16-mixed_B16: 0.190 s/step, peak 19.4 GB, loss 9.033
+h2s_bf16-mixed_B32: 0.338 s/step, peak 25.4 GB, loss 7.335
+h2s_bf16-mixed_B64: OOM
+{'vae.encoder': [9.25, 0.0], 'vae.decoder': [9.51, 0.0], 'hand_vae.encoder': [9.25, 0.0], 'hand_vae.decoder': [9.51, 0.0], 'rhand_vae.encoder': [9.25, 0.0], 'rhand_vae.decoder': [9.51, 0.0], 'lm.language_model': [0.0, 482.79], 'mlp_body.linear1': [0.0, 3.15], 'mlp_body.linear2': [0.0, 1.57], 'mlp_lhand.linear1': [0.0, 3.15], 'mlp_lhand.linear2': [0.0, 1.57], 'mlp_rhand.linear1': [0.0, 3.15], 'mlp_rhand.linear2': [0.0, 1.57]}
+words_32-true_B8: 0.092 s/step, peak 10.2 GB, loss 5.404
+words_32-true_B16: 0.153 s/step, peak 12.4 GB, loss 4.444
+words_32-true_B32: 0.192 s/step, peak 15.9 GB, loss 4.625
+words_32-true_B64: 0.344 s/step, peak 23.9 GB, loss 3.827
+words_bf16-mixed_B8: 0.097 s/step, peak 10.6 GB, loss 7.261
+words_bf16-mixed_B16: 0.113 s/step, peak 12.2 GB, loss 6.535
+words_bf16-mixed_B32: 0.150 s/step, peak 14.7 GB, loss 4.253
+words_bf16-mixed_B64: 0.248 s/step, peak 20.3 GB, loss 4.187

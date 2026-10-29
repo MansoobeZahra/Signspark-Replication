@@ -1,0 +1,102 @@
+baseline_cfg2.5          spec +1.40 (own 16.31) rank   92.1 top5 0.045 best8 B1 25.18 motion 0.0177 [22s]
+ctrl_wrong_text_cfg2.5   spec +0.77 (own 16.08) rank  108.5 top5 0.022 best8 B1 22.69 motion 0.0172 [38s]
+cfg1                     spec +1.26 (own 16.84) rank  103.1 top5 0.028 best8 B1 23.21 motion 0.0178 [50s]
+cfg5                     spec +1.15 (own 15.37) rank   86.6 top5 0.040 best8 B1 21.26 motion 0.0181 [62s]
+cfg7.5                   spec +1.10 (own 14.56) rank   86.2 top5 0.040 best8 B1 22.82 motion 0.0195 [74s]
+neg_mean_s2.5            spec +1.47 (own 16.42) rank   93.2 top5 0.035 best8 B1 24.75 motion 0.0173 [89s]
+neg_mean_s5              spec +1.57 (own 16.05) rank   85.1 top5 0.050 best8 B1 25.48 motion 0.0165 [104s]
+emb_res_l2               spec +1.52 (own 15.97) rank   84.2 top5 0.058 best8 B1 24.83 motion 0.0163 [120s]
+emb_res_l4               spec +1.45 (own 14.95) rank   88.7 top5 0.045 best8 B1 21.48 motion 0.0242 [134s]
+mean_text                spec +0.70 (own 16.20) rank  106.8 top5 0.022 best8 B1 23.17 motion 0.0182 [149s]
+tau0.7                   spec +0.95 (own 15.12) rank   97.3 top5 0.030 best8 B1 23.59 motion 0.0099 [164s]
+tau1.3                   spec +1.17 (own 16.87) rank   91.2 top5 0.048 best8 B1 24.08 motion 0.0378 [179s]
+chunks3                  spec +1.04 (own 15.37) rank  100.1 top5 0.028 best8 B1 23.97 motion 0.0160 [191s]
+out_res_l2               spec +1.44 (own 16.10) rank   86.2 top5 0.043 best8 B1 23.83 motion 0.0196 [203s]
+out_res_l3               spec +1.41 (own 15.61) rank   84.2 top5 0.052 best8 B1 23.58 motion 0.0227 [214s]
+{
+ "baseline_cfg2.5": null,
+ "ctrl_wrong_text_cfg2.5": {
+  "p_spec_better": 0.9703218839064309,
+  "p_rank_better": 0.9983301847174926,
+  "p_spec_worse": 0.030350700749153248,
+  "p_rank_worse": 0.001669815282507421
+ },
+ "cfg1": {
+  "p_spec_better": 0.687316101427978,
+  "p_rank_better": 0.9988577237122964,
+  "p_spec_worse": 0.31608663536552584,
+  "p_rank_worse": 0.001142276287703589
+ },
+ "cfg5": {
+  "p_spec_better": 0.8906687991207027,
+  "p_rank_better": 0.0402922664549519,
+  "p_spec_worse": 0.11115743807664646,
+  "p_rank_worse": 0.9597077335450481
+ },
+ "cfg7.5": {
+  "p_spec_better": 0.9011825158536793,
+  "p_rank_better": 0.08904554007325421,
+  "p_spec_worse": 0.10051736901411967,
+  "p_rank_worse": 0.9109544599267458
+ },
+ "neg_mean_s2.5": {
+  "p_spec_better": 0.322937978397543,
+  "p_rank_better": 0.6058768502532915,
+  "p_spec_worse": 0.6804952574769132,
+  "p_rank_worse": 0.3941231497467084
+ },
+ "neg_mean_s5": {
+  "p_spec_better": 0.12061012318474429,
+  "p_rank_better": 0.029240449098637843,
+  "p_spec_worse": 0.8813235061148061,
+  "p_rank_worse": 0.9707595509013621
+ },
+ "emb_res_l2": {
+  "p_spec_better": 0.22450338086434574,
+  "p_rank_better": 0.023906547079266757,
+  "p_spec_worse": 0.7783666392949051,
+  "p_rank_worse": 0.9760934529207332
+ },
+ "emb_res_l4": {
+  "p_spec_better": 0.4885516141527848,
+  "p_rank_better": 0.29940595442451123,
+  "p_spec_worse": 0.5152629137874305,
+  "p_rank_worse": 0.7005940455754888
+ },
+ "mean_text": {
+  "p_spec_better": 0.9893881641815758,
+  "p_rank_better": 0.9999009834025291,
+  "p_spec_worse": 0.010897143351068728,
+  "p_rank_worse": 9.901659747093141e-05
+ },
+ "tau0.7": {
+  "p_spec_better": 0.912506192319956,
+  "p_rank_better": 0.9701128762998056,
+  "p_spec_worse": 0.08905052389543044,
+  "p_rank_worse": 0.029887123700194373
+ },
+ "tau1.3": {
+  "p_spec_better": 0.631169731098078,
+  "p_rank_better": 0.38790697793363593,
+  "p_spec_worse": 0.37244794803900305,
+  "p_rank_worse": 0.6120930220663641
+ },
+ "chunks3": {
+  "p_spec_better": 0.912506192319956,
+  "p_rank_better": 0.9998581225087767,
+  "p_spec_worse": 0.08905052389543044,
+  "p_rank_worse": 0.00014187749122327787
+ },
+ "out_res_l2": {
+  "p_spec_better": 0.6166336657815785,
+  "p_rank_better": 0.001989442934215728,
+  "p_spec_worse": 0.3870265887769424,
+  "p_rank_worse": 0.9980105570657842
+ },
+ "out_res_l3": {
+  "p_spec_better": 0.6347760304879593,
+  "p_rank_better": 0.011794852687278244,
+  "p_spec_worse": 0.36883026890192205,
+  "p_rank_worse": 0.9882051473127218
+ }
+}

@@ -1,0 +1,52 @@
+seed: 102
+model_arch: unet_large
+final_type: 2
+unet_out_mult: 8
+seq_len: 304
+hidden_t_dim: 512
+hidden_dim: 512
+dropout: 0.1
+text_enc_name: CLIP
+text_enc_dim: 640
+text_enc_ver: M-CLIP/XLM-Roberta-Large-Vit-B-16Plus
+specify_lang: true
+flip_left_hand: false
+length_mask_conditioned: true
+custom_keyframe_file: 'null'
+keyframe_selection_mode: 3
+eval:
+  model_path: /home/cvl/Desktop/Speech to sign/model_tests/signspark/ckpt/body/ema_0.9999_200000.pt
+  seq_len: 304
+  seed: 123
+  batch_size: 128
+  text_guidance_scale: 2.5
+  keyframes_mask_all: true
+  candidate_num: 1
+  max_samples: -1
+  ode_stepnum: 50
+  split: test
+  clamp_step: 0
+  clip_denoised: false
+  is_debug: false
+  note: t2p_cfg2.5
+  sampler: torchdiffeq
+load_lmdb: true
+base_path: ${oc.env:DATA_ROOT,data}/lmdb
+train_data:
+- CSL-Daily
+dev_data:
+- CSL-Daily
+test_data:
+- How2Sign
+lr: 1.0e-05
+anneal_lr: true
+batch_size: 64
+microbatch: 64
+ema_rate: 0.9999
+gradient_clipping: 1.0
+weight_decay: 0.01
+resume_checkpoint: false
+dataset_feat: body
+note: body
+checkpoint_path: checkpoints/body
+is_debug: false
