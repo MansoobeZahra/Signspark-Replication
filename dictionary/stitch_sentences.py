@@ -64,6 +64,9 @@ def build(glosses, index, n_trans, hold):
     for i, g in enumerate(glosses):
         clip = index[g]["medoid"]
         d = DICT / "clips" / g / clip
+        if (DICT / "final" / g).exists():                     # consensus.py: cleaned and cross-checked sign
+            d = DICT / "final" / g
+            clip = json.loads((d / "meta.json").read_text())["source"]
         x = {k: np.load(d / k) for k in STREAMS}
         if i:
             for k in STREAMS:
@@ -72,7 +75,7 @@ def build(glosses, index, n_trans, hold):
         for k in STREAMS:
             parts[k].append(x[k])
         spans.append([g, t, t + len(x[STREAMS[0]])])
-        src.append(f"{g}/{clip}")
+        src.append(f"{g}/{clip}" if "/" not in clip and ":" not in clip else f"{g} <- {clip}")
         t += len(x[STREAMS[0]])
     out = {k: np.concatenate(v) for k, v in parts.items()}
     out = {k: np.concatenate([np.repeat(v[:1], hold, 0), v, np.repeat(v[-1:], hold, 0)]) for k, v in out.items()}

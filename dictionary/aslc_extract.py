@@ -61,15 +61,21 @@ def main():
     ap.add_argument("--glosses", nargs="*", default=None, help="default: every extracted video")
     ap.add_argument("--device", default="cuda:0")
     ap.add_argument("--backends", nargs="+", default=["wilor", "nlf"], choices=["wilor", "nlf"])
+    ap.add_argument("--video-dir", type=Path, default=None, help="any folder of .mp4 (recursive) instead of ASL Citizen")
+    ap.add_argument("--feats-dir", type=Path, default=FEATS)
+    ap.add_argument("--shard", default="0/1", help="i/n: this process takes every n-th video (parallel runs)")
     a = ap.parse_args()
-    vids = videos(set(a.glosses) if a.glosses else None)
-    log_p = FEATS / "extract_log.json"
+    i, n_sh = map(int, a.shard.split("/"))
+    vids = sorted(a.video_dir.rglob("*.mp4")) if a.video_dir else videos(set(a.glosses) if a.glosses else None)
+    vids = vids[i::n_sh]
+    feats = a.feats_dir
+    log_p = feats / f"extract_log_{a.backends[0]}_{i}of{n_sh}.json" if n_sh > 1 else feats / "extract_log.json"
     log = json.loads(log_p.read_text()) if log_p.exists() else {}
     make = {"wilor": lambda: WiLoRExtractor(WiLoRConfig(device=a.device)),
             "nlf": lambda: NLFExtractor(NLFConfig(device=a.device))}
     for name in a.backends:
         ext = make[name]()
-        d = FEATS / name
+        d = feats / name
         d.mkdir(parents=True, exist_ok=True)
         t0, n = time.time(), 0
         for v in vids:
